@@ -51,7 +51,7 @@ public class CreateRogue {
                 // Verifica se o ataque digitado é válido
                 if (ataque > maxPoints) {
                     System.out.println("Você excedeu o limite de pontos para o ataque. Tente novamente.");
-                    maxPoints += vida; // Restaura os pontos de vida descontados
+                    maxPoints = 99; // Restaura os pontos de vida descontados
                     continue;
                 }
 
@@ -70,7 +70,7 @@ public class CreateRogue {
                 // Verifica se o ataque especial digitado é válido
                 if (especial > maxPoints) {
                     System.out.println("Você excedeu o limite de pontos para o ataque especial. Tente novamente.");
-                    maxPoints += ataque; // Restaura os pontos de ataque descontados
+                    maxPoints = 99; // Restaura os pontos de ataque descontados
                     continue;
                 }
 
