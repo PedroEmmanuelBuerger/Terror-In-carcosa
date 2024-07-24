@@ -9,17 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando organização do projeto">
-      <change afterPath="$PROJECT_DIR$/src/Utils/ManaAdm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/Monsters/Goblin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/Monsters/Zombie.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando novos inimigos + loop de batalha + funcionamento de cada classe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scenario/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenario/Pve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateHealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateHealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateMage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateMage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreatePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreatePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateRogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateRogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateWarrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateWarrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Boss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Goblin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Zombie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Zombie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721830259508</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adicionando novos inimigos + loop de batalha + funcionamento de cada classe">
+      <option name="closed" value="true" />
+      <created>1721843503204</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721843503204</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,6 +158,7 @@
     <MESSAGE value="Adição de criação de personagem" />
     <MESSAGE value="Criando fluxo de combate, boss fight e alterando funcionamento do arquitétipo" />
     <MESSAGE value="Arrumando organização do projeto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando organização do projeto" />
+    <MESSAGE value="Adicionando novos inimigos + loop de batalha + funcionamento de cada classe" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando novos inimigos + loop de batalha + funcionamento de cada classe" />
   </component>
 </project>

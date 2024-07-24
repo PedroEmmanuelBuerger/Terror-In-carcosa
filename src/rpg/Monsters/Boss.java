@@ -3,17 +3,20 @@ package rpg.Monsters;
 import rpg.Classes.Attributes;
 
 public class Boss extends Attributes {
-    public Boss(String name, int healthbar, int attack, int special, String quote) {
-        super(name, healthbar, attack, special, quote);
-    }
 
+    public Boss(String name, int healthbar, int attack, int specialAttack, String battleCry) {
+        super(name, healthbar, attack, specialAttack, battleCry);
+    }
     @Override
-    public void attackWithSpecial(Attributes enemy) {
+    public void attack(Attributes target) {
+        int damage = this.getAttack();
+        System.out.println(this.getName() + " ataca " + target.getName() + " com força!");
+        target.takeDamage(damage);
+    }
+    @Override
+    public void attackWithSpecial(Attributes target) {
         int damage = this.getSpecial();
-        System.out.println(this.getName() + " atacou " + enemy.getName() + " com um ataque especial, causando " + damage + " de dano!");
-        enemy.takeDamage(damage);
-        if (enemy.getHealthbar() <= 0) {
-            System.out.println(this.getName() + ":" + this.getQuote());
-        }
+        System.out.println(this.getName() + " usa um ataque especial contra " + target.getName() + "!");
+        target.takeDamage(damage);
     }
 }

@@ -16,7 +16,7 @@ public class Pve {
     public static void startBattle(Scanner scanner) {
         Random random = new Random();
         Attributes personagem = CreatePlayer.createPlayer(scanner);
-        int control = 0;// Criar o personagem uma vez
+        int control = 0; // Criar o personagem uma vez
 
         while (personagem.getHealthbar() > 0) { // Enquanto o personagem estiver vivo
             // Escolher aleatoriamente um monstro para o próximo encontro
@@ -25,16 +25,16 @@ public class Pve {
 
             switch (randomMonster) {
                 case 0:
-                    enemy = new Boss("Ghazkull", 1500, 35, 50, "HAHAHAHAHAHA");
+                    enemy = new Boss("Ghazkull", 450, 25, 30, "HAHAHAHAHAHA");
                     break;
                 case 1:
-                    enemy = new Goblin("Goblin", 200, 20, 30, "Grrrr!");
+                    enemy = new Goblin("Goblin", 50, 5, 17, "Grrrr!");
                     break;
                 case 2:
-                    enemy = new Zombie("Zombie", 300, 25, 40, "Braaaaains...");
+                    enemy = new Zombie("Zombie", 70, 12, 14, "Braaaaains...");
                     break;
                 default:
-                    enemy = new Goblin("Goblin", 200, 20, 30, "Grrrr!");
+                    enemy = new Goblin("Goblin", 50, 5, 17, "Grrrr!");
                     break;
             }
 
@@ -46,6 +46,7 @@ public class Pve {
                 control = 1;
             }
             System.out.println("Você encontrou um " + enemy.getName() + "!");
+
             // Loop de batalha
             while (personagem.getHealthbar() > 0 && enemy.getHealthbar() > 0) {
                 System.out.println("Sua vez de agir:");
@@ -97,7 +98,7 @@ public class Pve {
                         System.out.println("Ação inválida. Você perdeu a vez.");
                 }
 
-                // Verifica se o jogador escolheu fugir (ação 5)
+                // Verifica se o jogador escolheu fugir (ação 3)
                 if (acaoJogador == 3) {
                     break; // Sai do loop de batalha atual
                 }
@@ -109,7 +110,20 @@ public class Pve {
 
                 // Turno do inimigo
                 System.out.println("\nTurno de " + enemy.getName() + ":");
-                enemy.attackWithSpecial(personagem);
+
+                int acaoInimigo = random.nextInt(2); // 0 para attack, 1 para attackWithSpecial
+
+                switch (acaoInimigo) {
+                    case 0:
+                        enemy.attack(personagem); // Inimigo ataca o personagem
+                        break;
+                    case 1:
+                        enemy.attackWithSpecial(personagem); // Inimigo usa ataque especial contra o personagem
+                        break;
+                    default:
+                        System.out.println("Inimigo não fez nada neste turno.");
+                }
+
                 System.out.println();
 
                 // Verifica se o jogador foi derrotado após a ação do inimigo

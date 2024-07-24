@@ -12,7 +12,6 @@ public class CreatePlayer {
         System.out.println("2 - Mago");
         System.out.println("3 - Ladino");
         System.out.println("4 - Curandeiro");
-
         int escolha;
         Attributes personagem = null;
 
@@ -21,7 +20,7 @@ public class CreatePlayer {
 
             switch (escolha) {
                 case 1:
-                    personagem = CreateWarrior.criarGuerreiro(scanner);
+                    personagem = CreateWarrior.createWarrior(scanner);
                     break;
                 case 2:
                     personagem = CreateMage.createMage(scanner);
