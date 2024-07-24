@@ -73,24 +73,40 @@ public abstract class Attributes {
         System.out.println(this.getName() + " atacou " + enemy.getName() + " causando " + damage + " de dano!");
         enemy.takeDamage(damage);
     }
+
     public void attackWithSpecial(Attributes enemy) {
         int damage = this.getSpecial();
         System.out.println(this.getName() + " atacou " + enemy.getName() + " Com um ataque Especial... causando " + damage + " de dano!");
         enemy.takeDamage(damage);
     }
+
     public void takeDamage(int damage) {
         // Reduz a saúde do guerreiro atual pelo valor do dano recebido
         int currentHealth = this.getHealthbar();
-            this.setHealthbar(currentHealth - damage);
+        this.setHealthbar(currentHealth - damage);
             System.out.println(this.getName() + " recebeu " + damage + " de dano!");
             GetHealth(this);
-        if (this.getHealthbar() <= 0) {
-            System.out.println(this.getName() + " foi derrotado!");
-        }
     }
+
     public void GetHealth(Attributes creature) {
-        System.out.println("vida total de " + creature.getName() + " é " + creature.getHealthbar());
+        if (this.getHealthbar() < 0) {
+            System.out.println("vida total de " + creature.getName() + " é 0");
+            System.out.println(this.getName() + " foi derrotado!");
+        } else {
+            System.out.println("vida total de " + creature.getName() + " é " + creature.getHealthbar());
+        }
+
     }
+
+    public void GetTecnicalInfo() {
+        System.out.println("Nome: " + getName());
+        System.out.println("Classe: " + getClasses());
+        System.out.println("Vida: " + getHealthbar());
+        System.out.println("Ataque: " + getAttack());
+        System.out.println("Ataque Especial: " + getSpecial());
+        System.out.println("Frase: " + getQuote());
+    }
+
     public int getMaxHealthInitial() {
         return maxHealthInitial;
     }

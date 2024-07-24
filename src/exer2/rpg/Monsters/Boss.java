@@ -12,6 +12,8 @@ public class Boss extends Attributes {
         int damage = this.getSpecial();
         System.out.println(this.getName() + " atacou " + enemy.getName() + " com um ataque especial, causando " + damage + " de dano!");
         enemy.takeDamage(damage);
-        System.out.println(this.getName() + ":" + this.getQuote());
+        if (enemy.getHealthbar() <= 0) {
+            System.out.println(this.getName() + ":" + this.getQuote());
+        }
     }
 }

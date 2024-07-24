@@ -15,6 +15,11 @@ public class Warrior extends Attributes {
         this.defense = defese;
     }
 
+    public void defend() {
+        setDefese(true);
+        System.out.println(getName() + " entrou em posição de defesa!");
+    }
+
     @Override
     public void takeDamage(int damage) {
         // Reduz a saúde do guerreiro atual pelo valor do dano recebido
