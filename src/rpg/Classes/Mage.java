@@ -1,12 +1,16 @@
 package rpg.Classes;
 
+import Utils.ManaAdm;
+
 public class Mage extends Attributes {
     private int mana;
+
     public Mage(String name, int healthbar, int Mana, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.mana = Mana;
         this.setClasses("Mage");
     }
+
     @Override
     public void attack(Attributes enemy) {
         int damage = this.getAttack();
@@ -16,10 +20,15 @@ public class Mage extends Attributes {
 
     @Override
     public void attackWithSpecial(Attributes enemy) {
-        int damage = this.getSpecial();
-        System.out.println(this.getName() + " conjurou um feitiço poderoso em " + enemy.getName() + " causando " + getSpecial() + " de dano!");
-        mana = mana - 25;
-        System.out.println(this.getName() + " gastou 25 de mana, ficando com " + mana + " Restante");
-        enemy.takeDamage(damage);
+        boolean manaRes;
+        ManaAdm manaAdm = new ManaAdm();
+        manaRes = manaAdm.costMana(this.mana, 25, this.getName()); // Chamar costMana na instância criada
+        if (!manaRes) {
+            int damage = this.getSpecial();
+            System.out.println(this.getName() + " conjurou um feitiço poderoso em " + enemy.getName() + " causando " + getSpecial() + " de dano!");
+            mana = mana - 25;
+            System.out.println(this.getName() + " gastou 25 de mana, ficando com " + mana + " Restante");
+            enemy.takeDamage(damage);
+        }
     }
 }

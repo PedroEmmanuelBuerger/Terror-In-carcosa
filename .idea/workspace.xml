@@ -9,8 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Criando fluxo de combate, boss fight e alterando funcionamento do arquitétipo">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando organização do projeto">
+      <change afterPath="$PROJECT_DIR$/src/Utils/ManaAdm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/Monsters/Goblin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/Monsters/Zombie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenario/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenario/Pve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Warrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,19 +60,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.principal.executor": "Run",
-    "JAR Application.Terror In YellowCity.jar.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/pedro.silva/Downloads",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.principal.executor&quot;: &quot;Run&quot;,
+    &quot;JAR Application.Terror In YellowCity.jar.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/pedro.silva/Downloads&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.principal">
     <configuration name="principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="principal" />
@@ -114,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721828737990</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Arrumando organização do projeto">
+      <option name="closed" value="true" />
+      <created>1721830259508</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1721830259508</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,6 +149,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adição de criação de personagem" />
     <MESSAGE value="Criando fluxo de combate, boss fight e alterando funcionamento do arquitétipo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criando fluxo de combate, boss fight e alterando funcionamento do arquitétipo" />
+    <MESSAGE value="Arrumando organização do projeto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando organização do projeto" />
   </component>
 </project>

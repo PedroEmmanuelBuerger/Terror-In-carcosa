@@ -1,13 +1,16 @@
 package rpg.Classes;
 
 public abstract class Attributes {
-    private String name = "";
-    private int healthbar = 0;
-    private int attack = 0;
-    private int special = 0;
-    private String quote = "";
-    private String classes = "";
+    private String name;
+    private int healthbar;
+    private int attack;
+    private int special;
+    private String quote;
+    private String classes;
     private int maxHealthInitial;
+    private boolean alive;
+    private int level;
+    private int exp; // Variável de experiência
 
     public Attributes(String name, int healthbar, int attack, int special, String quote) {
         this.name = name;
@@ -16,8 +19,10 @@ public abstract class Attributes {
         this.special = special;
         this.quote = quote;
         this.maxHealthInitial = healthbar;
+        this.alive = true;
+        this.level = 1; // Inicializa o nível como 1
+        this.exp = 0; // Inicializa a experiência como 0
     }
-
 
     public int getHealthbar() {
         return healthbar;
@@ -68,37 +73,79 @@ public abstract class Attributes {
     }
 
     public void attack(Attributes enemy) {
-        // Reduz a saúde do inimigo pelo valor do ataque do guerreiro atual
+        // Verifica se o inimigo está vivo antes de atacar
+        if (!enemy.isAlive()) {
+            System.out.println(enemy.getName() + " já foi derrotado!");
+            return;
+        }
+
+        // Reduz a saúde do inimigo pelo valor do ataque do personagem atual
         int damage = this.getAttack();
         System.out.println(this.getName() + " atacou " + enemy.getName() + " causando " + damage + " de dano!");
         enemy.takeDamage(damage);
+
+        // Verifica se o inimigo foi derrotado
+        if (!enemy.isAlive()) {
+            System.out.println("Vida total de " + enemy.getName() + " é 0");
+            System.out.println(enemy.getName() + " foi derrotado!");
+            gainExp(enemy.getLevel() * 10); // Ganha experiência baseada no nível do inimigo
+        }
     }
 
     public void attackWithSpecial(Attributes enemy) {
+        // Verifica se o inimigo está vivo antes de atacar com especial
+        if (!enemy.isAlive()) {
+            System.out.println(enemy.getName() + " já foi derrotado!");
+            return;
+        }
+
         int damage = this.getSpecial();
-        System.out.println(this.getName() + " atacou " + enemy.getName() + " Com um ataque Especial... causando " + damage + " de dano!");
+        System.out.println(this.getName() + " atacou " + enemy.getName() + " com um ataque especial, causando " + damage + " de dano!");
         enemy.takeDamage(damage);
+        if (!enemy.isAlive()) {
+            System.out.println("Vida total de " + enemy.getName() + " é 0");
+            System.out.println(enemy.getName() + " foi derrotado!");
+            gainExp(enemy.getLevel() * 10); // Ganha experiência baseada no nível do inimigo
+        }
     }
 
     public void takeDamage(int damage) {
-        // Reduz a saúde do guerreiro atual pelo valor do dano recebido
+        // Reduz a saúde do personagem pelo valor do dano recebido
         int currentHealth = this.getHealthbar();
         this.setHealthbar(currentHealth - damage);
-            System.out.println(this.getName() + " recebeu " + damage + " de dano!");
-            GetHealth(this);
+        System.out.println(this.getName() + " recebeu " + damage + " de dano!");
+        getHealth(this);
     }
 
-    public void GetHealth(Attributes creature) {
-        if (this.getHealthbar() < 0) {
-            System.out.println("vida total de " + creature.getName() + " é 0");
-            System.out.println(this.getName() + " foi derrotado!");
-        } else {
-            System.out.println("vida total de " + creature.getName() + " é " + creature.getHealthbar());
+    public void getHealth(Attributes creature) {
+        if(creature.getHealthbar() > 0) {
+            System.out.println("Vida total de " + creature.getName() + " é " + creature.getHealthbar());
         }
-
+        else {
+            creature.alive = false;
+        }
     }
 
-    public void GetTecnicalInfo() {
+    public boolean isAlive() {
+        return alive;
+    }
+
+    public void gainExp(int expGain) {
+        exp += expGain; // Adiciona a experiência ganha
+
+        // Verifica se o personagem subiu de nível
+        while (exp >= level * 10) {
+            exp -= level * 10; // Subtrai o máximo de experiência para o próximo nível
+            level++; // Aumenta o nível do personagem
+            System.out.println(getName() + " upou de nível! Nível atual é: " + getLevel());
+        }
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void getTechnicalInfo() {
         System.out.println("Nome: " + getName());
         System.out.println("Classe: " + getClasses());
         System.out.println("Vida: " + getHealthbar());

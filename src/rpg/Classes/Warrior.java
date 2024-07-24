@@ -28,12 +28,12 @@ public class Warrior extends Attributes {
             this.setHealthbar(currentHealth - (damage / 2));
             System.out.println(this.getName() + " defendeu, recebendo " + damage / 2 + " de dano!");
             this.setDefese(false);
-            GetHealth(this);
+            getHealth(this);
         }
         else {
             this.setHealthbar(currentHealth - damage);
             System.out.println(this.getName() + " recebeu " + damage + " de dano!");
-            GetHealth(this);
+            getHealth(this);
         }
     }
 }

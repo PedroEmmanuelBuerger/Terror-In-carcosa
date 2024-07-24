@@ -19,7 +19,7 @@ public class Rogue  extends  Attributes{
         } else {
             this.setHealthbar(currentHealth - damage);
             System.out.println(this.getName() + " recebeu " + damage + " de dano!");
-            GetHealth(this);
+            getHealth(this);
             if (this.getHealthbar() <= 0) {
                 System.out.println(this.getName() + " foi derrotado!");
             }
