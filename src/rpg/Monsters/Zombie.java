@@ -10,13 +10,13 @@ public class Zombie extends Attributes {
 @Override
     public void attack(Attributes target) {
         int damage = this.getAttack();
-        System.out.println(this.getName() + " avança e morde " + target.getName() + "!");
+        System.out.println(this.getName() + " avança e morde " + target.getName() + " ,causando "+damage+" de dano!");
         target.takeDamage(damage);
     }
     @Override
     public void attackWithSpecial(Attributes target) {
         int damage = this.getSpecial();
-        System.out.println(this.getName() + " tenta infectar " + target.getName() + " com seu ataque especial!");
+        System.out.println(this.getName() + " tenta infectar " + target.getName() + " , causando "+damage+" de dano!");
         target.takeDamage(damage);
     }
 }

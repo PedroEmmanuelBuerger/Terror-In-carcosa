@@ -1,5 +1,6 @@
 package rpg.CharacterCreation;
 
+import Utils.SlowConsole;
 import rpg.Classes.*;
 
 import java.util.Scanner;
@@ -7,11 +8,13 @@ import java.util.Scanner;
 public class CreatePlayer {
 
     public static Attributes createPlayer(Scanner scanner) {
-        System.out.println("Escolha sua classe:");
-        System.out.println("1 - Guerreiro");
-        System.out.println("2 - Mago");
-        System.out.println("3 - Ladino");
-        System.out.println("4 - Curandeiro");
+        SlowConsole slowConsole = new SlowConsole();
+        slowConsole.imprimirDevagar("Escolha sua classe:");
+        slowConsole.imprimirDevagar("1 - Guerreiro");
+        slowConsole.imprimirDevagar("2 - Mago");
+        slowConsole.imprimirDevagar("3 - Ladino");
+        slowConsole.imprimirDevagar("4 - Curandeiro");
+
         int escolha;
         Attributes personagem = null;
 
@@ -32,7 +35,7 @@ public class CreatePlayer {
                     personagem = CreateHealer.createHealer(scanner);
                     break;
                 default:
-                    System.out.println("Escolha inválida. Por favor, escolha uma opção válida.");
+                    slowConsole.imprimirDevagar("Escolha inválida. Por favor, escolha uma opção válida.");
             }
         } while (personagem == null);
 

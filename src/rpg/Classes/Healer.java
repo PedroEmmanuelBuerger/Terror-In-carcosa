@@ -1,6 +1,7 @@
 package rpg.Classes;
 
 import Utils.ManaAdm;
+import Utils.SlowConsole;
 
 public class Healer extends Attributes {
     int mana;
@@ -10,7 +11,7 @@ public class Healer extends Attributes {
         this.mana = Mana;
         this.setClasses("Healer");
     }
-
+    SlowConsole slowConsole = new SlowConsole();
     @Override
     public void attackWithSpecial(Attributes enemy) {
         int holyDamage = this.getSpecial() / 2;
@@ -19,9 +20,9 @@ public class Healer extends Attributes {
         manaRes = manaAdm.costMana(this.mana, 15, this.getName()); // Chamar costMana na instância criada
         if (!manaRes) {
             // Criar uma instância de ManaAdm
-            System.out.println(this.getName() + " conjurou um feitiço sagrado, causando " + holyDamage + " de dano a " + enemy.getName() + "!");
+            slowConsole.imprimirDevagar(this.getName() + " conjurou um feitiço sagrado, causando " + holyDamage + " de dano a " + enemy.getName() + "!");
             this.mana -= 15; // Reduzir a mana após o uso do feitiço
-            System.out.println(this.getName() + " gastou 15 de mana, ficando com " + this.mana + " restante.");
+            slowConsole.imprimirDevagar(this.getName() + " gastou 15 de mana, ficando com " + this.mana + " restante.");
             enemy.takeDamage(holyDamage);
             if (!enemy.isAlive()) {
                 System.out.println("Vida total de " + enemy.getName() + " é 0");
@@ -39,19 +40,19 @@ public class Healer extends Attributes {
             if (ally.isAlive()) {
                 if (ally.getMaxHealthInitial() < healAmount) {
                     ally.setHealthbar(ally.getMaxHealthInitial());
-                    System.out.println(getName() + " curou toda a vida de " + ally.getName() + "!");
+                    slowConsole.imprimirDevagar(getName() + " curou toda a vida de " + ally.getName() + "!");
                     this.mana = this.mana - 30;
-                    System.out.println(this.getName() + " gastou 30 de mana, ficando com " + this.mana + " restante.");
+                    slowConsole.imprimirDevagar(this.getName() + " gastou 30 de mana, ficando com " + this.mana + " restante.");
                 } else {
                     getHealth(ally);
                     ally.setHealthbar(healAmount);
-                    System.out.println(getName() + " curou " + getSpecial() + " de vida de " + ally.getName() + "!");
+                    slowConsole.imprimirDevagar(getName() + " curou " + getSpecial() + " de vida de " + ally.getName() + "!");
                     this.mana = this.mana - 30;
-                    System.out.println(this.getName() + " gastou 30 de mana, ficando com " + this.mana + " restante.");
+                    slowConsole.imprimirDevagar(this.getName() + " gastou 30 de mana, ficando com " + this.mana + " restante.");
                     getHealth(ally);
                 }
             } else {
-                System.out.println(this.getName() + " Esta morto!. Impossivel curar");
+                slowConsole.imprimirDevagar(this.getName() + " Esta morto!. Impossivel curar");
             }
         }
     }

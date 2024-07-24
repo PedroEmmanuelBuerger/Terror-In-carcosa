@@ -1,5 +1,7 @@
 package rpg.Classes;
 
+import Utils.SlowConsole;
+
 public abstract class Attributes {
     private String name;
     private int healthbar;
@@ -11,7 +13,7 @@ public abstract class Attributes {
     private boolean alive;
     private int level;
     private int exp; // Variável de experiência
-
+    SlowConsole slowConsole = new SlowConsole();
     public Attributes(String name, int healthbar, int attack, int special, String quote) {
         this.name = name;
         this.healthbar = healthbar;
@@ -75,19 +77,19 @@ public abstract class Attributes {
     public void attack(Attributes enemy) {
         // Verifica se o inimigo está vivo antes de atacar
         if (!enemy.isAlive()) {
-            System.out.println(enemy.getName() + " já foi derrotado!");
+            slowConsole.imprimirDevagar(enemy.getName() + " já foi derrotado!");
             return;
         }
 
         // Reduz a saúde do inimigo pelo valor do ataque do personagem atual
         int damage = this.getAttack();
-        System.out.println(this.getName() + " atacou " + enemy.getName() + " causando " + damage + " de dano!");
+        slowConsole.imprimirDevagar(this.getName() + " atacou " + enemy.getName() + " causando " + damage + " de dano!");
         enemy.takeDamage(damage);
 
         // Verifica se o inimigo foi derrotado
         if (!enemy.isAlive()) {
-            System.out.println("Vida total de " + enemy.getName() + " é 0");
-            System.out.println(enemy.getName() + " foi derrotado!");
+            slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
+            slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
             gainExp(enemy.getLevel() * 10); // Ganha experiência baseada no nível do inimigo
         }
     }
@@ -95,16 +97,16 @@ public abstract class Attributes {
     public void attackWithSpecial(Attributes enemy) {
         // Verifica se o inimigo está vivo antes de atacar com especial
         if (!enemy.isAlive()) {
-            System.out.println(enemy.getName() + " já foi derrotado!");
+            slowConsole.imprimirDevagar(enemy.getName() + " já foi derrotado!");
             return;
         }
 
         int damage = this.getSpecial();
-        System.out.println(this.getName() + " atacou " + enemy.getName() + " com um ataque especial, causando " + damage + " de dano!");
+        slowConsole.imprimirDevagar(this.getName() + " atacou " + enemy.getName() + " com um ataque especial, causando " + damage + " de dano!");
         enemy.takeDamage(damage);
         if (!enemy.isAlive()) {
-            System.out.println("Vida total de " + enemy.getName() + " é 0");
-            System.out.println(enemy.getName() + " foi derrotado!");
+            slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
+            slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
             gainExp(enemy.getLevel() * 10); // Ganha experiência baseada no nível do inimigo
         }
     }
@@ -113,13 +115,13 @@ public abstract class Attributes {
         // Reduz a saúde do personagem pelo valor do dano recebido
         int currentHealth = this.getHealthbar();
         this.setHealthbar(currentHealth - damage);
-        System.out.println(this.getName() + " recebeu " + damage + " de dano!");
+        slowConsole.imprimirDevagar(this.getName() + " recebeu " + damage + " de dano!");
         getHealth(this);
     }
 
     public void getHealth(Attributes creature) {
         if(creature.getHealthbar() > 0) {
-            System.out.println("Vida total de " + creature.getName() + " é " + creature.getHealthbar());
+            slowConsole.imprimirDevagar("Vida total de " + creature.getName() + " é " + creature.getHealthbar());
         }
         else {
             creature.alive = false;
@@ -137,7 +139,13 @@ public abstract class Attributes {
         while (exp >= level * 10) {
             exp -= level * 10; // Subtrai o máximo de experiência para o próximo nível
             level++; // Aumenta o nível do personagem
-            System.out.println(getName() + " upou de nível! Nível atual é: " + getLevel());
+            slowConsole.imprimirDevagar(getName() + " upou de nível! Nível atual é: " + getLevel());
+            setAttack(getAttack() + 5);
+            slowConsole.imprimirDevagar(getName() + " Aumentou 5 de ataque!");
+            setHealthbar(getHealthbar() + 5);
+            slowConsole.imprimirDevagar(getName() + " Aumentou 5 de vida!");
+            setSpecial(getSpecial() + 5);
+            slowConsole.imprimirDevagar(getName() + " Aumentou 5 de Ataque Especial!");
         }
     }
 
@@ -146,12 +154,12 @@ public abstract class Attributes {
     }
 
     public void getTechnicalInfo() {
-        System.out.println("Nome: " + getName());
-        System.out.println("Classe: " + getClasses());
-        System.out.println("Vida: " + getHealthbar());
-        System.out.println("Ataque: " + getAttack());
-        System.out.println("Ataque Especial: " + getSpecial());
-        System.out.println("Frase: " + getQuote());
+        slowConsole.imprimirDevagar("Nome: " + getName());
+        slowConsole.imprimirDevagar("Classe: " + getClasses());
+        slowConsole.imprimirDevagar("Vida: " + getHealthbar());
+        slowConsole.imprimirDevagar("Ataque: " + getAttack());
+        slowConsole.imprimirDevagar("Ataque Especial: " + getSpecial());
+        slowConsole.imprimirDevagar("Frase: " + getQuote());
     }
 
     public int getMaxHealthInitial() {

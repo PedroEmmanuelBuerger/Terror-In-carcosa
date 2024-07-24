@@ -25,10 +25,15 @@ public class Mage extends Attributes {
         manaRes = manaAdm.costMana(this.mana, 25, this.getName()); // Chamar costMana na instância criada
         if (!manaRes) {
             int damage = this.getSpecial();
-            System.out.println(this.getName() + " conjurou um feitiço poderoso em " + enemy.getName() + " causando " + getSpecial() + " de dano!");
-            mana = mana - 25;
+            damage = damage + 15;
+            System.out.println(this.getName() + " conjurou um feitiço poderoso em " + enemy.getName() + " causando " + damage+ " de dano!");
+            mana = mana - 20;
             System.out.println(this.getName() + " gastou 25 de mana, ficando com " + mana + " Restante");
             enemy.takeDamage(damage);
+            if (!enemy.isAlive()) {
+                System.out.println("Vida total de " + enemy.getName() + " é 0");
+                System.out.println(enemy.getName() + " foi derrotado!");
+            }
         }
     }
 }
