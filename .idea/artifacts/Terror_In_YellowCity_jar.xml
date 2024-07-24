@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Terror In YellowCity:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Terror_In_YellowCity_jar</output-path>
+    <root id="archive" name="Terror In YellowCity.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$USER_HOME$/Downloads/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="Terror In YellowCity" />
+    </root>
+  </artifact>
+</component>

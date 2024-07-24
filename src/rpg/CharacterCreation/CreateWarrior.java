@@ -1,22 +1,21 @@
-package exer2.rpg.CharacterCreation;
+package rpg.CharacterCreation;
 
-import exer2.rpg.Classes.Mage;
+import rpg.Classes.Warrior;
 
 import java.util.Scanner;
 
-public class CreateMage {
-    public static Mage createMage(Scanner scanner) {
+public class CreateWarrior {
+    public static Warrior criarGuerreiro(Scanner scanner) {
         String nome;
         int vida = 0;
         int ataque = 0;
         int especial = 0;
-        int mana = 0;
         String frase = "";
 
         // Loop para garantir entradas válidas
         boolean entradaValida = false;
         do {
-            System.out.println("Digite o nome do Mago:");
+            System.out.println("Digite o nome do Guerreiro:");
             nome = scanner.nextLine().trim(); // Remove espaços em branco extras
 
             // Verifica se o nome contém números
@@ -25,7 +24,7 @@ public class CreateMage {
                 continue;
             }
 
-            System.out.println("Digite o valor da vida inicial do Mago:");
+            System.out.println("Digite o valor da vida inicial do Guerreiro:");
             if (scanner.hasNextInt()) {
                 vida = scanner.nextInt();
                 scanner.nextLine(); // Limpar o buffer
@@ -35,7 +34,7 @@ public class CreateMage {
                 continue;
             }
 
-            System.out.println("Digite o valor do ataque do Mago:");
+            System.out.println("Digite o valor do ataque do Guerreiro:");
             if (scanner.hasNextInt()) {
                 ataque = scanner.nextInt();
                 scanner.nextLine(); // Limpar o buffer
@@ -45,7 +44,7 @@ public class CreateMage {
                 continue;
             }
 
-            System.out.println("Digite o valor do ataque especial do Mago:");
+            System.out.println("Digite o valor do ataque especial do Guerreiro:");
             if (scanner.hasNextInt()) {
                 especial = scanner.nextInt();
                 scanner.nextLine(); // Limpar o buffer
@@ -55,17 +54,7 @@ public class CreateMage {
                 continue;
             }
 
-            System.out.println("Digite o valor da mana do Mago:");
-            if (scanner.hasNextInt()) {
-                mana = scanner.nextInt();
-                scanner.nextLine(); // Limpar o buffer
-            } else {
-                System.out.println("Entrada inválida. Digite um número para a mana.");
-                scanner.nextLine(); // Limpar o buffer
-                continue;
-            }
-
-            System.out.println("Digite a frase de efeito do Mago:");
+            System.out.println("Digite a frase de efeito do Guerreiro (sem números):");
             frase = scanner.nextLine().trim(); // Remove espaços em branco extras
 
             // Verifica se a frase contém números
@@ -79,6 +68,6 @@ public class CreateMage {
 
         } while (!entradaValida);
 
-        return new Mage(nome, vida, mana, ataque, especial, frase);
+        return new Warrior(nome, vida, ataque, especial, frase);
     }
 }

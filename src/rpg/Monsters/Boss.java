@@ -1,6 +1,6 @@
-package exer2.rpg.Monsters;
+package rpg.Monsters;
 
-import exer2.rpg.Classes.Attributes;
+import rpg.Classes.Attributes;
 
 public class Boss extends Attributes {
     public Boss(String name, int healthbar, int attack, int special, String quote) {

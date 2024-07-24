@@ -1,10 +1,10 @@
 package Scenario;
 
-import exer2.rpg.CharacterCreation.CreatePlayer;
-import exer2.rpg.Classes.Attributes;
-import exer2.rpg.Classes.Healer;
-import exer2.rpg.Classes.Warrior;
-import exer2.rpg.Monsters.Boss;
+import rpg.CharacterCreation.CreatePlayer;
+import rpg.Classes.Attributes;
+import rpg.Classes.Healer;
+import rpg.Classes.Warrior;
+import rpg.Monsters.Boss;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package exer2.rpg.Classes;
+package rpg.Classes;
 
 public class Mage extends Attributes {
     private int mana;

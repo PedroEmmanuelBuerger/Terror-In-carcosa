@@ -1,4 +1,4 @@
-package exer2.rpg.Classes;
+package rpg.Classes;
 
 public class Warrior extends Attributes {
     private boolean defense = false;

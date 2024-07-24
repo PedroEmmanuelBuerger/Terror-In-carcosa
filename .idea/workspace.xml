@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Terror In YellowCity:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adição de criação de personagem">
-      <change afterPath="$PROJECT_DIR$/src/Scenario/Pve.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exer2/rpg/CharacterCreation/CreatePlayer.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Criando fluxo de combate, boss fight e alterando funcionamento do arquitétipo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exer2/principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exer2/principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exer2/rpg/CharacterCreation/CreateHealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exer2/rpg/CharacterCreation/CreateHealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exer2/rpg/CharacterCreation/CreateMage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exer2/rpg/CharacterCreation/CreateMage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exer2/rpg/CharacterCreation/CreateWarrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exer2/rpg/CharacterCreation/CreateWarrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exer2/rpg/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exer2/rpg/Classes/Attributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exer2/rpg/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exer2/rpg/Classes/Healer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exer2/rpg/Classes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exer2/rpg/Classes/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exer2/rpg/Monsters/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exer2/rpg/Monsters/Boss.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,19 +54,23 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.principal.executor": "Run",
+    "JAR Application.Terror In YellowCity.jar.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/pedro.silva/OneDrive - Mainhardt/Documentos/intellij/Terror In YellowCity"
+    "last_opened_file_path": "C:/Users/pedro.silva/Downloads",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.principal">
     <configuration name="principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exer2.principal" />
+      <option name="MAIN_CLASS_NAME" value="principal" />
       <module name="Terror In YellowCity" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="exer2.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,9 +78,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Terror In YellowCity.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/Terror_In_YellowCity_jar/Terror In YellowCity.jar" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.principal" />
+        <item itemvalue="JAR Application.Terror In YellowCity.jar" />
       </list>
     </recent_temporary>
   </component>
@@ -102,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721823944128</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Criando fluxo de combate, boss fight e alterando funcionamento do arquitétipo">
+      <option name="closed" value="true" />
+      <created>1721828737990</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721828737990</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,6 +130,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adição de criação de personagem" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adição de criação de personagem" />
+    <MESSAGE value="Criando fluxo de combate, boss fight e alterando funcionamento do arquitétipo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criando fluxo de combate, boss fight e alterando funcionamento do arquitétipo" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-package exer2.rpg.Classes;
+package rpg.Classes;
 
 public abstract class Attributes {
     private String name = "";

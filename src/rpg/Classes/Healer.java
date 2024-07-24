@@ -1,4 +1,4 @@
-package exer2.rpg.Classes;
+package rpg.Classes;
 
 public class Healer extends Attributes {
     int mana;

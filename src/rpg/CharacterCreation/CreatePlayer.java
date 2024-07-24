@@ -1,6 +1,6 @@
-package exer2.rpg.CharacterCreation;
+package rpg.CharacterCreation;
 
-import exer2.rpg.Classes.*;
+import rpg.Classes.*;
 
 import java.util.Scanner;
 

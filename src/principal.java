@@ -1,5 +1,3 @@
-package exer2;
-
 import Scenario.Pve;
 
 import java.util.Scanner;
