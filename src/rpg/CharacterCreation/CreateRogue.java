@@ -18,6 +18,9 @@ public class CreateRogue {
         // Loop para garantir entradas válidas
         boolean entradaValida = false;
         do {
+            // Resetando pontos de maxPoints a cada tentativa de criação
+            int tempMaxPoints = 99;
+
             slowConsole.imprimirDevagar("Digite o nome do Ladrão:");
             nome = scanner.nextLine().trim(); // Remove espaços em branco extras
 
@@ -27,70 +30,72 @@ public class CreateRogue {
                 continue;
             }
 
-            slowConsole.imprimirDevagar("Digite o valor da vida inicial do Ladrão (máximo " + maxPoints + "):");
+            // Entrada para vida
+            slowConsole.imprimirDevagar("Digite o valor da vida inicial do Ladrão (máximo " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 vida = scanner.nextInt();
                 scanner.nextLine(); // Limpar o buffer
 
                 // Verifica se a vida digitada é válida
-                if (vida > maxPoints) {
+                if (vida > tempMaxPoints) {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para a vida. Tente novamente.");
                     continue;
                 }
-
-                maxPoints -= vida; // Desconta os pontos da vida de maxPoints
+                if (vida == 0) {
+                    slowConsole.imprimirDevagar("Vida inicial não pode ser 0");
+                    continue;
+                }
+                tempMaxPoints -= vida; // Atualiza tempMaxPoints após a entrada válida
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para a vida.");
                 scanner.nextLine(); // Limpar o buffer
                 continue;
             }
 
-            slowConsole.imprimirDevagar("Digite o valor do ataque do Ladrão (máximo " + maxPoints + "):");
+            // Entrada para ataque
+            slowConsole.imprimirDevagar("Digite o valor do ataque do Ladrão (máximo " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 ataque = scanner.nextInt();
                 scanner.nextLine(); // Limpar o buffer
 
                 // Verifica se o ataque digitado é válido
-                if (ataque > maxPoints) {
+                if (ataque > tempMaxPoints) {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para o ataque. Tente novamente.");
-                    maxPoints = 99; // Restaura os pontos de vida descontados
                     continue;
                 }
-                if (vida == 0){
+                if (vida == 0) {
                     slowConsole.imprimirDevagar("Vida inicial não pode ser 0");
                     continue;
                 }
-                maxPoints -= ataque;
-                ataque = ataque + 15;// Desconta os pontos do ataque de maxPoints
+                tempMaxPoints -= ataque; // Atualiza tempMaxPoints após a entrada válida
+                ataque += 15; // Adiciona pontos extras ao ataque
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para o ataque.");
                 scanner.nextLine(); // Limpar o buffer
                 continue;
             }
 
-            slowConsole.imprimirDevagar("Digite o valor do ataque especial do Ladrão (máximo " + maxPoints + "):");
+            // Entrada para ataque especial
+            slowConsole.imprimirDevagar("Digite o valor do ataque especial do Ladrão (máximo " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 especial = scanner.nextInt();
                 scanner.nextLine(); // Limpar o buffer
 
                 // Verifica se o ataque especial digitado é válido
-                if (especial > maxPoints) {
+                if (especial > tempMaxPoints) {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para o ataque especial. Tente novamente.");
-                    maxPoints = 99; // Restaura os pontos de ataque descontados
                     continue;
                 }
-
-                maxPoints -= especial; // Desconta os pontos do ataque especial de maxPoints
+                tempMaxPoints -= especial; // Atualiza tempMaxPoints após a entrada válida
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para o ataque especial.");
                 scanner.nextLine(); // Limpar o buffer
                 continue;
             }
 
+            // Entrada para frase
             slowConsole.imprimirDevagar("Digite a frase de efeito do Ladrão:");
             frase = scanner.nextLine().trim(); // Remove espaços em branco extras
-
-            // Verifica se a frase contém números
 
             // Se todas as entradas forem válidas, sair do loop
             entradaValida = true;
