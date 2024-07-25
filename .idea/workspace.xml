@@ -12,9 +12,14 @@
     <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Emplementado a lógica de fugir e funcionamento de algumas classes + speelBook">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scenario/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenario/Pve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/ManaAdm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/ManaAdm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateRogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateRogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateWarrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateWarrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Boss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Goblin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Zombie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Zombie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

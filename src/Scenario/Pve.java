@@ -39,26 +39,30 @@ public class Pve {
         SlowConsole slowConsole = new SlowConsole();
         // Escolher aleatoriamente um monstro para o próximo encontro
         Attributes enemy;
-        int randomMonster = random.nextInt(3); // 0: Boss, 1: Goblin, 2: Zombie
 
-        switch (randomMonster) {
-            case 0:
-                enemy = new Boss("Ghazkull", 450, 25, 30, "HAHAHAHAHAHA");
-                break;
-            case 1:
-                enemy = new Goblin("Goblin", 50, 5, 17, "Grrrr!");
-                break;
-            case 2:
-                enemy = new Zombie("Zombie", 70, 12, 14, "Braaaaains...");
-                break;
-            default:
-                enemy = new Goblin("Goblin", 50, 5, 17, "Grrrr!");
-                break;
+        // Verificar se o personagem está no nível necessário para enfrentar o Boss
+        if (personagem.getLevel() >= 5) {
+            enemy = new Boss("Ghazkull", 450, 25, 30, "HAHAHAHAHAHA"); // Exemplo: Boss com 500 de exp ao ser derrotado
+        } else {
+            // Caso o jogador não esteja no nível adequado, enfrentará um Goblin ou Zombie
+            int randomMonster = random.nextInt(2); // 0: Goblin, 1: Zombie
+
+            switch (randomMonster) {
+                case 0:
+                    enemy = new Goblin("Goblin", 50, 5, 17, "Grrrr!");
+                    break;
+                case 1:
+                    enemy = new Zombie("Zombie", 70, 12, 14, "Braaaaains...");
+                    break;
+                default:
+                    enemy = new Goblin("Goblin", 50, 5, 17, "Grrrr!");
+                    break;
+            }
         }
 
         // Apresentação inicial do monstro
         slowConsole.imprimirDevagar("Você encontrou um " + enemy.getName() + "!");
-
+        slowConsole.imprimirDevagar(enemy.getName() + ": " + enemy.getQuote());
 
         // Loop de batalha
         while (personagem.getHealthbar() > 0 && enemy.getHealthbar() > 0) {
@@ -71,12 +75,12 @@ public class Pve {
                 slowConsole.imprimirDevagar("2 - Ataque Especial");
             }
             slowConsole.imprimirDevagar("3 - Fugir");
-            // Opções adicionais para Warrior e Healer
+            slowConsole.imprimirDevagar("4 - Status");
             if (personagem instanceof Warrior) {
-                slowConsole.imprimirDevagar("4 - Defender");
+                slowConsole.imprimirDevagar("5 - Defender");
             } else if (personagem instanceof Healer) {
-                slowConsole.imprimirDevagar("4 - Curar");
-                slowConsole.imprimirDevagar("5 - Ressurreição");
+                slowConsole.imprimirDevagar("5 - Curar");
+                slowConsole.imprimirDevagar("6 - Ressurreição");
             }
 
             int acaoJogador;
@@ -107,13 +111,16 @@ public class Pve {
                     }
                     break;
                 case 4:
+                    personagem.getTechnicalInfo();
+                    break;
+                case 5:
                     if (personagem instanceof Warrior) {
                         ((Warrior) personagem).defend();
                     } else if (personagem instanceof Healer) {
                         ((Healer) personagem).heal(personagem); // Pode ajustar para escolher outro aliado se houver
                     }
                     break;
-                case 5:
+                case 6:
                     if (personagem instanceof Healer) {
                         ((Healer) personagem).ressurection(personagem); // Pode ajustar para escolher um aliado a ser ressuscitado
                     }
@@ -162,7 +169,7 @@ public class Pve {
     private static void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
-        int eventType = random.nextInt(4); // Ajustado para 3 para incluir o novo tipo de evento
+        int eventType = random.nextInt(3); // Ajustado para 3 para incluir o novo tipo de evento
 
         switch (eventType) {
             case 0:
@@ -180,21 +187,30 @@ public class Pve {
                     // Caso não seja Mage nem Healer, pode ser um evento padrão como ganhar vida
                     int healthRecovered = random.nextInt(10) + 10; // Recupera entre 10 a 19 de vida
                     int maxHealth = personagem.getMaxHealthInitial();
-                    if (personagem.getHealthbar() + healthRecovered <= maxHealth) {
-                        personagem.setHealthbar(personagem.getHealthbar() + healthRecovered);
+                    if (personagem.getHealthbar() < maxHealth) { // Verifica se não está com saúde máxima
+                        if (personagem.getHealthbar() + healthRecovered <= maxHealth) {
+                            personagem.setHealthbar(personagem.getHealthbar() + healthRecovered);
+                        } else {
+                            personagem.setHealthbar(maxHealth);
+                        }
+                        slowConsole.imprimirDevagar("Você encontrou um pedaço de carne... Recuperou +" + healthRecovered + " de vida!");
                     } else {
-                        personagem.setHealthbar(maxHealth);
+                        slowConsole.imprimirDevagar("Você encontrou um pedaço de carne... Mas está com vida cheia, então deixou para trás.");
                     }
-                    slowConsole.imprimirDevagar("Você encontrou um evento não esperado... Recuperou +" + healthRecovered + " de vida!");
                 }
                 break;
             case 1:
-                slowConsole.imprimirDevagar("Você encontrou uma poção de cura! Recuperou +20 de vida.");
-                int maxHealth = personagem.getMaxHealthInitial();
-                if (personagem.getHealthbar() + 20 <= maxHealth) {
-                    personagem.setHealthbar(personagem.getHealthbar() + 20);
+                // Poção de cura
+                if (personagem.getHealthbar() < personagem.getMaxHealthInitial()) { // Verifica se não está com saúde máxima
+                    slowConsole.imprimirDevagar("Você encontrou uma poção de cura! Recuperou +20 de vida.");
+                    int maxHealth = personagem.getMaxHealthInitial();
+                    if (personagem.getHealthbar() + 20 <= maxHealth) {
+                        personagem.setHealthbar(personagem.getHealthbar() + 20);
+                    } else {
+                        personagem.setHealthbar(maxHealth);
+                    }
                 } else {
-                    personagem.setHealthbar(maxHealth);
+                    slowConsole.imprimirDevagar("Você encontrou uma poção de cura... Mas está com vida cheia, então deixou para trás.");
                 }
                 break;
             case 2:
@@ -202,12 +218,12 @@ public class Pve {
                 personagem.setAttack(personagem.getAttack() + 5);
                 break;
             case 3:
-                slowConsole.imprimirDevagar("Você presenciou  um evento estranho... Ganhou +5 de ataque Especial.");
+                slowConsole.imprimirDevagar("Você presenciou um evento estranho... Ganhou +5 de ataque Especial.");
                 personagem.setSpecial(personagem.getSpecial() + 5);
+                break;
             default:
                 slowConsole.imprimirDevagar("Evento não reconhecido.");
                 break;
         }
     }
-
 }

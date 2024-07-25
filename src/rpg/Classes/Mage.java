@@ -27,6 +27,11 @@ public class Mage extends Attributes {
         int damage = this.getAttack();
         slowConsole.imprimirDevagar(this.getName() + " lançou uma bola de fogo em " + enemy.getName() + " causando " + damage + " de dano!");
         enemy.takeDamage(damage);
+        if (!enemy.isAlive()) {
+            slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
+            slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
+            gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
+        }
     }
 
     @Override
@@ -38,7 +43,7 @@ public class Mage extends Attributes {
             if (!enemy.isAlive()) {
                 slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
                 slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
-                gainExp(enemy.getLevel() * 10);
+                gainExp(enemy.getExp());
             }
         }
     }

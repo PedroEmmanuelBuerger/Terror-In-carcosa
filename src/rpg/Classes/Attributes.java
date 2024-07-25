@@ -76,12 +76,6 @@ public abstract class Attributes {
     }
 
     public void attack(Attributes enemy) {
-        // Verifica se o inimigo está vivo antes de atacar
-        if (!enemy.isAlive()) {
-            slowConsole.imprimirDevagar(enemy.getName() + " já foi derrotado!");
-            return;
-        }
-
         // Reduz a saúde do inimigo pelo valor do ataque do personagem atual
         int damage = this.getAttack();
         slowConsole.imprimirDevagar(this.getName() + " atacou " + enemy.getName() + " causando " + damage + " de dano!");
@@ -91,7 +85,8 @@ public abstract class Attributes {
         if (!enemy.isAlive()) {
             slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
             slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
-            gainExp(enemy.getLevel() * 10); // Ganha experiência baseada no nível do inimigo
+            slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
+            gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
         }
     }
 
@@ -103,7 +98,7 @@ public abstract class Attributes {
         if (!enemy.isAlive()) {
             slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
             slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
-            gainExp(enemy.getLevel() * 10); // Ganha experiência baseada no nível do inimigo
+            gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
         }
     }
 
@@ -139,17 +134,22 @@ public abstract class Attributes {
         this.level = level;
     }
 
+    public void setMaxHealthInitial(int maxHealthInitial) {
+        this.maxHealthInitial = maxHealthInitial;
+    }
+
     public void gainExp(int expGain) {
         exp += expGain; // Adiciona a experiência ganha
 
         // Verifica se o personagem subiu de nível
-        while (exp >= level * 10) {
-            exp -= level * 10; // Subtrai o máximo de experiência para o próximo nível
+        while (exp >= level * 5) {
+            exp -= level * 5; // Subtrai o máximo de experiência para o próximo nível
             level++; // Aumenta o nível do personagem
             slowConsole.imprimirDevagar(getName() + " upou de nível! Nível atual é: " + getLevel());
             setAttack(getAttack() + 5);
             slowConsole.imprimirDevagar(getName() + " Aumentou 5 de ataque!");
             setHealthbar(getHealthbar() + 5);
+            setMaxHealthInitial(getMaxHealthInitial() + 5);
             slowConsole.imprimirDevagar(getName() + " Aumentou 5 de vida!");
             setSpecial(getSpecial() + 5);
             slowConsole.imprimirDevagar(getName() + " Aumentou 5 de Ataque Especial!");

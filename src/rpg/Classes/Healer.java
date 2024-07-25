@@ -35,7 +35,7 @@ public class Healer extends Attributes {
             if (!enemy.isAlive()) {
                 slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
                 slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
-                gainExp(enemy.getLevel() * 10);
+                gainExp(enemy.getExp());
             }
         }
     }

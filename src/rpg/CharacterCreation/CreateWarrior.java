@@ -83,7 +83,7 @@ public class CreateWarrior {
                 continue;
             }
 
-            slowConsole.imprimirDevagar("Digite a frase de efeito do Guerreiro (sem números):");
+            slowConsole.imprimirDevagar("Digite a frase de efeito do Guerreiro:");
             frase = scanner.nextLine().trim(); // Remove espaços em branco extras
 
             // Verifica se a frase contém número

@@ -83,7 +83,7 @@ public class CreateRogue {
                 continue;
             }
 
-            slowConsole.imprimirDevagar("Digite a frase de efeito do Ladrão (sem números):");
+            slowConsole.imprimirDevagar("Digite a frase de efeito do Ladrão:");
             frase = scanner.nextLine().trim(); // Remove espaços em branco extras
 
             // Verifica se a frase contém números

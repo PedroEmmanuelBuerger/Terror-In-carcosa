@@ -4,10 +4,12 @@ import Utils.SlowConsole;
 import rpg.Classes.Attributes;
 
 public class Goblin extends Attributes {
+    int exp = 5;
     SlowConsole slowConsole = new SlowConsole();
 
     public Goblin(String name, int healthbar, int attack, int specialAttack, String battleCry) {
         super(name, healthbar, attack, specialAttack, battleCry);
+        this.setExp(5);
     }
 
     @Override
