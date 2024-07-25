@@ -14,6 +14,7 @@ public abstract class Attributes {
     private int level;
     private int exp; // Variável de experiência
     SlowConsole slowConsole = new SlowConsole();
+
     public Attributes(String name, int healthbar, int attack, int special, String quote) {
         this.name = name;
         this.healthbar = healthbar;
@@ -95,11 +96,6 @@ public abstract class Attributes {
     }
 
     public void attackWithSpecial(Attributes enemy) {
-        // Verifica se o inimigo está vivo antes de atacar com especial
-        if (!enemy.isAlive()) {
-            slowConsole.imprimirDevagar(enemy.getName() + " já foi derrotado!");
-            return;
-        }
 
         int damage = this.getSpecial();
         slowConsole.imprimirDevagar(this.getName() + " atacou " + enemy.getName() + " com um ataque especial, causando " + damage + " de dano!");
@@ -120,10 +116,9 @@ public abstract class Attributes {
     }
 
     public void getHealth(Attributes creature) {
-        if(creature.getHealthbar() > 0) {
+        if (creature.getHealthbar() > 0) {
             slowConsole.imprimirDevagar("Vida total de " + creature.getName() + " é " + creature.getHealthbar());
-        }
-        else {
+        } else {
             creature.alive = false;
         }
     }

@@ -1,6 +1,7 @@
 package rpg.CharacterCreation;
 
 import Utils.SlowConsole;
+import Utils.InputUtils;
 import rpg.Classes.*;
 
 import java.util.Scanner;
@@ -19,7 +20,7 @@ public class CreatePlayer {
         Attributes personagem = null;
 
         do {
-            escolha = lerInteiro(scanner, "Escolha inválida. Por favor, escolha uma opção válida.");
+            escolha = InputUtils.lerInteiro(scanner, "Escolha inválida. Por favor, escolha uma opção válida.");
 
             switch (escolha) {
                 case 1:
@@ -40,15 +41,5 @@ public class CreatePlayer {
         } while (personagem == null);
 
         return personagem;
-    }
-
-    private static int lerInteiro(Scanner scanner, String mensagemErro) {
-        while (!scanner.hasNextInt()) {
-            System.out.println(mensagemErro);
-            scanner.next(); // Limpa a entrada inválida
-        }
-        int escolha = scanner.nextInt();
-        scanner.nextLine(); // Consumir a nova linha pendente
-        return escolha;
     }
 }

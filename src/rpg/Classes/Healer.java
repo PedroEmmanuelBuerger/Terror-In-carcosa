@@ -27,6 +27,7 @@ public class Healer extends Attributes {
             if (!enemy.isAlive()) {
                 slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
                 slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
+                gainExp(enemy.getLevel() * 10);
             }
         }
     }
@@ -57,6 +58,14 @@ public class Healer extends Attributes {
         }
     }
 
+    public int getMana() {
+        return mana;
+    }
+
+    public void setMana(int mana) {
+        this.mana = mana;
+    }
+
     public void ressurection(Attributes ally) {
         boolean manaRes;
         ManaAdm manaAdm = new ManaAdm();
@@ -71,5 +80,15 @@ public class Healer extends Attributes {
                 slowConsole.imprimirDevagar(getName() + " gastou 35 de mana, ficando com " + mana + " restante.");
             }
         }
+    }
+    @Override
+    public void getTechnicalInfo() {
+        slowConsole.imprimirDevagar("Nome: " + getName());
+        slowConsole.imprimirDevagar("Classe: " + getClasses());
+        slowConsole.imprimirDevagar("Vida: " + getHealthbar());
+        slowConsole.imprimirDevagar("Ataque: " + getAttack());
+        slowConsole.imprimirDevagar("Ataque Mágico: " + getSpecial());
+        slowConsole.imprimirDevagar("Mana: " + getMana());
+        slowConsole.imprimirDevagar("Frase: " + getQuote());
     }
 }

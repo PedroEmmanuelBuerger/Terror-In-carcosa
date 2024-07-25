@@ -3,6 +3,7 @@ package Scenario;
 import Utils.SlowConsole;
 import rpg.Classes.Attributes;
 import rpg.Classes.Healer;
+import rpg.Classes.Mage;
 import rpg.Classes.Warrior;
 import rpg.CharacterCreation.CreatePlayer;
 import rpg.Monsters.Boss;
@@ -148,23 +149,33 @@ public class Pve {
     private static void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
-        int eventType = random.nextInt(3); // Escolhe aleatoriamente o tipo de evento não combativo
+        int eventType = random.nextInt(2); // Escolhe aleatoriamente o tipo de evento não combativo
 
         switch (eventType) {
             case 0:
-                slowConsole.imprimirDevagar("Você encontrou um tesouro escondido! Ganhou 50 de ouro.");
+                // Evento de recuperação de mana
+                if (personagem instanceof Mage || personagem instanceof Healer) {
+                    int manaRecovered = random.nextInt(10) + 10; // Recupera entre 10 a 19 de mana
+                    if (personagem instanceof Mage) {
+                        ((Mage) personagem).setMana(((Mage) personagem).getMana() + manaRecovered);
+                        slowConsole.imprimirDevagar("Você encontrou um cristal de mana! Recuperou " + manaRecovered + " de mana.");
+                    } else if (personagem instanceof Healer) {
+                        // Adicione lógica específica de recuperação de mana para Healer, se necessário
+                        slowConsole.imprimirDevagar("Você encontrou um foco de cura! Recuperou " + manaRecovered + " de mana.");
+                    }
+                } else {
+                    // Caso não seja Mage nem Healer, pode ser um evento padrão como ganhar vida
+                    slowConsole.imprimirDevagar("Você encontrou um evento não esperado... ganhou +10 de vida!");
+                    personagem.setHealthbar(personagem.getHealthbar() + 10);
+                }
                 break;
             case 1:
                 slowConsole.imprimirDevagar("Você encontrou uma poção de cura! Ganhou +20 de vida.");
                 personagem.setHealthbar(personagem.getHealthbar() + 20);
                 break;
-            case 2:
+            default:
                 slowConsole.imprimirDevagar("Você encontrou um item raro! Ganhou +5 de ataque.");
                 personagem.setAttack(personagem.getAttack() + 5);
-                break;
-            default:
-                slowConsole.imprimirDevagar("Você encontrou um evento não esperado... ganhou +10 de vida!");
-                personagem.setHealthbar(personagem.getHealthbar() + 10);
                 break;
         }
     }
