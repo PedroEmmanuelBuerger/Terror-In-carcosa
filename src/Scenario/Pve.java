@@ -35,6 +35,7 @@ public class Pve {
 
     private static void startCombat(Scanner scanner, Attributes personagem) {
         Random random = new Random();
+        int escape = 0;
         SlowConsole slowConsole = new SlowConsole();
         // Escolher aleatoriamente um monstro para o próximo encontro
         Attributes enemy;
@@ -56,7 +57,7 @@ public class Pve {
         }
 
         // Apresentação inicial do monstro
-        slowConsole.imprimirDevagar ("Você encontrou um " + enemy.getName() + "!");
+        slowConsole.imprimirDevagar("Você encontrou um " + enemy.getName() + "!");
 
 
         // Loop de batalha
@@ -64,7 +65,11 @@ public class Pve {
             slowConsole.imprimirDevagar("Sua vez de agir:");
             slowConsole.imprimirDevagar("Escolha sua ação:");
             slowConsole.imprimirDevagar("1 - Atacar");
-            slowConsole.imprimirDevagar("2 - Ataque Especial");
+            if (personagem instanceof Mage) {
+                slowConsole.imprimirDevagar("2 - Livro de magias");
+            } else {
+                slowConsole.imprimirDevagar("2 - Ataque Especial");
+            }
             slowConsole.imprimirDevagar("3 - Fugir");
             // Opções adicionais para Warrior e Healer
             if (personagem instanceof Warrior) {
@@ -92,7 +97,14 @@ public class Pve {
                     personagem.attackWithSpecial(enemy);
                     break;
                 case 3:
-                    slowConsole.imprimirDevagar("Você fugiu!");
+                    double escapeChance = 35.00;
+                    Double randomSucess = random.nextDouble() * 100.0;
+                    if (randomSucess <= escapeChance) {
+                        slowConsole.imprimirDevagar("Você fugiu!");
+                        escape = 1;
+                    } else {
+                        slowConsole.imprimirDevagar("Você tentou fugir, mas não conseguiu!");
+                    }
                     break;
                 case 4:
                     if (personagem instanceof Warrior) {
@@ -111,7 +123,8 @@ public class Pve {
             }
 
             // Verifica se o jogador escolheu fugir (ação 3)
-            if (acaoJogador == 3) {
+            if (acaoJogador == 3 && escape == 1) {
+                escape = 0;
                 break; // Sai do loop de batalha atual
             }
 

@@ -7,6 +7,7 @@ import rpg.itens.SpeelBook;
 public class Mage extends Attributes {
     private int mana;
     SlowConsole slowConsole = new SlowConsole();
+
     public Mage(String name, int healthbar, int Mana, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.mana = Mana;
@@ -32,13 +33,16 @@ public class Mage extends Attributes {
     public void attackWithSpecial(Attributes enemy) {
         SpeelBook speelBook = new SpeelBook();
         int damageSpell = speelBook.selectSpell(this);
-        enemy.takeDamage(this.getSpecial() + damageSpell);
-        if (!enemy.isAlive()) {
-            slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
-            slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
-            gainExp(enemy.getLevel() * 10);
+        if (damageSpell != 0) {
+            enemy.takeDamage(this.getSpecial() + damageSpell);
+            if (!enemy.isAlive()) {
+                slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
+                slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
+                gainExp(enemy.getLevel() * 10);
+            }
         }
     }
+
     @Override
     public void getTechnicalInfo() {
         slowConsole.imprimirDevagar("Nome: " + getName());
@@ -48,5 +52,28 @@ public class Mage extends Attributes {
         slowConsole.imprimirDevagar("Ataque Mágico: " + getSpecial());
         slowConsole.imprimirDevagar("Mana: " + getMana());
         slowConsole.imprimirDevagar("Frase: " + getQuote());
+    }
+
+    @Override
+    public void gainExp(int expGain) {
+        setExp(getExp() + expGain); // Adiciona a experiência ganha
+
+        // Verifica se o personagem subiu de nível
+        while (getExp() >= getLevel() * 10) {
+            int levelsGained = getExp() / (getLevel() * 10); // Quantos níveis foram ganhos
+            setExp(getExp() % (getLevel() * 10)); // Experiência restante após subir de nível
+
+            // Aumenta o nível do personagem
+            setLevel(getLevel() + levelsGained);
+            slowConsole.imprimirDevagar(getName() + " upou de nível! Nível atual é: " + getLevel());
+
+            // Aumenta os atributos ao subir de nível
+            setSpecial(getSpecial() + 5 * levelsGained);
+            slowConsole.imprimirDevagar(getName() + " Aumentou " + (5 * levelsGained) + " de ataque Special!");
+            setHealthbar(getHealthbar() + 5 * levelsGained);
+            slowConsole.imprimirDevagar(getName() + " Aumentou " + (5 * levelsGained) + " de vida!");
+            setMana(getMana() + 5 * levelsGained);
+            slowConsole.imprimirDevagar(getName() + " Aumentou " + (5 * levelsGained) + " de Mana!");
+        }
     }
 }

@@ -127,6 +127,18 @@ public abstract class Attributes {
         return alive;
     }
 
+    public int getExp() {
+        return exp;
+    }
+
+    public void setExp(int exp) {
+        this.exp = exp;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
     public void gainExp(int expGain) {
         exp += expGain; // Adiciona a experiência ganha
 

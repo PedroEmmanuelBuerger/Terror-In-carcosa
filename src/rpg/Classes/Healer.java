@@ -11,7 +11,9 @@ public class Healer extends Attributes {
         this.mana = Mana;
         this.setClasses("Healer");
     }
+
     SlowConsole slowConsole = new SlowConsole();
+
     @Override
     public void attackWithSpecial(Attributes enemy) {
         int holyDamage = this.getSpecial() / 2;
@@ -81,6 +83,25 @@ public class Healer extends Attributes {
             }
         }
     }
+
+    @Override
+    public void gainExp(int expGain) {
+        setExp(getExp() + expGain); // Adiciona a experiência ganha
+
+        // Verifica se o personagem subiu de nível
+        while (getExp() >= getLevel() * 10) {
+            setExp(getExp() + getLevel() * 10); // Subtrai o máximo de experiência para o próximo nível
+            setLevel(getLevel() + 1); // Aumenta o nível do personagem
+            slowConsole.imprimirDevagar(getName() + " upou de nível! Nível atual é: " + getLevel());
+            setSpecial(getSpecial() + 5);
+            slowConsole.imprimirDevagar(getName() + " Aumentou 5 de ataque Special!");
+            setHealthbar(getHealthbar() + 5);
+            slowConsole.imprimirDevagar(getName() + " Aumentou 5 de vida!");
+            setMana(getMana() + 5);
+            slowConsole.imprimirDevagar(getName() + " Aumentou 5 de Mana!");
+        }
+    }
+
     @Override
     public void getTechnicalInfo() {
         slowConsole.imprimirDevagar("Nome: " + getName());
