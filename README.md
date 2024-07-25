@@ -13,16 +13,16 @@ Classes: Cada classe é unica e tem sua peculiaridade, com um funcionamento pró
 ## Tecnologias Utilizadas
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-Java: Linguagem de programação principal utilizada para implementar a lógica do jogo.
-POO (Programação Orientada a Objetos): Para estruturar e organizar o código do jogo.
-Intellij(IDE): Foi a IDE Utilizada para formular o projeto.
-Solid(Principio SOLID): Foi desenvolvido com base no solid.
+- Java: Linguagem de programação principal utilizada para implementar a lógica do jogo.
+- POO (Programação Orientada a Objetos): Para estruturar e organizar o código do jogo.
+- Intellij(IDE): Foi a IDE Utilizada para formular o projeto.
+- Solid(Principio SOLID): Foi desenvolvido com base no solid.
 
 ## Principais Aprendizados
 Os principais aprendizados incluem:
-Criação de Sistema de RPG: Implementar um sistema de RPG completo com criação de personagens, combate e eventos.
-Gestão de Estados e Recursos: Gerenciar atributos dos personagens, como vida, ataque, mana e experiência.
-Implementação de Eventos Aleatórios: Criar e integrar eventos que afetam a experiência do jogador de maneira dinâmica.
+- Criação de Sistema de RPG: Implementar um sistema de RPG completo com criação de personagens, combate e eventos.
+- Gestão de Estados e Recursos: Gerenciar atributos dos personagens, como vida, ataque, mana e experiência.
+- Implementação de Eventos Aleatórios: Criar e integrar eventos que afetam a experiência do jogador de maneira dinâmica.
 
 ## Conclusão
 Terror In YellowCity é um jogo de RPG que demonstra conceitos fundamentais de desenvolvimento de software, incluindo a criação de um sistema de combate, gerenciamento de recursos e eventos aleatórios. Este projeto proporcionou uma oportunidade valiosa para aprender e aplicar práticas modernas de desenvolvimento, além de criar uma experiência de jogo envolvente e interativa.
