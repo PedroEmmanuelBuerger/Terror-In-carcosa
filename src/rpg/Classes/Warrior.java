@@ -5,7 +5,8 @@ import Utils.SlowConsole;
 public class Warrior extends Attributes {
     private boolean defense = false;
     SlowConsole slowConsole = new SlowConsole();
-    public Warrior(String name,int healthbar, int attack, int special, String quote) {
+
+    public Warrior(String name, int healthbar, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         setClasses("Warrior");
     }
@@ -27,13 +28,12 @@ public class Warrior extends Attributes {
     public void takeDamage(int damage) {
         // Reduz a saúde do guerreiro atual pelo valor do dano recebido
         int currentHealth = this.getHealthbar();
-        if(this.isDefese() == true) {
+        if (this.isDefese() == true) {
             this.setHealthbar(currentHealth - (damage / 2));
             slowConsole.imprimirDevagar(this.getName() + " defendeu, recebendo " + damage / 2 + " de dano!");
             this.setDefese(false);
             getHealth(this);
-        }
-        else {
+        } else {
             this.setHealthbar(currentHealth - damage);
             slowConsole.imprimirDevagar(this.getName() + " recebeu " + damage + " de dano!");
             getHealth(this);

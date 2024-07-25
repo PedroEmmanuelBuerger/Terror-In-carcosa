@@ -97,7 +97,7 @@ public class Pve {
                     personagem.attackWithSpecial(enemy);
                     break;
                 case 3:
-                    double escapeChance = 35.00;
+                    double escapeChance = 25.00;
                     Double randomSucess = random.nextDouble() * 100.0;
                     if (randomSucess <= escapeChance) {
                         slowConsole.imprimirDevagar("Você fugiu!");
@@ -162,7 +162,7 @@ public class Pve {
     private static void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
-        int eventType = random.nextInt(2); // Escolhe aleatoriamente o tipo de evento não combativo
+        int eventType = random.nextInt(4); // Ajustado para 3 para incluir o novo tipo de evento
 
         switch (eventType) {
             case 0:
@@ -170,26 +170,44 @@ public class Pve {
                 if (personagem instanceof Mage || personagem instanceof Healer) {
                     int manaRecovered = random.nextInt(10) + 10; // Recupera entre 10 a 19 de mana
                     if (personagem instanceof Mage) {
-                        ((Mage) personagem).setMana(((Mage) personagem).getMana() + manaRecovered);
+                        ((Mage) personagem).recoverMana(manaRecovered);
                         slowConsole.imprimirDevagar("Você encontrou um cristal de mana! Recuperou " + manaRecovered + " de mana.");
                     } else if (personagem instanceof Healer) {
-                        // Adicione lógica específica de recuperação de mana para Healer, se necessário
+                        ((Healer) personagem).recoverMana(manaRecovered);
                         slowConsole.imprimirDevagar("Você encontrou um foco de cura! Recuperou " + manaRecovered + " de mana.");
                     }
                 } else {
                     // Caso não seja Mage nem Healer, pode ser um evento padrão como ganhar vida
-                    slowConsole.imprimirDevagar("Você encontrou um evento não esperado... ganhou +10 de vida!");
-                    personagem.setHealthbar(personagem.getHealthbar() + 10);
+                    int healthRecovered = random.nextInt(10) + 10; // Recupera entre 10 a 19 de vida
+                    int maxHealth = personagem.getMaxHealthInitial();
+                    if (personagem.getHealthbar() + healthRecovered <= maxHealth) {
+                        personagem.setHealthbar(personagem.getHealthbar() + healthRecovered);
+                    } else {
+                        personagem.setHealthbar(maxHealth);
+                    }
+                    slowConsole.imprimirDevagar("Você encontrou um evento não esperado... Recuperou +" + healthRecovered + " de vida!");
                 }
                 break;
             case 1:
-                slowConsole.imprimirDevagar("Você encontrou uma poção de cura! Ganhou +20 de vida.");
-                personagem.setHealthbar(personagem.getHealthbar() + 20);
+                slowConsole.imprimirDevagar("Você encontrou uma poção de cura! Recuperou +20 de vida.");
+                int maxHealth = personagem.getMaxHealthInitial();
+                if (personagem.getHealthbar() + 20 <= maxHealth) {
+                    personagem.setHealthbar(personagem.getHealthbar() + 20);
+                } else {
+                    personagem.setHealthbar(maxHealth);
+                }
                 break;
-            default:
+            case 2:
                 slowConsole.imprimirDevagar("Você encontrou um item raro! Ganhou +5 de ataque.");
                 personagem.setAttack(personagem.getAttack() + 5);
                 break;
+            case 3:
+                slowConsole.imprimirDevagar("Você presenciou  um evento estranho... Ganhou +5 de ataque Especial.");
+                personagem.setSpecial(personagem.getSpecial() + 5);
+            default:
+                slowConsole.imprimirDevagar("Evento não reconhecido.");
+                break;
         }
     }
+
 }

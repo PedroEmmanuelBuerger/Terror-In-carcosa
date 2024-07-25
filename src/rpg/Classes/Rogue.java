@@ -1,14 +1,17 @@
 package rpg.Classes;
+
 import Utils.SlowConsole;
 
 import java.util.Random;
 
-public class Rogue  extends  Attributes{
+public class Rogue extends Attributes {
     SlowConsole slowConsole = new SlowConsole();
+
     public Rogue(String name, int healthbar, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.setClasses("Rogue");
     }
+
     Double dodgeSkills = 25.0;
     Random random = new Random();
 
