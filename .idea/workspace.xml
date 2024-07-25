@@ -9,9 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando classe mago + adicionando ganho de exp individual para cada inimigo + enfrentar o boss nivel 5">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando sistema de vida + criando final">
+      <change afterPath="$PROJECT_DIR$/src/rpg/Events/HealthRecoveryEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/Events/ManaRecoveryEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/Events/NonCombatEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenario/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenario/Pve.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721926726872</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Arrumando sistema de vida + criando final">
+      <option name="closed" value="true" />
+      <created>1721927808184</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1721927808184</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,7 +249,8 @@
     <MESSAGE value="Adicionando SpellBook, um evento aleatório e mudando o comportamento de alguns métodos" />
     <MESSAGE value="Emplementado a lógica de fugir e funcionamento de algumas classes + speelBook" />
     <MESSAGE value="Arrumando classe mago + adicionando ganho de exp individual para cada inimigo + enfrentar o boss nivel 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando classe mago + adicionando ganho de exp individual para cada inimigo + enfrentar o boss nivel 5" />
+    <MESSAGE value="Arrumando sistema de vida + criando final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando sistema de vida + criando final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

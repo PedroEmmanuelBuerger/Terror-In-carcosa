@@ -6,6 +6,7 @@ import rpg.Classes.Healer;
 import rpg.Classes.Mage;
 import rpg.Classes.Warrior;
 import rpg.CharacterCreation.CreatePlayer;
+import rpg.Events.*;
 import rpg.Monsters.Boss;
 import rpg.Monsters.Goblin;
 import rpg.Monsters.Zombie;
@@ -174,61 +175,27 @@ public class Pve {
     private static void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
-        int eventType = random.nextInt(3); // Ajustado para 3 para incluir o novo tipo de evento
+        int eventType = random.nextInt(4); // Agora temos 4 tipos de eventos
 
+        NonCombatEvent event;
         switch (eventType) {
             case 0:
-                // Evento de recuperação de mana
-                if (personagem instanceof Mage || personagem instanceof Healer) {
-                    int manaRecovered = random.nextInt(10) + 10; // Recupera entre 10 a 19 de mana
-                    if (personagem instanceof Mage) {
-                        ((Mage) personagem).recoverMana(manaRecovered);
-                        slowConsole.imprimirDevagar("Você encontrou um cristal de mana! Recuperou " + manaRecovered + " de mana.");
-                    } else if (personagem instanceof Healer) {
-                        ((Healer) personagem).recoverMana(manaRecovered);
-                        slowConsole.imprimirDevagar("Você encontrou um foco de cura! Recuperou " + manaRecovered + " de mana.");
-                    }
-                } else {
-                    // Caso não seja Mage nem Healer, pode ser um evento padrão como ganhar vida
-                    int healthRecovered = random.nextInt(10) + 10; // Recupera entre 10 a 19 de vida
-                    int maxHealth = personagem.getMaxHealthInitial();
-                    if (personagem.getHealthbar() < maxHealth) { // Verifica se não está com saúde máxima
-                        if (personagem.getHealthbar() + healthRecovered <= maxHealth) {
-                            personagem.setHealthbar(personagem.getHealthbar() + healthRecovered);
-                        } else {
-                            personagem.setHealthbar(maxHealth);
-                        }
-                        slowConsole.imprimirDevagar("Você encontrou um pedaço de carne... Recuperou +" + healthRecovered + " de vida!");
-                    } else {
-                        slowConsole.imprimirDevagar("Você encontrou um pedaço de carne... Mas está com vida cheia, então deixou para trás.");
-                    }
-                }
+                event = new ManaRecoveryEvent();
                 break;
             case 1:
-                // Poção de cura
-                if (personagem.getHealthbar() < personagem.getMaxHealthInitial()) { // Verifica se não está com saúde máxima
-                    slowConsole.imprimirDevagar("Você encontrou uma poção de cura! Recuperou +20 de vida.");
-                    int maxHealth = personagem.getMaxHealthInitial();
-                    if (personagem.getHealthbar() + 20 <= maxHealth) {
-                        personagem.setHealthbar(personagem.getHealthbar() + 20);
-                    } else {
-                        personagem.setHealthbar(maxHealth);
-                    }
-                } else {
-                    slowConsole.imprimirDevagar("Você encontrou uma poção de cura... Mas está com vida cheia, então deixou para trás.");
-                }
+                event = new HealthRecoveryEvent();
                 break;
             case 2:
-                slowConsole.imprimirDevagar("Você encontrou um item raro! Ganhou +5 de ataque.");
-                personagem.setAttack(personagem.getAttack() + 5);
+                event = new HealingPotionEvent();
                 break;
             case 3:
-                slowConsole.imprimirDevagar("Você presenciou um evento estranho... Ganhou +5 de ataque Especial.");
-                personagem.setSpecial(personagem.getSpecial() + 5);
+                event = new RareItemEvent();
                 break;
             default:
                 slowConsole.imprimirDevagar("Evento não reconhecido.");
-                break;
+                return;
         }
+
+        event.executeEvent(personagem);
     }
 }
