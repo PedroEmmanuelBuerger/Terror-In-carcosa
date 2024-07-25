@@ -9,37 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="organizando código + mudando funcionamento eventos">
-      <change afterPath="$PROJECT_DIR$/src/rpg/Monsters/Carnical.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/Monsters/KingDragon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/Monsters/Lobisomen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/Utils/CombatSystem.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando Niveis + Dungeons diferentes + Novos inimigos + balanceamento">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenario/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/InputUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/InputUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/ManaAdm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/ManaAdm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/SlowConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/SlowConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateHealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateHealer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateMage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateMage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreatePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreatePlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateRogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateRogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateWarrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateWarrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/HealingPotionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/HealingPotionEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/HealthRecoveryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/HealthRecoveryEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/ManaRecoveryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/ManaRecoveryEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/RareItemEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/RareItemEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Boss.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Goblin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Zombie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Zombie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/itens/SpeelBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/SpeelBook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -264,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721928687789</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Adicionando Niveis + Dungeons diferentes + Novos inimigos + balanceamento">
+      <option name="closed" value="true" />
+      <created>1721934208746</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1721934208746</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -291,6 +278,7 @@
     <MESSAGE value="Arrumando classe mago + adicionando ganho de exp individual para cada inimigo + enfrentar o boss nivel 5" />
     <MESSAGE value="Arrumando sistema de vida + criando final" />
     <MESSAGE value="organizando código + mudando funcionamento eventos" />
-    <option name="LAST_COMMIT_MESSAGE" value="organizando código + mudando funcionamento eventos" />
+    <MESSAGE value="Adicionando Niveis + Dungeons diferentes + Novos inimigos + balanceamento" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando Niveis + Dungeons diferentes + Novos inimigos + balanceamento" />
   </component>
 </project>

@@ -98,8 +98,8 @@ public class CreateMage {
                     maxPoints = 99; // Restaura os pontos de ataque especial descontados
                     continue;
                 }
-
                 maxPoints -= mana; // Desconta os pontos da mana de maxPoints
+                mana = mana + 15;
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para a mana.");
                 scanner.nextLine(); // Limpar o buffer

@@ -42,7 +42,8 @@ public class CreateHealer {
                     slowConsole.imprimirDevagar("Vida inicial não pode ser 0");
                     continue;
                 }
-                maxPoints -= vida; // Desconta os pontos da vida de maxPoints
+                maxPoints -= vida;
+                vida = vida + 5;// Desconta os pontos da vida de maxPoints
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para a vida.");
                 scanner.nextLine(); // Limpar o buffer
@@ -80,7 +81,8 @@ public class CreateHealer {
                     continue;
                 }
 
-                maxPoints -= especial; // Desconta os pontos do ataque especial de maxPoints
+                maxPoints -= especial;
+                especial = especial + 5;// Desconta os pontos do ataque especial de maxPoints
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para o ataque especial.");
                 scanner.nextLine(); // Limpar o buffer
@@ -98,8 +100,8 @@ public class CreateHealer {
                     maxPoints += especial; // Restaura os pontos de ataque especial descontados
                     continue;
                 }
-
                 maxPoints -= mana; // Desconta os pontos da mana de maxPoints
+                mana = mana + 5;
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para a mana.");
                 scanner.nextLine(); // Limpar o buffer

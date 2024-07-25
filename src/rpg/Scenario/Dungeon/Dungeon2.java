@@ -82,7 +82,7 @@ public class Dungeon2 implements Dungeon {
                 case 3:
                     double escapeChance = 25.00;
                     Double randomSucess = random.nextDouble() * 100.0;
-                    if (randomSucess <= escapeChance && !enemy.getName().equals("Ghazkull")) {
+                    if (randomSucess <= escapeChance && !enemy.getName().equals("Dragon Lord King")) {
                         slowConsole.imprimirDevagar("Você fugiu!");
                         escape = 1;
                     } else {
@@ -114,7 +114,7 @@ public class Dungeon2 implements Dungeon {
             }
 
             if (enemy.getHealthbar() <= 0) {
-                if (enemy.getName().equals("Ghazkull")) {
+                if (enemy.getName().equals("Dragon Lord King")) {
                     slowConsole.imprimirDevagar("Você derrotou o chefão da dungeon! Liberdade cantou...");
                     System.exit(0);
                 }

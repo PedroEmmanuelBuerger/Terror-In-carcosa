@@ -20,10 +20,10 @@ public class SpeelBook {
 
     public int selectSpell(Mage mage) {
         slowConsole.imprimirDevagar("Selecione Sua Magia:");
-        slowConsole.imprimirDevagar("1 - Tormenta de fogo (Custo de mana: 15)");
-        slowConsole.imprimirDevagar("2 - Jato Super comprimido de água (Custo de mana: 11)");
-        slowConsole.imprimirDevagar("3 - Chuva de pedras (Custo de mana: 20)");
-        slowConsole.imprimirDevagar("4 - Tempestade Ártica (Custo de mana: 25)");
+        slowConsole.imprimirDevagar("1 - Tormenta de fogo (Custo de mana: 5)");
+        slowConsole.imprimirDevagar("2 - Jato Super comprimido de água (Custo de mana: 7)");
+        slowConsole.imprimirDevagar("3 - Chuva de pedras (Custo de mana: 13)");
+        slowConsole.imprimirDevagar("4 - Tempestade Ártica (Custo de mana: 17)");
         boolean manaRes;
         ManaAdm manaAdm = new ManaAdm();
 
@@ -34,39 +34,39 @@ public class SpeelBook {
 
             switch (escolha) {
                 case 1:
-                    manaRes = manaAdm.costMana(mage.getMana(), 15, mage.getName());
+                    manaRes = manaAdm.costMana(mage.getMana(), 5, mage.getName());
                     if (!manaRes) {
                         slowConsole.imprimirDevagar("Você selecionou: Tormenta de fogo");
-                        damage = 15;
-                        mage.setMana(mage.getMana() - 15);
-                        slowConsole.imprimirDevagar(mage.getName() + " gastou 15 de mana, ficando com " + mage.getMana() + " restante.");
+                        damage = 8;
+                        mage.setMana(mage.getMana() - 5);
+                        slowConsole.imprimirDevagar(mage.getName() + " gastou 5 de mana, ficando com " + mage.getMana() + " restante.");
                     }
                     break;
                 case 2:
-                    manaRes = manaAdm.costMana(mage.getMana(), 11, mage.getName());
+                    manaRes = manaAdm.costMana(mage.getMana(), 7, mage.getName());
                     if (!manaRes) {
                         slowConsole.imprimirDevagar("Você selecionou: Jato massiso de água");
                         damage = 12;
-                        mage.setMana(mage.getMana() - 11);// Chamar costMana na instância criada
-                        slowConsole.imprimirDevagar(mage.getName() + " gastou 11 de mana, ficando com " + mage.getMana() + " restante.");
+                        mage.setMana(mage.getMana() - 7);// Chamar costMana na instância criada
+                        slowConsole.imprimirDevagar(mage.getName() + " gastou 7 de mana, ficando com " + mage.getMana() + " restante.");
                     }
                     break;
                 case 3:
-                    manaRes = manaAdm.costMana(mage.getMana(), 20, mage.getName());
+                    manaRes = manaAdm.costMana(mage.getMana(), 13, mage.getName());
                     if (!manaRes) {
                         slowConsole.imprimirDevagar("Você selecionou: Chuva de pedras");
-                        mage.setMana(mage.getMana() - 20);
-                        slowConsole.imprimirDevagar(mage.getName() + " gastou 20 de mana, ficando com " + mage.getMana() + " restante.");// Chamar costMana na instância criada
-                        damage = 18;
+                        mage.setMana(mage.getMana() - 13);
+                        slowConsole.imprimirDevagar(mage.getName() + " gastou 13 de mana, ficando com " + mage.getMana() + " restante.");// Chamar costMana na instância criada
+                        damage = 15;
                     }
                     break;
                 case 4:
-                    manaRes = manaAdm.costMana(mage.getMana(), 25, mage.getName());
+                    manaRes = manaAdm.costMana(mage.getMana(), 17, mage.getName());
                     if (!manaRes) {
                         slowConsole.imprimirDevagar("Você selecionou: Tempestade Ártica");
-                        mage.setMana(mage.getMana() - 25);
-                        slowConsole.imprimirDevagar(mage.getName() + " gastou 25 de mana, ficando com " + mage.getMana() + " restante.");// Chamar costMana na instância criada
-                        damage = 30;
+                        mage.setMana(mage.getMana() - 17);
+                        slowConsole.imprimirDevagar(mage.getName() + " gastou 17 de mana, ficando com " + mage.getMana() + " restante.");// Chamar costMana na instância criada
+                        damage = 26;
                     }
                     break;
                 default:

@@ -5,12 +5,23 @@ import rpg.itens.SpeelBook;
 
 public class Mage extends Attributes {
     private int mana;
+    private int maxMana;
     SlowConsole slowConsole = new SlowConsole();
 
     public Mage(String name, int healthbar, int mana, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.mana = mana;
         this.setClasses("Mage");
+        this.maxMana = mana;
+
+    }
+
+    public int getMaxMana() {
+        return maxMana;
+    }
+
+    public void setMaxMana(int maxMana) {
+        this.maxMana = maxMana;
     }
 
     public int getMana() {
@@ -77,6 +88,7 @@ public class Mage extends Attributes {
             setHealthbar(getHealthbar() + 5 * levelsGained);
             slowConsole.imprimirDevagar(getName() + " Aumentou " + (5 * levelsGained) + " de vida!");
             setMana(getMana() + 5 * levelsGained);
+            setMaxMana(getMaxMana() + 5);
             slowConsole.imprimirDevagar(getName() + " Aumentou " + (5 * levelsGained) + " de Mana!");
         }
     }
@@ -90,8 +102,4 @@ public class Mage extends Attributes {
         }
     }
 
-    public int getMaxMana() {
-        // Define o máximo de mana com base no nível do personagem
-        return getLevel() * 10;
-    }
 }

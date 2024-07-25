@@ -117,7 +117,7 @@ public class Dungeon1 implements Dungeon {
 
             if (enemy.getHealthbar() <= 0) {
                 if (enemy.getName().equals("Ghazkull")) {
-                    slowConsole.imprimirDevagar("Você derrotou o chefão da dungeon! Liberdade cantou...");
+                    slowConsole.imprimirDevagar("Você derrotou o chefão da dungeon! Indo para o próximo nivel...");
                     personagem.setLevelDungeon(personagem.getLevelDungeon() + 1);
                 }
                 break;

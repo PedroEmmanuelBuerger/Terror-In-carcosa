@@ -5,12 +5,14 @@ import rpg.Utils.ManaAdm;
 
 public class Healer extends Attributes {
     private int mana;
+    private int maxMana;
     SlowConsole slowConsole = new SlowConsole();
 
     public Healer(String name, int healthbar, int Mana, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.mana = Mana;
         this.setClasses("Healer");
+        this.maxMana = mana;
     }
 
     public int getMana() {
@@ -99,6 +101,7 @@ public class Healer extends Attributes {
             setHealthbar(getHealthbar() + 5 * levelsGained);
             slowConsole.imprimirDevagar(getName() + " Aumentou " + (5 * levelsGained) + " de vida!");
             setMana(getMana() + 5 * levelsGained);
+            setMaxMana(getMaxMana() + 5);
             slowConsole.imprimirDevagar(getName() + " Aumentou " + (5 * levelsGained) + " de Mana!");
         }
     }
@@ -124,7 +127,10 @@ public class Healer extends Attributes {
     }
 
     public int getMaxMana() {
-        // Define o máximo de mana com base no nível do personagem
-        return getLevel() * 10;
+        return maxMana;
+    }
+
+    public void setMaxMana(int maxMana) {
+        this.maxMana = maxMana;
     }
 }

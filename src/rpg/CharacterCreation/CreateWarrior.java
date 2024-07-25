@@ -41,7 +41,8 @@ public class CreateWarrior {
                     slowConsole.imprimirDevagar("Vida inicial não pode ser 0");
                     continue;
                 }
-                maxPoints -= vida; // Desconta os pontos da vida de maxPoints
+                maxPoints -= vida;
+                vida = vida + 15;// Desconta os pontos da vida de maxPoints
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para a vida.");
                 scanner.nextLine(); // Limpar o buffer
