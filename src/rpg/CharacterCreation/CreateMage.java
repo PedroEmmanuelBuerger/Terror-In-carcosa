@@ -38,7 +38,10 @@ public class CreateMage {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para a vida. Tente novamente.");
                     continue;
                 }
-
+                if (vida == 0){
+                    slowConsole.imprimirDevagar("Vida inicial não pode ser 0");
+                    continue;
+                }
                 maxPoints -= vida; // Desconta os pontos da vida de maxPoints
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para a vida.");

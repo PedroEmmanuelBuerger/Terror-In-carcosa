@@ -56,7 +56,10 @@ public class CreateRogue {
                     maxPoints = 99; // Restaura os pontos de vida descontados
                     continue;
                 }
-
+                if (vida == 0){
+                    slowConsole.imprimirDevagar("Vida inicial não pode ser 0");
+                    continue;
+                }
                 maxPoints -= ataque; // Desconta os pontos do ataque de maxPoints
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para o ataque.");

@@ -42,7 +42,7 @@ public class Pve {
 
         // Verificar se o personagem está no nível necessário para enfrentar o Boss
         if (personagem.getLevel() >= 5) {
-            enemy = new Boss("Ghazkull", 450, 25, 30, "HAHAHAHAHAHA"); // Exemplo: Boss com 500 de exp ao ser derrotado
+            enemy = new Boss("Ghazkull", 100, 25, 30, "HAHAHAHAHAHA"); // Exemplo: Boss com 500 de exp ao ser derrotado
         } else {
             // Caso o jogador não esteja no nível adequado, enfrentará um Goblin ou Zombie
             int randomMonster = random.nextInt(2); // 0: Goblin, 1: Zombie
@@ -103,7 +103,7 @@ public class Pve {
                 case 3:
                     double escapeChance = 25.00;
                     Double randomSucess = random.nextDouble() * 100.0;
-                    if (randomSucess <= escapeChance) {
+                    if (randomSucess <= escapeChance && enemy.getName() != "Ghazkull") {
                         slowConsole.imprimirDevagar("Você fugiu!");
                         escape = 1;
                     } else {
@@ -137,13 +137,17 @@ public class Pve {
 
             // Verifica se o inimigo foi derrotado após a ação do jogador
             if (enemy.getHealthbar() <= 0) {
+                if (enemy.getName() == "Ghazkull") {
+                    slowConsole.imprimirDevagar("Você derrotou o chefão da dungeon! liberdade cantou...");
+                    System.exit( 0);
+                }
                 break; // Sai do loop de batalha atual
             }
 
             // Turno do inimigo
             slowConsole.imprimirDevagar("\nTurno de " + enemy.getName() + ":");
 
-            int acaoInimigo = random.nextInt(2); // 0 para attack, 1 para attackWithSpecial
+            int acaoInimigo = random.nextInt(3); // 0 para attack, 1 para attackWithSpecial
 
             switch (acaoInimigo) {
                 case 0:
@@ -153,7 +157,8 @@ public class Pve {
                     enemy.attackWithSpecial(personagem); // Inimigo usa ataque especial contra o personagem
                     break;
                 default:
-                    slowConsole.imprimirDevagar("Inimigo não fez nada neste turno.");
+                    slowConsole.imprimirDevagar(enemy.getName() + " esta preparando seu ataque!");
+                    slowConsole.imprimirDevagar(enemy.getName() + ": " + enemy.getQuote());
             }
 
             System.out.println();
