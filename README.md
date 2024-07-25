@@ -4,11 +4,11 @@ Terror In YellowCity é um projeto de RPG desenvolvido para oferecer uma experi�
 ## Funcionalidades
 O projeto inclui as seguintes funcionalidades:
 
-Criação de Personagens: Permite criar personagens de diferentes classes, incluindo Guerreiro, Mago, Ladino e Curandeiro, cada um com suas características e habilidades únicas.
-Sistema de Combate: Implementa batalhas entre o personagem do jogador e inimigos, com a capacidade de realizar ataques normais e especiais, entre outros.
-Eventos Não Combatentes: Inclui eventos aleatórios que podem afetar o estado do personagem, como encontrar poções de cura ou itens raros.
-Gerenciamento de Mana e Experiência: Personagens podem usar mana para habilidades especiais e ganhar experiência para subir de nível e melhorar suas estatísticas.
-Classes: Cada classe é unica e tem sua peculiaridade, com um funcionamento próprio.
+- Criação de Personagens: Permite criar personagens de diferentes classes, incluindo Guerreiro, Mago, Ladino e Curandeiro, cada um com suas características e habilidades únicas.
+- Sistema de Combate: Implementa batalhas entre o personagem do jogador e inimigos, com a capacidade de realizar ataques normais e especiais, entre outros.
+- Eventos Não Combatentes: Inclui eventos aleatórios que podem afetar o estado do personagem, como encontrar poções de cura ou itens raros.
+- Gerenciamento de Mana e Experiência: Personagens podem usar mana para habilidades especiais e ganhar experiência para subir de nível e melhorar suas estatísticas.
+- Classes: Cada classe é unica e tem sua peculiaridade, com um funcionamento próprio.
 
 ## Tecnologias Utilizadas
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
