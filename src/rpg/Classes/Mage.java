@@ -1,10 +1,11 @@
 package rpg.Classes;
 
 import Utils.ManaAdm;
+import Utils.SlowConsole;
 
 public class Mage extends Attributes {
     private int mana;
-
+    SlowConsole slowConsole = new SlowConsole();
     public Mage(String name, int healthbar, int Mana, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.mana = Mana;
@@ -14,7 +15,7 @@ public class Mage extends Attributes {
     @Override
     public void attack(Attributes enemy) {
         int damage = this.getAttack();
-        System.out.println(this.getName() + " lançou uma bola de fogo em " + enemy.getName() + " causando " + damage + " de dano!");
+        slowConsole.imprimirDevagar(this.getName() + " lançou uma bola de fogo em " + enemy.getName() + " causando " + damage + " de dano!");
         enemy.takeDamage(damage);
     }
 
@@ -26,13 +27,13 @@ public class Mage extends Attributes {
         if (!manaRes) {
             int damage = this.getSpecial();
             damage = damage + 15;
-            System.out.println(this.getName() + " conjurou um feitiço poderoso em " + enemy.getName() + " causando " + damage+ " de dano!");
+            slowConsole.imprimirDevagar(this.getName() + " conjurou um feitiço poderoso em " + enemy.getName() + " causando " + damage+ " de dano!");
             mana = mana - 20;
-            System.out.println(this.getName() + " gastou 25 de mana, ficando com " + mana + " Restante");
+            slowConsole.imprimirDevagar(this.getName() + " gastou 25 de mana, ficando com " + mana + " Restante");
             enemy.takeDamage(damage);
             if (!enemy.isAlive()) {
-                System.out.println("Vida total de " + enemy.getName() + " é 0");
-                System.out.println(enemy.getName() + " foi derrotado!");
+                slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
+                slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
             }
         }
     }

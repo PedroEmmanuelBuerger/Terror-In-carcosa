@@ -1,8 +1,10 @@
 package rpg.Classes;
+import Utils.SlowConsole;
+
 import java.util.Random;
 
 public class Rogue  extends  Attributes{
-
+    SlowConsole slowConsole = new SlowConsole();
     public Rogue(String name, int healthbar, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.setClasses("Rogue");
@@ -15,13 +17,13 @@ public class Rogue  extends  Attributes{
         double randomNumber = random.nextDouble() * 100.0;
         int currentHealth = this.getHealthbar();
         if (randomNumber <= dodgeSkills) {
-            System.out.println(getName() + " Desviou!");
+            slowConsole.imprimirDevagar(getName() + " Desviou!");
         } else {
             this.setHealthbar(currentHealth - damage);
-            System.out.println(this.getName() + " recebeu " + damage + " de dano!");
+            slowConsole.imprimirDevagar(this.getName() + " recebeu " + damage + " de dano!");
             getHealth(this);
             if (this.getHealthbar() <= 0) {
-                System.out.println(this.getName() + " foi derrotado!");
+                slowConsole.imprimirDevagar(this.getName() + " foi derrotado!");
             }
         }
     }

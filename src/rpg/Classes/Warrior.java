@@ -1,7 +1,10 @@
 package rpg.Classes;
 
+import Utils.SlowConsole;
+
 public class Warrior extends Attributes {
     private boolean defense = false;
+    SlowConsole slowConsole = new SlowConsole();
     public Warrior(String name,int healthbar, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         setClasses("Warrior");
@@ -17,7 +20,7 @@ public class Warrior extends Attributes {
 
     public void defend() {
         setDefese(true);
-        System.out.println(getName() + " entrou em posição de defesa!");
+        slowConsole.imprimirDevagar(getName() + " entrou em posição de defesa!");
     }
 
     @Override
@@ -26,13 +29,13 @@ public class Warrior extends Attributes {
         int currentHealth = this.getHealthbar();
         if(this.isDefese() == true) {
             this.setHealthbar(currentHealth - (damage / 2));
-            System.out.println(this.getName() + " defendeu, recebendo " + damage / 2 + " de dano!");
+            slowConsole.imprimirDevagar(this.getName() + " defendeu, recebendo " + damage / 2 + " de dano!");
             this.setDefese(false);
             getHealth(this);
         }
         else {
             this.setHealthbar(currentHealth - damage);
-            System.out.println(this.getName() + " recebeu " + damage + " de dano!");
+            slowConsole.imprimirDevagar(this.getName() + " recebeu " + damage + " de dano!");
             getHealth(this);
         }
     }

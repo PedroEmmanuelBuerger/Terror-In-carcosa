@@ -25,8 +25,8 @@ public class Healer extends Attributes {
             slowConsole.imprimirDevagar(this.getName() + " gastou 15 de mana, ficando com " + this.mana + " restante.");
             enemy.takeDamage(holyDamage);
             if (!enemy.isAlive()) {
-                System.out.println("Vida total de " + enemy.getName() + " é 0");
-                System.out.println(enemy.getName() + " foi derrotado!");
+                slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
+                slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
             }
         }
     }
@@ -63,12 +63,12 @@ public class Healer extends Attributes {
         manaRes = manaAdm.costMana(this.mana, 15, this.getName()); // Chamar costMana na instância criada
         if (!manaRes) {
             if (ally.isAlive() == true) {
-                System.out.println(ally.getName() + " Esta vivo, impossivel ressuscitar!");
+                slowConsole.imprimirDevagar(ally.getName() + " Esta vivo, impossivel ressuscitar!");
             } else {
                 ally.setHealthbar(ally.getMaxHealthInitial() / 2);
-                System.out.println(ally.getName() + " foi ressuscitado! Sua vida atual é " + ally.getHealthbar());
+                slowConsole.imprimirDevagar(ally.getName() + " foi ressuscitado! Sua vida atual é " + ally.getHealthbar());
                 mana -= 35;
-                System.out.println(getName() + " gastou 35 de mana, ficando com " + mana + " restante.");
+                slowConsole.imprimirDevagar(getName() + " gastou 35 de mana, ficando com " + mana + " restante.");
             }
         }
     }

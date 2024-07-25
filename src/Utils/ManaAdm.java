@@ -1,10 +1,11 @@
 package Utils;
 
 public class ManaAdm {
+    SlowConsole slowConsole = new SlowConsole();
     public boolean costMana(int mana, int discount, String Name) {
      int value = mana - discount;
      if (value < 0){
-         System.out.println(Name + " não tem mana suficiente para conjurar o feitiço.");
+         slowConsole.imprimirDevagar(Name + " não tem mana suficiente para conjurar o feitiço.");
          return true;
      }
      else return false;
