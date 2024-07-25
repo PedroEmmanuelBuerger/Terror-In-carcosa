@@ -1,4 +1,4 @@
-import Scenario.Pve;
+import rpg.Scenario.Mode.Pve;
 
 import java.util.Scanner;
 

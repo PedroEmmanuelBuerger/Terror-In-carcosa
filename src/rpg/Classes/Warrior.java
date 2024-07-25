@@ -1,6 +1,6 @@
 package rpg.Classes;
 
-import Utils.SlowConsole;
+import rpg.Utils.SlowConsole;
 
 public class Warrior extends Attributes {
     private boolean defense = false;

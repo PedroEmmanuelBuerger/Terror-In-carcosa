@@ -1,6 +1,6 @@
 package rpg.Events;
 
-import Utils.SlowConsole;
+import rpg.Utils.SlowConsole;
 import rpg.Classes.Attributes;
 
 public class RareItemEvent implements NonCombatEvent {

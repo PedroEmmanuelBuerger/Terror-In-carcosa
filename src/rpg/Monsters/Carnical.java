@@ -3,12 +3,12 @@ package rpg.Monsters;
 import rpg.Utils.SlowConsole;
 import rpg.Classes.Attributes;
 
-public class Goblin extends Attributes {
+public class Carnical extends Attributes {
     SlowConsole slowConsole = new SlowConsole();
 
-    public Goblin(String name, int healthbar, int attack, int specialAttack, String battleCry) {
+    public Carnical(String name, int healthbar, int attack, int specialAttack, String battleCry) {
         super(name, healthbar, attack, specialAttack, battleCry);
-        this.setExp(5);
+        this.setExp(15);
     }
 
     @Override

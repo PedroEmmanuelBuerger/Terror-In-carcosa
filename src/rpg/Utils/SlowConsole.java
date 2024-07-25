@@ -1,4 +1,4 @@
-package Utils;
+package rpg.Utils;
 
 public class SlowConsole {
     private int delay = 1; // ajuste o valor para controlar a velocidade (200 milissegundos neste exemplo)

@@ -1,6 +1,6 @@
 package rpg.Classes;
 
-import Utils.SlowConsole;
+import rpg.Utils.SlowConsole;
 
 public abstract class Attributes {
     private String name;
@@ -14,6 +14,7 @@ public abstract class Attributes {
     private int level;
     private int exp; // Variável de experiência
     SlowConsole slowConsole = new SlowConsole();
+    int levelDungeon = 1;
 
     public Attributes(String name, int healthbar, int attack, int special, String quote) {
         this.name = name;
@@ -33,6 +34,14 @@ public abstract class Attributes {
 
     public void setHealthbar(int healthbar) {
         this.healthbar = healthbar;
+    }
+
+    public int getLevelDungeon() {
+        return levelDungeon;
+    }
+
+    public void setLevelDungeon(int levelDungeon) {
+        this.levelDungeon = levelDungeon;
     }
 
     public int getAttack() {
@@ -142,8 +151,8 @@ public abstract class Attributes {
         exp += expGain; // Adiciona a experiência ganha
 
         // Verifica se o personagem subiu de nível
-        while (exp >= level * 5) {
-            exp -= level * 5; // Subtrai o máximo de experiência para o próximo nível
+        while (exp >= level * 7){
+            exp -= level * 7; // Subtrai o máximo de experiência para o próximo nível
             level++; // Aumenta o nível do personagem
             slowConsole.imprimirDevagar(getName() + " upou de nível! Nível atual é: " + getLevel());
             setAttack(getAttack() + 5);

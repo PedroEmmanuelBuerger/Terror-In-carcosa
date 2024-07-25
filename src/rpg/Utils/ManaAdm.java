@@ -1,4 +1,4 @@
-package Utils;
+package rpg.Utils;
 
 public class ManaAdm {
     SlowConsole slowConsole = new SlowConsole();

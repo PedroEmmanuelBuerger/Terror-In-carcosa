@@ -1,8 +1,8 @@
 package rpg.itens;
 
-import Utils.ManaAdm;
-import Utils.SlowConsole;
-import Utils.InputUtils;
+import rpg.Utils.ManaAdm;
+import rpg.Utils.SlowConsole;
+import rpg.Utils.InputUtils;
 import rpg.CharacterCreation.CreatePlayer; // Importe a classe CreatePlayer corretamente
 import rpg.Classes.Mage;
 

@@ -1,6 +1,6 @@
 package rpg.Classes;
 
-import Utils.SlowConsole;
+import rpg.Utils.SlowConsole;
 
 import java.util.Random;
 

@@ -1,6 +1,6 @@
 package rpg.Monsters;
 
-import Utils.SlowConsole;
+import rpg.Utils.SlowConsole;
 import rpg.Classes.Attributes;
 
 public class Boss extends Attributes {

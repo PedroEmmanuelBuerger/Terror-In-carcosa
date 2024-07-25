@@ -1,10 +1,9 @@
 package rpg.Monsters;
 
-import Utils.SlowConsole;
+import rpg.Utils.SlowConsole;
 import rpg.Classes.Attributes;
 
 public class Zombie extends Attributes {
-    int exp = 8;
     SlowConsole slowConsole = new SlowConsole();
 
     public Zombie(String name, int healthbar, int attack, int specialAttack, String battleCry) {
