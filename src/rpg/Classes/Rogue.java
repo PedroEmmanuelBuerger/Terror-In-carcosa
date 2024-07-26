@@ -1,16 +1,19 @@
 package rpg.Classes;
 
 import rpg.Utils.SlowConsole;
+import rpg.itens.Weapons.Initials.Axe;
+import rpg.itens.Weapons.Initials.Daggers;
+import rpg.itens.Weapons.Weapon;
 
 import java.util.Random;
 
 public class Rogue extends Attributes {
     SlowConsole slowConsole = new SlowConsole();
-
+    private Weapon weapon = new Daggers(0);
     public Rogue(String name, int healthbar, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.setClasses("Rogue");
-        this.setWeapon("Adagas");
+        setWeapon(weapon);
     }
 
     Double dodgeSkills = 25.0;

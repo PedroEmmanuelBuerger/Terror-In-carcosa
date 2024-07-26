@@ -2,20 +2,23 @@ package rpg.Classes;
 
 import rpg.Utils.SlowConsole;
 import rpg.itens.SpeelBook;
+import rpg.itens.Weapons.Initials.Axe;
+import rpg.itens.Weapons.Initials.Staff;
+import rpg.itens.Weapons.Weapon;
 
 public class Mage extends Attributes {
     private SpeelBook speelBook;
     private int mana;
     private int maxMana;
     SlowConsole slowConsole = new SlowConsole();
-
+    private Weapon weapon = new Staff(0);
     public Mage(String name, int healthbar, int mana, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.mana = mana;
         this.maxMana = mana;
         this.speelBook = new SpeelBook(); // Inicializa o SpeelBook
         this.setClasses("Mage");
-        this.setWeapon("Cetro Mágico");
+        setWeapon(weapon);
     }
 
     public SpeelBook getSpeelBook() {
@@ -74,7 +77,7 @@ public class Mage extends Attributes {
         slowConsole.imprimirDevagar("Ataque Mágico: " + getSpecial());
         slowConsole.imprimirDevagar("Mana: " + getMana());
         slowConsole.imprimirDevagar("Frase: " + getQuote());
-        slowConsole.imprimirDevagar("Arma: " + getWeapon());
+        slowConsole.imprimirDevagar("Arma: " + getWeapon().getName() + " (" + getWeapon().getAttack() + ") de dano!");
     }
 
     @Override

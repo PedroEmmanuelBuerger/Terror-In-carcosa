@@ -1,15 +1,18 @@
 package rpg.Classes;
 
 import rpg.Utils.SlowConsole;
+import rpg.itens.Weapons.Initials.Axe;
+import rpg.itens.Weapons.Weapon;
 
 public class Warrior extends Attributes {
     private boolean defense = false;
     SlowConsole slowConsole = new SlowConsole();
+    private Weapon weapon = new Axe(0);
 
     public Warrior(String name, int healthbar, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         setClasses("Warrior");
-        this.setWeapon("Machado");
+        setWeapon(weapon);
     }
 
     public boolean isDefese() {

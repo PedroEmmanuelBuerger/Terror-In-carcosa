@@ -2,18 +2,21 @@ package rpg.Classes;
 
 import rpg.Utils.SlowConsole;
 import rpg.Utils.ManaAdm;
+import rpg.itens.Weapons.Initials.Mace;
+import rpg.itens.Weapons.Initials.Staff;
+import rpg.itens.Weapons.Weapon;
 
 public class Healer extends Attributes {
     private int mana;
     private int maxMana;
     SlowConsole slowConsole = new SlowConsole();
-
+    private Weapon weapon = new Mace(0);
     public Healer(String name, int healthbar, int Mana, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.mana = Mana;
         this.setClasses("Healer");
         this.maxMana = mana;
-        this.setWeapon("Livro Sagrado");
+        setWeapon(weapon);
     }
 
     public int getMana() {
@@ -117,7 +120,7 @@ public class Healer extends Attributes {
         slowConsole.imprimirDevagar("Ataque Mágico: " + getSpecial());
         slowConsole.imprimirDevagar("Mana: " + getMana());
         slowConsole.imprimirDevagar("Frase: " + getQuote());
-        slowConsole.imprimirDevagar("Arma: " + getWeapon());
+        slowConsole.imprimirDevagar("Arma: " + getWeapon().getName() + " (" + getWeapon().getAttack() + ") de dano!");
     }
 
     public void recoverMana(int amount) {
