@@ -82,8 +82,8 @@ public class Mage extends Attributes {
         setExp(getExp() + expGain); // Adiciona a experiência ganha
 
         // Verifica se o personagem subiu de nível
-        while (getExp() >= getLevel() * 7) {
-            int levelsGained = getExp() / (getLevel() * 7); // Quantos níveis foram ganhos
+        while (getExp() >= getLevel() * 10) {
+            int levelsGained = getExp() / (getLevel() * 10); // Quantos níveis foram ganhos
             setExp(getExp() % (getLevel() * 7)); // Experiência restante após subir de nível
 
             // Aumenta o nível do personagem

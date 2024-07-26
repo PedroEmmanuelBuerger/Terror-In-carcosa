@@ -29,11 +29,11 @@ public class Healer extends Attributes {
         int holyDamage = this.getSpecial() / 2;
         boolean manaRes;
         ManaAdm manaAdm = new ManaAdm();
-        manaRes = manaAdm.costMana(this.mana, 15, this.getName()); // Chamar costMana na instância criada
+        manaRes = manaAdm.costMana(this.mana, 10, this.getName()); // Chamar costMana na instância criada
         if (!manaRes) {
             slowConsole.imprimirDevagar(this.getName() + " conjurou um feitiço sagrado, causando " + holyDamage + " de dano a " + enemy.getName() + "!");
-            this.mana -= 15; // Reduzir a mana após o uso do feitiço
-            slowConsole.imprimirDevagar(this.getName() + " gastou 15 de mana, ficando com " + this.mana + " restante.");
+            this.mana -= 10; // Reduzir a mana após o uso do feitiço
+            slowConsole.imprimirDevagar(this.getName() + " gastou 10 de mana, ficando com " + this.mana + " restante.");
             enemy.takeDamage(holyDamage);
             if (!enemy.isAlive()) {
                 slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
@@ -47,20 +47,20 @@ public class Healer extends Attributes {
     public void heal(Attributes ally) {
         boolean manaRes;
         ManaAdm manaAdm = new ManaAdm();
-        manaRes = manaAdm.costMana(this.mana, 30, this.getName()); // Chamar costMana na instância criada
+        manaRes = manaAdm.costMana(this.mana, 7,this.getName()); // Chamar costMana na instância criada
         if (!manaRes) {
-            int healAmount = getSpecial() + ally.getHealthbar();
+            int healAmount = (getSpecial() / 2) + ally.getHealthbar();
             if (ally.isAlive()) {
                 if (ally.getMaxHealthInitial() < healAmount) {
                     ally.setHealthbar(ally.getMaxHealthInitial());
                     slowConsole.imprimirDevagar(getName() + " curou toda a vida de " + ally.getName() + "!");
-                    this.mana = this.mana - 30;
-                    slowConsole.imprimirDevagar(this.getName() + " gastou 30 de mana, ficando com " + this.mana + " restante.");
+                    this.mana = this.mana - 7;
+                    slowConsole.imprimirDevagar(this.getName() + " gastou 7 de mana, ficando com " + this.mana + " restante.");
                 } else {
                     ally.setHealthbar(healAmount);
                     slowConsole.imprimirDevagar(getName() + " curou " + getSpecial() + " de vida de " + ally.getName() + "!");
-                    this.mana = this.mana - 30;
-                    slowConsole.imprimirDevagar(this.getName() + " gastou 30 de mana, ficando com " + this.mana + " restante.");
+                    this.mana = this.mana - 7;
+                    slowConsole.imprimirDevagar(this.getName() + " gastou 7 de mana, ficando com " + this.mana + " restante.");
                 }
             } else {
                 slowConsole.imprimirDevagar(ally.getName() + " está morto! Impossível curar.");
@@ -71,7 +71,7 @@ public class Healer extends Attributes {
     public void ressurection(Attributes ally) {
         boolean manaRes;
         ManaAdm manaAdm = new ManaAdm();
-        manaRes = manaAdm.costMana(this.mana, 15, this.getName()); // Chamar costMana na instância criada
+        manaRes = manaAdm.costMana(this.mana, 35, this.getName()); // Chamar costMana na instância criada
         if (!manaRes) {
             if (ally.isAlive()) {
                 slowConsole.imprimirDevagar(ally.getName() + " está vivo, impossível ressuscitar!");
@@ -89,8 +89,8 @@ public class Healer extends Attributes {
         setExp(getExp() + expGain); // Adiciona a experiência ganha
 
         // Verifica se o personagem subiu de nível
-        while (getExp() >= getLevel() * 7) {
-            int levelsGained = getExp() / (getLevel() * 7); // Quantos níveis foram ganhos
+        while (getExp() >= getLevel() * 10) {
+            int levelsGained = getExp() / (getLevel() * 10); // Quantos níveis foram ganhos
             setExp(getExp() % (getLevel() * 10)); // Experiência restante após subir de nível
 
             // Aumenta o nível do personagem

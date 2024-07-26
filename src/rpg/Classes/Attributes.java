@@ -161,8 +161,8 @@ public abstract class Attributes {
         exp += expGain; // Adiciona a experiência ganha
 
         // Verifica se o personagem subiu de nível
-        while (exp >= level * 7){
-            exp -= level * 7; // Subtrai o máximo de experiência para o próximo nível
+        while (exp >= level * 10){
+            exp -= level * 10; // Subtrai o máximo de experiência para o próximo nível
             level++; // Aumenta o nível do personagem
             slowConsole.imprimirDevagar(getName() + " upou de nível! Nível atual é: " + getLevel());
             setAttack(getAttack() + 5);
