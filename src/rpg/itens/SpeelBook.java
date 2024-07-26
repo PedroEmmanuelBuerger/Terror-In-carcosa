@@ -1,83 +1,105 @@
 package rpg.itens;
 
+import rpg.CharacterCreation.CreatePlayer;
 import rpg.Utils.ManaAdm;
 import rpg.Utils.SlowConsole;
 import rpg.Utils.InputUtils;
-import rpg.CharacterCreation.CreatePlayer; // Importe a classe CreatePlayer corretamente
 import rpg.Classes.Mage;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class SpeelBook {
-
     private Scanner scanner;
     private SlowConsole slowConsole = new SlowConsole();
-    private CreatePlayer createPlayer = new CreatePlayer(); // Crie uma instância de CreatePlayer se necessário
+    private CreatePlayer createPlayer = new CreatePlayer();
+    private List<Spell> spells = new ArrayList<>(); // Lista de feitiços
 
     public SpeelBook() {
-        this.scanner = new Scanner(System.in); // Inicializa o Scanner para entrada padrão
+        this.scanner = new Scanner(System.in);
+        initializeSpells(); // Inicializa com feitiços padrão
+    }
+
+    private void initializeSpells() {
+        // Adiciona feitiços padrão ao iniciar
+        spells.add(new Spell("Tormenta de fogo", 5, 8));
+        spells.add(new Spell("Jato Super Comprimido de Água", 7, 12));
+        spells.add(new Spell("Chuva de Pedras", 13, 15));
+        spells.add(new Spell("Tempestade Ártica", 17, 26));
+    }
+
+    public void addNewSpell(String name, int manaCost, int damage) {
+        if (!hasSpell(name)) {
+            spells.add(new Spell(name, manaCost, damage));
+            slowConsole.imprimirDevagar("Nova magia adicionada: " + name);
+        } else {
+            slowConsole.imprimirDevagar("A magia " + name + " já está no seu livro de magias.");
+        }
+    }
+
+    public boolean hasSpell(String name) {
+        for (Spell spell : spells) {
+            if (spell.getName().equals(name)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public int selectSpell(Mage mage) {
         slowConsole.imprimirDevagar("Selecione Sua Magia:");
-        slowConsole.imprimirDevagar("1 - Tormenta de fogo (Custo de mana: 5)");
-        slowConsole.imprimirDevagar("2 - Jato Super comprimido de água (Custo de mana: 7)");
-        slowConsole.imprimirDevagar("3 - Chuva de pedras (Custo de mana: 13)");
-        slowConsole.imprimirDevagar("4 - Tempestade Ártica (Custo de mana: 17)");
+        for (int i = 0; i < spells.size(); i++) {
+            Spell spell = spells.get(i);
+            slowConsole.imprimirDevagar((i + 1) + " - " + spell.getName() + " (Custo de mana: " + spell.getManaCost() + ")");
+        }
         boolean manaRes;
-        ManaAdm manaAdm = new ManaAdm();
-
         int escolha;
         int damage = 0;
         do {
             escolha = InputUtils.lerInteiro(scanner, "Escolha inválida. Por favor, escolha uma opção válida.");
 
-            switch (escolha) {
-                case 1:
-                    manaRes = manaAdm.costMana(mage.getMana(), 5, mage.getName());
-                    if (!manaRes) {
-                        slowConsole.imprimirDevagar("Você selecionou: Tormenta de fogo");
-                        damage = 8;
-                        mage.setMana(mage.getMana() - 5);
-                        slowConsole.imprimirDevagar(mage.getName() + " gastou 5 de mana, ficando com " + mage.getMana() + " restante.");
-                    }
-                    break;
-                case 2:
-                    manaRes = manaAdm.costMana(mage.getMana(), 7, mage.getName());
-                    if (!manaRes) {
-                        slowConsole.imprimirDevagar("Você selecionou: Jato massiso de água");
-                        damage = 12;
-                        mage.setMana(mage.getMana() - 7);// Chamar costMana na instância criada
-                        slowConsole.imprimirDevagar(mage.getName() + " gastou 7 de mana, ficando com " + mage.getMana() + " restante.");
-                    }
-                    break;
-                case 3:
-                    manaRes = manaAdm.costMana(mage.getMana(), 13, mage.getName());
-                    if (!manaRes) {
-                        slowConsole.imprimirDevagar("Você selecionou: Chuva de pedras");
-                        mage.setMana(mage.getMana() - 13);
-                        slowConsole.imprimirDevagar(mage.getName() + " gastou 13 de mana, ficando com " + mage.getMana() + " restante.");// Chamar costMana na instância criada
-                        damage = 15;
-                    }
-                    break;
-                case 4:
-                    manaRes = manaAdm.costMana(mage.getMana(), 17, mage.getName());
-                    if (!manaRes) {
-                        slowConsole.imprimirDevagar("Você selecionou: Tempestade Ártica");
-                        mage.setMana(mage.getMana() - 17);
-                        slowConsole.imprimirDevagar(mage.getName() + " gastou 17 de mana, ficando com " + mage.getMana() + " restante.");// Chamar costMana na instância criada
-                        damage = 26;
-                    }
-                    break;
-                default:
-                    slowConsole.imprimirDevagar("Escolha inválida. Por favor, escolha uma opção válida.");
+            if (escolha >= 1 && escolha <= spells.size()) {
+                Spell selectedSpell = spells.get(escolha - 1);
+                manaRes = new ManaAdm().costMana(mage.getMana(), selectedSpell.getManaCost(), mage.getName());
+                if (!manaRes) {
+                    slowConsole.imprimirDevagar("Você selecionou: " + selectedSpell.getName());
+                    damage = selectedSpell.getDamage();
+                    mage.setMana(mage.getMana() - selectedSpell.getManaCost());
+                    slowConsole.imprimirDevagar(mage.getName() + " gastou " + selectedSpell.getManaCost() + " de mana, ficando com " + mage.getMana() + " restante.");
+                }
+            } else {
+                slowConsole.imprimirDevagar("Escolha inválida. Por favor, escolha uma opção válida.");
             }
-        } while (escolha < 1 || escolha > 4);
+        } while (escolha < 1 || escolha > spells.size());
         return damage;
     }
 
-    // Método para fechar o Scanner se necessário
     public void fecharScanner() {
         scanner.close();
+    }
+
+    private static class Spell {
+        private String name;
+        private int manaCost;
+        private int damage;
+
+        public Spell(String name, int manaCost, int damage) {
+            this.name = name;
+            this.manaCost = manaCost;
+            this.damage = damage;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public int getManaCost() {
+            return manaCost;
+        }
+
+        public int getDamage() {
+            return damage;
+        }
     }
 }

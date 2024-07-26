@@ -21,20 +21,20 @@ public class Dungeon2 implements Dungeon {
 
         // Verificar se o personagem está no nível necessário para enfrentar o Boss
         if (personagem.getLevel() >= 10) {
-            enemy = new KingDragon("Dragon Lord King", 100, 25, 30, "FIRE!!!!!!!!!!!!!");
+            enemy = new KingDragon("Dragon Lord King", 500, 45, 60, "FIRE!!!!!!!!!!!!!");
         } else {
             // Caso o jogador não esteja no nível adequado, enfrentará um Goblin ou Zombie
             int randomMonster = random.nextInt(2);
 
             switch (randomMonster) {
                 case 0:
-                    enemy = new Carnical("Carniçal", 50, 5, 17, "GRAAAAAAAA!");
+                    enemy = new Carnical("Carniçal", 80, 15, 25, "GRAAAAAAAA!");
                     break;
                 case 1:
-                    enemy = new Lobisomen("Lobisomen", 70, 12, 14, "ARRGH!");
+                    enemy = new Lobisomen("Lobisomen", 110, 27, 12, "ARRGH!");
                     break;
                 default:
-                    enemy = new Carnical("Carniçal", 50, 5, 17, "GRAAAAAAAA!");
+                    enemy = new Carnical("Carniçal", 80, 15, 25, "GRAAAAAAAA!");
                     break;
             }
         }

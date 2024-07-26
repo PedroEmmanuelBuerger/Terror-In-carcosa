@@ -14,6 +14,15 @@ public class Rogue extends Attributes {
     }
 
     Double dodgeSkills = 25.0;
+
+    public Double getDodgeSkills() {
+        return dodgeSkills;
+    }
+
+    public void setDodgeSkills(Double dodgeSkills) {
+        this.dodgeSkills = dodgeSkills;
+    }
+
     Random random = new Random();
 
     @Override

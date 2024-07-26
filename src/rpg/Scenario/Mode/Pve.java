@@ -1,31 +1,40 @@
 package rpg.Scenario.Mode;
 
+import rpg.Classes.Attributes;
+import rpg.Classes.Mage;
+import rpg.Classes.Healer;
+import rpg.Classes.Warrior;
 import rpg.Events.*;
 import rpg.Utils.CombatSystem;
 import rpg.Utils.SlowConsole;
-import rpg.Classes.Attributes;
 import rpg.CharacterCreation.CreatePlayer;
+import rpg.itens.SpeelBook;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class Pve {
     private int levelDungeon = 1;
+    private boolean specialEncounterOccurred = false; // Flag para rastrear o evento SpecialEncounter
 
     public static void startBattle(Scanner scanner) {
         Random random = new Random();
         Attributes personagem = CreatePlayer.createPlayer(scanner);
         personagem.getTechnicalInfo();
 
-        while (personagem.getHealthbar() > 0) {
-            int randomEvent = random.nextInt(2);
+        SpeelBook speelBook = new SpeelBook(); // Crie o SpeelBook aqui para que ele possa ser usado nos eventos
 
-            if (randomEvent == 0) {
+        Pve pveInstance = new Pve(); // Crie uma instância de Pve para rastrear eventos
+
+        while (personagem.getHealthbar() > 0) {
+            int randomEvent = random.nextInt(7); // Ajustado para 7 eventos possíveis
+
+            if (randomEvent < 2) {
                 // Encontro de combate
                 CombatSystem.startCombat(scanner, personagem);
             } else {
                 // Evento não combativo
-                nonCombatEvent(personagem);
+                pveInstance.nonCombatEvent(personagem, speelBook);
             }
         }
     }
@@ -34,29 +43,43 @@ public class Pve {
         this.levelDungeon = levelDungeon;
     }
 
-    private static void nonCombatEvent(Attributes personagem) {
+    private void nonCombatEvent(Attributes personagem, SpeelBook speelBook) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
-        int eventType = random.nextInt(6); // Agora temos 6 tipos de eventos
+        int eventType = random.nextInt(7); // Ajuste para 7 eventos possíveis
 
-        NonCombatEvent event;
+        NonCombatEvent event = null;
         switch (eventType) {
             case 0:
-                event = new ManaRecoveryEvent();
+                if (personagem instanceof Mage) {
+                    Mage mage = (Mage) personagem;
+                    if (!specialEncounterOccurred) { // Verifica se o evento já ocorreu
+                        event = new SpecialEncounter(speelBook);
+                        specialEncounterOccurred = true; // Marca o evento como ocorrido
+                    }
+                } else {
+                    if (!specialEncounterOccurred) { // Verifica se o evento já ocorreu
+                        event = new SpecialEncounter(speelBook);
+                        specialEncounterOccurred = true; // Marca o evento como ocorrido
+                    }
+                }
                 break;
             case 1:
-                event = new HealthRecoveryEvent();
+                event = new ManaRecoveryEvent();
                 break;
             case 2:
-                event = new HealingPotionEvent();
+                event = new HealthRecoveryEvent();
                 break;
             case 3:
-                event = new RareItemEvent();
+                event = new HealingPotionEvent();
                 break;
             case 4:
-                event = new MagicItem();
+                event = new RareItemEvent();
                 break;
             case 5:
+                event = new MagicItem();
+                break;
+            case 6:
                 event = new OldRune();
                 break;
             default:
@@ -64,6 +87,8 @@ public class Pve {
                 return;
         }
 
-        event.executeEvent(personagem);
+        if (event != null) {
+            event.executeEvent(personagem);
+        }
     }
 }

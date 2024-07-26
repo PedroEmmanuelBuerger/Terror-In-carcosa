@@ -9,18 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando bug resetar valor maxpoints">
-      <change afterPath="$PROJECT_DIR$/src/rpg/Events/MagicItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/Events/OldRune.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando funcionamento de classes + adicionando novos eventos + adicionando atributo weapon">
+      <change afterPath="$PROJECT_DIR$/src/rpg/Events/SpecialEncounter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/ManaRecoveryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/ManaRecoveryEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/CombatSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/CombatSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/SpeelBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/SpeelBook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,22 +58,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ConsoleLento.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SlowConsole.executor&quot;: &quot;Run&quot;,
-    &quot;Application.principal.executor&quot;: &quot;Run&quot;,
-    &quot;JAR Application.Terror In YellowCity.jar.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pedro.silva/Downloads&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ConsoleLento.executor": "Run",
+    "Application.SlowConsole.executor": "Run",
+    "Application.principal.executor": "Run",
+    "JAR Application.Terror In YellowCity.jar.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/pedro.silva/Downloads",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="rpg.Monsters" />
@@ -268,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721937880426</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Arrumando funcionamento de classes + adicionando novos eventos + adicionando atributo weapon">
+      <option name="closed" value="true" />
+      <created>1721994870886</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1721994870886</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -298,6 +303,7 @@
     <MESSAGE value="Adicionando Niveis + Dungeons diferentes + Novos inimigos + balanceamento" />
     <MESSAGE value="Classes iniciam com valor definido + arrumando bugs" />
     <MESSAGE value="Arrumando bug resetar valor maxpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando bug resetar valor maxpoints" />
+    <MESSAGE value="Arrumando funcionamento de classes + adicionando novos eventos + adicionando atributo weapon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando funcionamento de classes + adicionando novos eventos + adicionando atributo weapon" />
   </component>
 </project>

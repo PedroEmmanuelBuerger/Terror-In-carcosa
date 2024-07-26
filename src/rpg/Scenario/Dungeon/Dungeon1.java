@@ -23,20 +23,20 @@ public class Dungeon1 implements Dungeon {
 
         // Verificar se o personagem está no nível necessário para enfrentar o Boss
         if (personagem.getLevel() >= 5) {
-            enemy = new Boss("Ghazkull", 100, 25, 30, "HAHAHAHAHAHA");
+            enemy = new Boss("Ghazkull", 350, 20, 30, "HAHAHAHAHAHA");
         } else {
             // Caso o jogador não esteja no nível adequado, enfrentará um Goblin ou Zombie
             int randomMonster = random.nextInt(2);
 
             switch (randomMonster) {
                 case 0:
-                    enemy = new Goblin("Goblin", 50, 5, 17, "Grrrr!");
+                    enemy = new Goblin("Goblin", 35, 5, 17, "Grrrr!");
                     break;
                 case 1:
-                    enemy = new Zombie("Zombie", 70, 12, 14, "Braaaaains...");
+                    enemy = new Zombie("Zombie", 50, 12, 14, "Braaaaains...");
                     break;
                 default:
-                    enemy = new Goblin("Goblin", 50, 5, 17, "Grrrr!");
+                    enemy = new Goblin("Goblin", 35, 5, 17, "Grrrr!");
                     break;
             }
         }

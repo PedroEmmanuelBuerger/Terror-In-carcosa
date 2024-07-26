@@ -4,6 +4,7 @@ import rpg.Utils.SlowConsole;
 import rpg.itens.SpeelBook;
 
 public class Mage extends Attributes {
+    private SpeelBook speelBook;
     private int mana;
     private int maxMana;
     SlowConsole slowConsole = new SlowConsole();
@@ -11,9 +12,14 @@ public class Mage extends Attributes {
     public Mage(String name, int healthbar, int mana, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.mana = mana;
-        this.setClasses("Mage");
         this.maxMana = mana;
+        this.speelBook = new SpeelBook(); // Inicializa o SpeelBook
+        this.setClasses("Mage");
         this.setWeapon("Cetro Mágico");
+    }
+
+    public SpeelBook getSpeelBook() {
+        return speelBook;
     }
 
     public int getMaxMana() {
@@ -47,7 +53,6 @@ public class Mage extends Attributes {
 
     @Override
     public void attackWithSpecial(Attributes enemy) {
-        SpeelBook speelBook = new SpeelBook();
         int damageSpell = speelBook.selectSpell(this);
         if (damageSpell != 0) {
             enemy.takeDamage(this.getSpecial() + damageSpell);
@@ -79,7 +84,7 @@ public class Mage extends Attributes {
         // Verifica se o personagem subiu de nível
         while (getExp() >= getLevel() * 7) {
             int levelsGained = getExp() / (getLevel() * 7); // Quantos níveis foram ganhos
-            setExp(getExp() % (getLevel() * 10)); // Experiência restante após subir de nível
+            setExp(getExp() % (getLevel() * 7)); // Experiência restante após subir de nível
 
             // Aumenta o nível do personagem
             setLevel(getLevel() + levelsGained);
@@ -104,5 +109,4 @@ public class Mage extends Attributes {
             this.mana = maxMana;
         }
     }
-
 }
