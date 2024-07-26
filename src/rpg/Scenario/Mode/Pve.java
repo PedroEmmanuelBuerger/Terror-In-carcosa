@@ -22,8 +22,6 @@ public class Pve {
         Attributes personagem = CreatePlayer.createPlayer(scanner);
         personagem.getTechnicalInfo();
 
-        SpeelBook speelBook = new SpeelBook(); // Crie o SpeelBook aqui para que ele possa ser usado nos eventos
-
         Pve pveInstance = new Pve(); // Crie uma instância de Pve para rastrear eventos
 
         while (personagem.getHealthbar() > 0) {
@@ -34,7 +32,7 @@ public class Pve {
                 CombatSystem.startCombat(scanner, personagem);
             } else {
                 // Evento não combativo
-                pveInstance.nonCombatEvent(personagem, speelBook);
+                pveInstance.nonCombatEvent(personagem);
             }
         }
     }
@@ -43,7 +41,7 @@ public class Pve {
         this.levelDungeon = levelDungeon;
     }
 
-    private void nonCombatEvent(Attributes personagem, SpeelBook speelBook) {
+    private void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
         int eventType = random.nextInt(7); // Ajuste para 7 eventos possíveis
@@ -53,11 +51,13 @@ public class Pve {
             case 0:
                 if (personagem instanceof Mage) {
                     Mage mage = (Mage) personagem;
-                    if (!specialEncounterOccurred) { // Verifica se o evento já ocorreu
-                        event = new SpecialEncounter(speelBook);
+                    if (!specialEncounterOccurred) {
+                        SpeelBook speelBookactual = mage.getSpeelBook();// Verifica se o evento já ocorreu
+                        event = new SpecialEncounter(speelBookactual);
                         specialEncounterOccurred = true; // Marca o evento como ocorrido
                     }
                 } else {
+                    SpeelBook speelBook = new SpeelBook(); // Crie o SpeelBook aqui para que ele possa ser usado nos eventos
                     if (!specialEncounterOccurred) { // Verifica se o evento já ocorreu
                         event = new SpecialEncounter(speelBook);
                         specialEncounterOccurred = true; // Marca o evento como ocorrido

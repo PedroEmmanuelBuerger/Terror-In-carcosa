@@ -28,7 +28,7 @@ public class SpecialEncounter implements NonCombatEvent {
                 String spellName = "Tempestade de Raios";
                 if (!speelBook.hasSpell(spellName)) {
                     // Adiciona a nova magia ao SpeelBook
-                    speelBook.addNewSpell(spellName, 20, 25); // Nome, custo de mana, dano
+                    speelBook.addNewSpell(spellName, 20, 33); // Nome, custo de mana, dano
                 } else {
                     slowConsole.imprimirDevagar("Você já conhece a magia " + spellName + ".");
                 }
