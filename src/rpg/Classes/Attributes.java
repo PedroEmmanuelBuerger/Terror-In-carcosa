@@ -15,6 +15,7 @@ public abstract class Attributes {
     private int exp; // Variável de experiência
     SlowConsole slowConsole = new SlowConsole();
     int levelDungeon = 1;
+    private String weapon = "";
 
     public Attributes(String name, int healthbar, int attack, int special, String quote) {
         this.name = name;
@@ -26,6 +27,14 @@ public abstract class Attributes {
         this.alive = true;
         this.level = 1; // Inicializa o nível como 1
         this.exp = 0; // Inicializa a experiência como 0
+    }
+
+    public String getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(String weapon) {
+        this.weapon = weapon;
     }
 
     public int getHealthbar() {
@@ -107,6 +116,7 @@ public abstract class Attributes {
         if (!enemy.isAlive()) {
             slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
             slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
+            slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
             gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
         }
     }
@@ -176,6 +186,7 @@ public abstract class Attributes {
         slowConsole.imprimirDevagar("Ataque: " + getAttack());
         slowConsole.imprimirDevagar("Ataque Especial: " + getSpecial());
         slowConsole.imprimirDevagar("Frase: " + getQuote());
+        slowConsole.imprimirDevagar("Arma: " + getWeapon());
     }
 
     public int getMaxHealthInitial() {

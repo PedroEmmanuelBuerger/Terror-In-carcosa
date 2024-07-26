@@ -13,7 +13,7 @@ public class Mage extends Attributes {
         this.mana = mana;
         this.setClasses("Mage");
         this.maxMana = mana;
-
+        this.setWeapon("Cetro Mágico");
     }
 
     public int getMaxMana() {
@@ -40,6 +40,7 @@ public class Mage extends Attributes {
         if (!enemy.isAlive()) {
             slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
             slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
+            slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
             gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
         }
     }
@@ -53,6 +54,7 @@ public class Mage extends Attributes {
             if (!enemy.isAlive()) {
                 slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
                 slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
+                slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
                 gainExp(enemy.getExp());
             }
         }
@@ -67,6 +69,7 @@ public class Mage extends Attributes {
         slowConsole.imprimirDevagar("Ataque Mágico: " + getSpecial());
         slowConsole.imprimirDevagar("Mana: " + getMana());
         slowConsole.imprimirDevagar("Frase: " + getQuote());
+        slowConsole.imprimirDevagar("Arma: " + getWeapon());
     }
 
     @Override

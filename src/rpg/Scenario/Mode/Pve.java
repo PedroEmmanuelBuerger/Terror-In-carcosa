@@ -1,20 +1,17 @@
 package rpg.Scenario.Mode;
 
+import rpg.Events.*;
 import rpg.Utils.CombatSystem;
 import rpg.Utils.SlowConsole;
 import rpg.Classes.Attributes;
 import rpg.CharacterCreation.CreatePlayer;
-import rpg.Events.NonCombatEvent;
-import rpg.Events.ManaRecoveryEvent;
-import rpg.Events.HealthRecoveryEvent;
-import rpg.Events.HealingPotionEvent;
-import rpg.Events.RareItemEvent;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class Pve {
-    int levelDungeon = 1;
+    private int levelDungeon = 1;
+
     public static void startBattle(Scanner scanner) {
         Random random = new Random();
         Attributes personagem = CreatePlayer.createPlayer(scanner);
@@ -40,7 +37,7 @@ public class Pve {
     private static void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
-        int eventType = random.nextInt(4); // Agora temos 4 tipos de eventos
+        int eventType = random.nextInt(6); // Agora temos 6 tipos de eventos
 
         NonCombatEvent event;
         switch (eventType) {
@@ -55,6 +52,12 @@ public class Pve {
                 break;
             case 3:
                 event = new RareItemEvent();
+                break;
+            case 4:
+                event = new MagicItem();
+                break;
+            case 5:
+                event = new OldRune();
                 break;
             default:
                 slowConsole.imprimirDevagar("Evento não reconhecido.");

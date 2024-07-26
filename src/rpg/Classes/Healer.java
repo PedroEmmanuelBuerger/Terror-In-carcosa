@@ -13,6 +13,7 @@ public class Healer extends Attributes {
         this.mana = Mana;
         this.setClasses("Healer");
         this.maxMana = mana;
+        this.setWeapon("Livro Sagrado");
     }
 
     public int getMana() {
@@ -37,6 +38,7 @@ public class Healer extends Attributes {
             if (!enemy.isAlive()) {
                 slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
                 slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
+                slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
                 gainExp(enemy.getExp());
             }
         }
@@ -115,6 +117,7 @@ public class Healer extends Attributes {
         slowConsole.imprimirDevagar("Ataque Mágico: " + getSpecial());
         slowConsole.imprimirDevagar("Mana: " + getMana());
         slowConsole.imprimirDevagar("Frase: " + getQuote());
+        slowConsole.imprimirDevagar("Arma: " + getWeapon());
     }
 
     public void recoverMana(int amount) {

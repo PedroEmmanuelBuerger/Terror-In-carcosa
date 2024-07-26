@@ -9,6 +9,7 @@ public class Warrior extends Attributes {
     public Warrior(String name, int healthbar, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         setClasses("Warrior");
+        this.setWeapon("Machado");
     }
 
     public boolean isDefese() {

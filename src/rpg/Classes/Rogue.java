@@ -10,6 +10,7 @@ public class Rogue extends Attributes {
     public Rogue(String name, int healthbar, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.setClasses("Rogue");
+        this.setWeapon("Adagas");
     }
 
     Double dodgeSkills = 25.0;
