@@ -15,9 +15,9 @@ public abstract class Attributes {
     private int maxHealthInitial;
     private boolean alive;
     private int level;
-    private int exp; // Variável de experiência
+    private int exp;
+    private int levelDungeon = 1; // Inicialize o nível da dungeon// Variável de experiência
     SlowConsole slowConsole = new SlowConsole();
-    int levelDungeon = 1;
     private Weapon weapon = new Axe(0);
     private Race race;
 
@@ -32,6 +32,7 @@ public abstract class Attributes {
         this.level = 1; // Inicializa o nível como 1
         this.exp = 0; // Inicializa a experiência como 0
     }
+
 
     public void setRace(Race race) {
         this.race = race;
@@ -65,12 +66,12 @@ public abstract class Attributes {
         this.healthbar = healthbar;
     }
 
-    public int getLevelDungeon() {
-        return levelDungeon;
-    }
-
     public void setLevelDungeon(int levelDungeon) {
         this.levelDungeon = levelDungeon;
+    }
+
+    public int getLevelDungeon() {
+        return levelDungeon;
     }
 
     public int getAttack() {
@@ -181,7 +182,7 @@ public abstract class Attributes {
         exp += expGain; // Adiciona a experiência ganha
 
         // Verifica se o personagem subiu de nível
-        while (exp >= level * 10){
+        while (exp >= level * 10) {
             exp -= level * 10; // Subtrai o máximo de experiência para o próximo nível
             level++; // Aumenta o nível do personagem
             slowConsole.imprimirDevagar(getName() + " upou de nível! Nível atual é: " + getLevel());

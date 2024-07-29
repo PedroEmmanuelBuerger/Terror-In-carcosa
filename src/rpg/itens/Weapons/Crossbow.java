@@ -3,13 +3,19 @@ package rpg.itens.Weapons;
 import java.util.Random;
 
 public class Crossbow implements Weapon {
-    private final int minAttack = 5;
-    private final int maxAttack = 15; // Ajuste o intervalo conforme necessário
+    private final int attack; // Dano aleatório definido uma vez
     private final String name = "Crossbow";
+
+    public Crossbow() {
+        Random random = new Random();
+        int minAttack = 5;
+        int maxAttack = 15;
+        this.attack = random.nextInt((maxAttack - minAttack) + 1) + minAttack;
+    }
 
     @Override
     public int getAttack() {
-        return new Random().nextInt((maxAttack - minAttack) + 1) + minAttack;
+        return attack; // Retorna o dano definido no construtor
     }
 
     @Override

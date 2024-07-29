@@ -21,13 +21,16 @@ public class Pve {
         personagem.getTechnicalInfo();
 
         Pve pveInstance = new Pve(); // Crie uma instância de Pve para rastrear eventos
+        personagem.setLevelDungeon(1); // Defina o nível da dungeon inicial como 1
 
         while (personagem.getHealthbar() > 0) {
-            int randomEvent = random.nextInt(8); // Ajustado para 7 eventos possíveis
+            int randomEvent = random.nextInt(8); // Ajustado para 8 eventos possíveis
 
             if (randomEvent < 2) {
                 // Encontro de combate
                 CombatSystem.startCombat(scanner, personagem);
+                // Após o combate, atualize o nível da dungeon se necessário
+                pveInstance.levelDungeon = personagem.getLevelDungeon();
             } else {
                 // Evento não combativo
                 pveInstance.nonCombatEvent(personagem);
