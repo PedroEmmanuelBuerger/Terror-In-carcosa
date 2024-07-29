@@ -2,7 +2,7 @@ package rpg.Scenario.Dungeon;
 
 import rpg.Classes.Attributes;
 import rpg.Monsters.Mob;
-import rpg.Monsters.Ghazkull;
+import rpg.Monsters.Bosses.Ghazkull;
 import rpg.Utils.Messages.Start;
 
 public class Dungeon1 extends DungeonBase {
@@ -27,7 +27,7 @@ public class Dungeon1 extends DungeonBase {
     @Override
     protected void onBossDefeated(Attributes personagem) {
         if (personagem.getLevelDungeon() == 1) {
-            Start.FinishFirstBoss(); // Exibe a mensagem e avança para a próxima dungeon
+            Start.FinishGhazkull(); // Exibe a mensagem e avança para a próxima dungeon
         }
         personagem.setLevelDungeon(personagem.getLevelDungeon() + 1); // Atualiza o nível da dungeon
     }

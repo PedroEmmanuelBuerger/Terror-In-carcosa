@@ -1,9 +1,9 @@
 package rpg.Scenario.Dungeon;
 
 import rpg.Classes.*;
-import rpg.Monsters.Ghazkull;
-import rpg.Monsters.KingDragon;
-import rpg.Monsters.KnightOfFear;
+import rpg.Monsters.Bosses.Ghazkull;
+import rpg.Monsters.Bosses.KingDragon;
+import rpg.Monsters.Bosses.KnightOfFear;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Specials.Imp;
 

@@ -35,7 +35,7 @@ public class Start {
                 """);
     }
 
-    public static void FinishFirstBoss() {
+    public static void FinishGhazkull() {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -69,7 +69,7 @@ public class Start {
                 """);
     }
 
-    public static void FinishDungeon() {
+    public static void FinishDragonKing() {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -81,27 +81,18 @@ public class Start {
                 * é um testemunho da força e coragem que você           *
                 * demonstrou ao longo de sua jornada.                   *
                 *                                                       *
-                * Enquanto o corpo do dragão se transforma em cinzas,   *
-                * uma abertura se revela no teto da caverna, banhada    *
-                * pela luz da liberdade. O caminho para a saída se      *
-                * torna claro, e um brilho de esperança ilumina seu     *
-                * caminho.                                              *
+                * Enquanto o corpo do dragão se dissolve em cinzas,     *
+                * uma nova abertura se revela no horizonte. A luz       *
+                * que irrompe da passagem ilumina seu caminho para o    *
+                * próximo nível.                                        *
                 *                                                       *
-                * Com o dragão derrotado, você sente um alívio profundo *
-                * e a sensação de realização. A jornada chegou ao       *
-                * seu clímax, mas uma nova vida fora da dungeon está    *
-                * ao seu alcance.                                       *
+                * Com o dragão derrotado, você sente um alívio e a      *
+                * sensação de que um novo desafio está por vir. O       *
+                * caminho à frente promete novos enigmas e perigos.     *
                 *                                                       *
-                * A liberdade está diante de você, e com um último      *
-                * olhar para os escombros da antiga prisão, você avança *
-                * para a saída, pronto para novas aventuras no mundo    *
-                * exterior.                                             *
+                * Avance com coragem e prepare-se para a próxima etapa. *
                 *                                                       *
-                * Parabéns, aventureiro. Você conquistou sua liberdade  *
-                * e escreveu seu nome nas lendas da Yellow City.        *
-                *                                                       *
-                * Que seus futuros desafios sejam tão grandiosos quanto *
-                * sua vitória sobre o Lorde Rei Dragão.                 *
+                * A jornada ainda continua, e o próximo nível aguarda.  *
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
@@ -155,11 +146,62 @@ public class Start {
                 * O dragão encarará você com olhos flamejantes,         *
                 * demonstrando que é o mestre absoluto desta dungeon.   *
                 *                                                       *
-                * Esta é a batalha final. Prepare-se para o confronto   *
-                * mais épico de sua jornada!                            *
-                *                                                       *
-                * A liberdade e a vitória estão ao seu alcance.         *
+                * Avance com coragem e determinação. O caminho para     *
+                * o próximo nível está à sua frente.                    *
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                """);
+    }
+
+    public static void EncounterTaigon() {
+        SlowConsole slowConsole = new SlowConsole();
+        slowConsole.imprimirDevagar("""
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                *   O Encontro com o Cavaleiro do Medo Taigon!           *
+                *                                                        *
+                * À medida que você adentra as profundezas da dungeon,   *
+                * o ar torna-se gélido e uma aura de terror permeia      *
+                * o ambiente. O chão treme sob seus pés e um rugido      *
+                * profundo reverbera pelas paredes.                      *
+                *                                                        *
+                * Finalmente, você chega a uma câmara colossal. No       *
+                * centro, o Cavaleiro do Medo Taigon se ergue em toda    *
+                * sua glória sinistra. Sua armadura negra e sua          *
+                * presença aterrorizante lançam sombras sinistras sobre  *
+                * o chão.                                                *
+                *                                                        *
+                * Taigon encara você com olhos que refletem o medo       *
+                * absoluto, demonstrando que ele é o mestre dos terrores.*
+                *                                                        *
+                * Prepare-se para enfrentar o Cavaleiro do Medo Taigon!  *
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                """);
+    }
+
+    public static void FinishTaigon() {
+        SlowConsole slowConsole = new SlowConsole();
+        slowConsole.imprimirDevagar("""
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                *   Vitória sobre o Cavaleiro do Medo Taigon!             *
+                *                                                         *
+                * Com um último grito aterrador e uma aura de             *
+                * terror que envolveu a dungeon, o Cavaleiro do Medo      *
+                * Taigon caiu derrotado. Sua figura imponente e           *
+                * aterrorizante agora é um testemunho da força e          *
+                * coragem que você demonstrou ao longo de sua jornada.    *
+                *                                                         *
+                * Enquanto o corpo do cavaleiro se dissolve nas trevas,   *
+                * uma abertura se revela no teto da caverna, banhada      *
+                * pela luz da nova etapa. O caminho para o próximo nível  *
+                * se torna claro, e um brilho de esperança ilumina seu    *
+                * caminho.                                                *
+                *                                                         *
+                * Com o cavaleiro derrotado, você sente um alívio         *
+                * profundo e a sensação de realização. A jornada continua,*
+                * e um novo desafio o aguarda adiante.                    *
+                *                                                         *
+                * Avance com coragem e determinação. A verdadeira         *
+                * prova está apenas começando.                            *
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
 }

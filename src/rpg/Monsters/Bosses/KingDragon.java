@@ -1,4 +1,4 @@
-package rpg.Monsters;
+package rpg.Monsters.Bosses;
 
 import rpg.Utils.SlowConsole;
 import rpg.Classes.Attributes;
