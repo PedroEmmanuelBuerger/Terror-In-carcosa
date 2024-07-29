@@ -9,26 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando classe healer e mage + balanceamento">
-      <change afterPath="$PROJECT_DIR$/src/rpg/Events/ChoseBonus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/Events/NewWeapon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Bayoneta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Axe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Daggers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Mace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Staff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Necronomicon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/StickOfTruth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/SwordOfThousandTruths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Weapon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Zheiwender.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando Objeto para arma + adicionando dano por arma + evento que troca a arma + varias novas armas + armas iniciais">
+      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Bible.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Crossbow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Wand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/NewWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/NewWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Bayoneta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Bayoneta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Necronomicon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Necronomicon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/StickOfTruth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/StickOfTruth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/SwordOfThousandTruths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/SwordOfThousandTruths.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +290,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722005317972</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Adicionando Objeto para arma + adicionando dano por arma + evento que troca a arma + varias novas armas + armas iniciais">
+      <option name="closed" value="true" />
+      <created>1722015650134</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1722015650134</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -333,6 +331,7 @@
     <MESSAGE value="Arrumando funcionamento de classes + adicionando novos eventos + adicionando atributo weapon" />
     <MESSAGE value="Arrumando eventos para mago" />
     <MESSAGE value="Arrumando classe healer e mage + balanceamento" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando classe healer e mage + balanceamento" />
+    <MESSAGE value="Adicionando Objeto para arma + adicionando dano por arma + evento que troca a arma + varias novas armas + armas iniciais" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando Objeto para arma + adicionando dano por arma + evento que troca a arma + varias novas armas + armas iniciais" />
   </component>
 </project>

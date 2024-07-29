@@ -2,7 +2,7 @@ package rpg.itens.Weapons;
 
 public class SwordOfThousandTruths implements Weapon {
     private int attack; // Atributo para armazenar o valor de ataque
-    private String Name = "Sword Of the Thousand Truths";
+    private String Name = "Espada de mil verdades";
 
     public SwordOfThousandTruths(int attack) {
         this.attack = attack; // Inicializa o valor de ataque

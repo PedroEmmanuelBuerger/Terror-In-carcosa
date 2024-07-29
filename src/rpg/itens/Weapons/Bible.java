@@ -1,10 +1,10 @@
 package rpg.itens.Weapons;
 
-public class Bayoneta implements Weapon {
+public class Bible implements Weapon {
     private int attack; // Atributo para armazenar o valor de ataque
-    private String Name = "Bayoneta";
+    private String Name = "Biblia Sagrada";
 
-    public Bayoneta(int attack) {
+    public Bible(int attack) {
         this.attack = attack; // Inicializa o valor de ataque
     }
 
