@@ -3,12 +3,12 @@ package rpg.Monsters;
 import rpg.Utils.SlowConsole;
 import rpg.Classes.Attributes;
 
-public class Carnical extends Attributes {
+public class Mob extends Attributes {
     SlowConsole slowConsole = new SlowConsole();
 
-    public Carnical(String name, int healthbar, int attack, int specialAttack, String battleCry) {
+    public Mob(String name, int healthbar, int attack, int specialAttack, String battleCry, int exp) {
         super(name, healthbar, attack, specialAttack, battleCry);
-        this.setExp(15);
+        this.setExp(exp); // Configura a experiência do mob
     }
 
     @Override

@@ -1,7 +1,9 @@
 package rpg.Scenario.Dungeon;
 
 import rpg.Classes.*;
-import rpg.Monsters.Boss;
+import rpg.Monsters.Ghazkull;
+import rpg.Monsters.KingDragon;
+import rpg.Monsters.KnightOfFear;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Specials.Imp;
 
@@ -30,7 +32,9 @@ public abstract class DungeonBase implements Dungeon {
         }
 
         // Verifica se o inimigo derrotado é um boss e chama o método onBossDefeated
-        if (enemy.getHealthbar() <= 0 && enemy instanceof Boss) {
+        // Verifica se o inimigo derrotado é um boss e chama o método onBossDefeated
+        if (enemy.getHealthbar() <= 0 &&
+                (enemy instanceof Ghazkull || enemy instanceof KingDragon || enemy instanceof KnightOfFear)) {
             onBossDefeated(personagem);
         }
     }

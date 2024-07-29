@@ -1,26 +1,25 @@
 package rpg.Scenario.Dungeon;
 
 import rpg.Classes.Attributes;
-import rpg.Monsters.Boss;
-import rpg.Monsters.Goblin;
-import rpg.Monsters.Zombie;
+import rpg.Monsters.Mob;
+import rpg.Monsters.Ghazkull;
 import rpg.Utils.Messages.Start;
-import rpg.itens.Specials.Imp;
-
-import java.util.Scanner;
 
 public class Dungeon1 extends DungeonBase {
     @Override
     protected Attributes createEnemy(Attributes personagem) {
         if (personagem.getLevel() >= 5) {
             Start.EncounterGhazkull(); // Exibe a mensagem ao encontrar Ghazkull
-            return new Boss("Ghazkull", 350, 20, 30, "HAHAHAHAHAHA");
+            return new Ghazkull("Ghazkull", 350, 20, 30, "HAHAHAHAHAHA");
         } else {
             int randomMonster = random.nextInt(2);
             switch (randomMonster) {
-                case 0: return new Goblin("Goblin", 35, 5, 17, "Grrrr!");
-                case 1: return new Zombie("Zombie", 50, 12, 14, "Braaaaains...");
-                default: return new Goblin("Goblin", 35, 5, 17, "Grrrr!");
+                case 0:
+                    return new Mob("Goblin", 35, 5, 17, "Grrrr!", 5);
+                case 1:
+                    return new Mob("Zombie", 50, 12, 14, "Braaaaains...", 10);
+                default:
+                    return new Mob("Goblin", 35, 5, 17, "Grrrr!", 5);
             }
         }
     }

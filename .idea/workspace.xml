@@ -9,9 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando Bug danos das armas + refatorando código + abrindo espaço para novas dungeons">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando fluxo de esqueletos necromante + adicionando info esqueletos">
+      <change afterPath="$PROJECT_DIR$/src/rpg/Monsters/KnightOfFear.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/Monsters/Mob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/ChoseBonus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Ghazkull.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Carnical.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Goblin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Lobisomen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Zombie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/CombatSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/CombatSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,7 +353,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722278520243</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Arrumando fluxo de esqueletos necromante + adicionando info esqueletos">
+      <option name="closed" value="true" />
+      <created>1722280070525</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1722280070525</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -356,7 +376,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adição de criação de personagem" />
     <MESSAGE value="Criando fluxo de combate, boss fight e alterando funcionamento do arquitétipo" />
     <MESSAGE value="Arrumando organização do projeto" />
     <MESSAGE value="Adicionando novos inimigos + loop de batalha + funcionamento de cada classe" />
@@ -381,6 +400,7 @@
     <MESSAGE value="Adicionando raças + buff raças" />
     <MESSAGE value="Adicionando BakcGround + Mudando funcionamento armas + Removendo esqueleto da lista caso morra + mudar de imp para esqueleto" />
     <MESSAGE value="Arrumando Bug danos das armas + refatorando código + abrindo espaço para novas dungeons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando Bug danos das armas + refatorando código + abrindo espaço para novas dungeons" />
+    <MESSAGE value="Arrumando fluxo de esqueletos necromante + adicionando info esqueletos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando fluxo de esqueletos necromante + adicionando info esqueletos" />
   </component>
 </project>
