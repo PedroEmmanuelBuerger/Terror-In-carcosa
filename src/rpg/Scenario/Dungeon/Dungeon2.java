@@ -2,6 +2,7 @@ package rpg.Scenario.Dungeon;
 
 import rpg.Classes.*;
 import rpg.Monsters.*;
+import rpg.Utils.Messages.Start;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Specials.Imp;
 
@@ -20,7 +21,8 @@ public class Dungeon2 implements Dungeon {
 
         // Verificar se o personagem está no nível necessário para enfrentar o Boss
         if (personagem.getLevel() >= 10) {
-            enemy = new KingDragon("Dragon Lord King", 500, 45, 60, "FIRE!!!!!!!!!!!!!");
+            enemy = new KingDragon("Lorde Rei Dragão", 500, 45, 60, "FIRE!!!!!!!!!!!!!");
+            Start.EncounterLordDragonKing();
         } else {
             // Caso o jogador não esteja no nível adequado, enfrentará um Goblin ou Zombie
             int randomMonster = random.nextInt(2);
@@ -83,7 +85,7 @@ public class Dungeon2 implements Dungeon {
                 case 3:
                     double escapeChance = 25.00;
                     Double randomSucess = random.nextDouble() * 100.0;
-                    if (randomSucess <= escapeChance && !enemy.getName().equals("Dragon Lord King")) {
+                    if (randomSucess <= escapeChance && !enemy.getName().equals("Lorde Rei Dragão")) {
                         slowConsole.imprimirDevagar("Você fugiu!");
                         escape = 1;
                     } else {
@@ -123,8 +125,8 @@ public class Dungeon2 implements Dungeon {
                 }
             }
             if (enemy.getHealthbar() <= 0) {
-                if (enemy.getName().equals("Dragon Lord King")) {
-                    slowConsole.imprimirDevagar("Você derrotou o chefão da dungeon! Liberdade cantou...");
+                if (enemy.getName().equals("Lorde Rei Dragão")) {
+                    Start.FinishDungeon();
                     System.exit(0);
                 }
 

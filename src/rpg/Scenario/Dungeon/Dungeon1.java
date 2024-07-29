@@ -1,6 +1,7 @@
 package rpg.Scenario.Dungeon;
 
 import rpg.Classes.*;
+import rpg.Utils.Messages.Start;
 import rpg.Utils.SlowConsole;
 import rpg.Monsters.Boss;
 import rpg.Monsters.Goblin;
@@ -23,6 +24,7 @@ public class Dungeon1 implements Dungeon {
         // Verificar se o personagem está no nível necessário para enfrentar o Boss
         if (personagem.getLevel() >= 5) {
             enemy = new Boss("Ghazkull", 350, 20, 30, "HAHAHAHAHAHA");
+            Start.EncounterGhazkull();
         } else {
             // Caso o jogador não esteja no nível adequado, enfrentará um Goblin ou Zombie
             int randomMonster = random.nextInt(2);
@@ -40,7 +42,6 @@ public class Dungeon1 implements Dungeon {
             }
         }
 
-        // Apresentação inicial do monstro
         slowConsole.imprimirDevagar("Você encontrou um " + enemy.getName() + "!");
         slowConsole.imprimirDevagar(enemy.getName() + ": " + enemy.getQuote());
 
@@ -126,7 +127,7 @@ public class Dungeon1 implements Dungeon {
             }
             if (enemy.getHealthbar() <= 0) {
                 if (enemy.getName().equals("Ghazkull")) {
-                    slowConsole.imprimirDevagar("Você derrotou o chefão da dungeon! Indo para o próximo nivel...");
+                    Start.FinishFirstBoss();
                     personagem.setLevelDungeon(personagem.getLevelDungeon() + 1);
                 }
                 break;

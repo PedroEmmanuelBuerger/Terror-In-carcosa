@@ -23,7 +23,7 @@ public class Pve {
         Pve pveInstance = new Pve(); // Crie uma instância de Pve para rastrear eventos
 
         while (personagem.getHealthbar() > 0) {
-            int randomEvent = random.nextInt(7); // Ajustado para 7 eventos possíveis
+            int randomEvent = random.nextInt(8); // Ajustado para 7 eventos possíveis
 
             if (randomEvent < 2) {
                 // Encontro de combate
@@ -42,7 +42,7 @@ public class Pve {
     private void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
-        int eventType = random.nextInt(1); // Ajuste para 8 eventos possíveis, incluindo o novo
+        int eventType = random.nextInt(8); // Ajuste para 8 eventos possíveis, incluindo o novo
 
         NonCombatEvent event = null;
         switch (eventType) {

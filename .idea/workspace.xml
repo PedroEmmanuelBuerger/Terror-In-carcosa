@@ -9,25 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando 2 armas novas por classe + evento de trocar de arma + balanceamento">
-      <change afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateNecromancer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/Classes/Necromancer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Specials/Imp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/DaggersOfSouls.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/DemonHearth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Ring.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando Classe Necromante + 2 novas armas + arma inicial + eventos para necromante + mecanica de invocação + balanceamento">
+      <change afterPath="$PROJECT_DIR$/src/rpg/Utils/Messages/Start.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreatePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreatePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/ManaRecoveryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/ManaRecoveryEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/NewWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/NewWeapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/SpecialEncounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/SpecialEncounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/itens/SpeelBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Specials/SpeelBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Specials/Imp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Specials/Imp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,7 +306,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722251162607</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Adicionando Classe Necromante + 2 novas armas + arma inicial + eventos para necromante + mecanica de invocação + balanceamento">
+      <option name="closed" value="true" />
+      <created>1722258389577</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1722258389577</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -352,6 +349,7 @@
     <MESSAGE value="Arrumando classe healer e mage + balanceamento" />
     <MESSAGE value="Adicionando Objeto para arma + adicionando dano por arma + evento que troca a arma + varias novas armas + armas iniciais" />
     <MESSAGE value="Adicionando 2 armas novas por classe + evento de trocar de arma + balanceamento" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando 2 armas novas por classe + evento de trocar de arma + balanceamento" />
+    <MESSAGE value="Adicionando Classe Necromante + 2 novas armas + arma inicial + eventos para necromante + mecanica de invocação + balanceamento" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando Classe Necromante + 2 novas armas + arma inicial + eventos para necromante + mecanica de invocação + balanceamento" />
   </component>
 </project>
