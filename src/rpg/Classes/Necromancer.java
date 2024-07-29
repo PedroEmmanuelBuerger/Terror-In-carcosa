@@ -99,8 +99,21 @@ public class Necromancer extends Attributes {
         slowConsole.imprimirDevagar("Mana: " + getMana());
         slowConsole.imprimirDevagar("Frase: " + getQuote());
         slowConsole.imprimirDevagar("Arma: " + getWeapon().getName());
-        slowConsole.imprimirDevagar("Raça " + getRace().getName());
+        slowConsole.imprimirDevagar("Raça: " + getRace().getName());
+
+        // Adiciona a verificação dos imps vivos
+        if (!getImps().isEmpty()) {
+            slowConsole.imprimirDevagar("Esqueletos invocados:");
+            for (Imp imp : getImps()) {
+                if (imp.getHealthbar() > 0) {
+                    slowConsole.imprimirDevagar("- " + imp.getName() + " (Vida: " + imp.getHealthbar() + ")");
+                }
+            }
+        } else {
+            slowConsole.imprimirDevagar("Nenhum Imp invocado.");
+        }
     }
+
 
     @Override
     public void gainExp(int expGain) {

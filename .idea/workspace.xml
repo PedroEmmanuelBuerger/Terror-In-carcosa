@@ -9,15 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando BakcGround + Mudando funcionamento armas + Removendo esqueleto da lista caso morra + mudar de imp para esqueleto">
-      <change afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando Bug danos das armas + refatorando código + abrindo espaço para novas dungeons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/CombatSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/CombatSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Bayoneta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Bayoneta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -339,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722274253557</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Arrumando Bug danos das armas + refatorando código + abrindo espaço para novas dungeons">
+      <option name="closed" value="true" />
+      <created>1722278520243</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1722278520243</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -378,6 +380,7 @@
     <MESSAGE value="Adicionando Textos + lore + fim" />
     <MESSAGE value="Adicionando raças + buff raças" />
     <MESSAGE value="Adicionando BakcGround + Mudando funcionamento armas + Removendo esqueleto da lista caso morra + mudar de imp para esqueleto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando BakcGround + Mudando funcionamento armas + Removendo esqueleto da lista caso morra + mudar de imp para esqueleto" />
+    <MESSAGE value="Arrumando Bug danos das armas + refatorando código + abrindo espaço para novas dungeons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando Bug danos das armas + refatorando código + abrindo espaço para novas dungeons" />
   </component>
 </project>

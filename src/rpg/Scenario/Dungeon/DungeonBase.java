@@ -13,6 +13,7 @@ public abstract class DungeonBase implements Dungeon {
     protected SlowConsole slowConsole = new SlowConsole();
 
     protected abstract Attributes createEnemy(Attributes personagem);
+
     protected abstract void onBossDefeated(Attributes personagem);
 
     @Override
@@ -43,13 +44,26 @@ public abstract class DungeonBase implements Dungeon {
         if (acaoJogador == -1) return true; // Continua o loop se a entrada for inválida
 
         switch (acaoJogador) {
-            case 1: personagem.attack(enemy); break;
-            case 2: personagem.attackWithSpecial(enemy); break;
-            case 3: return handleEscape(scanner, enemy);
-            case 4: personagem.getTechnicalInfo(); break;
-            case 5: handleSpecialActions(personagem); break;
-            case 6: handleRessurection(personagem); break;
-            default: slowConsole.imprimirDevagar("Ação inválida. Você perdeu a vez."); return true;
+            case 1:
+                personagem.attack(enemy);
+                break;
+            case 2:
+                personagem.attackWithSpecial(enemy);
+                break;
+            case 3:
+                return handleEscape(scanner, enemy);
+            case 4:
+                personagem.getTechnicalInfo();
+                break;
+            case 5:
+                handleSpecialActions(personagem);
+                break;
+            case 6:
+                handleRessurection(personagem);
+                break;
+            default:
+                slowConsole.imprimirDevagar("Ação inválida. Você perdeu a vez.");
+                return true;
         }
 
         if (personagem instanceof Necromancer) {
@@ -66,14 +80,26 @@ public abstract class DungeonBase implements Dungeon {
         int acaoInimigo = random.nextInt(3);
 
         switch (acaoInimigo) {
-            case 0: enemy.attack(target); break;
-            case 1: enemy.attackWithSpecial(target); break;
-            default: slowConsole.imprimirDevagar(enemy.getName() + " está preparando seu ataque!"); break;
+            case 0:
+                enemy.attack(target);
+                break;
+            case 1:
+                enemy.attackWithSpecial(target);
+                break;
+            default:
+                slowConsole.imprimirDevagar(enemy.getName() + " está preparando seu ataque!");
+                break;
         }
 
+        // Verifica se o personagem foi derrotado
         if (personagem.getHealthbar() <= 0) {
             slowConsole.imprimirDevagar("Você foi derrotado por " + enemy.getName() + ". Game Over!");
             return false;
+        }
+
+        // Se o personagem for um Necromancer, remova os imps mortos após o ataque do inimigo
+        if (personagem instanceof Necromancer) {
+            ((Necromancer) personagem).getImps().removeIf(imp -> imp.getHealthbar() <= 0);
         }
 
         return true;
