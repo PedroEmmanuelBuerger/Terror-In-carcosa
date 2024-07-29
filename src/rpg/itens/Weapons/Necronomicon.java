@@ -1,20 +1,19 @@
 package rpg.itens.Weapons;
 
-public class Necronomicon implements Weapon {
-    private int attack; // Atributo para armazenar o valor de ataque
-    private String Name = "Livro dos mortos: Necronomicon";
+import java.util.Random;
 
-    public Necronomicon(int attack) {
-        this.attack = attack; // Inicializa o valor de ataque
-    }
+public class Necronomicon implements Weapon {
+    private final int minAttack = 50;
+    private final int maxAttack = 100; // Ajuste o intervalo conforme necessário
+    private final String name = "Livro dos Mortos: Necronomicon";
 
     @Override
     public int getAttack() {
-        return attack; // Retorna o valor de ataque
+        return new Random().nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 
     @Override
     public String getName() {
-        return Name;
+        return name;
     }
 }

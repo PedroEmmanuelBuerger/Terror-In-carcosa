@@ -52,7 +52,7 @@ public class Dungeon2 implements Dungeon {
             if (personagem instanceof Mage) {
                 slowConsole.imprimirDevagar("2 - Livro de magias");
             } else if (personagem instanceof Necromancer) {
-                slowConsole.imprimirDevagar("2 - Invocar Imp");
+                slowConsole.imprimirDevagar("2 - Invocar Esqueleto");
             } else {
                 slowConsole.imprimirDevagar("2 - Ataque Especial");
             }

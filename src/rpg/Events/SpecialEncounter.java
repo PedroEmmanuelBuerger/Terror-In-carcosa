@@ -68,7 +68,7 @@ public class SpecialEncounter implements NonCombatEvent {
                 necromancer.setLimitImp(necromancer.getLimitImp() + 2);
                 necromancer.setMaxMana(necromancer.getMaxMana() + 10);
                 necromancer.setMana(necromancer.getMana() + 10);
-                slowConsole.imprimirDevagar("Você encontrou um culto sobre seu deus mesopotanico, quantidade de imps aumentou para " + necromancer.getLimitImp() + " e recuperou 10 de mana!");
+                slowConsole.imprimirDevagar("Você encontrou um culto sobre seu deus mesopotanico, quantidade de esqueletos aumentou para " + necromancer.getLimitImp() + " e recuperou 10 de mana!");
                 NecromancerEncounterOcurred = true; // Marca o evento como ocorrido
             }
         }

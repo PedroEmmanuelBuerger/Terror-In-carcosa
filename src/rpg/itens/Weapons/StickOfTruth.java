@@ -1,20 +1,19 @@
 package rpg.itens.Weapons;
 
-public class StickOfTruth implements Weapon {
-    private int attack; // Atributo para armazenar o valor de ataque
-    private String Name = "Cajado da verdade";
+import java.util.Random;
 
-    public StickOfTruth(int attack) {
-        this.attack = attack; // Inicializa o valor de ataque
-    }
+public class StickOfTruth implements Weapon {
+    private final int minAttack = 10;
+    private final int maxAttack = 20; // Ajuste o intervalo conforme necessário
+    private final String name = "Cajado da Verdade";
 
     @Override
     public int getAttack() {
-        return attack; // Retorna o valor de ataque
+        return new Random().nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 
     @Override
     public String getName() {
-        return Name;
+        return name;
     }
 }

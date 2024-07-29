@@ -13,7 +13,7 @@ import java.util.List;
 public class Necromancer extends Attributes {
     private int mana;
     private int maxMana;
-    private int limitImp = 4;
+    private int limitImp = 3;
     SlowConsole slowConsole = new SlowConsole();
     private Weapon weapon = new Ring(0);
     private List<Imp> imps = new ArrayList<>(); // Lista para armazenar os Imps invocados
@@ -56,17 +56,23 @@ public class Necromancer extends Attributes {
 
     public void summonImp() {
         if (getImps().size() >= getLimitImp()) {
-            slowConsole.imprimirDevagar("Você só pode ter "+getLimitImp()+" imps lutando ao mesmo tempo");
+            slowConsole.imprimirDevagar("Você só pode ter " + getLimitImp() + " esqueletos lutando ao mesmo tempo");
         } else {
             if (this.mana >= 15) { // Exemplo de custo de mana
                 Imp imp = new Imp();
-                imp.setName(imp.getName() +" "+(getImps().size() + 1));
+                imp.setName(imp.getName() + " " + (getImps().size() + 1));
                 imps.add(imp);
                 this.mana -= 15; // Reduz a mana usada para invocar o Imp
-                slowConsole.imprimirDevagar("Um Imp foi invocado para lutar ao seu lado!");
+                slowConsole.imprimirDevagar("Um Esqueleto foi invocado para lutar ao seu lado!");
             } else {
-                slowConsole.imprimirDevagar("Mana insuficiente para invocar um Imp.");
+                slowConsole.imprimirDevagar("Mana insuficiente para invocar um esqueleto.");
             }
+        }
+    }
+
+    public void removeImp(Imp imp) {
+        if (getImps().contains(imp)) {
+            getImps().remove(imp);
         }
     }
 
@@ -92,7 +98,7 @@ public class Necromancer extends Attributes {
         slowConsole.imprimirDevagar("Ataque Mágico: " + getSpecial());
         slowConsole.imprimirDevagar("Mana: " + getMana());
         slowConsole.imprimirDevagar("Frase: " + getQuote());
-        slowConsole.imprimirDevagar("Arma: " + getWeapon().getName() + " (" + getWeapon().getAttack() + ") de dano!");
+        slowConsole.imprimirDevagar("Arma: " + getWeapon().getName());
         slowConsole.imprimirDevagar("Raça " + getRace().getName());
     }
 

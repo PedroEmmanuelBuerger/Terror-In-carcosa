@@ -1,20 +1,19 @@
 package rpg.itens.Weapons;
 
-public class DaggersOfSouls implements Weapon {
-    private int attack; // Atributo para armazenar o valor de ataque
-    private String Name = "Adagas da alma";
+import java.util.Random;
 
-    public DaggersOfSouls(int attack) {
-        this.attack = attack; // Inicializa o valor de ataque
-    }
+public class DaggersOfSouls implements Weapon {
+    private final int minAttack = 10;
+    private final int maxAttack = 20; // Ajuste o intervalo conforme necessário
+    private final String name = "Adagas da Alma";
 
     @Override
     public int getAttack() {
-        return attack; // Retorna o valor de ataque
+        return new Random().nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 
     @Override
     public String getName() {
-        return Name;
+        return name;
     }
 }

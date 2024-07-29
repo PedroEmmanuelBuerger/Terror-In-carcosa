@@ -5,7 +5,7 @@ import rpg.Utils.SlowConsole;
 
 public class Imp extends Attributes {
     public Imp() {
-        super("imp", 10, 5, 0, "I am the Imp!");
+        super("Esqueleto", 10, 5, 0, "I am the Skeleton!");
     }
 
     SlowConsole slowConsole = new SlowConsole();

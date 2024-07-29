@@ -206,7 +206,7 @@ public abstract class Attributes {
         slowConsole.imprimirDevagar("Ataque: " + getAttack());
         slowConsole.imprimirDevagar("Ataque Especial: " + getSpecial());
         slowConsole.imprimirDevagar("Frase: " + getQuote());
-        slowConsole.imprimirDevagar("Arma: " + getWeapon().getName() + " (" + getWeapon().getAttack() + ") de dano!");
+        slowConsole.imprimirDevagar("Arma: " + getWeapon().getName());
         slowConsole.imprimirDevagar("Raça " + getRace().getName());
     }
 

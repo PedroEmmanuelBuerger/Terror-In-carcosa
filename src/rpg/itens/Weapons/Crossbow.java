@@ -1,20 +1,19 @@
 package rpg.itens.Weapons;
 
-public class Crossbow implements Weapon {
-    private int attack; // Atributo para armazenar o valor de ataque
-    private String Name = "Crossbow";
+import java.util.Random;
 
-    public Crossbow(int attack) {
-        this.attack = attack; // Inicializa o valor de ataque
-    }
+public class Crossbow implements Weapon {
+    private final int minAttack = 5;
+    private final int maxAttack = 15; // Ajuste o intervalo conforme necessário
+    private final String name = "Crossbow";
 
     @Override
     public int getAttack() {
-        return attack; // Retorna o valor de ataque
+        return new Random().nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 
     @Override
     public String getName() {
-        return Name;
+        return name;
     }
 }

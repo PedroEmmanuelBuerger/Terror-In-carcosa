@@ -1,20 +1,19 @@
 package rpg.itens.Weapons;
 
-public class DemonHearth implements Weapon {
-    private int attack; // Atributo para armazenar o valor de ataque
-    private String Name = "Coração de demonio";
+import java.util.Random;
 
-    public DemonHearth(int attack) {
-        this.attack = attack; // Inicializa o valor de ataque
-    }
+public class DemonHearth implements Weapon {
+    private final int minAttack = 20;
+    private final int maxAttack = 30; // Ajuste o intervalo conforme necessário
+    private final String name = "Coração de Demônio";
 
     @Override
     public int getAttack() {
-        return attack; // Retorna o valor de ataque
+        return new Random().nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 
     @Override
     public String getName() {
-        return Name;
+        return name;
     }
 }
