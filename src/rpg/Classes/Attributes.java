@@ -1,5 +1,6 @@
 package rpg.Classes;
 
+import rpg.CharacterCreation.Race;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Weapons.Initials.Axe;
 import rpg.itens.Weapons.Weapon;
@@ -18,6 +19,7 @@ public abstract class Attributes {
     SlowConsole slowConsole = new SlowConsole();
     int levelDungeon = 1;
     private Weapon weapon = new Axe(0);
+    private Race race;
 
     public Attributes(String name, int healthbar, int attack, int special, String quote) {
         this.name = name;
@@ -31,8 +33,24 @@ public abstract class Attributes {
         this.exp = 0; // Inicializa a experiência como 0
     }
 
+    public void setRace(Race race) {
+        this.race = race;
+    }
+
     public Weapon getWeapon() {
         return weapon;
+    }
+
+    public void applyRaceBonuses() {
+        if (race != null) {
+            this.healthbar += race.getBonusHealth();
+            this.special += race.getBonusSpecial();
+            this.attack += race.getBonusAttack(); // Aplica o bônus de ataque
+        }
+    }
+
+    public Race getRace() {
+        return race;
     }
 
     public void setWeapon(Weapon weapon) {
@@ -189,6 +207,7 @@ public abstract class Attributes {
         slowConsole.imprimirDevagar("Ataque Especial: " + getSpecial());
         slowConsole.imprimirDevagar("Frase: " + getQuote());
         slowConsole.imprimirDevagar("Arma: " + getWeapon().getName() + " (" + getWeapon().getAttack() + ") de dano!");
+        slowConsole.imprimirDevagar("Raça " + getRace().getName());
     }
 
     public int getMaxHealthInitial() {

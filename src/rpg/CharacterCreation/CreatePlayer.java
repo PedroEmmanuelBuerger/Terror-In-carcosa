@@ -42,6 +42,39 @@ public class CreatePlayer {
                     slowConsole.imprimirDevagar("Escolha inválida. Por favor, escolha uma opção válida.");
             }
         } while (personagem == null);
+        // Escolha de raça
+        slowConsole.imprimirDevagar("Escolha sua raça:");
+        slowConsole.imprimirDevagar("1 - Humano (+10 de ataque)");
+        slowConsole.imprimirDevagar("2 - Orc (+10 de vida)");
+        slowConsole.imprimirDevagar("3 - Elfo (+10 de ataque especial)");
+        slowConsole.imprimirDevagar("4 - Anão (+5 de ataque e +5 de vida)");
+
+        int escolhaRace;
+        Race race = null;
+
+        do {
+            escolhaRace = InputUtils.lerInteiro(scanner, "Escolha inválida. Por favor, escolha uma opção válida.");
+
+            switch (escolhaRace) {
+                case 1:
+                    race = Race.HUMAN;
+                    break;
+                case 2:
+                    race = Race.ORC;
+                    break;
+                case 3:
+                    race = Race.ELF;
+                    break;
+                case 4:
+                    race = Race.DWARF;
+                    break;
+                default:
+                    slowConsole.imprimirDevagar("Escolha inválida. Por favor, escolha uma opção válida.");
+            }
+        } while (race == null);
+
+        personagem.setRace(race);
+        personagem.applyRaceBonuses(); // Aplica os bônus da raça
 
         return personagem;
     }

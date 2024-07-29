@@ -93,6 +93,7 @@ public class Necromancer extends Attributes {
         slowConsole.imprimirDevagar("Mana: " + getMana());
         slowConsole.imprimirDevagar("Frase: " + getQuote());
         slowConsole.imprimirDevagar("Arma: " + getWeapon().getName() + " (" + getWeapon().getAttack() + ") de dano!");
+        slowConsole.imprimirDevagar("Raça " + getRace().getName());
     }
 
     @Override
