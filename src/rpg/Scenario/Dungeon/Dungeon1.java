@@ -1,12 +1,11 @@
 package rpg.Scenario.Dungeon;
+
+import rpg.Classes.*;
 import rpg.Utils.SlowConsole;
-import rpg.Classes.Attributes;
-import rpg.Classes.Healer;
-import rpg.Classes.Mage;
-import rpg.Classes.Warrior;
 import rpg.Monsters.Boss;
 import rpg.Monsters.Goblin;
 import rpg.Monsters.Zombie;
+import rpg.itens.Specials.Imp;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -52,6 +51,8 @@ public class Dungeon1 implements Dungeon {
             slowConsole.imprimirDevagar("1 - Atacar");
             if (personagem instanceof Mage) {
                 slowConsole.imprimirDevagar("2 - Livro de magias");
+            } else if (personagem instanceof Necromancer) {
+                slowConsole.imprimirDevagar("2 - Invocar Imp");
             } else {
                 slowConsole.imprimirDevagar("2 - Ataque Especial");
             }
@@ -114,7 +115,15 @@ public class Dungeon1 implements Dungeon {
                 escape = 0;
                 break;
             }
-
+            if (personagem instanceof Necromancer) {
+                Necromancer necromancer = (Necromancer) personagem;
+                for (Imp imp : necromancer.getImps()) {
+                    if (imp.getHealthbar() > 0 && enemy.getHealthbar() > 0) {
+                        slowConsole.imprimirDevagar("\nTurno do "+imp.getName()+":");
+                        imp.ImpAttack(enemy, personagem); // Imp realiza um ataque normal
+                    }
+                }
+            }
             if (enemy.getHealthbar() <= 0) {
                 if (enemy.getName().equals("Ghazkull")) {
                     slowConsole.imprimirDevagar("Você derrotou o chefão da dungeon! Indo para o próximo nivel...");
@@ -126,14 +135,27 @@ public class Dungeon1 implements Dungeon {
             // Turno do inimigo
             slowConsole.imprimirDevagar("\nTurno de " + enemy.getName() + ":");
 
+            Attributes target;
+            if (personagem instanceof Necromancer && !((Necromancer) personagem).getImps().isEmpty()) {
+                // Inclui o Necromancer e os Imps na lista de possíveis alvos
+                int targetChoice = random.nextInt(((Necromancer) personagem).getImps().size() + 1);
+                if (targetChoice == 0) {
+                    target = personagem;
+                } else {
+                    target = ((Necromancer) personagem).getImps().get(targetChoice - 1);
+                }
+            } else {
+                target = personagem;
+            }
+
             int acaoInimigo = random.nextInt(3);
 
             switch (acaoInimigo) {
                 case 0:
-                    enemy.attack(personagem);
+                    enemy.attack(target);
                     break;
                 case 1:
-                    enemy.attackWithSpecial(personagem);
+                    enemy.attackWithSpecial(target);
                     break;
                 default:
                     slowConsole.imprimirDevagar(enemy.getName() + " está preparando seu ataque!");

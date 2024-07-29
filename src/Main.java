@@ -2,7 +2,7 @@ import rpg.Scenario.Mode.Pve;
 
 import java.util.Scanner;
 
-public class principal {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

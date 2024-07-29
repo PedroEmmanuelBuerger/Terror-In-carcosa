@@ -1,4 +1,4 @@
-package rpg.itens;
+package rpg.itens.Specials;
 
 import rpg.CharacterCreation.CreatePlayer;
 import rpg.Utils.ManaAdm;

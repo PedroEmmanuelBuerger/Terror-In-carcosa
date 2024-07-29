@@ -120,5 +120,31 @@ public class NewWeapon implements NonCombatEvent {
                 slowConsole.imprimirDevagar(personagem.getName() + " decidiu não equipar a arma.");
             }
         }
+        if (personagem instanceof Necromancer) {
+            Necromancer necromancer = (Necromancer) personagem;
+
+            Weapon[] weapons = {
+                    new DaggersOfSouls(14), // Dano da arma é 5
+                    new DemonHearth(22) // Dano da nova arma é 15
+            };
+
+            Random random = new Random();
+            Weapon newWeapon = weapons[random.nextInt(weapons.length)];
+
+            slowConsole.imprimirDevagar("Você achou uma nova arma: " + newWeapon.getName() + " com dano (" + newWeapon.getAttack() + "). Deseja equipá-la? (s/n)");
+
+            Scanner scanner = new Scanner(System.in);
+            String choice = scanner.nextLine();
+
+            if (choice.equalsIgnoreCase("s")) {
+                necromancer.setWeapon(newWeapon);
+                // Atualiza o ataque considerando a nova arma
+                necromancer.setSpecial((necromancer.getSpecial() + newWeapon.getAttack()) - necromancer.getWeapon().getAttack());
+
+                slowConsole.imprimirDevagar(personagem.getName() + " equipou a nova arma: " + newWeapon.getName() + " com dano " + newWeapon.getAttack() + "!");
+            } else {
+                slowConsole.imprimirDevagar(personagem.getName() + " decidiu não equipar a arma.");
+            }
+        }
     }
 }

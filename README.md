@@ -13,7 +13,7 @@ O projeto inclui as seguintes funcionalidades:
 ## Tecnologias Utilizadas
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-- Java: Linguagem de programação principal utilizada para implementar a lógica do jogo.
+- Java: Linguagem de programação Main utilizada para implementar a lógica do jogo.
 - POO (Programação Orientada a Objetos): Para estruturar e organizar o código do jogo.
 - Intellij(IDE): Foi a IDE Utilizada para formular o projeto.
 - Solid(Principio SOLID): Foi desenvolvido com base no solid.

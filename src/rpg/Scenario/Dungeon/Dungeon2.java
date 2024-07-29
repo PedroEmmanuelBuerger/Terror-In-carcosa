@@ -1,10 +1,9 @@
 package rpg.Scenario.Dungeon;
+
+import rpg.Classes.*;
 import rpg.Monsters.*;
 import rpg.Utils.SlowConsole;
-import rpg.Classes.Attributes;
-import rpg.Classes.Healer;
-import rpg.Classes.Mage;
-import rpg.Classes.Warrior;
+import rpg.itens.Specials.Imp;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -50,6 +49,8 @@ public class Dungeon2 implements Dungeon {
             slowConsole.imprimirDevagar("1 - Atacar");
             if (personagem instanceof Mage) {
                 slowConsole.imprimirDevagar("2 - Livro de magias");
+            } else if (personagem instanceof Necromancer) {
+                slowConsole.imprimirDevagar("2 - Invocar Imp");
             } else {
                 slowConsole.imprimirDevagar("2 - Ataque Especial");
             }
@@ -112,12 +113,21 @@ public class Dungeon2 implements Dungeon {
                 escape = 0;
                 break;
             }
-
+            if (personagem instanceof Necromancer) {
+                Necromancer necromancer = (Necromancer) personagem;
+                for (Imp imp : necromancer.getImps()) {
+                    if (imp.getHealthbar() > 0 && enemy.getHealthbar() > 0) {
+                        slowConsole.imprimirDevagar("\nTurno do Imp:");
+                        imp.ImpAttack(enemy, personagem); // Imp realiza um ataque normal
+                    }
+                }
+            }
             if (enemy.getHealthbar() <= 0) {
                 if (enemy.getName().equals("Dragon Lord King")) {
                     slowConsole.imprimirDevagar("Você derrotou o chefão da dungeon! Liberdade cantou...");
                     System.exit(0);
                 }
+
                 break;
             }
 

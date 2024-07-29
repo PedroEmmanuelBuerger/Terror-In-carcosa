@@ -15,6 +15,7 @@ public class CreatePlayer {
         slowConsole.imprimirDevagar("2 - Mago (+15 de mana)");
         slowConsole.imprimirDevagar("3 - Ladino(+15 de ataque)");
         slowConsole.imprimirDevagar("4 - Curandeiro(+5 de vida, +5 de mana, +5 de ataque especial)");
+        slowConsole.imprimirDevagar("5 - Necromante(+10 de ataque especial, +5 de mana)");
 
         int escolha;
         Attributes personagem = null;
@@ -35,6 +36,8 @@ public class CreatePlayer {
                 case 4:
                     personagem = CreateHealer.createHealer(scanner);
                     break;
+                case 5:
+                    personagem = CreateNecromancer.createNecromancer(scanner);
                 default:
                     slowConsole.imprimirDevagar("Escolha inválida. Por favor, escolha uma opção válida.");
             }

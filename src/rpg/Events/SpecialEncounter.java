@@ -2,13 +2,14 @@ package rpg.Events;
 
 import rpg.Classes.*;
 import rpg.Utils.SlowConsole;
-import rpg.itens.SpeelBook;
+import rpg.itens.Specials.SpeelBook;
 
 public class SpecialEncounter implements NonCombatEvent {
     private static boolean mageEncounterOccurred = false;
     private static boolean warriorEncounterOccurred = false;
     private static boolean rogueEncounterOccurred = false;
     private static boolean healerEncounterOccurred = false;
+    private static boolean NecromancerEncounterOcurred = false;
 
     private SlowConsole slowConsole = new SlowConsole();
     private SpeelBook speelBook;
@@ -60,6 +61,15 @@ public class SpecialEncounter implements NonCombatEvent {
                 slowConsole.imprimirDevagar("Você encontrou uma estátua de seu deus! Seu poder guiado pela sua fé é dobrado!");
 
                 healerEncounterOccurred = true; // Marca o evento como ocorrido
+            }
+        } else if (personagem instanceof Necromancer) {
+            Necromancer necromancer = (Necromancer) personagem;
+            if (!NecromancerEncounterOcurred) {
+                necromancer.setLimitImp(necromancer.getLimitImp() + 2);
+                necromancer.setMaxMana(necromancer.getMaxMana() + 10);
+                necromancer.setMana(necromancer.getMana() + 10);
+                slowConsole.imprimirDevagar("Você encontrou um culto sobre seu deus mesopotanico, quantidade de imps aumentou para " + necromancer.getLimitImp() + " e recuperou 10 de mana!");
+                NecromancerEncounterOcurred = true; // Marca o evento como ocorrido
             }
         }
     }

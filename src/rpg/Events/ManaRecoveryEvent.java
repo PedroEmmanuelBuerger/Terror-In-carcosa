@@ -1,5 +1,6 @@
 package rpg.Events;
 
+import rpg.Classes.Necromancer;
 import rpg.Utils.SlowConsole;
 import rpg.Classes.Attributes;
 import rpg.Classes.Healer;
@@ -19,6 +20,10 @@ public class ManaRecoveryEvent implements NonCombatEvent {
         } else if (personagem instanceof Healer) {
             ((Healer) personagem).recoverMana(manaRecovered);
             slowConsole.imprimirDevagar("Você encontrou um foco de cura! ganhou " + manaRecovered + " de mana.");
+        }
+        else if (personagem instanceof Necromancer) {
+            ((Necromancer) personagem).recoverMana(manaRecovered);
+            slowConsole.imprimirDevagar("Você encontrou um corpo para ritual! ganhou " + manaRecovered + " de mana.");
         }
     }
 }
