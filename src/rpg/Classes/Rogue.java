@@ -1,7 +1,6 @@
 package rpg.Classes;
 
 import rpg.Utils.SlowConsole;
-import rpg.itens.Weapons.Initials.Axe;
 import rpg.itens.Weapons.Initials.Daggers;
 import rpg.itens.Weapons.Weapon;
 

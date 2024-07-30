@@ -1,5 +1,6 @@
 package rpg.Classes;
 
+import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
 import rpg.Utils.ManaAdm;
 import rpg.itens.Weapons.Initials.Mace;
@@ -30,6 +31,8 @@ public class Healer extends Attributes {
     @Override
     public void attackWithSpecial(Attributes enemy) {
         int holyDamage = this.getSpecial() / 2;
+        CriticChance criticChance = new CriticChance(holyDamage);
+        holyDamage = criticChance.chanceCritic(); // Corrigir chamada ao método chanceCritic
         boolean manaRes;
         ManaAdm manaAdm = new ManaAdm();
         manaRes = manaAdm.costMana(this.mana, 10, this.getName()); // Chamar costMana na instância criada

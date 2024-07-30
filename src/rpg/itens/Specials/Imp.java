@@ -1,6 +1,7 @@
 package rpg.itens.Specials;
 
 import rpg.Classes.Attributes;
+import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
 
 public class Imp extends Attributes {
@@ -12,6 +13,8 @@ public class Imp extends Attributes {
 
     public void ImpAttack(Attributes enemy, Attributes personagem) {
         int damage = personagem.getSpecial() / 2;
+        CriticChance criticChance = new CriticChance(damage);
+        damage = criticChance.chanceCritic();
         slowConsole.imprimirDevagar(this.getName() + " atacou " + enemy.getName() + " causando " + damage + " de dano!");
         enemy.takeDamage(damage);
 

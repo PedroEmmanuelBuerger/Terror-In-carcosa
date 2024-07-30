@@ -1,5 +1,6 @@
 package rpg.Classes;
 
+import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Specials.SpeelBook;
 import rpg.itens.Weapons.Initials.Staff;
@@ -43,6 +44,8 @@ public class Mage extends Attributes {
     @Override
     public void attack(Attributes enemy) {
         int damage = this.getAttack();
+        CriticChance criticChance = new CriticChance(damage);
+        damage = criticChance.chanceCritic(); // Corrigir chamada ao método chanceCritic
         slowConsole.imprimirDevagar(this.getName() + " lançou uma bola de fogo em " + enemy.getName() + " causando " + damage + " de dano!");
         enemy.takeDamage(damage);
         if (!enemy.isAlive()) {
@@ -56,6 +59,8 @@ public class Mage extends Attributes {
     @Override
     public void attackWithSpecial(Attributes enemy) {
         int damageSpell = speelBook.selectSpell(this);
+        CriticChance criticChance = new CriticChance(damageSpell);
+        damageSpell = criticChance.chanceCritic();
         if (damageSpell != 0) {
             enemy.takeDamage(this.getSpecial() + damageSpell);
             if (!enemy.isAlive()) {

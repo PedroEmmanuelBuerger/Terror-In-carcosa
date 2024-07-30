@@ -1,5 +1,6 @@
 package rpg.Classes;
 
+import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Specials.EvilForces;
 import rpg.itens.Specials.Imp;
@@ -88,6 +89,8 @@ public class Necromancer extends Attributes {
     @Override
     public void attack(Attributes enemy) {
         int damage = this.getAttack();
+        CriticChance criticChance = new CriticChance(damage);
+        damage = criticChance.chanceCritic();
         slowConsole.imprimirDevagar(this.getName() + " lançou uma caveira voadora em " + enemy.getName() + " causando " + damage + " de dano!");
         enemy.takeDamage(damage);
         if (!enemy.isAlive()) {
@@ -99,6 +102,8 @@ public class Necromancer extends Attributes {
     }
     public void selectSpell(Attributes enemy) {
         int damageSpeel = spellBook.selectSpell(this);
+        CriticChance criticChance = new CriticChance(damageSpeel);
+        damageSpeel = criticChance.chanceCritic();
         if (damageSpeel != 0) {
             enemy.takeDamage(this.getSpecial() + damageSpeel);
             if (!enemy.isAlive()) {

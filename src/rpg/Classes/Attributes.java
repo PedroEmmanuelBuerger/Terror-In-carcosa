@@ -1,6 +1,7 @@
 package rpg.Classes;
 
 import rpg.CharacterCreation.Race;
+import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Weapons.Initials.Axe;
 import rpg.itens.Weapons.Weapon;
@@ -115,8 +116,8 @@ public abstract class Attributes {
     }
 
     public void attack(Attributes enemy) {
-        // Reduz a saúde do inimigo pelo valor do ataque do personagem atual
-        int damage = this.getAttack();
+        CriticChance criticChance = new CriticChance(this.getAttack());
+        int damage = criticChance.chanceCritic(); // Corrigir chamada ao método chanceCritic
         slowConsole.imprimirDevagar(this.getName() + " atacou " + enemy.getName() + " causando " + damage + " de dano!");
         enemy.takeDamage(damage);
 
@@ -130,8 +131,8 @@ public abstract class Attributes {
     }
 
     public void attackWithSpecial(Attributes enemy) {
-
-        int damage = this.getSpecial();
+        CriticChance criticChance = new CriticChance(this.getSpecial());
+        int damage = criticChance.chanceCritic(); // Corrigir chamada ao método chanceCritic
         slowConsole.imprimirDevagar(this.getName() + " atacou " + enemy.getName() + " com um ataque especial, causando " + damage + " de dano!");
         enemy.takeDamage(damage);
         if (!enemy.isAlive()) {
