@@ -14,7 +14,7 @@ public class Healer extends Attributes {
     public Healer(String name, int healthbar, int Mana, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.mana = Mana;
-        this.setClasses("Healer");
+        this.setClasses("Curandeiro");
         this.maxMana = mana;
         setWeapon(weapon);
     }

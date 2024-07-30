@@ -24,9 +24,9 @@ public class Pve {
         personagem.setLevelDungeon(1); // Defina o nível da dungeon inicial como 1
 
         while (personagem.getHealthbar() > 0) {
-            int randomEvent = random.nextInt(8); // Ajustado para 8 eventos possíveis
+            int randomEvent = random.nextInt(5); // Ajustado para 5 eventos possíveis
 
-            if (randomEvent < 2) {
+            if (randomEvent < 2) { // 2/5 chance para combate
                 // Encontro de combate
                 CombatSystem.startCombat(scanner, personagem);
                 // Após o combate, atualize o nível da dungeon se necessário

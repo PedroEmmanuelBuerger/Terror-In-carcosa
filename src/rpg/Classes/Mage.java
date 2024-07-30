@@ -16,7 +16,7 @@ public class Mage extends Attributes {
         this.mana = mana;
         this.maxMana = mana;
         this.speelBook = new SpeelBook(); // Inicializa o SpeelBook
-        this.setClasses("Mage");
+        this.setClasses("Mago");
         setWeapon(weapon);
     }
 

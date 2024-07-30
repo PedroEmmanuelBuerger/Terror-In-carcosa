@@ -18,6 +18,9 @@ public class Dungeon1 extends DungeonBase {
                     return new Mob("Goblin", 35, 5, 17, "Grrrr!", 5);
                 case 1:
                     return new Mob("Zombie", 50, 12, 14, "Braaaaains...", 10);
+                case 3:
+                    return new Mob("Morcego", 25, 5, 4, "zizpzi", 10);
+                case 4:
                 default:
                     return new Mob("Goblin", 35, 5, 17, "Grrrr!", 5);
             }

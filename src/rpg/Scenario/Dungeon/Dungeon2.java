@@ -10,7 +10,7 @@ public class Dungeon2 extends DungeonBase {
     protected Attributes createEnemy(Attributes personagem) {
         if (personagem.getLevel() >= 10) {
             Start.EncounterLordDragonKing(); // Exibe a mensagem ao encontrar o Lorde Rei Dragão
-            return new KingDragon("Lorde Rei Dragão", 500, 45, 60, "FIRE!!!!!!!!!!!!!");
+            return new KingDragon("Lorde Rei Dragão", 550, 45, 60, "FIRE!!!!!!!!!!!!!");
         } else {
             int randomMonster = random.nextInt(2);
             switch (randomMonster) {

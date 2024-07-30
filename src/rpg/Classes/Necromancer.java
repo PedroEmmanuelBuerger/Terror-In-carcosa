@@ -22,7 +22,7 @@ public class Necromancer extends Attributes {
         super(name, healthbar, attack, special, quote);
         this.mana = mana;
         this.maxMana = mana;
-        this.setClasses("Necromancer");
+        this.setClasses("Necromante");
         setWeapon(weapon);
     }
 

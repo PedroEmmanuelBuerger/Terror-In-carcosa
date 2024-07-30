@@ -7,7 +7,7 @@ public class KnightOfFear extends Attributes {
     SlowConsole slowConsole = new SlowConsole();
     public KnightOfFear(String name, int healthbar, int attack, int specialAttack, String battleCry) {
         super(name, healthbar, attack, specialAttack, battleCry);
-        this.setExp(120);
+        this.setExp(150);
     }
     @Override
     public void attack(Attributes target) {
