@@ -9,18 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Balanceamento + Adicionando mensagems novo boss + refatoração">
-      <change afterPath="$PROJECT_DIR$/src/rpg/Utils/Messages/End.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Balanceamento + 1 final para cada classe">
+      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Specials/EvilForces.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Necromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Necromancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KnightOfFear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KnightOfFear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -374,7 +367,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722283338163</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Balanceamento + 1 final para cada classe">
+      <option name="closed" value="true" />
+      <created>1722340696328</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1722340696328</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -389,7 +390,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionando novos inimigos + loop de batalha + funcionamento de cada classe" />
     <MESSAGE value="Inimigos conseguem usar + de 1 tipo de ação + sistema de status no jogo" />
     <MESSAGE value="Trocando o console da aplicação pra ficar mais lento" />
     <MESSAGE value="Adicionando os consoles logs q faltam" />
@@ -414,6 +414,7 @@
     <MESSAGE value="Arrumando fluxo de esqueletos necromante + adicionando info esqueletos" />
     <MESSAGE value="Refatorando mobs + adicionando dungeon nova + adicionando boss novo" />
     <MESSAGE value="Balanceamento + Adicionando mensagems novo boss + refatoração" />
-    <option name="LAST_COMMIT_MESSAGE" value="Balanceamento + Adicionando mensagems novo boss + refatoração" />
+    <MESSAGE value="Balanceamento + 1 final para cada classe" />
+    <option name="LAST_COMMIT_MESSAGE" value="Balanceamento + 1 final para cada classe" />
   </component>
 </project>

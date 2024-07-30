@@ -1,10 +1,9 @@
 package rpg.Classes;
 
 import rpg.Utils.SlowConsole;
+import rpg.itens.Specials.EvilForces;
 import rpg.itens.Specials.Imp;
-import rpg.itens.Specials.SpeelBook;
 import rpg.itens.Weapons.Initials.Ring;
-import rpg.itens.Weapons.Initials.Staff;
 import rpg.itens.Weapons.Weapon;
 
 import java.util.ArrayList;
@@ -16,7 +15,8 @@ public class Necromancer extends Attributes {
     private int limitImp = 3;
     SlowConsole slowConsole = new SlowConsole();
     private Weapon weapon = new Ring(0);
-    private List<Imp> imps = new ArrayList<>(); // Lista para armazenar os Imps invocados
+    private List<Imp> imps = new ArrayList<>();
+    private EvilForces spellBook; // Lista para armazenar os Imps invocados
 
     public Necromancer(String name, int healthbar, int mana, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
@@ -24,10 +24,19 @@ public class Necromancer extends Attributes {
         this.maxMana = mana;
         this.setClasses("Necromante");
         setWeapon(weapon);
+        this.spellBook = new EvilForces();
     }
 
     public int getLimitImp() {
         return limitImp;
+    }
+
+    public EvilForces getSpellBook() {
+        return spellBook;
+    }
+
+    public void setSpellBook(EvilForces spellBook) {
+        this.spellBook = spellBook;
     }
 
     public void setLimitImp(int limitImp) {
@@ -88,7 +97,18 @@ public class Necromancer extends Attributes {
             gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
         }
     }
-
+    public void selectSpell(Attributes enemy) {
+        int damageSpeel = spellBook.selectSpell(this);
+        if (damageSpeel != 0) {
+            enemy.takeDamage(this.getSpecial() + damageSpeel);
+            if (!enemy.isAlive()) {
+                slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
+                slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
+                slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
+                gainExp(enemy.getExp());
+            }
+        }
+    }
     @Override
     public void getTechnicalInfo() {
         slowConsole.imprimirDevagar("Nome: " + getName());

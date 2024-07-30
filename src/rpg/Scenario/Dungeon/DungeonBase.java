@@ -55,12 +55,25 @@ public abstract class DungeonBase implements Dungeon {
                 personagem.attackWithSpecial(enemy);
                 break;
             case 3:
-                return handleEscape(scanner, enemy);
+                if (personagem instanceof Necromancer) {
+                    ((Necromancer) personagem).selectSpell(enemy);
+                } else {
+                    return handleEscape(scanner, enemy);
+                }
+                break;
             case 4:
-                personagem.getTechnicalInfo();
+                if (personagem instanceof Necromancer) {
+                    return handleEscape(scanner, enemy);
+                } else {
+                    personagem.getTechnicalInfo();
+                }
                 break;
             case 5:
-                handleSpecialActions(personagem);
+                if (personagem instanceof Necromancer) {
+                    personagem.getTechnicalInfo();
+                } else {
+                    handleSpecialActions(personagem);
+                }
                 break;
             case 6:
                 handleRessurection(personagem);
@@ -118,13 +131,19 @@ public abstract class DungeonBase implements Dungeon {
         } else {
             slowConsole.imprimirDevagar("2 - Ataque Especial");
         }
-        slowConsole.imprimirDevagar("3 - Fugir");
-        slowConsole.imprimirDevagar("4 - Status");
-        if (personagem instanceof Warrior) {
-            slowConsole.imprimirDevagar("5 - Defender");
-        } else if (personagem instanceof Healer) {
-            slowConsole.imprimirDevagar("5 - Curar");
-            slowConsole.imprimirDevagar("6 - Ressurreição");
+        if (personagem instanceof Necromancer) {
+            slowConsole.imprimirDevagar("3 - Necromancia");
+            slowConsole.imprimirDevagar("4 - Fugir");
+            slowConsole.imprimirDevagar("5 - Status");
+        } else {
+            slowConsole.imprimirDevagar("3 - Fugir");
+            slowConsole.imprimirDevagar("4 - Status");
+            if (personagem instanceof Warrior) {
+                slowConsole.imprimirDevagar("5 - Defender");
+            } else if (personagem instanceof Healer) {
+                slowConsole.imprimirDevagar("5 - Curar");
+                slowConsole.imprimirDevagar("6 - Ressurreição");
+            }
         }
     }
 
