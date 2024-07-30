@@ -74,6 +74,7 @@ public class Necromancer extends Attributes {
                 imps.add(imp);
                 this.mana -= 15; // Reduz a mana usada para invocar o Imp
                 slowConsole.imprimirDevagar("Um Esqueleto foi invocado para lutar ao seu lado!");
+                slowConsole.imprimirDevagar("Gastou 15 de mana, mana restante: " + this.getMana());
             } else {
                 slowConsole.imprimirDevagar("Mana insuficiente para invocar um esqueleto.");
             }
@@ -135,7 +136,7 @@ public class Necromancer extends Attributes {
                 }
             }
         } else {
-            slowConsole.imprimirDevagar("Nenhum Imp invocado.");
+            slowConsole.imprimirDevagar("Nenhum Esqueleto invocado.");
         }
     }
 

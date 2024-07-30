@@ -8,8 +8,8 @@ public class DemonHearth implements Weapon {
 
     public DemonHearth() {
         Random random = new Random();
-        int minAttack = 20;
-        int maxAttack = 30;
+        int minAttack = 13;
+        int maxAttack = 17;
         this.attack = random.nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 

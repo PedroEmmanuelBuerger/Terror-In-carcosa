@@ -9,8 +9,8 @@ public class Bayoneta implements Weapon {
     // Construtor da classe que define o dano aleatório
     public Bayoneta() {
         Random random = new Random();
-        int minAttack = 5;
-        int maxAttack = 10;
+        int minAttack = 8;
+        int maxAttack = 15;
         // Define o valor do ataque aleatório apenas uma vez no momento da criação
         this.attack = random.nextInt((maxAttack - minAttack) + 1) + minAttack;
     }

@@ -8,7 +8,7 @@ public class Crossbow implements Weapon {
 
     public Crossbow() {
         Random random = new Random();
-        int minAttack = 5;
+        int minAttack = 7;
         int maxAttack = 15;
         this.attack = random.nextInt((maxAttack - minAttack) + 1) + minAttack;
     }

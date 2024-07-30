@@ -9,15 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Balanceamento + 1 final para cada classe">
-      <change afterPath="$PROJECT_DIR$/src/rpg/Utils/CriticChance.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando mecanica de critico">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Necromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Necromancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/itens/Specials/Imp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Specials/Imp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Bayoneta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Bayoneta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Bible.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Bible.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Crossbow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Crossbow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/DaggersOfSouls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/DaggersOfSouls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/DemonHearth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/DemonHearth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Necronomicon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Necronomicon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/SwordOfThousandTruths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/SwordOfThousandTruths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Wand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Wand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -379,7 +383,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722340696328</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Adicionando mecanica de critico">
+      <option name="closed" value="true" />
+      <created>1722346806944</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1722346806944</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -394,7 +406,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Inimigos conseguem usar + de 1 tipo de ação + sistema de status no jogo" />
     <MESSAGE value="Trocando o console da aplicação pra ficar mais lento" />
     <MESSAGE value="Adicionando os consoles logs q faltam" />
     <MESSAGE value="Adicionando SpellBook, um evento aleatório e mudando o comportamento de alguns métodos" />
@@ -419,6 +430,7 @@
     <MESSAGE value="Refatorando mobs + adicionando dungeon nova + adicionando boss novo" />
     <MESSAGE value="Balanceamento + Adicionando mensagems novo boss + refatoração" />
     <MESSAGE value="Balanceamento + 1 final para cada classe" />
-    <option name="LAST_COMMIT_MESSAGE" value="Balanceamento + 1 final para cada classe" />
+    <MESSAGE value="Adicionando mecanica de critico" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando mecanica de critico" />
   </component>
 </project>

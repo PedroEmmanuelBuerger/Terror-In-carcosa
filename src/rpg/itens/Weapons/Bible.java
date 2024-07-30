@@ -8,8 +8,8 @@ public class Bible implements Weapon {
 
     public Bible() {
         Random random = new Random();
-        int minAttack = 10;
-        int maxAttack = 20;
+        int minAttack = 8;
+        int maxAttack = 17;
         this.attack = random.nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 

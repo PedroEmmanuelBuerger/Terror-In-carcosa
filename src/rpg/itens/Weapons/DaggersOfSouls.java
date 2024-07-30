@@ -8,8 +8,8 @@ public class DaggersOfSouls implements Weapon {
 
     public DaggersOfSouls() {
         Random random = new Random();
-        int minAttack = 10;
-        int maxAttack = 20;
+        int minAttack = 15;
+        int maxAttack = 23;
         this.attack = random.nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 

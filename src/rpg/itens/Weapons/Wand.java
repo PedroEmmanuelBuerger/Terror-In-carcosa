@@ -8,8 +8,8 @@ public class Wand implements Weapon {
 
     public Wand() {
         Random random = new Random();
-        int minAttack = 10;
-        int maxAttack = 20;
+        int minAttack = 8;
+        int maxAttack = 14;
         this.attack = random.nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 

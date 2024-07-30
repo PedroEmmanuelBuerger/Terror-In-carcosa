@@ -9,7 +9,7 @@ public class SwordOfThousandTruths implements Weapon {
     public SwordOfThousandTruths() {
         Random random = new Random();
         int minAttack = 15;
-        int maxAttack = 25;
+        int maxAttack = 23;
         this.attack = random.nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 

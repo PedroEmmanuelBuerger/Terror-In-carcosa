@@ -8,8 +8,8 @@ public class Necronomicon implements Weapon {
 
     public Necronomicon() {
         Random random = new Random();
-        int minAttack = 50;
-        int maxAttack = 100;
+        int minAttack = 18;
+        int maxAttack = 28;
         this.attack = random.nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 
