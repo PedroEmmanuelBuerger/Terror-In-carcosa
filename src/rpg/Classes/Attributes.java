@@ -3,8 +3,12 @@ package rpg.Classes;
 import rpg.CharacterCreation.Race;
 import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
+import rpg.itens.Item;
 import rpg.itens.Weapons.Initials.Axe;
 import rpg.itens.Weapons.Weapon;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Attributes {
     private String name;
@@ -17,10 +21,11 @@ public abstract class Attributes {
     private boolean alive;
     private int level;
     private int exp;
-    private int levelDungeon = 1; // Inicialize o nível da dungeon// Variável de experiência
+    private int levelDungeon = 1; // Inicialize o nível da dungeon
     SlowConsole slowConsole = new SlowConsole();
     private Weapon weapon = new Axe(0);
     private Race race;
+    private List<Item> bag = new ArrayList<>(); // Lista de itens na bag
 
     public Attributes(String name, int healthbar, int attack, int special, String quote) {
         this.name = name;
@@ -34,6 +39,7 @@ public abstract class Attributes {
         this.exp = 0; // Inicializa a experiência como 0
     }
 
+    // Métodos existentes
 
     public void setRace(Race race) {
         this.race = race;
@@ -209,10 +215,47 @@ public abstract class Attributes {
         slowConsole.imprimirDevagar("Ataque Especial: " + getSpecial());
         slowConsole.imprimirDevagar("Frase: " + getQuote());
         slowConsole.imprimirDevagar("Arma: " + getWeapon().getName());
-        slowConsole.imprimirDevagar("Raça " + getRace().getName());
+        slowConsole.imprimirDevagar("Raça: " + getRace().getName());
     }
 
     public int getMaxHealthInitial() {
         return maxHealthInitial;
+    }
+
+    public void addItemToBag(Item item) {
+        bag.add(item);
+        slowConsole.imprimirDevagar("Adicionou " + item.getName() + " à bag.");
+    }
+
+    // Remove um item da bag
+    public void removeItemFromBag(Item item) {
+        if (bag.remove(item)) {
+            slowConsole.imprimirDevagar("Removed " + item.getName() + " da bag.");
+        } else {
+            slowConsole.imprimirDevagar(item.getName() + " não está na bag.");
+        }
+    }
+
+    // Usa um item da bag
+    public void useItem(Item item) {
+        if (bag.contains(item)) {
+            // Implementar lógica específica de uso do item
+            slowConsole.imprimirDevagar("Usou " + item.getName() + ".");
+            removeItemFromBag(item); // Remove o item após o uso
+        } else {
+            slowConsole.imprimirDevagar(item.getName() + " não está na bag.");
+        }
+    }
+
+    // Mostra os itens na bag
+    public void showBagContents() {
+        if (bag.isEmpty()) {
+            slowConsole.imprimirDevagar("A bag está vazia.");
+        } else {
+            slowConsole.imprimirDevagar("Itens na bag:");
+            for (Item item : bag) {
+                slowConsole.imprimirDevagar(item.getName());
+            }
+        }
     }
 }

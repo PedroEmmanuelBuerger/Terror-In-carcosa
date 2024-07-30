@@ -12,15 +12,16 @@ public class Dungeon1 extends DungeonBase {
             Start.EncounterGhazkull(); // Exibe a mensagem ao encontrar Ghazkull
             return new Ghazkull("Ghazkull", 350, 20, 30, "HAHAHAHAHAHA");
         } else {
-            int randomMonster = random.nextInt(2);
+            int randomMonster = random.nextInt(4);
             switch (randomMonster) {
                 case 0:
                     return new Mob("Goblin", 35, 5, 17, "Grrrr!", 5);
                 case 1:
                     return new Mob("Zombie", 50, 12, 14, "Braaaaains...", 10);
+                case 2:
+                    return new Mob("Morcego", 25, 5, 4, "zizpzi", 3);
                 case 3:
-                    return new Mob("Morcego", 25, 5, 4, "zizpzi", 10);
-                case 4:
+                    return new Mob("Mercenario", 65, 15, 7, "Me passe seu ouro!", 15);
                 default:
                     return new Mob("Goblin", 35, 5, 17, "Grrrr!", 5);
             }

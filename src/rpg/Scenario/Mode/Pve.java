@@ -45,7 +45,7 @@ public class Pve {
     private void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
-        int eventType = random.nextInt(8); // Ajuste para 8 eventos possíveis, incluindo o novo
+        int eventType = random.nextInt(9); // Ajuste para 8 eventos possíveis, incluindo o novo
 
         NonCombatEvent event = null;
         switch (eventType) {
@@ -85,6 +85,9 @@ public class Pve {
                 break;
             case 7:
                 event = new NewWeapon(); // Adiciona o novo evento
+                break;
+            case 8:
+                event = new Pause();
                 break;
             default:
                 slowConsole.imprimirDevagar("Evento não reconhecido.");

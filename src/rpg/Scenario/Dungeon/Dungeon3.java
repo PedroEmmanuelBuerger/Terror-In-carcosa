@@ -15,11 +15,20 @@ public class Dungeon3 extends DungeonBase {
             Start.EncounterTaigon(); // Exibe a mensagem ao encontrar o Cavaleiro do Medo Taigon
             return new KnightOfFear("Cavaleiro do medo Taigon", 1000, 60, 80, "Seu fim está próximo...");
         } else {
-            int randomMonster = random.nextInt(2);
+            int randomMonster = random.nextInt(5);
             switch (randomMonster) {
-                case 0: return new Mob("Golem", 120, 30, 20, "Meu dever!", 40);
-                case 1: return new Mob("Ciclope", 150, 40, 8, "Estou te vendo!", 50);
-                default:  return new Mob("Golem", 120, 30, 20, "Meu dever!", 40);
+                case 0:
+                    return new Mob("Golem", 120, 30, 20, "Meu dever!", 40);
+                case 1:
+                    return new Mob("Ciclope", 150, 40, 8, "Estou te vendo!", 50);
+                case 2:
+                    return new Mob("Observador", 170, 25, 30, "Seja reduzido a Pó", 65);
+                case 3:
+                    return new Mob("Cervo Demoniaco", 130, 50, 15, "Te levarei até o inferno!", 60);
+                case 4:
+                    return new Mob("Cavaleiro Corrompido", 180, 30, 30, "Servirei a Taigon até o fim!", 85);
+                default:
+                    return new Mob("Golem", 120, 30, 20, "Meu dever!", 40);
             }
         }
     }
