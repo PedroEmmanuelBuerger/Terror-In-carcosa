@@ -254,8 +254,12 @@ public abstract class Attributes {
     }
 
     public void addItemToBag(Item item) {
-        bag.add(item);
-        slowConsole.imprimirDevagar("Adicionou " + item.getName() + " à bag.");
+        if (this.getBag().size() >= 5) {
+            slowConsole.imprimirDevagar("Limite de 5 itens alcançados...");
+        } else {
+            bag.add(item);
+            slowConsole.imprimirDevagar("Adicionou " + item.getName() + " à bag.");
+        }
     }
 
     public void removeItemFromBag(Item item) {

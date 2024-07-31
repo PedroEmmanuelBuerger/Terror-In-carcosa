@@ -8,7 +8,7 @@ import rpg.Utils.Messages.Start;
 public class Dungeon2 extends DungeonBase {
     @Override
     protected Attributes createEnemy(Attributes personagem) {
-        if (personagem.getLevel() >= 20) {
+        if (personagem.getLevel() >= 10) {
             Start.EncounterLordDragonKing(); // Exibe a mensagem ao encontrar o Lorde Rei Dragão
             return new KingDragon("Lorde Rei Dragão", 550, 45, 60, "Irei incendiar o mundo!!!");
         } else {

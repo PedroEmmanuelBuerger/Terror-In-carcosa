@@ -45,7 +45,7 @@ public class Pve {
     private void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
-        int eventType = random.nextInt(12); // Atualizado para 12 eventos possíveis
+        int eventType = random.nextInt(16); // Atualizado para 16 eventos possíveis (dá mais variação)
 
         NonCombatEvent event = null;
         switch (eventType) {
@@ -84,21 +84,20 @@ public class Pve {
                 event = new OldRune();
                 break;
             case 7:
-                event = new NewWeapon(); // Adiciona o evento de arma
-                break;
-            case 8:
                 event = new FoundItem(); // Adiciona o novo evento de encontrar item
                 break;
-            case 9:
-                event = new Pause();
+            case 8:
+                event = new FindGoldEvent(random.nextInt(101) + 50); // Encontrar entre 50 e 150 de ouro
                 break;
+            case 9:
+                event = new Shooper(); // Adiciona o evento de loja
+                break;
+            // Menos probabilidade para os eventos mais raros
             case 10:
-                // Evento de encontrar ouro
-                int goldAmount = new Random().nextInt(101) + 50; // Encontrar entre 50 e 150 de ouro
-                event = new FindGoldEvent(goldAmount);
+                event = new NewWeapon(); // Adiciona o evento de arma
                 break;
             case 11:
-                event = new Shooper(); // Adiciona o evento de loja
+                event = new Pause(); // Evento de pausa
                 break;
             default:
                 slowConsole.imprimirDevagar("Evento não reconhecido.");

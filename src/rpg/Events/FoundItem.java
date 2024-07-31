@@ -31,7 +31,6 @@ public class FoundItem implements NonCombatEvent {
         // Atualiza a bag do personagem com base na escolha
         if (choice.equalsIgnoreCase("s")) {
             personagem.addItemToBag(foundPotion);
-            slowConsole.imprimirDevagar("Você adicionou " + foundPotion.getName() + " à sua bag.");
         } else {
             slowConsole.imprimirDevagar("Você decidiu não adicionar a poção à sua bag.");
         }

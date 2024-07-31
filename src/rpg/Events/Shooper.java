@@ -62,13 +62,17 @@ public class Shooper implements NonCombatEvent {
     }
 
     private void buyItem(Attributes personagem, Item item) {
-        if (personagem.getGold() >= item.getPrice()) {
-            personagem.setGold(personagem.getGold() - item.getPrice());
-            personagem.addItemToBag(item);
-            itemsForSale.remove(item); // Remove o item da lista de itens à venda
-            slowConsole.imprimirDevagar("Você comprou " + item.getName() + " por " + item.getPrice() + " Ouro.");
+        if (personagem.getBag().size() >= 5) {
+            slowConsole.imprimirDevagar("Limite de 5 itens alcançados...");
         } else {
-            slowConsole.imprimirDevagar("Ouro insuficiente para comprar " + item.getName() + ".");
+            if (personagem.getGold() >= item.getPrice()) {
+                personagem.setGold(personagem.getGold() - item.getPrice());
+                personagem.addItemToBag(item);
+                itemsForSale.remove(item); // Remove o item da lista de itens à venda
+                slowConsole.imprimirDevagar("Você comprou " + item.getName() + " por " + item.getPrice() + " Ouro.");
+            } else {
+                slowConsole.imprimirDevagar("Ouro insuficiente para comprar " + item.getName() + ".");
+            }
         }
     }
 }
