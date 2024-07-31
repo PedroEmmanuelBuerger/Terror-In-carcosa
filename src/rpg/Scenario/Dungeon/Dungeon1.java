@@ -8,7 +8,7 @@ import rpg.Utils.Messages.Start;
 public class Dungeon1 extends DungeonBase {
     @Override
     protected Attributes createEnemy(Attributes personagem) {
-        if (personagem.getLevel() >= 5) {
+        if (personagem.getLevel() >= 10) {
             Start.EncounterGhazkull(); // Exibe a mensagem ao encontrar Ghazkull
             return new Ghazkull("Ghazkull", 350, 20, 30, "HAHAHAHAHAHA");
         } else {

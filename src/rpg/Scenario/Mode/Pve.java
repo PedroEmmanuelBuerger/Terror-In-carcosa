@@ -24,9 +24,9 @@ public class Pve {
         personagem.setLevelDungeon(1); // Defina o nível da dungeon inicial como 1
 
         while (personagem.getHealthbar() > 0) {
-            int randomEvent = random.nextInt(5); // Ajustado para 5 eventos possíveis
+            int randomEvent = random.nextInt(12); // Atualizado para 12 eventos possíveis
 
-            if (randomEvent < 2) { // 2/5 chance para combate
+            if (randomEvent < 3) { // 3/12 chance para combate (ajustado para 5 eventos de combate possíveis)
                 // Encontro de combate
                 CombatSystem.startCombat(scanner, personagem);
                 // Após o combate, atualize o nível da dungeon se necessário
@@ -42,7 +42,7 @@ public class Pve {
         this.levelDungeon = levelDungeon;
     }
 
-    public void nonCombatEvent(Attributes personagem) {
+    private void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
         int eventType = random.nextInt(12); // Atualizado para 12 eventos possíveis
@@ -50,37 +50,52 @@ public class Pve {
         NonCombatEvent event = null;
         switch (eventType) {
             case 0:
-                // Código existente...
+                if (personagem instanceof Mage) {
+                    Mage mage = (Mage) personagem;
+                    if (!specialEncounterOccurred) {
+                        SpeelBook speelBookactual = mage.getSpeelBook(); // Verifica se o evento já ocorreu
+                        event = new SpecialEncounter(speelBookactual);
+                        specialEncounterOccurred = true; // Marca o evento como ocorrido
+                    }
+                } else {
+                    SpeelBook speelBook = new SpeelBook(); // Crie o SpeelBook aqui para que ele possa ser usado nos eventos
+                    if (!specialEncounterOccurred) { // Verifica se o evento já ocorreu
+                        event = new SpecialEncounter(speelBook);
+                        specialEncounterOccurred = true; // Marca o evento como ocorrido
+                    }
+                }
                 break;
             case 1:
-                // Código existente...
+                event = new ManaRecoveryEvent();
                 break;
             case 2:
-                // Código existente...
+                event = new HealthRecoveryEvent();
                 break;
             case 3:
-                // Código existente...
+                event = new HealingPotionEvent();
                 break;
             case 4:
-                // Código existente...
+                event = new RareItemEvent();
                 break;
             case 5:
-                // Código existente...
+                event = new MagicItem();
                 break;
             case 6:
-                // Código existente...
+                event = new OldRune();
                 break;
             case 7:
-                // Código existente...
+                event = new NewWeapon(); // Adiciona o evento de arma
                 break;
             case 8:
-                // Código existente...
+                event = new FoundItem(); // Adiciona o novo evento de encontrar item
                 break;
             case 9:
                 event = new Pause();
                 break;
             case 10:
-                // Código existente...
+                // Evento de encontrar ouro
+                int goldAmount = new Random().nextInt(101) + 50; // Encontrar entre 50 e 150 de ouro
+                event = new FindGoldEvent(goldAmount);
                 break;
             case 11:
                 event = new Shooper(); // Adiciona o evento de loja

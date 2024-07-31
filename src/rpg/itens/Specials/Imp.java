@@ -1,6 +1,7 @@
 package rpg.itens.Specials;
 
 import rpg.Classes.Attributes;
+import rpg.Monsters.Mob;
 import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
 
@@ -20,6 +21,8 @@ public class Imp extends Attributes {
             slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
             slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
             slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
+            slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGold() + " De Ouro!");
+            gainGold(enemy.getGold());
             personagem.gainExp(enemy.getExp());
         }
     }

@@ -11,7 +11,7 @@ public class Dungeon3 extends DungeonBase {
 
     @Override
     protected Attributes createEnemy(Attributes personagem) {
-        if (personagem.getLevel() >= 20) {
+        if (personagem.getLevel() >= 30) {
             Start.EncounterTaigon(); // Exibe a mensagem ao encontrar o Cavaleiro do Medo Taigon
             return new KnightOfFear("Cavaleiro do medo Taigon", 1000, 60, 80, "Seu fim está próximo...");
         } else {

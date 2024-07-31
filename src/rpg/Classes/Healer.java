@@ -1,5 +1,6 @@
 package rpg.Classes;
 
+import rpg.Monsters.Mob;
 import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
 import rpg.Utils.ManaAdm;
@@ -45,7 +46,9 @@ public class Healer extends Attributes {
                 slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
                 slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
                 slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
-                gainExp(enemy.getExp());
+                slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGold() + " De Ouro!");
+                gainGold(enemy.getGold());
+               gainExp(enemy.getExp());
             }
         }
     }

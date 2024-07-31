@@ -2,16 +2,16 @@ package rpg.Monsters;
 
 import rpg.Utils.SlowConsole;
 import rpg.Classes.Attributes;
+import java.util.Random;
 
 public class Mob extends Attributes {
-    private static final int GOLD_VARIATION = 5; // Variação de ouro (±5)
-    private int baseGoldDrop; // Valor base de ouro que o mob pode soltar
-    private SlowConsole slowConsole = new SlowConsole();
+    SlowConsole slowConsole = new SlowConsole();
+    private static final Random random = new Random();
 
-    public Mob(String name, int healthbar, int attack, int specialAttack, String battleCry, int exp, int baseGoldDrop) {
+    public Mob(String name, int healthbar, int attack, int specialAttack, String battleCry, int exp, int gold) {
         super(name, healthbar, attack, specialAttack, battleCry);
-        this.setExp(exp);
-        this.baseGoldDrop = baseGoldDrop; // Inicializa o valor base de ouro
+        this.setExp(exp); // Configura a experiência do mob
+        this.setGold(generateRandomGold(gold)); // Configura o ouro com um valor aleatório baseado no parâmetro
     }
 
     @Override
@@ -28,12 +28,10 @@ public class Mob extends Attributes {
         target.takeDamage(damage);
     }
 
-    public int getGoldDrop() {
-        // Calcula o intervalo de ouro com base no valor base e na variação
-        int minGold = baseGoldDrop - GOLD_VARIATION;
-        int maxGold = baseGoldDrop + GOLD_VARIATION;
-
-        // Gera um valor aleatório de ouro dentro do intervalo especificado
-        return minGold + (int) (Math.random() * (maxGold - minGold + 1));
+    // Método auxiliar para gerar um valor aleatório de gold baseado em um intervalo
+    private int generateRandomGold(int baseGold) {
+        int minVal = baseGold - 5;
+        int maxVal = baseGold + 5;
+        return random.nextInt((maxVal - minVal) + 1) + minVal; // Gera um número aleatório entre minVal e maxVal (inclusive)
     }
 }

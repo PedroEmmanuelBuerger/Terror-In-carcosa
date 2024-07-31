@@ -1,5 +1,6 @@
 package rpg.Classes;
 
+import rpg.Monsters.Mob;
 import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Specials.EvilForces;
@@ -99,6 +100,8 @@ public class Necromancer extends Attributes {
             slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
             slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
             gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
+            slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGold() + " De Ouro!");
+            gainGold(enemy.getGold());
         }
     }
 
@@ -113,6 +116,8 @@ public class Necromancer extends Attributes {
                 slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
                 slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
                 gainExp(enemy.getExp());
+                slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGold() + " De Ouro!");
+                gainGold(enemy.getGold());
             }
         }
     }
@@ -165,13 +170,13 @@ public class Necromancer extends Attributes {
         }
     }
 
-    public void attackWithSpecial(Attributes enemy) {
+    public void attackWithSpecial(Mob enemy) {
         summonImp();
         if (!enemy.isAlive()) {
             slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
             slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
-            slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
-            gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
+            slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGold() + " De Ouro!");
+            gainGold(enemy.getGold());
         }
     }
 }
