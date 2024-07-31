@@ -9,13 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando código + refatoração + drop de gold aleatório + remoção de item na loja apos compra + bug fixes">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Balanceamento + chance de aparecer eventos é menor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/Shooper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/Shooper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Necromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Necromancer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/HealingPotionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/HealingPotionEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/HealthRecoveryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/HealthRecoveryEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -442,7 +440,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722434512394</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Balanceamento + chance de aparecer eventos é menor">
+      <option name="closed" value="true" />
+      <created>1722435400415</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1722435400415</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -457,7 +463,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionando Niveis + Dungeons diferentes + Novos inimigos + balanceamento" />
     <MESSAGE value="Classes iniciam com valor definido + arrumando bugs" />
     <MESSAGE value="Arrumando bug resetar valor maxpoints" />
     <MESSAGE value="Arrumando funcionamento de classes + adicionando novos eventos + adicionando atributo weapon" />
@@ -482,6 +487,7 @@
     <MESSAGE value="Atualizando o Pause arrumando bug" />
     <MESSAGE value="Adicionando evento de vendedor + mob dropa gold + refatoração" />
     <MESSAGE value="Arrumando código + refatoração + drop de gold aleatório + remoção de item na loja apos compra + bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando código + refatoração + drop de gold aleatório + remoção de item na loja apos compra + bug fixes" />
+    <MESSAGE value="Balanceamento + chance de aparecer eventos é menor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Balanceamento + chance de aparecer eventos é menor" />
   </component>
 </project>

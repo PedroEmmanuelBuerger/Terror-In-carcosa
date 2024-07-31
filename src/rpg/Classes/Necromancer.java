@@ -170,7 +170,8 @@ public class Necromancer extends Attributes {
         }
     }
 
-    public void attackWithSpecial(Mob enemy) {
+    @Override
+    public void attackWithSpecial(Attributes enemy) {
         summonImp();
         if (!enemy.isAlive()) {
             slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");

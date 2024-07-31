@@ -6,8 +6,8 @@ import rpg.Classes.Attributes;
 import java.util.Random;
 
 public class HealthRecoveryEvent implements NonCombatEvent {
-    private SlowConsole slowConsole = new SlowConsole();
-    private Random random = new Random();
+    private final SlowConsole slowConsole = new SlowConsole();
+    private final Random random = new Random();
 
     public void executeEvent(Attributes personagem) {
         int healthRecovered = random.nextInt(10) + 10; // Recupera entre 10 a 19 de vida

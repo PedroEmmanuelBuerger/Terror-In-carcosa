@@ -45,7 +45,7 @@ public class Pve {
     private void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
-        int eventType = random.nextInt(16); // Atualizado para 16 eventos possíveis (dá mais variação)
+        int eventType = random.nextInt(12); // Atualizado para 16 eventos possíveis (dá mais variação)
 
         NonCombatEvent event = null;
         switch (eventType) {
