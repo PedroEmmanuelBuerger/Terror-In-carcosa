@@ -116,15 +116,8 @@ public class Healer extends Attributes {
 
     @Override
     public void getTechnicalInfo() {
-        slowConsole.imprimirDevagar("Nome: " + getName());
-        slowConsole.imprimirDevagar("Classe: " + getClasses());
-        slowConsole.imprimirDevagar("Vida: " + getHealthbar());
-        slowConsole.imprimirDevagar("Ataque: " + getAttack());
-        slowConsole.imprimirDevagar("Ataque Mágico: " + getSpecial());
+        super.getTechnicalInfo();
         slowConsole.imprimirDevagar("Mana: " + getMana());
-        slowConsole.imprimirDevagar("Frase: " + getQuote());
-        slowConsole.imprimirDevagar("Arma: " + getWeapon().getName());
-        slowConsole.imprimirDevagar("Raça " + getRace().getName());
     }
 
     public void recoverMana(int amount) {

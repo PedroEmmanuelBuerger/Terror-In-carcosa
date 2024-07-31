@@ -101,6 +101,7 @@ public class Necromancer extends Attributes {
             gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
         }
     }
+
     public void selectSpell(Attributes enemy) {
         int damageSpeel = spellBook.selectSpell(this);
         CriticChance criticChance = new CriticChance(damageSpeel);
@@ -115,28 +116,22 @@ public class Necromancer extends Attributes {
             }
         }
     }
+
     @Override
     public void getTechnicalInfo() {
-        slowConsole.imprimirDevagar("Nome: " + getName());
-        slowConsole.imprimirDevagar("Classe: " + getClasses());
-        slowConsole.imprimirDevagar("Vida: " + getHealthbar());
-        slowConsole.imprimirDevagar("Ataque: " + getAttack());
-        slowConsole.imprimirDevagar("Ataque Mágico: " + getSpecial());
+        super.getTechnicalInfo();
         slowConsole.imprimirDevagar("Mana: " + getMana());
-        slowConsole.imprimirDevagar("Frase: " + getQuote());
-        slowConsole.imprimirDevagar("Arma: " + getWeapon().getName());
-        slowConsole.imprimirDevagar("Raça: " + getRace().getName());
 
         // Adiciona a verificação dos imps vivos
         if (!getImps().isEmpty()) {
-            slowConsole.imprimirDevagar("Esqueletos invocados:");
+            slowConsole.imprimirDevagar("Imps Invocados:");
             for (Imp imp : getImps()) {
                 if (imp.getHealthbar() > 0) {
                     slowConsole.imprimirDevagar("- " + imp.getName() + " (Vida: " + imp.getHealthbar() + ")");
                 }
             }
         } else {
-            slowConsole.imprimirDevagar("Nenhum Esqueleto invocado.");
+            slowConsole.imprimirDevagar("Nenhum Imp invocado.");
         }
     }
 

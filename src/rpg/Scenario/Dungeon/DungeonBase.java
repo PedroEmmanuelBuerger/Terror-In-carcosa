@@ -5,6 +5,7 @@ import rpg.Monsters.Bosses.Ghazkull;
 import rpg.Monsters.Bosses.KingDragon;
 import rpg.Monsters.Bosses.KnightOfFear;
 import rpg.Utils.SlowConsole;
+import rpg.itens.Item;
 import rpg.itens.Specials.Imp;
 
 import java.util.Random;
@@ -31,8 +32,6 @@ public abstract class DungeonBase implements Dungeon {
             if (!enemyTurn(personagem, enemy)) break;
         }
 
-        // Verifica se o inimigo derrotado é um boss e chama o método onBossDefeated
-        // Verifica se o inimigo derrotado é um boss e chama o método onBossDefeated
         if (enemy.getHealthbar() <= 0 &&
                 (enemy instanceof Ghazkull || enemy instanceof KingDragon || enemy instanceof KnightOfFear)) {
             onBossDefeated(personagem);
@@ -45,7 +44,7 @@ public abstract class DungeonBase implements Dungeon {
         printPlayerActions(personagem);
 
         int acaoJogador = getPlayerAction(scanner);
-        if (acaoJogador == -1) return true; // Continua o loop se a entrada for inválida
+        if (acaoJogador == -1) return true;
 
         switch (acaoJogador) {
             case 1:
@@ -72,11 +71,15 @@ public abstract class DungeonBase implements Dungeon {
                 if (personagem instanceof Necromancer) {
                     personagem.getTechnicalInfo();
                 } else {
-                    handleSpecialActions(personagem);
+                    viewOrUseItems(scanner, personagem);
                 }
                 break;
             case 6:
-                handleRessurection(personagem);
+                if (personagem instanceof Healer) {
+                    handleRessurection(personagem);
+                } else {
+                    viewOrUseItems(scanner, personagem); // Se o personagem não for Healer, use esta opção
+                }
                 break;
             default:
                 slowConsole.imprimirDevagar("Ação inválida. Você perdeu a vez.");
@@ -88,6 +91,52 @@ public abstract class DungeonBase implements Dungeon {
         }
 
         return enemy.getHealthbar() > 0;
+    }
+
+    private void viewOrUseItems(Scanner scanner, Attributes personagem) {
+        slowConsole.imprimirDevagar("Escolha uma ação:");
+        slowConsole.imprimirDevagar("1 - Visualizar Itens na Bag");
+        slowConsole.imprimirDevagar("2 - Usar Item");
+
+        int choice = getPlayerAction(scanner);
+        scanner.nextLine(); // Consome a nova linha remanescente
+
+        if (choice == 1) {
+            for (Item item : personagem.getBag()) {
+                slowConsole.imprimirDevagar("- " + item.getName());
+            }
+        } else if (choice == 2) {
+            useItem(scanner, personagem);
+        } else {
+            slowConsole.imprimirDevagar("Opção inválida. Você perdeu a vez.");
+        }
+    }
+
+    private void useItem(Scanner scanner, Attributes personagem) {
+        slowConsole.imprimirDevagar("Escolha o item para usar:");
+        // Exibe itens disponíveis na bag
+        for (Item item : personagem.getBag()) {
+            slowConsole.imprimirDevagar("- " + item.getName());
+        }
+
+        slowConsole.imprimirDevagar("Digite o nome do item:");
+        String itemName = scanner.nextLine().trim(); // Captura a entrada e remove espaços extras
+
+        Item itemToUse = null;
+        for (Item item : personagem.getBag()) {
+            if (item.getName().equalsIgnoreCase(itemName)) {
+                itemToUse = item;
+                break;
+            }
+        }
+
+        if (itemToUse != null) {
+            // Implementar a lógica para usar o item aqui
+            slowConsole.imprimirDevagar("Usou o item: " + itemToUse.getName());
+            personagem.removeItemFromBag(itemToUse); // Remove o item após o uso
+        } else {
+            slowConsole.imprimirDevagar("Item não encontrado na bag.");
+        }
     }
 
     private boolean enemyTurn(Attributes personagem, Attributes enemy) {
@@ -104,17 +153,20 @@ public abstract class DungeonBase implements Dungeon {
                 enemy.attackWithSpecial(target);
                 break;
             default:
-                slowConsole.imprimirDevagar(enemy.getName() + " está preparando seu ataque!");
+                if (enemy instanceof Ghazkull || enemy instanceof KingDragon) {
+                    enemy.attack(target);
+                    break;
+                } else {
+                    slowConsole.imprimirDevagar(enemy.getName() + " está preparando seu ataque!");
+                }
                 break;
         }
 
-        // Verifica se o personagem foi derrotado
         if (personagem.getHealthbar() <= 0) {
             slowConsole.imprimirDevagar("Você foi derrotado por " + enemy.getName() + ". Game Over!");
             return false;
         }
 
-        // Se o personagem for um Necromancer, remova os imps mortos após o ataque do inimigo
         if (personagem instanceof Necromancer) {
             ((Necromancer) personagem).getImps().removeIf(imp -> imp.getHealthbar() <= 0);
         }
@@ -135,13 +187,14 @@ public abstract class DungeonBase implements Dungeon {
             slowConsole.imprimirDevagar("3 - Necromancia");
             slowConsole.imprimirDevagar("4 - Fugir");
             slowConsole.imprimirDevagar("5 - Status");
+            slowConsole.imprimirDevagar("6 - Usar Item");
         } else {
             slowConsole.imprimirDevagar("3 - Fugir");
             slowConsole.imprimirDevagar("4 - Status");
+            slowConsole.imprimirDevagar("5 - Usar Item"); // Adicione esta linha
             if (personagem instanceof Warrior) {
-                slowConsole.imprimirDevagar("5 - Defender");
+                slowConsole.imprimirDevagar("6 - Defender");
             } else if (personagem instanceof Healer) {
-                slowConsole.imprimirDevagar("5 - Curar");
                 slowConsole.imprimirDevagar("6 - Ressurreição");
             }
         }
@@ -152,7 +205,7 @@ public abstract class DungeonBase implements Dungeon {
             return scanner.nextInt();
         } else {
             slowConsole.imprimirDevagar("Entrada inválida. Você perdeu a vez.");
-            scanner.nextLine(); // Limpar o buffer
+            scanner.nextLine();
             return -1;
         }
     }
@@ -162,7 +215,7 @@ public abstract class DungeonBase implements Dungeon {
         double randomSucess = random.nextDouble() * 100.0;
         if (randomSucess <= escapeChance && !enemy.getName().equals("Ghazkull") && !enemy.getName().equals("Lorde Rei Dragão")) {
             slowConsole.imprimirDevagar("Você fugiu!");
-            return false; // Sair do loop de combate
+            return false;
         } else {
             slowConsole.imprimirDevagar("Você tentou fugir, mas não conseguiu!");
             return true;

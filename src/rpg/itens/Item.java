@@ -12,6 +12,4 @@ public abstract class Item {
     public String getName() {
         return name;
     }
-
-    public abstract void use(Attributes user);
 }

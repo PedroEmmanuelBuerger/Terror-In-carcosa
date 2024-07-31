@@ -28,6 +28,7 @@ public class Pause implements NonCombatEvent {
                     visualizarStatus(personagem);
                     break;
                 case 2:
+                    usarItem(personagem);
                     break;
                 case 3:
                     running = false; // Sai do loop para voltar ao jogo
@@ -43,5 +44,31 @@ public class Pause implements NonCombatEvent {
         personagem.getTechnicalInfo();
         slowConsole.imprimirDevagar("Pressione Enter para voltar ao menu.");
         scanner.nextLine(); // Espera o usuário pressionar Enter
+    }
+
+    private void usarItem(Attributes personagem) {
+        slowConsole.imprimirDevagar("Escolha o item para usar:");
+        // Exibe itens disponíveis na bag
+        for (Item item : personagem.getBag()) {
+            slowConsole.imprimirDevagar("- " + item.getName());
+        }
+        slowConsole.imprimirDevagar("Digite o nome do item:");
+        String itemName = scanner.nextLine();
+
+        Item itemToUse = null;
+        for (Item item : personagem.getBag()) {
+            if (item.getName().equalsIgnoreCase(itemName)) {
+                itemToUse = item;
+                break;
+            }
+        }
+
+        if (itemToUse != null) {
+            // Implementar a lógica para usar o item aqui
+            slowConsole.imprimirDevagar("Usou o item: " + itemToUse.getName());
+            personagem.removeItemFromBag(itemToUse); // Remove o item após o uso
+        } else {
+            slowConsole.imprimirDevagar("Item não encontrado na bag.");
+        }
     }
 }

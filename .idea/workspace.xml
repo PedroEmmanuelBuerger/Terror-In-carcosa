@@ -9,17 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Balanceamento + mudanças necromante">
-      <change afterPath="$PROJECT_DIR$/src/rpg/Events/FoundItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/Events/Pause.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Specials/UseItem.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Aumentando escopo + começo implementação de item usavel+ menu de pausa + balanceamento">
+      <change afterPath="$PROJECT_DIR$/src/rpg/itens/BagItens/Potion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Necromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Necromancer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/FoundItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/FoundItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/HealingPotionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/HealingPotionEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/Pause.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/Pause.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Specials/Imp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Specials/Imp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Specials/UseItem.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

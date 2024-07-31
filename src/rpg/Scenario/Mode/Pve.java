@@ -45,7 +45,7 @@ public class Pve {
     private void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
-        int eventType = random.nextInt(9); // Ajuste para 8 eventos possíveis, incluindo o novo
+        int eventType = random.nextInt(10); // Ajustado para 10 eventos possíveis
 
         NonCombatEvent event = null;
         switch (eventType) {
@@ -53,7 +53,7 @@ public class Pve {
                 if (personagem instanceof Mage) {
                     Mage mage = (Mage) personagem;
                     if (!specialEncounterOccurred) {
-                        SpeelBook speelBookactual = mage.getSpeelBook();// Verifica se o evento já ocorreu
+                        SpeelBook speelBookactual = mage.getSpeelBook(); // Verifica se o evento já ocorreu
                         event = new SpecialEncounter(speelBookactual);
                         specialEncounterOccurred = true; // Marca o evento como ocorrido
                     }
@@ -84,9 +84,12 @@ public class Pve {
                 event = new OldRune();
                 break;
             case 7:
-                event = new NewWeapon(); // Adiciona o novo evento
+                event = new NewWeapon(); // Adiciona o evento de arma
                 break;
             case 8:
+                event = new FoundItem(); // Adiciona o novo evento de encontrar item
+                break;
+            case 9:
                 event = new Pause();
                 break;
             default:

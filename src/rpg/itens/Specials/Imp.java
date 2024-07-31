@@ -6,15 +6,13 @@ import rpg.Utils.SlowConsole;
 
 public class Imp extends Attributes {
     public Imp() {
-        super("Esqueleto", 15, 5, 0, "I am the Skeleton!");
+        super("Esqueleto", 15, 13, 0, "I am the Skeleton!");
     }
 
     SlowConsole slowConsole = new SlowConsole();
 
     public void ImpAttack(Attributes enemy, Attributes personagem) {
-        int damage = (personagem.getSpecial() / 2) / 2;
-        CriticChance criticChance = new CriticChance(damage);
-        damage = criticChance.chanceCritic();
+        int damage = (personagem.getLevel() + this.getAttack() + 2);
         slowConsole.imprimirDevagar(this.getName() + " atacou " + enemy.getName() + " causando " + damage + " de dano!");
         enemy.takeDamage(damage);
 

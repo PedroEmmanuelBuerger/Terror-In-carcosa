@@ -216,39 +216,8 @@ public abstract class Attributes {
         slowConsole.imprimirDevagar("Frase: " + getQuote());
         slowConsole.imprimirDevagar("Arma: " + getWeapon().getName());
         slowConsole.imprimirDevagar("Raça: " + getRace().getName());
-    }
 
-    public int getMaxHealthInitial() {
-        return maxHealthInitial;
-    }
-
-    public void addItemToBag(Item item) {
-        bag.add(item);
-        slowConsole.imprimirDevagar("Adicionou " + item.getName() + " à bag.");
-    }
-
-    // Remove um item da bag
-    public void removeItemFromBag(Item item) {
-        if (bag.remove(item)) {
-            slowConsole.imprimirDevagar("Removed " + item.getName() + " da bag.");
-        } else {
-            slowConsole.imprimirDevagar(item.getName() + " não está na bag.");
-        }
-    }
-
-    // Usa um item da bag
-    public void useItem(Item item) {
-        if (bag.contains(item)) {
-            // Implementar lógica específica de uso do item
-            slowConsole.imprimirDevagar("Usou " + item.getName() + ".");
-            removeItemFromBag(item); // Remove o item após o uso
-        } else {
-            slowConsole.imprimirDevagar(item.getName() + " não está na bag.");
-        }
-    }
-
-    // Mostra os itens na bag
-    public void showBagContents() {
+        // Adiciona a exibição dos itens na bag
         if (bag.isEmpty()) {
             slowConsole.imprimirDevagar("A bag está vazia.");
         } else {
@@ -256,6 +225,33 @@ public abstract class Attributes {
             for (Item item : bag) {
                 slowConsole.imprimirDevagar(item.getName());
             }
+        }
+    }
+
+    public int getMaxHealthInitial() {
+        return maxHealthInitial;
+    }
+
+    public List<Item> getBag() {
+        return bag;
+    }
+
+    public void addItemToBag(Item item) {
+        bag.add(item);
+        slowConsole.imprimirDevagar("Adicionou " + item.getName() + " à bag.");
+    }
+
+    public void removeItemFromBag(Item item) {
+        bag.remove(item);
+    }
+
+    public void useItem(Item item) {
+        if (bag.contains(item)) {
+            // Implementar a lógica específica de uso do item aqui
+            slowConsole.imprimirDevagar("Usou " + item.getName() + ".");
+            removeItemFromBag(item); // Remove o item após o uso
+        } else {
+            slowConsole.imprimirDevagar(item.getName() + " não está na bag.");
         }
     }
 }
