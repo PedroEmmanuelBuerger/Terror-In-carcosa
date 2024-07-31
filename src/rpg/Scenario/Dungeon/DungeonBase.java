@@ -4,6 +4,7 @@ import rpg.Classes.*;
 import rpg.Monsters.Bosses.Ghazkull;
 import rpg.Monsters.Bosses.KingDragon;
 import rpg.Monsters.Bosses.KnightOfFear;
+import rpg.Monsters.Mob;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Item;
 import rpg.itens.Specials.Imp;
@@ -32,9 +33,21 @@ public abstract class DungeonBase implements Dungeon {
             if (!enemyTurn(personagem, enemy)) break;
         }
 
-        if (enemy.getHealthbar() <= 0 &&
-                (enemy instanceof Ghazkull || enemy instanceof KingDragon || enemy instanceof KnightOfFear)) {
-            onBossDefeated(personagem);
+        if (enemy.getHealthbar() <= 0) {
+            slowConsole.imprimirDevagar("Você derrotou " + enemy.getName() + "!");
+            slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
+            personagem.gainExp(enemy.getExp()); // Ganha experiência
+
+            // Adiciona o ouro que o mob solta ao personagem
+            if (enemy instanceof Mob) {
+                int goldDropped = ((Mob) enemy).getGoldDrop();
+                personagem.setGold(personagem.getGold() + goldDropped);
+                slowConsole.imprimirDevagar("O mob soltou " + goldDropped + " de ouro!");
+            }
+
+            if (enemy instanceof Ghazkull || enemy instanceof KingDragon || enemy instanceof KnightOfFear) {
+                onBossDefeated(personagem);
+            }
         }
     }
 
@@ -237,23 +250,12 @@ public abstract class DungeonBase implements Dungeon {
     private void handleImps(Necromancer necromancer, Attributes enemy) {
         for (Imp imp : necromancer.getImps()) {
             if (imp.getHealthbar() > 0 && enemy.getHealthbar() > 0) {
-                slowConsole.imprimirDevagar("\nTurno do " + imp.getName() + ":");
-                imp.ImpAttack(enemy, necromancer);
+                imp.attack(enemy);
             }
         }
-        necromancer.getImps().removeIf(imp -> imp.getHealthbar() <= 0);
     }
 
     private Attributes getEnemyTarget(Attributes personagem, Attributes enemy) {
-        if (personagem instanceof Necromancer && !((Necromancer) personagem).getImps().isEmpty()) {
-            int targetChoice = random.nextInt(((Necromancer) personagem).getImps().size() + 1);
-            if (targetChoice == 0) {
-                return personagem;
-            } else {
-                return ((Necromancer) personagem).getImps().get(targetChoice - 1);
-            }
-        } else {
-            return personagem;
-        }
+        return personagem.getHealthbar() > 0 ? personagem : enemy;
     }
 }

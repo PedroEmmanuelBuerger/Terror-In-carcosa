@@ -39,9 +39,9 @@ public class FoundItem implements NonCombatEvent {
 
     private Potion[] getAvailablePotions() {
         return new Potion[] {
-                new Potion("Poção de Vida Menor", 50),
-                new Potion("Poção de Vida Média", 100),
-                new Potion("Poção de Vida Maior", 200)
+                new Potion("Poção de Vida Menor",15, 50),
+                new Potion("Poção de Vida Média",25, 100),
+                new Potion("Poção de Vida Maior",50, 200)
         };
     }
 }

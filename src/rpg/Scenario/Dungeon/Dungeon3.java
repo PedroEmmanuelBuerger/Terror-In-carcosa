@@ -18,17 +18,17 @@ public class Dungeon3 extends DungeonBase {
             int randomMonster = random.nextInt(5);
             switch (randomMonster) {
                 case 0:
-                    return new Mob("Golem", 120, 30, 20, "Meu dever!", 40);
+                    return new Mob("Golem", 120, 30, 20, "Meu dever!", 40,40);
                 case 1:
-                    return new Mob("Ciclope", 150, 40, 8, "Estou te vendo!", 50);
+                    return new Mob("Ciclope", 150, 40, 8, "Estou te vendo!", 50,50);
                 case 2:
-                    return new Mob("Observador", 170, 25, 30, "Seja reduzido a Pó", 65);
+                    return new Mob("Observador", 170, 25, 30, "Seja reduzido a Pó", 65,65);
                 case 3:
-                    return new Mob("Cervo Demoniaco", 130, 50, 15, "Te levarei até o inferno!", 60);
+                    return new Mob("Cervo Demoniaco", 130, 50, 15, "Te levarei até o inferno!", 60,60);
                 case 4:
-                    return new Mob("Cavaleiro Corrompido", 180, 30, 30, "Servirei a Taigon até o fim!", 85);
+                    return new Mob("Cavaleiro Corrompido", 180, 30, 30, "Servirei a Taigon até o fim!", 85,85);
                 default:
-                    return new Mob("Golem", 120, 30, 20, "Meu dever!", 40);
+                    return new Mob("Golem", 120, 30, 20, "Meu dever!", 40,40);
             }
         }
     }

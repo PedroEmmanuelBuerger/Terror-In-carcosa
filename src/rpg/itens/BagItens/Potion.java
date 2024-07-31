@@ -7,8 +7,8 @@ import rpg.itens.Item;
 public class Potion extends Item {
     private int healingAmount;
 
-    public Potion(String name, int healingAmount) {
-        super(name);
+    public Potion(String name,int price, int healingAmount) {
+        super(name,price);
         this.healingAmount = healingAmount;
     }
 

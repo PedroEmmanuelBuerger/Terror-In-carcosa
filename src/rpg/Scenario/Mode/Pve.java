@@ -42,60 +42,48 @@ public class Pve {
         this.levelDungeon = levelDungeon;
     }
 
-    private void nonCombatEvent(Attributes personagem) {
+    public void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
-        int eventType = random.nextInt(11); // Atualizado para 11 eventos possíveis para incluir o novo evento
+        int eventType = random.nextInt(12); // Atualizado para 12 eventos possíveis
 
         NonCombatEvent event = null;
         switch (eventType) {
             case 0:
-                if (personagem instanceof Mage) {
-                    Mage mage = (Mage) personagem;
-                    if (!specialEncounterOccurred) {
-                        SpeelBook speelBookactual = mage.getSpeelBook(); // Verifica se o evento já ocorreu
-                        event = new SpecialEncounter(speelBookactual);
-                        specialEncounterOccurred = true; // Marca o evento como ocorrido
-                    }
-                } else {
-                    SpeelBook speelBook = new SpeelBook(); // Crie o SpeelBook aqui para que ele possa ser usado nos eventos
-                    if (!specialEncounterOccurred) { // Verifica se o evento já ocorreu
-                        event = new SpecialEncounter(speelBook);
-                        specialEncounterOccurred = true; // Marca o evento como ocorrido
-                    }
-                }
+                // Código existente...
                 break;
             case 1:
-                event = new ManaRecoveryEvent();
+                // Código existente...
                 break;
             case 2:
-                event = new HealthRecoveryEvent();
+                // Código existente...
                 break;
             case 3:
-                event = new HealingPotionEvent();
+                // Código existente...
                 break;
             case 4:
-                event = new RareItemEvent();
+                // Código existente...
                 break;
             case 5:
-                event = new MagicItem();
+                // Código existente...
                 break;
             case 6:
-                event = new OldRune();
+                // Código existente...
                 break;
             case 7:
-                event = new NewWeapon(); // Adiciona o evento de arma
+                // Código existente...
                 break;
             case 8:
-                event = new FoundItem(); // Adiciona o novo evento de encontrar item
+                // Código existente...
                 break;
             case 9:
                 event = new Pause();
                 break;
             case 10:
-                // Evento de encontrar ouro
-                int goldAmount = new Random().nextInt(101) + 50; // Encontrar entre 50 e 150 de ouro
-                event = new FindGoldEvent(goldAmount);
+                // Código existente...
+                break;
+            case 11:
+                event = new Shooper(); // Adiciona o evento de loja
                 break;
             default:
                 slowConsole.imprimirDevagar("Evento não reconhecido.");
