@@ -25,7 +25,8 @@ public abstract class Attributes {
     SlowConsole slowConsole = new SlowConsole();
     private Weapon weapon = new Axe(0);
     private Race race;
-    private List<Item> bag = new ArrayList<>(); // Lista de itens na bag
+    private List<Item> bag = new ArrayList<>();
+    private int gold = 0;
 
     public Attributes(String name, int healthbar, int attack, int special, String quote) {
         this.name = name;
@@ -39,7 +40,13 @@ public abstract class Attributes {
         this.exp = 0; // Inicializa a experiência como 0
     }
 
-    // Métodos existentes
+    public int getGold() {
+        return gold;
+    }
+
+    public void setGold(int gold) {
+        this.gold = gold;
+    }
 
     public void setRace(Race race) {
         this.race = race;
@@ -216,6 +223,7 @@ public abstract class Attributes {
         slowConsole.imprimirDevagar("Frase: " + getQuote());
         slowConsole.imprimirDevagar("Arma: " + getWeapon().getName());
         slowConsole.imprimirDevagar("Raça: " + getRace().getName());
+        slowConsole.imprimirDevagar("Ouro: " + getGold());
 
         // Adiciona a exibição dos itens na bag
         if (bag.isEmpty()) {

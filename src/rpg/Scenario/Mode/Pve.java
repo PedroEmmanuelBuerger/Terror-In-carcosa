@@ -45,7 +45,7 @@ public class Pve {
     private void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
-        int eventType = random.nextInt(10); // Ajustado para 10 eventos possíveis
+        int eventType = random.nextInt(11); // Atualizado para 11 eventos possíveis para incluir o novo evento
 
         NonCombatEvent event = null;
         switch (eventType) {
@@ -91,6 +91,11 @@ public class Pve {
                 break;
             case 9:
                 event = new Pause();
+                break;
+            case 10:
+                // Evento de encontrar ouro
+                int goldAmount = new Random().nextInt(101) + 50; // Encontrar entre 50 e 150 de ouro
+                event = new FindGoldEvent(goldAmount);
                 break;
             default:
                 slowConsole.imprimirDevagar("Evento não reconhecido.");

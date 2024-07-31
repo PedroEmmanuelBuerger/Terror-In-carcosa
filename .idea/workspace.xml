@@ -9,11 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Grande Update! - Adicionando itens utilizaveis + bag + visualização Bag + refatoração + Poções">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Criando sistema uso de poções + atualização bag">
+      <change afterPath="$PROJECT_DIR$/src/rpg/Events/FindGoldEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/itens/BagItens/Potion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/BagItens/Potion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ConsoleLento.executor": "Run",
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "Application.SlowConsole.executor": "Run",
     "Application.main.executor": "Run",
     "Application.principal.executor": "Run",
@@ -399,7 +399,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722426129338</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Criando sistema uso de poções + atualização bag">
+      <option name="closed" value="true" />
+      <created>1722428954351</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1722428954351</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -414,7 +422,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionando SpellBook, um evento aleatório e mudando o comportamento de alguns métodos" />
     <MESSAGE value="Emplementado a lógica de fugir e funcionamento de algumas classes + speelBook" />
     <MESSAGE value="Arrumando classe mago + adicionando ganho de exp individual para cada inimigo + enfrentar o boss nivel 5" />
     <MESSAGE value="Arrumando sistema de vida + criando final" />
@@ -439,21 +446,7 @@
     <MESSAGE value="Adicionando mecanica de critico" />
     <MESSAGE value="Balanceamento + mudanças necromante" />
     <MESSAGE value="Grande Update! - Adicionando itens utilizaveis + bag + visualização Bag + refatoração + Poções" />
-    <option name="LAST_COMMIT_MESSAGE" value="Grande Update! - Adicionando itens utilizaveis + bag + visualização Bag + refatoração + Poções" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/rpg/itens/BagItens/Potion.java</url>
-          <line>19</line>
-          <properties class="rpg.itens.BagItens.Potion" method="UseItem">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Criando sistema uso de poções + atualização bag" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criando sistema uso de poções + atualização bag" />
   </component>
 </project>
