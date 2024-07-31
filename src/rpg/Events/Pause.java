@@ -49,9 +49,15 @@ public class Pause implements NonCombatEvent {
     private void usarItem(Attributes personagem) {
         slowConsole.imprimirDevagar("Escolha o item para usar:");
         // Exibe itens disponíveis na bag
+        if (personagem.getBag().isEmpty()) {
+            slowConsole.imprimirDevagar("Sua bag está vazia.");
+            return;
+        }
+
         for (Item item : personagem.getBag()) {
             slowConsole.imprimirDevagar("- " + item.getName());
         }
+
         slowConsole.imprimirDevagar("Digite o nome do item:");
         String itemName = scanner.nextLine();
 
@@ -64,9 +70,7 @@ public class Pause implements NonCombatEvent {
         }
 
         if (itemToUse != null) {
-            // Implementar a lógica para usar o item aqui
-            slowConsole.imprimirDevagar("Usou o item: " + itemToUse.getName());
-            personagem.removeItemFromBag(itemToUse); // Remove o item após o uso
+            personagem.useItem(itemToUse); // Usar o item utilizando o método useItem de Attributes
         } else {
             slowConsole.imprimirDevagar("Item não encontrado na bag.");
         }
