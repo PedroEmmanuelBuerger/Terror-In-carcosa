@@ -106,7 +106,7 @@ public abstract class DungeonBase implements Dungeon {
                 slowConsole.imprimirDevagar("- " + item.getName());
             }
         } else if (choice == 2) {
-            useItem(scanner, personagem);
+            useItem(scanner, personagem); // Chama a lógica correta para usar o item
         } else {
             slowConsole.imprimirDevagar("Opção inválida. Você perdeu a vez.");
         }
@@ -131,9 +131,7 @@ public abstract class DungeonBase implements Dungeon {
         }
 
         if (itemToUse != null) {
-            // Implementar a lógica para usar o item aqui
-            slowConsole.imprimirDevagar("Usou o item: " + itemToUse.getName());
-            personagem.removeItemFromBag(itemToUse); // Remove o item após o uso
+            personagem.useItem(itemToUse); // Usa o método useItem da classe Attributes
         } else {
             slowConsole.imprimirDevagar("Item não encontrado na bag.");
         }

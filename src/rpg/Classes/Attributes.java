@@ -247,7 +247,7 @@ public abstract class Attributes {
 
     public void useItem(Item item) {
         if (bag.contains(item)) {
-            // Implementar a lógica específica de uso do item aqui
+            item.UseItem(this);
             slowConsole.imprimirDevagar("Usou " + item.getName() + ".");
             removeItemFromBag(item); // Remove o item após o uso
         } else {
