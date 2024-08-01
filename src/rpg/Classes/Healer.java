@@ -1,11 +1,9 @@
 package rpg.Classes;
 
-import rpg.Monsters.Mob;
 import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
 import rpg.Utils.ManaAdm;
 import rpg.itens.Weapons.Initials.Mace;
-import rpg.itens.Weapons.Initials.Staff;
 import rpg.itens.Weapons.Weapon;
 
 public class Healer extends Attributes {

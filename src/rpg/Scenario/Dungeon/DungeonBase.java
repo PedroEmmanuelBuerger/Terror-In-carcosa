@@ -1,4 +1,5 @@
 package rpg.Scenario.Dungeon;
+
 import rpg.Classes.*;
 import rpg.Monsters.Bosses.Ghazkull;
 import rpg.Monsters.Bosses.KingDragon;
@@ -76,8 +77,15 @@ public abstract class DungeonBase implements Dungeon {
             case 6:
                 if (personagem instanceof Healer) {
                     handleRessurection(personagem);
+                } else if (personagem instanceof Warrior) {
+                    ((Warrior) personagem).defend();
                 } else {
                     viewOrUseItems(scanner, personagem); // Se o personagem não for Healer, use esta opção
+                }
+                break;
+            case 7:
+                if (personagem instanceof Healer) {
+                    ((Healer) personagem).heal(personagem);
                 }
                 break;
             default:
@@ -193,6 +201,7 @@ public abstract class DungeonBase implements Dungeon {
                 slowConsole.imprimirDevagar("6 - Defender");
             } else if (personagem instanceof Healer) {
                 slowConsole.imprimirDevagar("6 - Ressurreição");
+                slowConsole.imprimirDevagar("7 - Curar");
             }
         }
     }
@@ -216,14 +225,6 @@ public abstract class DungeonBase implements Dungeon {
         } else {
             slowConsole.imprimirDevagar("Você tentou fugir, mas não conseguiu!");
             return true;
-        }
-    }
-
-    private void handleSpecialActions(Attributes personagem) {
-        if (personagem instanceof Warrior) {
-            ((Warrior) personagem).defend();
-        } else if (personagem instanceof Healer) {
-            ((Healer) personagem).heal(personagem);
         }
     }
 

@@ -4,7 +4,7 @@ import rpg.itens.Weapons.Weapon;
 
 public class Ring implements Weapon {
     private int attack; // Atributo para armazenar o valor de ataque
-    private String Name = "Maça";
+    private String Name = "Anel";
     public Ring(int attack) {
         this.attack = attack; // Inicializa o valor de ataque
     }

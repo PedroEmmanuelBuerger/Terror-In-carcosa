@@ -1,4 +1,3 @@
-// Arquivo: rpg/itens/BagItens/Potion.java
 package rpg.itens.BagItens;
 
 import rpg.Classes.Attributes;

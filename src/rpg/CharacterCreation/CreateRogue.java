@@ -13,7 +13,6 @@ public class CreateRogue {
         int ataque = 0;
         int especial = 0;
         String frase = "";
-        int maxPoints = 99; // Total máximo de pontos disponíveis
 
         // Loop para garantir entradas válidas
         boolean entradaValida = false;

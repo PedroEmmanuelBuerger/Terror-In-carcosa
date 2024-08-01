@@ -91,7 +91,6 @@ public class CreateWarrior {
                 continue;
             }
 
-            // Entrada para frase
             slowConsole.imprimirDevagar("Digite a frase de efeito do Guerreiro:");
             frase = scanner.nextLine().trim(); // Remove espaços em branco extras
 

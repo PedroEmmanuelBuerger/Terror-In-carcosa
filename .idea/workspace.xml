@@ -9,12 +9,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Balanceamento + chance de aparecer eventos é menor">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando Necromante">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateHealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateHealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateMage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateMage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateNecromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateNecromancer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateRogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateRogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateWarrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateWarrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Necromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Necromancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/HealingPotionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/HealingPotionEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/HealthRecoveryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/HealthRecoveryEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/FoundItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/FoundItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/OldRune.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/OldRune.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/CriticChance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/CriticChance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/BagItens/Potion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/BagItens/Potion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Specials/EvilForces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Specials/EvilForces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Specials/Imp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Specials/Imp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Specials/SpeelBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Specials/SpeelBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Ring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Ring.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,24 +71,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ConsoleLento.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.SlowConsole.executor": "Run",
-    "Application.main.executor": "Run",
-    "Application.principal.executor": "Run",
-    "JAR Application.Terror In YellowCity.jar.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/pedro.silva/Downloads",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ConsoleLento.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SlowConsole.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.principal.executor&quot;: &quot;Run&quot;,
+    &quot;JAR Application.Terror In YellowCity.jar.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/pedro.silva/Downloads&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="rpg.Monsters" />
@@ -448,7 +464,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722435400415</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Arrumando Necromante">
+      <option name="closed" value="true" />
+      <created>1722453719022</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1722453719022</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -463,7 +487,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Classes iniciam com valor definido + arrumando bugs" />
     <MESSAGE value="Arrumando bug resetar valor maxpoints" />
     <MESSAGE value="Arrumando funcionamento de classes + adicionando novos eventos + adicionando atributo weapon" />
     <MESSAGE value="Arrumando eventos para mago" />
@@ -488,6 +511,7 @@
     <MESSAGE value="Adicionando evento de vendedor + mob dropa gold + refatoração" />
     <MESSAGE value="Arrumando código + refatoração + drop de gold aleatório + remoção de item na loja apos compra + bug fixes" />
     <MESSAGE value="Balanceamento + chance de aparecer eventos é menor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Balanceamento + chance de aparecer eventos é menor" />
+    <MESSAGE value="Arrumando Necromante" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando Necromante" />
   </component>
 </project>

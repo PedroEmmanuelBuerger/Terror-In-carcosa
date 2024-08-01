@@ -26,14 +26,14 @@ public class EvilForces {
         spells.add(new Spell("Maldicão de Desolação", 30, 40));
     }
 
-    public void addNewSpell(String name, int manaCost, int damage) {
-        if (!hasSpell(name)) {
-            spells.add(new Spell(name, manaCost, damage));
-            slowConsole.imprimirDevagar("Nova magia adicionada: " + name);
-        } else {
-            slowConsole.imprimirDevagar("A magia " + name + " já está no seu livro de magias.");
-        }
-    }
+//    public void addNewSpell(String name, int manaCost, int damage) {
+//        if (!hasSpell(name)) {
+//            spells.add(new Spell(name, manaCost, damage));
+//            slowConsole.imprimirDevagar("Nova magia adicionada: " + name);
+//        } else {
+//            slowConsole.imprimirDevagar("A magia " + name + " já está no seu livro de magias.");
+//        }
+//    }
 
     public boolean hasSpell(String name) {
         for (Spell spell : spells) {
@@ -70,10 +70,6 @@ public class EvilForces {
             }
         } while (escolha < 1 || escolha > spells.size());
         return damage;
-    }
-
-    public void fecharScanner() {
-        scanner.close();
     }
 
     private static class Spell {

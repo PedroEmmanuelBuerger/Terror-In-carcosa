@@ -1,4 +1,3 @@
-// Arquivo: rpg/Events/FoundItem.java
 package rpg.Events;
 
 import rpg.Classes.Attributes;

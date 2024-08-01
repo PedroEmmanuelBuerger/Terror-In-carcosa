@@ -1,6 +1,5 @@
 package rpg.Classes;
 
-import rpg.Monsters.Mob;
 import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Specials.SpeelBook;
@@ -53,9 +52,9 @@ public class Mage extends Attributes {
             slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
             slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
             slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
+            slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGold() + " De Ouro!");
+            gainGold(enemy.getGold());
             gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
-//            slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGoldDrop() + " De Ouro!");
-//            gainGold(enemy.getGoldDrop());
         }
     }
 

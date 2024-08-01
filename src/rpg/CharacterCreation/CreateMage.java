@@ -14,7 +14,6 @@
             int especial = 0;
             int mana = 0;
             String frase = "";
-            int maxPoints = 99; // Total máximo de pontos disponíveis
 
             // Loop para garantir entradas válidas
             boolean entradaValida = false;

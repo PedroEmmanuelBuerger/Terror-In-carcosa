@@ -1,8 +1,6 @@
 package rpg.itens.Specials;
 
 import rpg.Classes.Attributes;
-import rpg.Monsters.Mob;
-import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
 
 public class Imp extends Attributes {

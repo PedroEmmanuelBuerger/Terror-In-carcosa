@@ -1,7 +1,6 @@
 package rpg.Classes;
 
 import rpg.CharacterCreation.Race;
-import rpg.Monsters.Mob;
 import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Item;
@@ -101,10 +100,6 @@ public abstract class Attributes {
         return quote;
     }
 
-    public void setQuote(String quote) {
-        this.quote = quote;
-    }
-
     public int getSpecial() {
         return special;
     }
@@ -140,9 +135,9 @@ public abstract class Attributes {
             slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
             slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
             slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
-            gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
             slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGold() + " De Ouro!");
             gainGold(enemy.getGold());
+            gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
         }
     }
 
@@ -155,9 +150,9 @@ public abstract class Attributes {
             slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
             slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
             slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
-            gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
             slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGold() + " De Ouro!");
             gainGold(enemy.getGold());
+            gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
         }
     }
 

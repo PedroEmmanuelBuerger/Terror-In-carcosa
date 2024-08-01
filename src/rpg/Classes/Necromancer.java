@@ -1,13 +1,10 @@
 package rpg.Classes;
-
-import rpg.Monsters.Mob;
 import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Specials.EvilForces;
 import rpg.itens.Specials.Imp;
 import rpg.itens.Weapons.Initials.Ring;
 import rpg.itens.Weapons.Weapon;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,12 +79,6 @@ public class Necromancer extends Attributes {
         }
     }
 
-    public void removeImp(Imp imp) {
-        if (getImps().contains(imp)) {
-            getImps().remove(imp);
-        }
-    }
-
     @Override
     public void attack(Attributes enemy) {
         int damage = this.getAttack();
@@ -99,9 +90,9 @@ public class Necromancer extends Attributes {
             slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
             slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
             slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
-            gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
             slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGold() + " De Ouro!");
             gainGold(enemy.getGold());
+            gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
         }
     }
 
@@ -115,9 +106,9 @@ public class Necromancer extends Attributes {
                 slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
                 slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
                 slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
-                gainExp(enemy.getExp());
                 slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGold() + " De Ouro!");
                 gainGold(enemy.getGold());
+                gainExp(enemy.getExp());
             }
         }
     }
@@ -145,7 +136,6 @@ public class Necromancer extends Attributes {
     public void gainExp(int expGain) {
         setExp(getExp() + expGain); // Adiciona a experiência ganha
 
-        // Verifica se o personagem subiu de nível
         while (getExp() >= getLevel() * 10) {
             int levelsGained = getExp() / (getLevel() * 10); // Quantos níveis foram ganhos
             setExp(getExp() % (getLevel() * 7)); // Experiência restante após subir de nível

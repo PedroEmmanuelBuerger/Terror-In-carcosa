@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class SpeelBook {
     private Scanner scanner;
     private SlowConsole slowConsole = new SlowConsole();
-    private CreatePlayer createPlayer = new CreatePlayer();
+    private final CreatePlayer createPlayer = new CreatePlayer();
     private List<Spell> spells = new ArrayList<>(); // Lista de feitiços
 
     public SpeelBook() {

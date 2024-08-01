@@ -3,7 +3,6 @@ package rpg.Scenario.Dungeon;
 import rpg.Classes.Attributes;
 import rpg.Monsters.Bosses.KnightOfFear;
 import rpg.Monsters.Mob;
-import rpg.Monsters.Bosses.KingDragon;
 import rpg.Utils.Messages.End;
 import rpg.Utils.Messages.Start;
 

@@ -14,9 +14,7 @@ public class CreateHealer {
         int especial = 0;
         int mana = 0;
         String frase = "";
-        int maxPoints = 99; // Total máximo de pontos disponíveis
 
-        // Loop para garantir entradas válidas
         boolean entradaValida = false;
         do {
             // Resetando pontos de maxPoints a cada tentativa de criação
@@ -110,11 +108,9 @@ public class CreateHealer {
                 continue;
             }
 
-            // Entrada para frase
             slowConsole.imprimirDevagar("Digite a frase de efeito do Curandeiro:");
             frase = scanner.nextLine().trim(); // Remove espaços em branco extras
 
-            // Se todas as entradas forem válidas, sair do loop
             entradaValida = true;
 
         } while (!entradaValida);

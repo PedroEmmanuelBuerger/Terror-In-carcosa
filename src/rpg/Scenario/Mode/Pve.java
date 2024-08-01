@@ -12,7 +12,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Pve {
-    private int levelDungeon = 1;
     private boolean specialEncounterOccurred = false; // Flag para rastrear o evento SpecialEncounter
 
     public static void startBattle(Scanner scanner) {
@@ -30,7 +29,6 @@ public class Pve {
                 // Encontro de combate
                 CombatSystem.startCombat(scanner, personagem);
                 // Após o combate, atualize o nível da dungeon se necessário
-                pveInstance.levelDungeon = personagem.getLevelDungeon();
             } else {
                 // Evento não combativo
                 pveInstance.nonCombatEvent(personagem);
@@ -39,7 +37,6 @@ public class Pve {
     }
 
     public void setLevelDungeon(int levelDungeon) {
-        this.levelDungeon = levelDungeon;
     }
 
     private void nonCombatEvent(Attributes personagem) {

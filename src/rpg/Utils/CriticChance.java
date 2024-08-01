@@ -19,22 +19,6 @@ public class CriticChance {
         this.damage = damage;
     }
 
-    public double getCriticalChance() {
-        return criticalChance;
-    }
-
-    public void setCriticalChance(double criticalChance) {
-        this.criticalChance = criticalChance;
-    }
-
-    public int getCriticalMultiplier() {
-        return criticalMultiplier;
-    }
-
-    public void setCriticalMultiplier(int criticalMultiplier) {
-        this.criticalMultiplier = criticalMultiplier;
-    }
-
     public int chanceCritic() {
         Random random = new Random();
         SlowConsole slowConsole = new SlowConsole();
