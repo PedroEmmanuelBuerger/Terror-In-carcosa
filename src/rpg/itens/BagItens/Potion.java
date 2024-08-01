@@ -1,9 +1,11 @@
 package rpg.itens.BagItens;
 
 import rpg.Character.Classes.Attributes;
+import rpg.Utils.SlowConsole;
 import rpg.itens.Item;
 
 public class Potion extends Item {
+    private SlowConsole slowConsole = new SlowConsole();
     private int healingAmount;
 
     public Potion(String name,int price, int healingAmount) {
@@ -30,6 +32,6 @@ public class Potion extends Item {
 
         // Atualiza a vida do jogador
         player.setHealthbar(newHealth);
-        System.out.println("Nova vida após cura: " + newHealth);
+       slowConsole.imprimirDevagar("Nova vida após cura: " + newHealth);
     }
 }
