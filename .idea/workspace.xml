@@ -9,28 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando Necromante">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando Bugs + Refatorando todo código + removendo redundancias">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateHealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateHealer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateMage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateMage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateNecromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateNecromancer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateRogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateRogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateWarrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/CreateWarrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Attributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Healer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/CharacterCreation/Race.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/CharacterCreation/Race.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Classes/Necromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Classes/Necromancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/FoundItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/FoundItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/OldRune.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/OldRune.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/CriticChance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/CriticChance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/itens/BagItens/Potion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/BagItens/Potion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Specials/EvilForces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Specials/EvilForces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Specials/Imp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Specials/Imp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/itens/Specials/SpeelBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Specials/SpeelBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Ring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Ring.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -472,7 +461,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722453719022</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Arrumando Bugs + Refatorando todo código + removendo redundancias">
+      <option name="closed" value="true" />
+      <created>1722510180113</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1722510180113</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -487,7 +484,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Arrumando bug resetar valor maxpoints" />
     <MESSAGE value="Arrumando funcionamento de classes + adicionando novos eventos + adicionando atributo weapon" />
     <MESSAGE value="Arrumando eventos para mago" />
     <MESSAGE value="Arrumando classe healer e mage + balanceamento" />
@@ -512,6 +508,7 @@
     <MESSAGE value="Arrumando código + refatoração + drop de gold aleatório + remoção de item na loja apos compra + bug fixes" />
     <MESSAGE value="Balanceamento + chance de aparecer eventos é menor" />
     <MESSAGE value="Arrumando Necromante" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando Necromante" />
+    <MESSAGE value="Arrumando Bugs + Refatorando todo código + removendo redundancias" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando Bugs + Refatorando todo código + removendo redundancias" />
   </component>
 </project>

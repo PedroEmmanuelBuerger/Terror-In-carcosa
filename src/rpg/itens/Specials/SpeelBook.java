@@ -75,10 +75,6 @@ public class SpeelBook {
         return damage;
     }
 
-    public void fecharScanner() {
-        scanner.close();
-    }
-
     private static class Spell {
         private String name;
         private int manaCost;

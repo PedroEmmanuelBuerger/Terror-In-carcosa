@@ -36,9 +36,6 @@ public class Pve {
         }
     }
 
-    public void setLevelDungeon(int levelDungeon) {
-    }
-
     private void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();

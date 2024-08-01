@@ -30,14 +30,6 @@ public class Necromancer extends Attributes {
         return limitImp;
     }
 
-    public EvilForces getSpellBook() {
-        return spellBook;
-    }
-
-    public void setSpellBook(EvilForces spellBook) {
-        this.spellBook = spellBook;
-    }
-
     public void setLimitImp(int limitImp) {
         this.limitImp = limitImp;
     }

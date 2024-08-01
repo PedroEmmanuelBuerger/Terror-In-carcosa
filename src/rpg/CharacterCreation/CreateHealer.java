@@ -100,7 +100,6 @@ public class CreateHealer {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para a mana. Tente novamente.");
                     continue;
                 }
-                tempMaxPoints -= mana; // Atualiza tempMaxPoints após a entrada válida
                 mana += 5; // Adiciona pontos extras à mana
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para a mana.");

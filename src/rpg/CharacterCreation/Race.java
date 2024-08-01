@@ -28,10 +28,6 @@ public enum Race {
         return bonusHealth;
     }
 
-    public int getBonusMana() {
-        return bonusMana;
-    }
-
     public int getBonusSpecial() {
         return bonusSpecial;
     }

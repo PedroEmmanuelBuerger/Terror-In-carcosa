@@ -85,7 +85,6 @@ public class CreateRogue {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para o ataque especial. Tente novamente.");
                     continue;
                 }
-                tempMaxPoints -= especial; // Atualiza tempMaxPoints após a entrada válida
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para o ataque especial.");
                 scanner.nextLine(); // Limpar o buffer
