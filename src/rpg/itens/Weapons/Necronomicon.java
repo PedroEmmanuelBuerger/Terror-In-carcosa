@@ -5,7 +5,12 @@ import java.util.Random;
 public class Necronomicon implements Weapon {
     private final int attack; // Dano aleatório definido uma vez
     private final String name = "Livro dos Mortos: Necronomicon";
+    private int price = 15;
 
+    @Override
+    public int getPrice() {
+        return price;
+    }
     public Necronomicon() {
         Random random = new Random();
         int minAttack = 18;

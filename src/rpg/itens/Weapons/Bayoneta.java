@@ -5,6 +5,12 @@ import java.util.Random;
 public class Bayoneta implements Weapon {
     private final int attack; // Dano aleatório definido uma vez
     private final String name = "Bayoneta";
+    private int price = 15;
+
+    @Override
+    public int getPrice() {
+        return price;
+    }
 
     // Construtor da classe que define o dano aleatório
     public Bayoneta() {

@@ -5,7 +5,12 @@ import java.util.Random;
 public class SwordOfThousandTruths implements Weapon {
     private final int attack; // Dano aleatório definido uma vez
     private final String name = "Espada de Mil Verdades";
+    private int price = 15;
 
+    @Override
+    public int getPrice() {
+        return price;
+    }
     public SwordOfThousandTruths() {
         Random random = new Random();
         int minAttack = 15;

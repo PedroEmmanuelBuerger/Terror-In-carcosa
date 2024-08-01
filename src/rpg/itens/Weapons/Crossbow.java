@@ -5,7 +5,12 @@ import java.util.Random;
 public class Crossbow implements Weapon {
     private final int attack; // Dano aleatório definido uma vez
     private final String name = "Crossbow";
+    private int price = 15;
 
+    @Override
+    public int getPrice() {
+        return price;
+    }
     public Crossbow() {
         Random random = new Random();
         int minAttack = 7;

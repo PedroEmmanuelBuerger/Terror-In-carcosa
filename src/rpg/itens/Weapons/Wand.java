@@ -5,7 +5,12 @@ import java.util.Random;
 public class Wand implements Weapon {
     private final int attack; // Dano aleatório definido uma vez
     private final String name = "Varinha";
+    private int price = 15;
 
+    @Override
+    public int getPrice() {
+        return price;
+    }
     public Wand() {
         Random random = new Random();
         int minAttack = 8;
