@@ -1,11 +1,11 @@
 package rpg.Scenario.Mode;
 
-import rpg.Classes.Attributes;
-import rpg.Classes.Mage;
+import rpg.Character.Classes.Attributes;
+import rpg.Character.Classes.Mage;
 import rpg.Events.*;
 import rpg.Utils.CombatSystem;
 import rpg.Utils.SlowConsole;
-import rpg.CharacterCreation.CreatePlayer;
+import rpg.Character.CharacterCreation.CreatePlayer;
 import rpg.itens.Specials.SpeelBook;
 
 import java.util.Random;

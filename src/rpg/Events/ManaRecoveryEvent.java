@@ -1,10 +1,10 @@
 package rpg.Events;
 
-import rpg.Classes.Necromancer;
+import rpg.Character.Classes.Necromancer;
 import rpg.Utils.SlowConsole;
-import rpg.Classes.Attributes;
-import rpg.Classes.Healer;
-import rpg.Classes.Mage;
+import rpg.Character.Classes.Attributes;
+import rpg.Character.Classes.Healer;
+import rpg.Character.Classes.Mage;
 
 import java.util.Random;
 

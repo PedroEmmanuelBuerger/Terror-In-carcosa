@@ -1,6 +1,6 @@
 package rpg.Scenario.Dungeon;
 
-import rpg.Classes.Attributes;
+import rpg.Character.Classes.Attributes;
 import rpg.Monsters.Mob;
 import rpg.Monsters.Bosses.Ghazkull;
 import rpg.Utils.Messages.Start;

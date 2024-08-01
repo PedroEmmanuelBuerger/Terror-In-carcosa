@@ -1,17 +1,18 @@
-package rpg.CharacterCreation;
+package rpg.Character.CharacterCreation;
 
+import rpg.Character.Classes.Necromancer;
 import rpg.Utils.SlowConsole;
-import rpg.Classes.Rogue;
 
 import java.util.Scanner;
 
-public class CreateRogue {
-    public static Rogue createRogue(Scanner scanner) {
+public class CreateNecromancer {
+    public static Necromancer createNecromancer(Scanner scanner) {
         SlowConsole slowConsole = new SlowConsole();
         String nome;
         int vida = 0;
         int ataque = 0;
         int especial = 0;
+        int mana = 0;
         String frase = "";
 
         // Loop para garantir entradas válidas
@@ -20,7 +21,7 @@ public class CreateRogue {
             // Resetando pontos de maxPoints a cada tentativa de criação
             int tempMaxPoints = 99;
 
-            slowConsole.imprimirDevagar("Digite o nome do Ladrão:");
+            slowConsole.imprimirDevagar("Digite o nome do Necromante:");
             nome = scanner.nextLine().trim(); // Remove espaços em branco extras
 
             // Verifica se o nome contém números
@@ -30,7 +31,7 @@ public class CreateRogue {
             }
 
             // Entrada para vida
-            slowConsole.imprimirDevagar("Digite o valor da vida inicial do Ladrão (máximo " + tempMaxPoints + "):");
+            slowConsole.imprimirDevagar("Digite o valor da vida inicial do Necromante (máximo " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 vida = scanner.nextInt();
                 scanner.nextLine(); // Limpar o buffer
@@ -52,7 +53,7 @@ public class CreateRogue {
             }
 
             // Entrada para ataque
-            slowConsole.imprimirDevagar("Digite o valor do ataque do Ladrão (máximo " + tempMaxPoints + "):");
+            slowConsole.imprimirDevagar("Digite o valor do ataque do Necromante (máximo " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 ataque = scanner.nextInt();
                 scanner.nextLine(); // Limpar o buffer
@@ -62,12 +63,7 @@ public class CreateRogue {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para o ataque. Tente novamente.");
                     continue;
                 }
-                if (vida == 0) {
-                    slowConsole.imprimirDevagar("Vida inicial não pode ser 0");
-                    continue;
-                }
                 tempMaxPoints -= ataque; // Atualiza tempMaxPoints após a entrada válida
-                ataque += 15; // Adiciona pontos extras ao ataque
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para o ataque.");
                 scanner.nextLine(); // Limpar o buffer
@@ -75,7 +71,7 @@ public class CreateRogue {
             }
 
             // Entrada para ataque especial
-            slowConsole.imprimirDevagar("Digite o valor do ataque especial do Ladrão (máximo " + tempMaxPoints + "):");
+            slowConsole.imprimirDevagar("Digite o valor do ataque especial do Necromante (máximo " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 especial = scanner.nextInt();
                 scanner.nextLine(); // Limpar o buffer
@@ -85,14 +81,34 @@ public class CreateRogue {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para o ataque especial. Tente novamente.");
                     continue;
                 }
+                tempMaxPoints -= especial;
+                especial = especial + 10;
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para o ataque especial.");
                 scanner.nextLine(); // Limpar o buffer
                 continue;
             }
 
+            // Entrada para mana
+            slowConsole.imprimirDevagar("Digite o valor da mana do Necromante (máximo " + tempMaxPoints + "):");
+            if (scanner.hasNextInt()) {
+                mana = scanner.nextInt();
+                scanner.nextLine(); // Limpar o buffer
+
+                // Verifica se a mana digitada é válida
+                if (mana > tempMaxPoints) {
+                    slowConsole.imprimirDevagar("Você excedeu o limite de pontos para a mana. Tente novamente.");
+                    continue;
+                }
+                mana += 5; // Adiciona pontos extras à mana
+            } else {
+                slowConsole.imprimirDevagar("Entrada inválida. Digite um número para a mana.");
+                scanner.nextLine(); // Limpar o buffer
+                continue;
+            }
+
             // Entrada para frase
-            slowConsole.imprimirDevagar("Digite a frase de efeito do Ladrão:");
+            slowConsole.imprimirDevagar("Digite a frase de efeito do Necromante:");
             frase = scanner.nextLine().trim(); // Remove espaços em branco extras
 
             // Se todas as entradas forem válidas, sair do loop
@@ -100,6 +116,6 @@ public class CreateRogue {
 
         } while (!entradaValida);
 
-        return new Rogue(nome, vida, ataque, especial, frase);
+        return new Necromancer(nome, vida, mana, ataque, especial, frase);
     }
 }

@@ -1,7 +1,7 @@
 package rpg.Monsters;
 
 import rpg.Utils.SlowConsole;
-import rpg.Classes.Attributes;
+import rpg.Character.Classes.Attributes;
 import java.util.Random;
 
 public class Mob extends Attributes {

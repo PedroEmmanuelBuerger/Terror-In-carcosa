@@ -1,6 +1,6 @@
 package rpg.Events;
 
-import rpg.Classes.*;
+import rpg.Character.Classes.*;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Specials.SpeelBook;
 

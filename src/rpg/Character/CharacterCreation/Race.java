@@ -1,4 +1,4 @@
-package rpg.CharacterCreation;
+package rpg.Character.CharacterCreation;
 
 public enum Race {
     HUMAN("Humano", 0, 0, 0, 10),

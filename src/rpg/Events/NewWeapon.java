@@ -1,6 +1,6 @@
 package rpg.Events;
 
-import rpg.Classes.*;
+import rpg.Character.Classes.*;
 import rpg.itens.Weapons.*;
 import rpg.Utils.SlowConsole;
 

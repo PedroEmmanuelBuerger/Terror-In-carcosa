@@ -1,10 +1,10 @@
 package rpg.itens.Specials;
 
-import rpg.CharacterCreation.CreatePlayer;
+import rpg.Character.CharacterCreation.CreatePlayer;
 import rpg.Utils.ManaAdm;
 import rpg.Utils.SlowConsole;
 import rpg.Utils.InputUtils;
-import rpg.Classes.Mage;
+import rpg.Character.Classes.Mage;
 
 import java.util.ArrayList;
 import java.util.List;

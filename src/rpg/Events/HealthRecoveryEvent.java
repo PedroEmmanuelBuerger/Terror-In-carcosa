@@ -1,7 +1,7 @@
 package rpg.Events;
 
 import rpg.Utils.SlowConsole;
-import rpg.Classes.Attributes;
+import rpg.Character.Classes.Attributes;
 
 import java.util.Random;
 

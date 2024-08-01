@@ -3,7 +3,7 @@ package rpg.Utils;
 import rpg.Scenario.Dungeon.Dungeon;
 import rpg.Scenario.Dungeon.Dungeon1;
 import rpg.Scenario.Dungeon.Dungeon2;
-import rpg.Classes.Attributes;
+import rpg.Character.Classes.Attributes;
 import rpg.Scenario.Dungeon.Dungeon3;
 
 import java.util.Scanner;

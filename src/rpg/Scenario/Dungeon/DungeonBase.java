@@ -1,6 +1,6 @@
 package rpg.Scenario.Dungeon;
 
-import rpg.Classes.*;
+import rpg.Character.Classes.*;
 import rpg.Monsters.Bosses.Ghazkull;
 import rpg.Monsters.Bosses.KingDragon;
 import rpg.Monsters.Bosses.KnightOfFear;

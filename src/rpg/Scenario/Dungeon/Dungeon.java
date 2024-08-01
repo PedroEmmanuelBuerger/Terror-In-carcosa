@@ -1,5 +1,5 @@
 package rpg.Scenario.Dungeon;
-import rpg.Classes.Attributes;
+import rpg.Character.Classes.Attributes;
 
 import java.util.Scanner;
 

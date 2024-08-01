@@ -1,7 +1,7 @@
-package rpg.CharacterCreation;
+package rpg.Character.CharacterCreation;
 
 import rpg.Utils.SlowConsole;
-import rpg.Classes.Warrior;
+import rpg.Character.Classes.Warrior;
 
 import java.util.Scanner;
 

@@ -1,13 +1,12 @@
-package rpg.CharacterCreation;
+package rpg.Character.CharacterCreation;
 
-import rpg.Classes.Necromancer;
 import rpg.Utils.SlowConsole;
-import rpg.Classes.Mage;
+import rpg.Character.Classes.Healer;
 
 import java.util.Scanner;
 
-public class CreateNecromancer {
-    public static Necromancer createNecromancer(Scanner scanner) {
+public class CreateHealer {
+    public static Healer createHealer(Scanner scanner) {
         SlowConsole slowConsole = new SlowConsole();
         String nome;
         int vida = 0;
@@ -16,13 +15,12 @@ public class CreateNecromancer {
         int mana = 0;
         String frase = "";
 
-        // Loop para garantir entradas válidas
         boolean entradaValida = false;
         do {
             // Resetando pontos de maxPoints a cada tentativa de criação
             int tempMaxPoints = 99;
 
-            slowConsole.imprimirDevagar("Digite o nome do Necromante:");
+            slowConsole.imprimirDevagar("Digite o nome do Curandeiro:");
             nome = scanner.nextLine().trim(); // Remove espaços em branco extras
 
             // Verifica se o nome contém números
@@ -32,7 +30,7 @@ public class CreateNecromancer {
             }
 
             // Entrada para vida
-            slowConsole.imprimirDevagar("Digite o valor da vida inicial do Necromante (máximo " + tempMaxPoints + "):");
+            slowConsole.imprimirDevagar("Digite o valor da vida inicial do Curandeiro (restantes " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 vida = scanner.nextInt();
                 scanner.nextLine(); // Limpar o buffer
@@ -47,6 +45,7 @@ public class CreateNecromancer {
                     continue;
                 }
                 tempMaxPoints -= vida; // Atualiza tempMaxPoints após a entrada válida
+                vida += 5; // Adiciona pontos extras à vida
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para a vida.");
                 scanner.nextLine(); // Limpar o buffer
@@ -54,7 +53,7 @@ public class CreateNecromancer {
             }
 
             // Entrada para ataque
-            slowConsole.imprimirDevagar("Digite o valor do ataque do Necromante (máximo " + tempMaxPoints + "):");
+            slowConsole.imprimirDevagar("Digite o valor do ataque do Curandeiro (restantes " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 ataque = scanner.nextInt();
                 scanner.nextLine(); // Limpar o buffer
@@ -72,7 +71,7 @@ public class CreateNecromancer {
             }
 
             // Entrada para ataque especial
-            slowConsole.imprimirDevagar("Digite o valor do ataque especial do Necromante (máximo " + tempMaxPoints + "):");
+            slowConsole.imprimirDevagar("Digite o valor do ataque especial do Curandeiro (restantes " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 especial = scanner.nextInt();
                 scanner.nextLine(); // Limpar o buffer
@@ -82,8 +81,8 @@ public class CreateNecromancer {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para o ataque especial. Tente novamente.");
                     continue;
                 }
-                tempMaxPoints -= especial;
-                especial = especial + 10;
+                tempMaxPoints -= especial; // Atualiza tempMaxPoints após a entrada válida
+                especial += 5; // Adiciona pontos extras ao ataque especial
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para o ataque especial.");
                 scanner.nextLine(); // Limpar o buffer
@@ -91,7 +90,7 @@ public class CreateNecromancer {
             }
 
             // Entrada para mana
-            slowConsole.imprimirDevagar("Digite o valor da mana do Necromante (máximo " + tempMaxPoints + "):");
+            slowConsole.imprimirDevagar("Digite o valor da mana do Curandeiro (restantes " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 mana = scanner.nextInt();
                 scanner.nextLine(); // Limpar o buffer
@@ -108,15 +107,13 @@ public class CreateNecromancer {
                 continue;
             }
 
-            // Entrada para frase
-            slowConsole.imprimirDevagar("Digite a frase de efeito do Necromante:");
+            slowConsole.imprimirDevagar("Digite a frase de efeito do Curandeiro:");
             frase = scanner.nextLine().trim(); // Remove espaços em branco extras
 
-            // Se todas as entradas forem válidas, sair do loop
             entradaValida = true;
 
         } while (!entradaValida);
 
-        return new Necromancer(nome, vida, mana, ataque, especial, frase);
+        return new Healer(nome, vida, mana, ataque, especial, frase);
     }
 }

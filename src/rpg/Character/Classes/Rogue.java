@@ -1,4 +1,4 @@
-package rpg.Classes;
+package rpg.Character.Classes;
 
 import rpg.Utils.SlowConsole;
 import rpg.itens.Weapons.Initials.Daggers;

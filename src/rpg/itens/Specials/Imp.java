@@ -1,6 +1,6 @@
 package rpg.itens.Specials;
 
-import rpg.Classes.Attributes;
+import rpg.Character.Classes.Attributes;
 import rpg.Utils.SlowConsole;
 
 public class Imp extends Attributes {

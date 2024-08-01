@@ -1,7 +1,7 @@
 package rpg.Monsters.Bosses;
 
 import rpg.Utils.SlowConsole;
-import rpg.Classes.Attributes;
+import rpg.Character.Classes.Attributes;
 
 public class KingDragon extends Attributes {
     SlowConsole slowConsole = new SlowConsole();

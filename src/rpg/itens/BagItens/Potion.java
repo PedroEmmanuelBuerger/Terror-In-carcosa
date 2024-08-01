@@ -1,6 +1,6 @@
 package rpg.itens.BagItens;
 
-import rpg.Classes.Attributes;
+import rpg.Character.Classes.Attributes;
 import rpg.itens.Item;
 
 public class Potion extends Item {

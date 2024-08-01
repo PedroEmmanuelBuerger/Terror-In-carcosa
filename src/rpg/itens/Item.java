@@ -1,6 +1,6 @@
 package rpg.itens;
 
-import rpg.Classes.Attributes;
+import rpg.Character.Classes.Attributes;
 
 public abstract class Item {
     private String name;

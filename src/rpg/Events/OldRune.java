@@ -1,8 +1,8 @@
 package rpg.Events;
 
-import rpg.Classes.Attributes;
-import rpg.Classes.Healer;
-import rpg.Classes.Mage;
+import rpg.Character.Classes.Attributes;
+import rpg.Character.Classes.Healer;
+import rpg.Character.Classes.Mage;
 import rpg.Utils.SlowConsole;
 
 import java.util.Random;

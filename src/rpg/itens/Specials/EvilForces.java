@@ -1,6 +1,6 @@
 package rpg.itens.Specials;
 
-import rpg.Classes.Necromancer;
+import rpg.Character.Classes.Necromancer;
 import rpg.Utils.ManaAdm;
 import rpg.Utils.SlowConsole;
 import rpg.Utils.InputUtils;

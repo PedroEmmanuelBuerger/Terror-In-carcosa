@@ -1,7 +1,7 @@
 package rpg.Events;
 
 import rpg.Utils.SlowConsole;
-import rpg.Classes.Attributes;
+import rpg.Character.Classes.Attributes;
 
 public class HealingPotionEvent implements NonCombatEvent {
     private SlowConsole slowConsole = new SlowConsole();

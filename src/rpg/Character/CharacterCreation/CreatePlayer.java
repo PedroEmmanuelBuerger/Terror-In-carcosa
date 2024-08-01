@@ -1,9 +1,9 @@
-package rpg.CharacterCreation;
+package rpg.Character.CharacterCreation;
 
 import rpg.Utils.Messages.Chose;
 import rpg.Utils.SlowConsole;
 import rpg.Utils.InputUtils;
-import rpg.Classes.*;
+import rpg.Character.Classes.*;
 
 import java.util.Scanner;
 

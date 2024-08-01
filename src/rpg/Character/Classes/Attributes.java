@@ -1,6 +1,6 @@
-package rpg.Classes;
+package rpg.Character.Classes;
 
-import rpg.CharacterCreation.Race;
+import rpg.Character.CharacterCreation.Race;
 import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Item;
