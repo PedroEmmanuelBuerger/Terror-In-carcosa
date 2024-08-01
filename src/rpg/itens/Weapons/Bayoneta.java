@@ -4,12 +4,10 @@ import java.util.Random;
 
 public class Bayoneta implements Weapon {
     private final int attack; // Dano aleatório definido uma vez
-    private final String name = "Bayoneta";
-    private int price = 15;
 
     @Override
     public int getPrice() {
-        return price;
+        return 15;
     }
 
     // Construtor da classe que define o dano aleatório
@@ -22,12 +20,12 @@ public class Bayoneta implements Weapon {
     }
 
     @Override
-    public int getAttack() {
+    public int attack() {
         return attack; // Retorna o dano definido no construtor
     }
 
     @Override
     public String getName() {
-        return name;
+        return "Bayoneta";
     }
 }

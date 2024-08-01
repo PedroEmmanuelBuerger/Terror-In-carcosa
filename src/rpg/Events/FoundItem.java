@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class FoundItem implements NonCombatEvent {
-    private SlowConsole slowConsole = new SlowConsole();
+    private final SlowConsole slowConsole = new SlowConsole();
 
     @Override
     public void executeEvent(Attributes personagem) {

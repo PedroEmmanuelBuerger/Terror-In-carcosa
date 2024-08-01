@@ -7,17 +7,18 @@ import rpg.itens.Weapons.Initials.Staff;
 import rpg.itens.Weapons.Weapon;
 
 public class Mage extends Attributes {
-    private SpeelBook speelBook;
+    private final SpeelBook speelBook;
     private int mana;
     private int maxMana;
     SlowConsole slowConsole = new SlowConsole();
-    private Weapon weapon = new Staff(0);
+
     public Mage(String name, int healthbar, int mana, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.mana = mana;
         this.maxMana = mana;
         this.speelBook = new SpeelBook(); // Inicializa o SpeelBook
         this.setClasses("Mago");
+        Weapon weapon = new Staff(0);
         setWeapon(weapon);
     }
 

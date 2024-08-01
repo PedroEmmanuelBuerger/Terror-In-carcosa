@@ -44,8 +44,7 @@ public class Pve {
         NonCombatEvent event = null;
         switch (eventType) {
             case 0:
-                if (personagem instanceof Mage) {
-                    Mage mage = (Mage) personagem;
+                if (personagem instanceof Mage mage) {
                     if (!specialEncounterOccurred) {
                         SpeelBook speelBookactual = mage.getSpeelBook(); // Verifica se o evento já ocorreu
                         event = new SpecialEncounter(speelBookactual);

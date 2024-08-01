@@ -4,7 +4,7 @@ import rpg.Utils.SlowConsole;
 import rpg.Character.Classes.Attributes;
 
 public class HealingPotionEvent implements NonCombatEvent {
-    private SlowConsole slowConsole = new SlowConsole();
+    private final SlowConsole slowConsole = new SlowConsole();
 
     @Override
     public void executeEvent(Attributes personagem) {

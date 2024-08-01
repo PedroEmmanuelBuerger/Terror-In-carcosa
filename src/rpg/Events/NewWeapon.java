@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class NewWeapon implements NonCombatEvent {
-    private SlowConsole slowConsole = new SlowConsole();
+    private final SlowConsole slowConsole = new SlowConsole();
 
     @Override
     public void executeEvent(Attributes personagem) {
@@ -20,12 +20,12 @@ public class NewWeapon implements NonCombatEvent {
         Weapon newWeapon = weapons[random.nextInt(weapons.length)];
 
         // Exibe informações sobre a nova arma encontrada
-        slowConsole.imprimirDevagar("Você achou uma nova arma: " + newWeapon.getName() + " com dano (" + newWeapon.getAttack() + ").");
+        slowConsole.imprimirDevagar("Você achou uma nova arma: " + newWeapon.getName() + " com dano (" + newWeapon.attack() + ").");
 
         // Exibe informações sobre a arma atual, se houver
         Weapon currentWeapon = personagem.getWeapon();
         if (currentWeapon != null) {
-            slowConsole.imprimirDevagar("Sua arma atual é: " + currentWeapon.getName() + " com dano (" + currentWeapon.getAttack() + ").");
+            slowConsole.imprimirDevagar("Sua arma atual é: " + currentWeapon.getName() + " com dano (" + currentWeapon.attack() + ").");
         }
 
         // Pergunta ao jogador se deseja equipar a nova arma
@@ -37,42 +37,28 @@ public class NewWeapon implements NonCombatEvent {
         if (choice.equalsIgnoreCase("s")) {
             if (currentWeapon != null) {
                 // Calcula a diferença de dano entre a nova arma e a arma atual
-                int damageDifference = newWeapon.getAttack() - currentWeapon.getAttack();
+                int damageDifference = newWeapon.attack() - currentWeapon.attack();
 
                 // Atualiza o ataque ou ataque especial do personagem
-                if (personagem instanceof Warrior) {
-                    Warrior warrior = (Warrior) personagem;
-                    warrior.setAttack(warrior.getAttack() + damageDifference);
-                } else if (personagem instanceof Rogue) {
-                    Rogue rogue = (Rogue) personagem;
-                    rogue.setAttack(rogue.getAttack() + damageDifference);
-                } else if (personagem instanceof Healer) {
-                    Healer healer = (Healer) personagem;
-                    healer.setSpecial(healer.getSpecial() + damageDifference);
-                } else if (personagem instanceof Mage) {
-                    Mage mage = (Mage) personagem;
-                    mage.setSpecial(mage.getSpecial() + damageDifference);
-                } else if (personagem instanceof Necromancer) {
-                    Necromancer necromancer = (Necromancer) personagem;
-                    necromancer.setSpecial(necromancer.getSpecial() + damageDifference);
+                switch (personagem) {
+                    case Warrior warrior -> warrior.setAttack(warrior.getAttack() + damageDifference);
+                    case Rogue rogue -> rogue.setAttack(rogue.getAttack() + damageDifference);
+                    case Healer healer -> healer.setSpecial(healer.getSpecial() + damageDifference);
+                    case Mage mage -> mage.setSpecial(mage.getSpecial() + damageDifference);
+                    case Necromancer necromancer -> necromancer.setSpecial(necromancer.getSpecial() + damageDifference);
+                    default -> {
+                    }
                 }
             } else {
                 // Se o personagem não tem uma arma atual, simplesmente define o valor da nova arma
-                if (personagem instanceof Warrior) {
-                    Warrior warrior = (Warrior) personagem;
-                    warrior.setAttack(newWeapon.getAttack());
-                } else if (personagem instanceof Rogue) {
-                    Rogue rogue = (Rogue) personagem;
-                    rogue.setAttack(newWeapon.getAttack());
-                } else if (personagem instanceof Healer) {
-                    Healer healer = (Healer) personagem;
-                    healer.setSpecial(newWeapon.getAttack());
-                } else if (personagem instanceof Mage) {
-                    Mage mage = (Mage) personagem;
-                    mage.setSpecial(newWeapon.getAttack());
-                } else if (personagem instanceof Necromancer) {
-                    Necromancer necromancer = (Necromancer) personagem;
-                    necromancer.setSpecial(newWeapon.getAttack());
+                switch (personagem) {
+                    case Warrior warrior -> warrior.setAttack(newWeapon.attack());
+                    case Rogue rogue -> rogue.setAttack(newWeapon.attack());
+                    case Healer healer -> healer.setSpecial(newWeapon.attack());
+                    case Mage mage -> mage.setSpecial(newWeapon.attack());
+                    case Necromancer necromancer -> necromancer.setSpecial(newWeapon.attack());
+                    default -> {
+                    }
                 }
             }
 
@@ -80,7 +66,7 @@ public class NewWeapon implements NonCombatEvent {
             personagem.setWeapon(newWeapon);
 
             // Exibe mensagem de sucesso
-            slowConsole.imprimirDevagar(personagem.getName() + " equipou a nova arma: " + newWeapon.getName() + " com dano " + newWeapon.getAttack() + "!");
+            slowConsole.imprimirDevagar(personagem.getName() + " equipou a nova arma: " + newWeapon.getName() + " com dano " + newWeapon.attack() + "!");
         } else {
             slowConsole.imprimirDevagar(personagem.getName() + " decidiu não equipar a arma.");
         }

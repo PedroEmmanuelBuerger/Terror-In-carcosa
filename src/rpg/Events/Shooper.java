@@ -10,21 +10,18 @@ import rpg.Utils.SlowConsole;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Shooper implements NonCombatEvent {
-    private SlowConsole slowConsole = new SlowConsole();
-    private Scanner scanner = new Scanner(System.in);
-    private Random random = new Random();
+    private final SlowConsole slowConsole = new SlowConsole();
+    private final Scanner scanner = new Scanner(System.in);
 
     // Lista de todos os itens possíveis
-    private List<Item> allItems;
-    private List<Weapon> allWeapons;
+    private final List<Item> allItems;
 
     // Listas de itens e armas disponíveis para venda
-    private List<Item> itemsForSale;
-    private List<Weapon> weaponsForSale;
+    private final List<Item> itemsForSale;
+    private final List<Weapon> weaponsForSale;
 
     // Construtor
     public Shooper() {
@@ -36,7 +33,7 @@ public class Shooper implements NonCombatEvent {
         allItems.add(new ManaPotion("Poção de Mana Média", 35, 60));
         allItems.add(new ManaPotion("Poção de Mana Maior", 60, 120));
 
-        allWeapons = new ArrayList<>();
+        List<Weapon> allWeapons = new ArrayList<>();
         allWeapons.add(new Zheiwender()); // Exemplo de arma
         allWeapons.add(new SwordOfThousandTruths()); // Exemplo de arma
         allWeapons.add(new Bayoneta()); // Exemplo de arma
@@ -78,7 +75,7 @@ public class Shooper implements NonCombatEvent {
                 shopping = false; // Sai do loop para voltar ao jogo
             } else if (choice == 1) {
                 // Exibe poções
-                displayItems(availableItems, "Poções");
+                displayItems(availableItems);
                 // Processa a compra de poções
                 int potionChoice = scanner.nextInt();
                 scanner.nextLine(); // Limpar o buffer do scanner
@@ -89,7 +86,7 @@ public class Shooper implements NonCombatEvent {
                 }
             } else if (choice == 2) {
                 // Exibe armas
-                displayWeapons(availableWeapons, "Armas");
+                displayWeapons(availableWeapons);
                 // Processa a compra de armas
                 int weaponChoice = scanner.nextInt();
                 scanner.nextLine(); // Limpar o buffer do scanner
@@ -131,17 +128,15 @@ public class Shooper implements NonCombatEvent {
     private List<Weapon> getWeaponsForSale(Attributes personagem) {
         List<Weapon> weaponsForSale = new ArrayList<>();
         // Adiciona armas disponíveis baseadas na classe do personagem
-        for (Weapon weapon : getAvailableWeapons(personagem)) {
-            weaponsForSale.add(weapon);
-        }
+        Collections.addAll(weaponsForSale, getAvailableWeapons(personagem));
 
         // Embaralha e limita a 3 armas
         Collections.shuffle(weaponsForSale);
         return weaponsForSale.subList(0, Math.min(3, weaponsForSale.size()));
     }
 
-    private void displayItems(List<Item> items, String type) {
-        slowConsole.imprimirDevagar("=== " + type + " à venda ===");
+    private void displayItems(List<Item> items) {
+        slowConsole.imprimirDevagar("=== " + "Poções" + " à venda ===");
         for (int i = 0; i < items.size(); i++) {
             Item item = items.get(i);
             slowConsole.imprimirDevagar((i + 1) + ". " + item.getName() + " - " + item.getPrice() + " Ouro");
@@ -149,11 +144,11 @@ public class Shooper implements NonCombatEvent {
         slowConsole.imprimirDevagar((items.size() + 1) + ". Voltar ao menu principal");
     }
 
-    private void displayWeapons(List<Weapon> weapons, String type) {
-        slowConsole.imprimirDevagar("=== " + type + " à venda ===");
+    private void displayWeapons(List<Weapon> weapons) {
+        slowConsole.imprimirDevagar("=== " + "Armas" + " à venda ===");
         for (int i = 0; i < weapons.size(); i++) {
             Weapon weapon = weapons.get(i);
-            slowConsole.imprimirDevagar((i + 1) + ". " + weapon.getName() + " - " + weapon.getAttack() + " de dano");
+            slowConsole.imprimirDevagar((i + 1) + ". " + weapon.getName() + " - " + weapon.attack() + " de dano");
         }
         slowConsole.imprimirDevagar((weapons.size() + 1) + ". Voltar ao menu principal");
     }

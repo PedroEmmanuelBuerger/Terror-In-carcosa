@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class EvilForces {
-    private Scanner scanner;
-    private SlowConsole slowConsole = new SlowConsole();
-    private List<Spell> spells = new ArrayList<>(); // Lista de feitiços
+    private final Scanner scanner;
+    private final SlowConsole slowConsole = new SlowConsole();
+    private final List<Spell> spells = new ArrayList<>(); // Lista de feitiços
 
     public EvilForces() {
         this.scanner = new Scanner(System.in);
@@ -26,29 +26,11 @@ public class EvilForces {
         spells.add(new Spell("Maldicão de Desolação", 30, 40));
     }
 
-//    public void addNewSpell(String name, int manaCost, int damage) {
-//        if (!hasSpell(name)) {
-//            spells.add(new Spell(name, manaCost, damage));
-//            slowConsole.imprimirDevagar("Nova magia adicionada: " + name);
-//        } else {
-//            slowConsole.imprimirDevagar("A magia " + name + " já está no seu livro de magias.");
-//        }
-//    }
-
-    public boolean hasSpell(String name) {
-        for (Spell spell : spells) {
-            if (spell.getName().equals(name)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public int selectSpell(Necromancer necromancer) {
         slowConsole.imprimirDevagar("Selecione Sua Magia:");
         for (int i = 0; i < spells.size(); i++) {
             Spell spell = spells.get(i);
-            slowConsole.imprimirDevagar((i + 1) + " - " + spell.getName() + " (Custo de mana: " + spell.getManaCost() + ")");
+            slowConsole.imprimirDevagar((i + 1) + " - " + spell.name() + " (Custo de mana: " + spell.manaCost() + ")");
         }
         boolean manaRes;
         int escolha;
@@ -58,12 +40,12 @@ public class EvilForces {
 
             if (escolha >= 1 && escolha <= spells.size()) {
                 Spell selectedSpell = spells.get(escolha - 1);
-                manaRes = new ManaAdm().costMana(necromancer.getMana(), selectedSpell.getManaCost(), necromancer.getName());
+                manaRes = new ManaAdm().costMana(necromancer.getMana(), selectedSpell.manaCost(), necromancer.getName());
                 if (!manaRes) {
-                    slowConsole.imprimirDevagar("Você selecionou: " + selectedSpell.getName());
-                    damage = selectedSpell.getDamage();
-                    necromancer.setMana(necromancer.getMana() - selectedSpell.getManaCost());
-                    slowConsole.imprimirDevagar(necromancer.getName() + " gastou " + selectedSpell.getManaCost() + " de mana, ficando com " + necromancer.getMana() + " restante.");
+                    slowConsole.imprimirDevagar("Você selecionou: " + selectedSpell.name());
+                    damage = selectedSpell.damage();
+                    necromancer.setMana(necromancer.getMana() - selectedSpell.manaCost());
+                    slowConsole.imprimirDevagar(necromancer.getName() + " gastou " + selectedSpell.manaCost() + " de mana, ficando com " + necromancer.getMana() + " restante.");
                 }
             } else {
                 slowConsole.imprimirDevagar("Escolha inválida. Por favor, escolha uma opção válida.");
@@ -72,27 +54,6 @@ public class EvilForces {
         return damage;
     }
 
-    private static class Spell {
-        private String name;
-        private int manaCost;
-        private int damage;
-
-        public Spell(String name, int manaCost, int damage) {
-            this.name = name;
-            this.manaCost = manaCost;
-            this.damage = damage;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getManaCost() {
-            return manaCost;
-        }
-
-        public int getDamage() {
-            return damage;
-        }
+    private record Spell(String name, int manaCost, int damage) {
     }
 }

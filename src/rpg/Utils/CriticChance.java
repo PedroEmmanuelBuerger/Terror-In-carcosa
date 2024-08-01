@@ -4,8 +4,6 @@ import java.util.Random;
 
 public class CriticChance {
     private int damage;
-    private double criticalChance = 15.0; // Chance de ataque crítico em porcentagem
-    private int criticalMultiplier = 2;
 
     public CriticChance(int damage) {
         this.damage = damage;
@@ -23,9 +21,12 @@ public class CriticChance {
         Random random = new Random();
         SlowConsole slowConsole = new SlowConsole();
         double randomNumber = random.nextDouble() * 100.0;
-        if (randomNumber <= this.criticalChance) {
+        // Chance de ataque crítico em porcentagem
+        double criticalChance = 15.0;
+        if (randomNumber <= criticalChance) {
             slowConsole.imprimirDevagar("Seu ataque critou!");
-            return damage * this.criticalMultiplier;
+            int criticalMultiplier = 2;
+            return damage * criticalMultiplier;
         } else {
             return damage;
         }

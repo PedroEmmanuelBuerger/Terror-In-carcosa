@@ -8,8 +8,8 @@ import rpg.Utils.SlowConsole;
 import java.util.Random;
 
 public class OldRune implements NonCombatEvent {
-    private SlowConsole slowConsole = new SlowConsole();
-    private Random random = new Random();
+    private final SlowConsole slowConsole = new SlowConsole();
+    private final Random random = new Random();
 
     public void executeEvent(Attributes personagem) {
         int manaRecovered = random.nextInt(10) + 10; // Recupera entre 10 a 19 de mana

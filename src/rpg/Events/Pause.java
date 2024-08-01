@@ -7,8 +7,8 @@ import rpg.Utils.SlowConsole;
 import java.util.Scanner;
 
 public class Pause implements NonCombatEvent {
-    private SlowConsole slowConsole = new SlowConsole();
-    private Scanner scanner = new Scanner(System.in);
+    private final SlowConsole slowConsole = new SlowConsole();
+    private final Scanner scanner = new Scanner(System.in);
 
     @Override
     public void executeEvent(Attributes personagem) {

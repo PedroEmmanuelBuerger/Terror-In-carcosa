@@ -7,11 +7,11 @@ import rpg.itens.Weapons.Weapon;
 public class Warrior extends Attributes {
     private boolean defense = false;
     SlowConsole slowConsole = new SlowConsole();
-    private Weapon weapon = new Axe(0);
 
     public Warrior(String name, int healthbar, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         setClasses("Guerreiro");
+        Weapon weapon = new Axe(0);
         setWeapon(weapon);
     }
 
@@ -32,7 +32,7 @@ public class Warrior extends Attributes {
     public void takeDamage(int damage) {
         // Reduz a saúde do guerreiro atual pelo valor do dano recebido
         int currentHealth = this.getHealthbar();
-        if (this.isDefese() == true) {
+        if (this.isDefese()) {
             this.setHealthbar(currentHealth - (damage / 2));
             slowConsole.imprimirDevagar(this.getName() + " defendeu, recebendo " + damage / 2 + " de dano!");
             this.setDefese(false);

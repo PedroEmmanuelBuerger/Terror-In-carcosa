@@ -8,8 +8,8 @@ import rpg.Utils.SlowConsole;
 import rpg.itens.Item;
 
 public class ManaPotion extends Item {
-    private SlowConsole slowConsole = new SlowConsole();
-    private int manaAmount;
+    private final SlowConsole slowConsole = new SlowConsole();
+    private final int manaAmount;
 
     public ManaPotion(String name, int price, int manaAmount) {
         super(name, price);
@@ -27,8 +27,7 @@ public class ManaPotion extends Item {
         int maxMana;
         int currentMana;
 
-        if (player instanceof Necromancer) {
-            Necromancer necromancer = (Necromancer) player;
+        if (player instanceof Necromancer necromancer) {
             currentMana = necromancer.getMana();
             maxMana = necromancer.getMaxMana();
             newMana = currentMana + manaAmount;
@@ -38,8 +37,7 @@ public class ManaPotion extends Item {
             necromancer.setMana(newMana);
             slowConsole.imprimirDevagar("Nova mana após recuperação: " + newMana);
 
-        } else if (player instanceof Mage) {
-            Mage mage = (Mage) player;
+        } else if (player instanceof Mage mage) {
             currentMana = mage.getMana();
             maxMana = mage.getMaxMana();
             newMana = currentMana + manaAmount;
@@ -49,8 +47,7 @@ public class ManaPotion extends Item {
             mage.setMana(newMana);
             slowConsole.imprimirDevagar("Nova mana após recuperação: " + newMana);
 
-        } else if (player instanceof Healer) {
-            Healer healer = (Healer) player;
+        } else if (player instanceof Healer healer) {
             currentMana = healer.getMana();
             maxMana = healer.getMaxMana();
             newMana = currentMana + manaAmount;

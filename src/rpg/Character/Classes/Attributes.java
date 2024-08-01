@@ -15,7 +15,7 @@ public abstract class Attributes {
     private int healthbar;
     private int attack;
     private int special;
-    private String quote;
+    private final String quote;
     private String classes;
     private int maxHealthInitial;
     private boolean alive;
@@ -25,13 +25,13 @@ public abstract class Attributes {
     SlowConsole slowConsole = new SlowConsole();
     private Weapon weapon = new Axe(0);
     private Race race;
-    private List<Item> bag = new ArrayList<>();
+    private final List<Item> bag = new ArrayList<>();
     private int gold = 0;
 
     public Attributes(String name, int healthbar, int attack, int special, String quote) {
         this.name = name;
         this.healthbar = healthbar;
-        this.attack = attack + weapon.getAttack();
+        this.attack = attack + weapon.attack();
         this.special = special;
         this.quote = quote;
         this.maxHealthInitial = healthbar;

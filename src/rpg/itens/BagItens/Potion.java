@@ -5,8 +5,8 @@ import rpg.Utils.SlowConsole;
 import rpg.itens.Item;
 
 public class Potion extends Item {
-    private SlowConsole slowConsole = new SlowConsole();
-    private int healingAmount;
+    private final SlowConsole slowConsole = new SlowConsole();
+    private final int healingAmount;
 
     public Potion(String name,int price, int healingAmount) {
         super(name,price);

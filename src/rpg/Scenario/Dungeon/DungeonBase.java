@@ -57,12 +57,12 @@ public abstract class DungeonBase implements Dungeon {
                 if (personagem instanceof Necromancer) {
                     ((Necromancer) personagem).selectSpell(enemy);
                 } else {
-                    return handleEscape(scanner, enemy);
+                    return handleEscape(enemy);
                 }
                 break;
             case 4:
                 if (personagem instanceof Necromancer) {
-                    return handleEscape(scanner, enemy);
+                    return handleEscape(enemy);
                 } else {
                     personagem.getTechnicalInfo();
                 }
@@ -216,7 +216,7 @@ public abstract class DungeonBase implements Dungeon {
         }
     }
 
-    private boolean handleEscape(Scanner scanner, Attributes enemy) {
+    private boolean handleEscape(Attributes enemy) {
         double escapeChance = 25.00;
         double randomSucess = random.nextDouble() * 100.0;
         if (randomSucess <= escapeChance && !enemy.getName().equals("Ghazkull") && !enemy.getName().equals("Lorde Rei Dragão")) {

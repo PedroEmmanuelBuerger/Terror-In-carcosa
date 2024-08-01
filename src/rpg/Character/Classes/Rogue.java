@@ -8,10 +8,11 @@ import java.util.Random;
 
 public class Rogue extends Attributes {
     SlowConsole slowConsole = new SlowConsole();
-    private Weapon weapon = new Daggers(0);
+
     public Rogue(String name, int healthbar, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.setClasses("Bandido");
+        Weapon weapon = new Daggers(0);
         setWeapon(weapon);
     }
 

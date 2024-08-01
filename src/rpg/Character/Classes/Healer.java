@@ -10,12 +10,13 @@ public class Healer extends Attributes {
     private int mana;
     private int maxMana;
     SlowConsole slowConsole = new SlowConsole();
-    private Weapon weapon = new Mace(0);
+
     public Healer(String name, int healthbar, int Mana, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.mana = Mana;
         this.setClasses("Curandeiro");
         this.maxMana = mana;
+        Weapon weapon = new Mace(0);
         setWeapon(weapon);
     }
 
@@ -61,14 +62,12 @@ public class Healer extends Attributes {
                 if (ally.getMaxHealthInitial() < healAmount) {
                     ally.setHealthbar(ally.getMaxHealthInitial());
                     slowConsole.imprimirDevagar(getName() + " curou toda a vida de " + ally.getName() + "!");
-                    this.mana = this.mana - 7;
-                    slowConsole.imprimirDevagar(this.getName() + " gastou 7 de mana, ficando com " + this.mana + " restante.");
                 } else {
                     ally.setHealthbar(healAmount);
                     slowConsole.imprimirDevagar(getName() + " curou " + getSpecial() + " de vida de " + ally.getName() + "!");
-                    this.mana = this.mana - 7;
-                    slowConsole.imprimirDevagar(this.getName() + " gastou 7 de mana, ficando com " + this.mana + " restante.");
                 }
+                this.mana = this.mana - 7;
+                slowConsole.imprimirDevagar(this.getName() + " gastou 7 de mana, ficando com " + this.mana + " restante.");
             } else {
                 slowConsole.imprimirDevagar(ally.getName() + " está morto! Impossível curar.");
             }

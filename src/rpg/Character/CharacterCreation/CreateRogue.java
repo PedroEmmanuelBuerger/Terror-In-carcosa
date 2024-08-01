@@ -62,10 +62,6 @@ public class CreateRogue {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para o ataque. Tente novamente.");
                     continue;
                 }
-                if (vida == 0) {
-                    slowConsole.imprimirDevagar("Vida inicial não pode ser 0");
-                    continue;
-                }
                 tempMaxPoints -= ataque; // Atualiza tempMaxPoints após a entrada válida
                 ataque += 15; // Adiciona pontos extras ao ataque
             } else {

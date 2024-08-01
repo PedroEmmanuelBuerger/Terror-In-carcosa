@@ -4,12 +4,10 @@ import java.util.Random;
 
 public class Wand implements Weapon {
     private final int attack; // Dano aleatório definido uma vez
-    private final String name = "Varinha";
-    private int price = 15;
 
     @Override
     public int getPrice() {
-        return price;
+        return 15;
     }
     public Wand() {
         Random random = new Random();
@@ -19,12 +17,12 @@ public class Wand implements Weapon {
     }
 
     @Override
-    public int getAttack() {
+    public int attack() {
         return attack; // Retorna o dano definido no construtor
     }
 
     @Override
     public String getName() {
-        return name;
+        return "Varinha";
     }
 }

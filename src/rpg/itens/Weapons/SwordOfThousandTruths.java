@@ -4,12 +4,10 @@ import java.util.Random;
 
 public class SwordOfThousandTruths implements Weapon {
     private final int attack; // Dano aleatório definido uma vez
-    private final String name = "Espada de Mil Verdades";
-    private int price = 15;
 
     @Override
     public int getPrice() {
-        return price;
+        return 15;
     }
     public SwordOfThousandTruths() {
         Random random = new Random();
@@ -19,12 +17,12 @@ public class SwordOfThousandTruths implements Weapon {
     }
 
     @Override
-    public int getAttack() {
+    public int attack() {
         return attack; // Retorna o dano definido no construtor
     }
 
     @Override
     public String getName() {
-        return name;
+        return "Espada de Mil Verdades";
     }
 }

@@ -4,7 +4,7 @@ import rpg.Character.Classes.Attributes;
 import rpg.Utils.SlowConsole;
 
 public class FindGoldEvent implements NonCombatEvent {
-    private int goldAmount; // Quantidade de ouro a ser encontrada
+    private final int goldAmount; // Quantidade de ouro a ser encontrada
 
     public FindGoldEvent(int goldAmount) {
         this.goldAmount = goldAmount;

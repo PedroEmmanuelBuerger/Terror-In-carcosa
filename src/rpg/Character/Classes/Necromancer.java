@@ -13,15 +13,15 @@ public class Necromancer extends Attributes {
     private int maxMana;
     private int limitImp = 3;
     SlowConsole slowConsole = new SlowConsole();
-    private Weapon weapon = new Ring(0);
-    private List<Imp> imps = new ArrayList<>();
-    private EvilForces spellBook; // Lista para armazenar os Imps invocados
+    private final List<Imp> imps = new ArrayList<>();
+    private final EvilForces spellBook; // Lista para armazenar os Imps invocados
 
     public Necromancer(String name, int healthbar, int mana, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
         this.mana = mana;
         this.maxMana = mana;
         this.setClasses("Necromante");
+        Weapon weapon = new Ring(0);
         setWeapon(weapon);
         this.spellBook = new EvilForces();
     }
