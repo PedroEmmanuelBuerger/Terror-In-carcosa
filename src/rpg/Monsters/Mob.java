@@ -32,6 +32,10 @@ public class Mob extends Attributes {
     private int generateRandomGold(int baseGold) {
         int minVal = baseGold - 5;
         int maxVal = baseGold + 5;
-        return random.nextInt((maxVal - minVal) + 1) + minVal; // Gera um número aleatório entre minVal e maxVal (inclusive)
+        int valFinal = random.nextInt((maxVal - minVal) + 1) + minVal;
+        if(valFinal <= 0){
+            valFinal = 1;
+        }
+        return valFinal;
     }
 }

@@ -9,26 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando poção de mana + mudanças no shooper">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Refatorando TODO o codigo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateRogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateRogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/Race.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/Race.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Attributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Healer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Necromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Necromancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/FindGoldEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/FindGoldEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/FoundItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/FoundItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/HealingPotionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/HealingPotionEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/HealthRecoveryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/HealthRecoveryEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/MagicItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/MagicItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/ManaRecoveryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/ManaRecoveryEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/NewWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/NewWeapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/OldRune.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/OldRune.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/Pause.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/Pause.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/RareItemEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/RareItemEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Mob.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,24 +52,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ConsoleLento.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.SlowConsole.executor": "Run",
-    "Application.main.executor": "Run",
-    "Application.principal.executor": "Run",
-    "JAR Application.Terror In YellowCity.jar.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/pedro.silva/Downloads",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ConsoleLento.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SlowConsole.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.principal.executor&quot;: &quot;Run&quot;,
+    &quot;JAR Application.Terror In YellowCity.jar.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/pedro.silva/Downloads&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="rpg.Monsters" />
@@ -502,7 +485,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722518080412</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Refatorando TODO o codigo">
+      <option name="closed" value="true" />
+      <created>1722543452264</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1722543452264</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -517,7 +508,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Arrumando classe healer e mage + balanceamento" />
     <MESSAGE value="Adicionando Objeto para arma + adicionando dano por arma + evento que troca a arma + varias novas armas + armas iniciais" />
     <MESSAGE value="Adicionando 2 armas novas por classe + evento de trocar de arma + balanceamento" />
     <MESSAGE value="Adicionando Classe Necromante + 2 novas armas + arma inicial + eventos para necromante + mecanica de invocação + balanceamento" />
@@ -542,6 +532,7 @@
     <MESSAGE value="Arrumando Bugs + Refatorando todo código + removendo redundancias" />
     <MESSAGE value="+ Refatoração" />
     <MESSAGE value="Adicionando poção de mana + mudanças no shooper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando poção de mana + mudanças no shooper" />
+    <MESSAGE value="Refatorando TODO o codigo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatorando TODO o codigo" />
   </component>
 </project>
