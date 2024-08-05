@@ -9,9 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Refatorando TODO o codigo">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Mob.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando bug que gold vinha negativo em certos casos">
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/Pause.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/Pause.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -493,7 +492,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722543452264</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Arrumando bug que gold vinha negativo em certos casos">
+      <option name="closed" value="true" />
+      <created>1722874869834</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1722874869834</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -508,7 +515,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionando Objeto para arma + adicionando dano por arma + evento que troca a arma + varias novas armas + armas iniciais" />
     <MESSAGE value="Adicionando 2 armas novas por classe + evento de trocar de arma + balanceamento" />
     <MESSAGE value="Adicionando Classe Necromante + 2 novas armas + arma inicial + eventos para necromante + mecanica de invocação + balanceamento" />
     <MESSAGE value="Adicionando Textos + lore + fim" />
@@ -533,6 +539,7 @@
     <MESSAGE value="+ Refatoração" />
     <MESSAGE value="Adicionando poção de mana + mudanças no shooper" />
     <MESSAGE value="Refatorando TODO o codigo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refatorando TODO o codigo" />
+    <MESSAGE value="Arrumando bug que gold vinha negativo em certos casos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando bug que gold vinha negativo em certos casos" />
   </component>
 </project>
