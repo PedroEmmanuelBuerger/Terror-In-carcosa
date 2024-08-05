@@ -1,8 +1,6 @@
 package rpg.Events;
 
-import rpg.Character.Classes.Attributes;
-import rpg.Character.Classes.Necromancer;
-import rpg.Character.Classes.Rogue;
+import rpg.Character.Classes.*;
 import rpg.itens.Item;
 import rpg.Utils.SlowConsole;
 
@@ -24,6 +22,12 @@ public class Pause implements NonCombatEvent {
             if (personagem instanceof Necromancer) {
                 slowConsole.imprimirDevagar("4. Invocar Esqueleto");
             }
+            if (personagem instanceof Warrior) {
+                slowConsole.imprimirDevagar("4. Defender");
+            }
+            if (personagem instanceof Healer) {
+                slowConsole.imprimirDevagar("4. Curar");
+            }
 
             int choice = scanner.nextInt();
             scanner.nextLine();  // Limpar o buffer do scanner
@@ -41,8 +45,14 @@ public class Pause implements NonCombatEvent {
                 case 4:
                     if (personagem instanceof Necromancer necromancer) {
                         ((Necromancer) personagem).summonImp();
-                        break;
                     }
+                    if (personagem instanceof Warrior warrior) {
+                        ((Warrior) personagem).setDefese(true);
+                    }
+                    if (personagem instanceof Healer healer) {
+                        ((Healer) personagem).heal(personagem);
+                    }
+                    break;
                 default:
                     slowConsole.imprimirDevagar("Opção inválida. Tente novamente.");
             }
