@@ -7,23 +7,19 @@ public class End {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                *   Vitória do Guerreiro!                                *
+                *   Vitória do Guerreiro do Abismo!                      *
                 *                                                        *
-                * Após uma batalha feroz e intensa, sua bravura e        *
-                * força incomparáveis prevaleceram. Você enfrentou       *
-                * e derrotou seus inimigos com uma destreza admirável.   *
+                * Sua força e bravura se destacaram diante dos horrores  *
+                * das profundezas. Com coragem inabalável, você          *
+                * superou os desafios mais terríveis.                    *
                 *                                                        *
-                * O campo de batalha agora é seu, e a vitória é          *
-                * celebrada em meio aos ecos das suas conquistas.        *
+                * O abismo agora se acalma, e a vitória é sua. A estrada *
+                * para novos horrores se abre à sua frente.              *
                 *                                                        *
-                * As portas da dungeon se abrem para um novo caminho,    *
-                * revelando a próxima fase de sua jornada. O brilho da   *
-                * vitória ilumina seu caminho e fortalece seu espírito.  *
+                * Continue a avançar, pois a jornada para enfrentar      *
+                * o desconhecido está apenas começando.                  *
                 *                                                        *
-                * Continue a avançar com coragem e honra. A jornada      *
-                * ainda não acabou, e novos desafios esperam por você.   *
-                *                                                        *
-                * Que a sua força continue a ser sua guia e inspiração.  *
+                * Que sua bravura continue a ser sua guia.               *
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
@@ -32,21 +28,17 @@ public class End {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                *   Vitória do Mago!                                     *
+                *   Vitória do Mago dos Mistérios Cósmicos!              *
                 *                                                        *
-                * Com uma explosão de magia e um brilho ofuscante,       *
-                * suas habilidades arcanas derrotaram seus adversários.  *
-                * A energia mística que você dominou agora brilha em     *
-                * seu caminho para a vitória.                            *
+                * Com suas habilidades arcanas, você desvendou e         *
+                * derrotou horrores cósmicos. Seu poder místico          *
+                * dominou as forças além da compreensão.                 *
                 *                                                        *
-                * O universo se abre diante de você, revelando novos     *
-                * mistérios e desafios. A magia e a sabedoria são suas   *
-                * aliadas na próxima etapa de sua jornada.               *
+                * O cosmos agora se revela em novas dimensões. Sua       *
+                * jornada está longe de terminar, e novos mistérios      *
+                * aguardam.                                              *
                 *                                                        *
-                * Continue a explorar e a desvendar os segredos ocultos. *
-                * A verdadeira prova de seu poder ainda está por vir.    *
-                *                                                        *
-                * Que sua astúcia e conhecimento conduzam sua jornada.   *
+                * Que o poder das artes arcanas continue a guiá-lo.      *
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
@@ -54,23 +46,18 @@ public class End {
     public static void FinishNecromancer() {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
-                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                *   Vitória do Necromante!                                  *
-                *                                                           *
-                * Com um comando sombrio e o poder das trevas, você         *
-                * dominou seus inimigos e prevaleceu. A energia necromântica*
-                * que você controla agora reverte a maré da batalha a       *
-                * seu favor.                                                *
-                *                                                           *
-                * O reino das sombras se desvela à sua frente, abrindo      *
-                * caminho para novos horrores e conquistas. A escuridão     *
-                * é sua aliada, e os segredos das profundezas aguardam.     *
-                *                                                           *
-                * Continue a reinar sobre as forças do além. Seu domínio    *
-                * sobre o oculto ainda está em ascensão.                    *
-                *                                                           *
-                * Que o poder das trevas guie seu caminho na jornada.       *
-                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                *   Vitória do Necromante das Profundezas!              *
+                *                                                       *
+                * Com domínio absoluto sobre as forças da morte e do    *
+                * além, você triunfou sobre os horrores das profundezas.*
+                * O poder das trevas agora se curva ao seu comando.     *
+                *                                                       *
+                * Novos desafios e segredos obscuros se desvelam diante *
+                * de você. Continue a explorar o desconhecido.          *
+                *                                                       *
+                * Que o poder das sombras continue a guiá-lo.           *
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
 
@@ -78,22 +65,16 @@ public class End {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                *   Vitória do Curandeiro!                                *
+                *   Vitória do Curandeiro das Entidades!                  *
                 *                                                         *
-                * Com um toque de cura e uma força de espírito inabalável,*
-                * você superou os desafios e trouxe equilíbrio à batalha. *
-                * A sua habilidade em curar e proteger fez a diferença,   *
-                * garantindo a vitória e a paz.                           *
+                * Com sua habilidade de restaurar e proteger, você        *
+                * trouxe uma breve pausa ao caos. Sua luz em meio ao      *
+                * horror cósmico trouxe esperança e renovação.            *
                 *                                                         *
-                * À medida que o campo de batalha se acalma, uma nova     *
-                * estrada se abre para você. O próximo nível é uma        *
-                * oportunidade para continuar sua missão de cura e        *
-                * benevolência.                                           *
+                * A batalha chega a um fim, mas novos horrores aguardam   *
+                * sua cura. Continue sua missão com fé e compaixão.       *
                 *                                                         *
-                * Avance com compaixão e esperança. Seu caminho está      *
-                * iluminado pela luz da vitória e da cura.                *
-                *                                                         *
-                * Que sua bondade continue a ser sua força e guia.        *
+                * Que a luz das entidades continue a iluminar seu caminho.*
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
@@ -101,21 +82,19 @@ public class End {
     public static void FinishRogue() {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
-                * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                *   Vitória do Bandido!                                  *
-                *                                                        *
-                * Com astúcia e agilidade, você superou seus inimigos e  *
-                * conquistou a vitória. Seus truques e habilidades de    *
-                * furtividade foram fundamentais para seu sucesso.       *
-                *                                                        *
-                * O caminho para o próximo nível agora se revela,        *
-                * trazendo novas oportunidades para testar sua esperteza.*
-                *                                                        *
-                * Continue a se infiltrar e a explorar. A jornada ainda  *
-                * guarda muitos segredos e recompensas.                  *
-                *                                                        *
-                * Que sua astúcia e rapidez sejam sempre seus aliados.   *
-                * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                *   Vitória do Ladrão das Sombras!                        *
+                *                                                         *
+                * Com astúcia e habilidades furtivas, você navegou        *
+                * através das teias do horror cósmico e emergiu vitorioso.*
+                * Seus truques e manobras foram cruciais na sua           *
+                * jornada.                                                *
+                *                                                         *
+                * O caminho para o próximo nível se desdobra, revelando   *
+                * novos enigmas e desafios.                               *
+                *                                                         *
+                * Que sua astúcia continue a guiá-lo através do caos.     *
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
 }

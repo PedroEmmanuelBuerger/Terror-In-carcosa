@@ -10,16 +10,16 @@ public class Dungeon1 extends DungeonBase {
     protected Attributes createEnemy(Attributes personagem) {
         if (personagem.getLevel() >= 5) {
             Start.EncounterGhazkull(); // Exibe a mensagem ao encontrar Ghazkull
-            return new Ghazkull("Ghazkull", 350, 20, 30, "HAHAHAHAHAHA");
+            return new Ghazkull("Ghazkull", 350, 20, 30, "SUA ALMA É MINHA!");
         } else {
             int randomMonster = random.nextInt(5);
             return switch (randomMonster) {
-                case 0 -> new Mob("Goblin", 35, 5, 13, "Grrrr!", 5, 5);
-                case 1 -> new Mob("Zombie", 50, 12, 10, "Braaaaains...", 10, 10);
-                case 2 -> new Mob("Morcego", 25, 5, 4, "zizpzi", 3, 3);
-                case 3 -> new Mob("Mercenario", 65, 15, 7, "Me passe seu ouro!", 15, 15);
-                case 4 -> new Mob("Coveiro", 45, 10, 7, "Te enterrarei aqui!", 7, 7);
-                default -> new Mob("Goblin", 35, 5, 13, "Grrrr!", 5, 5);
+                case 0 -> new Mob("Sombra do Abismo", 35, 5, 13, "Sinto o cosmos chorando!", 5, 5);
+                case 1 -> new Mob("Andarilho dos Vastos Vácuos", 50, 12, 10, "A eternidade me consome...", 10, 10);
+                case 2 -> new Mob("Crepúsculo Alado", 25, 5, 4, "O vazio é meu lar...", 3, 3);
+                case 3 -> new Mob("Caçador de Almas", 65, 15, 7, "Seu ouro não pode salvar sua mente...", 15, 15);
+                case 4 -> new Mob("Guardião dos Sepulcros", 45, 10, 7, "A escuridão vai te engolir!", 7, 7);
+                default -> new Mob("Sombra do Abismo", 35, 5, 13, "Sinto o cosmos chorando!", 5, 5);
             };
         }
     }

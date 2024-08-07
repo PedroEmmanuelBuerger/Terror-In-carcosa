@@ -9,8 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando bug que gold vinha negativo em certos casos">
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/Pause.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/Pause.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando opções no menu de pause">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/Messages/Chose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/Messages/Chose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/Messages/End.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/Messages/End.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/Messages/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/Messages/Start.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,14 +119,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Adição de criação de personagem">
-      <option name="closed" value="true" />
-      <created>1721823944128</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1721823944128</updated>
     </task>
     <task id="LOCAL-00002" summary="Criando fluxo de combate, boss fight e alterando funcionamento do arquitétipo">
       <option name="closed" value="true" />
@@ -500,7 +496,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722874869834</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Liberando Opção invocar esqueleto pause">
+      <option name="closed" value="true" />
+      <created>1722875506308</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1722875506308</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Adicionando opções no menu de pause">
+      <option name="closed" value="true" />
+      <created>1722876153785</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1722876153785</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -515,8 +527,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionando 2 armas novas por classe + evento de trocar de arma + balanceamento" />
-    <MESSAGE value="Adicionando Classe Necromante + 2 novas armas + arma inicial + eventos para necromante + mecanica de invocação + balanceamento" />
     <MESSAGE value="Adicionando Textos + lore + fim" />
     <MESSAGE value="Adicionando raças + buff raças" />
     <MESSAGE value="Adicionando BakcGround + Mudando funcionamento armas + Removendo esqueleto da lista caso morra + mudar de imp para esqueleto" />
@@ -540,6 +550,8 @@
     <MESSAGE value="Adicionando poção de mana + mudanças no shooper" />
     <MESSAGE value="Refatorando TODO o codigo" />
     <MESSAGE value="Arrumando bug que gold vinha negativo em certos casos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando bug que gold vinha negativo em certos casos" />
+    <MESSAGE value="Liberando Opção invocar esqueleto pause" />
+    <MESSAGE value="Adicionando opções no menu de pause" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando opções no menu de pause" />
   </component>
 </project>

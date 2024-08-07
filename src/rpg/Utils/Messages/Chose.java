@@ -7,45 +7,46 @@ public class Chose {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                *   O Guerreiro Valoroso!                               *
-                *                                                       *
-                * Com sua força incomparável e habilidades no combate,  *
-                * o Guerreiro é a linha de frente da batalha,           *
-                * destemido e incansável.                               *
-                *                                                       *
-                * Prepare-se para enfrentar qualquer desafio com coragem*
+                *   O Guerreiro do Abismo!                               *
+                *                                                        *
+                * Forjado nas profundezas do caos, o Guerreiro do Abismo *
+                * é um combatente implacável, destemido diante dos       *
+                * horrores desconhecidos que surgem das sombras.         *
+                *                                                        *
+                * Prepare-se para enfrentar entidades além da compreensão*
+                * com força e bravura inabaláveis.                       *
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
 
     public static void ChooseMage() {
-        SlowConsole slowconsole = new SlowConsole();
-        slowconsole.imprimirDevagar(
-                """
-                        * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                        *   O Mago Poderoso!                                    *
-                        *                                                       *
-                        * Mestre das artes arcanas, o Mago manipula a magia     *
-                        * para lançar feitiços devastadores e controlar o campo *
-                        * de batalha com sabedoria.                             *
-                        *                                                       *
-                        * Prepare-se para conjurar poderosos encantamentos!     *
-                        * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                        """
-        );
+        SlowConsole slowConsole = new SlowConsole();
+        slowConsole.imprimirDevagar("""
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                *   O Mago dos Mistérios Cósmicos!                       *
+                *                                                        *
+                * Mestre dos segredos arcanos, o Mago dos Mistérios      *
+                * Cósmicos manipula forças além da compreensão humana,   *
+                * evocando encantamentos que desafiam a sanidade.        *
+                *                                                        *
+                * Prepare-se para conjurar feitiços que revelam o        *
+                * desconhecido e alteram a realidade.                    *
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                """);
     }
 
     public static void ChooseRogue() {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                *   O Ladino Astuto!                                    *
-                *                                                       *
-                * Ágil e sorrateiro, o Bandido usa sua esperteza e      *
-                * habilidades furtivas para enganar e dominar seus      *
-                * inimigos com precisão.                                *
-                *                                                       *
-                * Cuidado com suas tramas e truques!                    *
+                *   O Ladrão das Sombras!                                *
+                *                                                        *
+                * Ágil e furtivo, o Ladrão das Sombras se move através   *
+                * dos véus da realidade, desvendando e manipulando       *
+                * os horrores invisíveis que permeiam o mundo.           *
+                *                                                        *
+                * Cuidado com suas táticas, pois o desconhecido é        *
+                * mais perigoso do que se imagina.                       *
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
@@ -54,13 +55,14 @@ public class Chose {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                *   O Curandeiro Benevolente!                           *
-                *                                                       *
-                * Com suas habilidades de cura e apoio, o Curandeiro    *
-                * restaura a saúde e dá suporte vital a seus aliados,   *
-                * mantendo a equipe forte e resistente.                 *
-                *                                                       *
-                * Confie na sua capacidade de manter todos saudáveis!   *
+                *   O Curandeiro das Entidades!                          *
+                *                                                        *
+                * Com habilidades de cura que transcendem o entendimento,*
+                * o Curandeiro das Entidades é um farol de esperança     *
+                * e de restauramento em um mundo mergulhado na escuridão.*
+                *                                                        *
+                * Confie na capacidade de curar e proteger, mesmo        *
+                * diante do horror cósmico.                              *
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
@@ -68,15 +70,16 @@ public class Chose {
     public static void ChooseNecromancer() {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
-                * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                *   O Necromante Sombrio!                               *
-                *                                                       *
-                * Mestre das artes obscuras, o Necromante convoca       *
-                * criaturas das trevas e manipula a energia da morte    *
-                * para subjugar seus inimigos.                          *
-                *                                                       *
-                * Prepare-se para enfrentar horrores das profundezas!   *
-                * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                *   O Necromante das Profundezas!                         *
+                *                                                         *
+                * Com domínio sobre as forças necromânticas e as entidades*
+                * que vagam além da morte, o Necromante das Profundezas   *
+                * manipula os mortos e os horrores que desafiam a vida.   *
+                *                                                         *
+                * Prepare-se para invocar e controlar o que está além     *
+                * do véu da morte.                                        *
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
 
@@ -84,29 +87,32 @@ public class Chose {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                *   O Orc Feroz!                                        *
+                *   O Orc do Abismo!                                    *
                 *                                                       *
-                * Com sua força bruta e natureza selvagem, os Orcs      *
-                * são guerreiros temidos, conhecidos por sua ferocidade *
-                * e resistência.                                        *
+                * Com uma força bruta alimentada pelo caos primordial,  *
+                * o Orc do Abismo é um guerreiro indomável. Sua         *
+                * fúria e resistência são alimentadas pelas trevas que  *
+                * habitam as profundezas.                               *
                 *                                                       *
-                * Prepare-se para uma batalha de força imensa!          *
+                * Prepare-se para enfrentar inimigos que desafiam a     *
+                * realidade com força e destemência.                    *
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
-
     }
 
     public static void ChooseElf() {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                *   O Elfo Ágil!                                        *
+                *   O Elfo do Crepúsculo!                               *
                 *                                                       *
-                * Elegantes e ágeis, os Elfos são mestres em arqueria e *
-                * têm uma conexão profunda com a natureza, utilizando   *
-                * suas habilidades naturais em combate.                 *
+                * Ágil e misterioso, o Elfo do Crepúsculo se move       *
+                * silenciosamente entre as sombras e os terrores do     *
+                * desconhecido. Sua precisão é tão letal quanto as      *
+                * entidades que espreitam nas trevas.                   *
                 *                                                       *
-                * Prepare-se para uma luta rápida e precisa!            *
+                * Prepare-se para dominar o campo de batalha com        *
+                * habilidades sobrenaturais.                            *
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
@@ -115,13 +121,15 @@ public class Chose {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                *   O Anão Resistente!                                  *
+                *   O Anão do Abismo!                                   *
                 *                                                       *
-                * Com sua resistência e habilidades em mineração,       *
-                * os Anões são mestres em combate em ambientes fechados *
-                * e têm uma força inabalável.                           *
+                * Com uma força imensa e um espírito forjado nas        *
+                * profundezas, o Anão do Abismo é um guerreiro que      *
+                * resiste às forças cósmicas mais terríveis. Sua        *
+                * resistência e coragem são inabaláveis diante do caos. *
                 *                                                       *
-                * Confie na força e resistência dos anões!              *
+                * Confie na força dos anões para superar horrores e     *
+                * inimigos que desafiam a sanidade.                     *
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
@@ -130,13 +138,15 @@ public class Chose {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                *   O Humano Versátil!                                  *
+                *   O Humano do Vórtice!                                *
                 *                                                       *
-                * Adaptáveis e resilientes, os Humanos têm uma          *
-                * incrível capacidade de aprender e se adaptar a        *
-                * qualquer situação, tornando-os aliados valiosos.      *
+                * Adaptáveis e resilientes, os Humanos do Vórtice têm   *
+                * uma capacidade única de enfrentar e sobreviver ao     *
+                * horror cósmico. Sua flexibilidade permite que eles    *
+                * lidem com o desconhecido de maneira eficaz.           *
                 *                                                       *
-                * Aproveite a versatilidade dos humanos em batalha!     *
+                * Aproveite a versatilidade e o engenho humano em       *
+                * meio ao caos e à loucura.                             *
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
