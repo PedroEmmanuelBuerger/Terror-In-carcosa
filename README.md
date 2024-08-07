@@ -1,5 +1,5 @@
-## Terror In YellowCity
-Terror In YellowCity é um projeto de RPG desenvolvido para oferecer uma experiência de jogo imersiva com combate, eventos e criação de personagens. O sistema permite criar e gerenciar personagens de diferentes classes, participar de batalhas e eventos não combativos, e experimentar um ambiente de jogo dinâmico e envolvente.
+## Terror In Carcosa
+Terror In Carcosa é um projeto de RPG desenvolvido para oferecer uma experiência de jogo imersiva com combate, eventos e criação de personagens. O sistema permite criar e gerenciar personagens de diferentes classes, participar de batalhas e eventos não combativos, e experimentar um ambiente de jogo dinâmico e envolvente.
 
 ## Funcionalidades
 O projeto inclui as seguintes funcionalidades:
@@ -25,4 +25,4 @@ Os principais aprendizados incluem:
 - Implementação de Eventos Aleatórios: Criar e integrar eventos que afetam a experiência do jogador de maneira dinâmica.
 
 ## Conclusão
-Terror In YellowCity é um jogo de RPG que demonstra conceitos fundamentais de desenvolvimento de software, incluindo a criação de um sistema de combate, gerenciamento de recursos e eventos aleatórios. Este projeto proporcionou uma oportunidade valiosa para aprender e aplicar práticas modernas de desenvolvimento, além de criar uma experiência de jogo envolvente e interativa.
+Terror In Carcosa é um jogo de RPG que demonstra conceitos fundamentais de desenvolvimento de software, incluindo a criação de um sistema de combate, gerenciamento de recursos e eventos aleatórios. Este projeto proporcionou uma oportunidade valiosa para aprender e aplicar práticas modernas de desenvolvimento, além de criar uma experiência de jogo envolvente e interativa.
