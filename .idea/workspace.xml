@@ -9,10 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="+ Adição de tematica + finalização tematica texto">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" afterDir="false" />
-    </list>
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="adicionando finais que é derrottado por boss" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,14 +113,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Adicionando novos inimigos + loop de batalha + funcionamento de cada classe">
-      <option name="closed" value="true" />
-      <created>1721843503204</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1721843503204</updated>
     </task>
     <task id="LOCAL-00005" summary="Inimigos conseguem usar + de 1 tipo de ação + sistema de status no jogo">
       <option name="closed" value="true" />
@@ -509,7 +498,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723041216394</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="adicionando finais que é derrottado por boss">
+      <option name="closed" value="true" />
+      <created>1723055039485</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1723055039485</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -524,7 +521,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionando BakcGround + Mudando funcionamento armas + Removendo esqueleto da lista caso morra + mudar de imp para esqueleto" />
     <MESSAGE value="Arrumando Bug danos das armas + refatorando código + abrindo espaço para novas dungeons" />
     <MESSAGE value="Arrumando fluxo de esqueletos necromante + adicionando info esqueletos" />
     <MESSAGE value="Refatorando mobs + adicionando dungeon nova + adicionando boss novo" />
@@ -549,6 +545,7 @@
     <MESSAGE value="Adicionando opções no menu de pause" />
     <MESSAGE value="Iniciando a mudança de tematica" />
     <MESSAGE value="+ Adição de tematica + finalização tematica texto" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Adição de tematica + finalização tematica texto" />
+    <MESSAGE value="adicionando finais que é derrottado por boss" />
+    <option name="LAST_COMMIT_MESSAGE" value="adicionando finais que é derrottado por boss" />
   </component>
 </project>

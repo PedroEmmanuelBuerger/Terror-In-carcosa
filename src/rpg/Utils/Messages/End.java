@@ -97,58 +97,85 @@ public class End {
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
+
     public static void DefeatGhazkull() {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
-            * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-            *   Derrota pelo Abissal Ghazkull!                     *
-            *                                                      *
-            * Apesar de sua bravura, o titânico Ghazkull provou ser *
-            * imbatível. Com um golpe final, você cai ao chão,      *
-            * sentindo a vida esvair-se de seu corpo. A câmara     *
-            * escurece, e a última coisa que você vê é o olhar     *
-            * vazio e ameaçador do abissal.                        *
-            *                                                      *
-            * Seu destino foi selado neste plano de horror, e sua  *
-            * jornada termina aqui, consumido pelas trevas.        *
-            * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-            """);
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                *   Derrota pelo Abissal Ghazkull!                     *
+                *                                                      *
+                * Apesar de sua bravura, o titânico Ghazkull provou ser*
+                * imbatível. Com um golpe final, você cai ao chão,     *
+                * sentindo a vida esvair-se de seu corpo. A câmara     *
+                * escurece, e a última coisa que você vê é o olhar     *
+                * vazio e ameaçador do abissal.                        *
+                *                                                      *
+                * Seu destino foi selado neste plano de horror, e sua  *
+                * jornada termina aqui, consumido pelas trevas.        *
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                """);
     }
 
     public static void DefeatDragonKing() {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
-            * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-            *   Derrota pelo Rei Dragão do Abismo!                  *
-            *                                                       *
-            * Apesar de sua bravura, o poder avassalador do Rei     *
-            * Dragão do Abismo provou ser demais. Com um último     *
-            * rugido e uma explosão de chamas, você é consumido     *
-            * pelo fogo etéreo. A câmara escurece, e seu corpo é    *
-            * reduzido a cinzas.                                    *
-            *                                                       *
-            * Seu destino foi selado neste plano infernal, e sua    *
-            * jornada termina aqui, perdido nas chamas do abismo.   *
-            * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-            """);
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                *   Derrota pelo Rei Dragão do Abismo!                  *
+                *                                                       *
+                * Apesar de sua bravura, o poder avassalador do Rei     *
+                * Dragão do Abismo provou ser demais. Com um último     *
+                * rugido e uma explosão de chamas, você é consumido     *
+                * pelo fogo etéreo. A câmara escurece, e seu corpo é    *
+                * reduzido a cinzas.                                    *
+                *                                                       *
+                * Seu destino foi selado neste plano infernal, e sua    *
+                * jornada termina aqui, perdido nas chamas do abismo.   *
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                """);
     }
 
     public static void DefeatTaigon() {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
-            * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-            *   Derrota pelo Rei de Amarelo!                        *
-            *                                                        *
-            * Apesar de sua coragem, o Rei de Amarelo se revelou    *
-            * imbatível. Com um último golpe, você é consumido       *
-            * pela distorção da realidade. Sua visão se desfaz em    *
-            * caos e o ambiente se torna um vórtice de loucura e    *
-            * terror.                                               *
-            *                                                        *
-            * Seu destino foi selado pelas garras do Rei de Amarelo, *
-            * e sua jornada termina aqui, perdida nas trevas da     *
-            * dungeon.                                              *
-            * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-            """);
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                *   Derrota pelo Rei de Amarelo!                        *
+                *                                                       *
+                * Apesar de sua coragem, o Rei de Amarelo se revelou    *
+                * imbatível. Com um último golpe, você é consumido      *
+                * pela distorção da realidade. Sua visão se desfaz em   *
+                * caos e o ambiente se torna um vórtice de loucura e    *
+                * terror.                                               *
+                *                                                       *
+                * Seu destino foi selado pelas garras do Rei de Amarelo,*
+                * e sua jornada termina aqui, perdida nas trevas da     *
+                * dungeon.                                              *
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                """);
+    }
+
+    public static void DefeatGenericMonster() {
+        SlowConsole slowConsole = new SlowConsole();
+        slowConsole.imprimirDevagar("""
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                *   Derrota nas Garras do Abismo!                         *
+                *                                                         *
+                * Apesar de seus esforços, o monstro que você enfrentou   *
+                * revelou-se uma entidade além da compreensão humana.     *
+                * Com uma força indescritível, ele lhe venceu, e a        *
+                * realidade ao seu redor começa a desmoronar.             *
+                *                                                         *
+                * Você é consumido por uma escuridão primordial, uma      *
+                * distorção de realidade que faz seus sentidos se         *
+                * desintegrarem. O horror cósmico se apropria de você,    *
+                * e sua sanidade se desfez sob a pressão da entidade.     *
+                *                                                         *
+                * Sua jornada chega ao fim, e o universo continua a girar,*
+                * indiferente à sua queda. O vazio abissal aguarda seu    *
+                * próximo desafiante.                                     *
+                *                                                         *
+                * Que seu destino seja um lembrete do terror que reside   *
+                * além da compreensão.                                    *
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                """);
     }
 }

@@ -176,7 +176,7 @@ public abstract class DungeonBase implements Dungeon {
             } else if (enemy instanceof KnightOfFear) {
                 End.DefeatTaigon();
             } else {
-                slowConsole.imprimirDevagar("Você foi derrotado por " + enemy.getName() + ". Game Over!");
+                End.DefeatGenericMonster();
             }
             return false;
         }
