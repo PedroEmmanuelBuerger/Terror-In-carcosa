@@ -97,4 +97,58 @@ public class End {
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
+    public static void DefeatGhazkull() {
+        SlowConsole slowConsole = new SlowConsole();
+        slowConsole.imprimirDevagar("""
+            * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+            *   Derrota pelo Abissal Ghazkull!                     *
+            *                                                      *
+            * Apesar de sua bravura, o titânico Ghazkull provou ser *
+            * imbatível. Com um golpe final, você cai ao chão,      *
+            * sentindo a vida esvair-se de seu corpo. A câmara     *
+            * escurece, e a última coisa que você vê é o olhar     *
+            * vazio e ameaçador do abissal.                        *
+            *                                                      *
+            * Seu destino foi selado neste plano de horror, e sua  *
+            * jornada termina aqui, consumido pelas trevas.        *
+            * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+            """);
+    }
+
+    public static void DefeatDragonKing() {
+        SlowConsole slowConsole = new SlowConsole();
+        slowConsole.imprimirDevagar("""
+            * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+            *   Derrota pelo Rei Dragão do Abismo!                  *
+            *                                                       *
+            * Apesar de sua bravura, o poder avassalador do Rei     *
+            * Dragão do Abismo provou ser demais. Com um último     *
+            * rugido e uma explosão de chamas, você é consumido     *
+            * pelo fogo etéreo. A câmara escurece, e seu corpo é    *
+            * reduzido a cinzas.                                    *
+            *                                                       *
+            * Seu destino foi selado neste plano infernal, e sua    *
+            * jornada termina aqui, perdido nas chamas do abismo.   *
+            * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+            """);
+    }
+
+    public static void DefeatTaigon() {
+        SlowConsole slowConsole = new SlowConsole();
+        slowConsole.imprimirDevagar("""
+            * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+            *   Derrota pelo Rei de Amarelo!                        *
+            *                                                        *
+            * Apesar de sua coragem, o Rei de Amarelo se revelou    *
+            * imbatível. Com um último golpe, você é consumido       *
+            * pela distorção da realidade. Sua visão se desfaz em    *
+            * caos e o ambiente se torna um vórtice de loucura e    *
+            * terror.                                               *
+            *                                                        *
+            * Seu destino foi selado pelas garras do Rei de Amarelo, *
+            * e sua jornada termina aqui, perdida nas trevas da     *
+            * dungeon.                                              *
+            * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+            """);
+    }
 }

@@ -4,6 +4,7 @@ import rpg.Character.Classes.*;
 import rpg.Monsters.Bosses.Ghazkull;
 import rpg.Monsters.Bosses.KingDragon;
 import rpg.Monsters.Bosses.KnightOfFear;
+import rpg.Utils.Messages.End;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Item;
 import rpg.itens.Specials.Imp;
@@ -168,7 +169,15 @@ public abstract class DungeonBase implements Dungeon {
         }
 
         if (personagem.getHealthbar() <= 0) {
-            slowConsole.imprimirDevagar("Você foi derrotado por " + enemy.getName() + ". Game Over!");
+            if (enemy instanceof Ghazkull) {
+                End.DefeatGhazkull();
+            } else if (enemy instanceof KingDragon) {
+                End.DefeatDragonKing();
+            } else if (enemy instanceof KnightOfFear) {
+                End.DefeatTaigon();
+            } else {
+                slowConsole.imprimirDevagar("Você foi derrotado por " + enemy.getName() + ". Game Over!");
+            }
             return false;
         }
 
