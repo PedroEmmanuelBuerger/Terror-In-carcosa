@@ -35,7 +35,7 @@ public class ManaPotion extends Item {
                 newMana = maxMana;
             }
             necromancer.setMana(newMana);
-            slowConsole.imprimirDevagar("Nova mana após recuperação: " + newMana);
+            slowConsole.imprimirDevagar("Após consumir a poção negra, sentes a mana fluir novamente em suas veias corrompidas. Nova mana: " + newMana);
 
         } else if (player instanceof Mage mage) {
             currentMana = mage.getMana();
@@ -45,7 +45,7 @@ public class ManaPotion extends Item {
                 newMana = maxMana;
             }
             mage.setMana(newMana);
-            slowConsole.imprimirDevagar("Nova mana após recuperação: " + newMana);
+            slowConsole.imprimirDevagar("Ao beber a poção, visões de Carcosa invadem sua mente. Nova mana: " + newMana);
 
         } else if (player instanceof Healer healer) {
             currentMana = healer.getMana();
@@ -55,7 +55,7 @@ public class ManaPotion extends Item {
                 newMana = maxMana;
             }
             healer.setMana(newMana);
-            slowConsole.imprimirDevagar("Nova mana após recuperação: " + newMana);
+            slowConsole.imprimirDevagar("A poção sagrada renova suas forças espirituais. Nova mana: " + newMana);
 
         }
     }

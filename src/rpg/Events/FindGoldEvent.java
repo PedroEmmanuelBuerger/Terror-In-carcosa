@@ -18,7 +18,7 @@ public class FindGoldEvent implements NonCombatEvent {
         personagem.setGold(personagem.getGold() + goldAmount);
 
         // Mensagem para o jogador
-        slowConsole.imprimirDevagar("Você encontrou " + goldAmount + " de ouro!");
-        slowConsole.imprimirDevagar("Você agora tem um total de " + personagem.getGold() + " de ouro.");
+        slowConsole.imprimirDevagar("Você encontrou uma quantidade sombria de " + goldAmount + " de ouro escondida entre ossos e ruínas...");
+        slowConsole.imprimirDevagar("Você agora tem um total de " + personagem.getGold() + " de ouro, um símbolo do seu progresso sombrio.");
     }
 }

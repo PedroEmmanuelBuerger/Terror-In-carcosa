@@ -5,21 +5,21 @@ import rpg.Utils.SlowConsole;
 
 public class Imp extends Attributes {
     public Imp() {
-        super("Esqueleto", 15, 13, 0, "I am the Skeleton!");
+        super("Imp das Trevas", 15, 13, 0, "Eu sou o Imp das Trevas!");
     }
 
-    SlowConsole slowConsole = new SlowConsole();
+    private final SlowConsole slowConsole = new SlowConsole();
 
-    public void ImpAttack(Attributes enemy, Attributes personagem) {
+    public void impAttack(Attributes enemy, Attributes personagem) {
         int damage = (personagem.getLevel() + this.getAttack() + 2);
-        slowConsole.imprimirDevagar(this.getName() + " atacou " + enemy.getName() + " causando " + damage + " de dano!");
+        slowConsole.imprimirDevagar(this.getName() + " atacou " + enemy.getName() + ", causando " + damage + " de dano sombrio!");
         enemy.takeDamage(damage);
 
         if (!enemy.isAlive()) {
-            slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
-            slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
+            slowConsole.imprimirDevagar("A vida de " + enemy.getName() + " chegou a 0.");
+            slowConsole.imprimirDevagar(enemy.getName() + " foi consumido pelas sombras!");
             slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
-            slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGold() + " De Ouro!");
+            slowConsole.imprimirDevagar(enemy.getName() + " deixou cair " + enemy.getGold() + " de Ouro!");
             gainGold(enemy.getGold());
             personagem.gainExp(enemy.getExp());
         }
@@ -27,13 +27,12 @@ public class Imp extends Attributes {
 
     @Override
     public void takeDamage(int damage) {
-        // Reduz a saúde do personagem pelo valor do dano recebido
         int currentHealth = this.getHealthbar();
         this.setHealthbar(currentHealth - damage);
-        slowConsole.imprimirDevagar(this.getName() + " recebeu " + damage + " de dano!");
+        slowConsole.imprimirDevagar(this.getName() + " recebeu " + damage + " de dano sombrio!");
         getHealth(this);
         if (getHealthbar() <= 0) {
-            slowConsole.imprimirDevagar(this.getName() + " Foi derrotado!");
+            slowConsole.imprimirDevagar(this.getName() + " foi consumido pela escuridão!");
         }
     }
 }

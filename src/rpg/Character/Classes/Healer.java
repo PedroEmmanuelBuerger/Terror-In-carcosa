@@ -11,10 +11,10 @@ public class Healer extends Attributes {
     private int maxMana;
     SlowConsole slowConsole = new SlowConsole();
 
-    public Healer(String name, int healthbar, int Mana, int attack, int special, String quote) {
+    public Healer(String name, int healthbar, int mana, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
-        this.mana = Mana;
-        this.setClasses("Curandeiro");
+        this.mana = mana;
+        this.setClasses("Curandeiro das Trevas");
         this.maxMana = mana;
         Weapon weapon = new Mace(0);
         setWeapon(weapon);
@@ -30,24 +30,24 @@ public class Healer extends Attributes {
 
     @Override
     public void attackWithSpecial(Attributes enemy) {
-        int holyDamage = this.getSpecial() / 2;
-        CriticChance criticChance = new CriticChance(holyDamage);
-        holyDamage = criticChance.chanceCritic(); // Corrigir chamada ao método chanceCritic
+        int sacredDamage = this.getSpecial() / 2;
+        CriticChance criticChance = new CriticChance(sacredDamage);
+        sacredDamage = criticChance.chanceCritic(); // Corrigir chamada ao método chanceCritic
         boolean manaRes;
         ManaAdm manaAdm = new ManaAdm();
         manaRes = manaAdm.costMana(this.mana, 10, this.getName()); // Chamar costMana na instância criada
         if (!manaRes) {
-            slowConsole.imprimirDevagar(this.getName() + " conjurou um feitiço sagrado, causando " + holyDamage + " de dano a " + enemy.getName() + "!");
+            slowConsole.imprimirDevagar(this.getName() + " lançou um feitiço sagrado, infligindo " + sacredDamage + " de dano a " + enemy.getName() + "!");
             this.mana -= 10; // Reduzir a mana após o uso do feitiço
-            slowConsole.imprimirDevagar(this.getName() + " gastou 10 de mana, ficando com " + this.mana + " restante.");
-            enemy.takeDamage(holyDamage);
+            slowConsole.imprimirDevagar(this.getName() + " drenou 10 de mana, restando " + this.mana + ".");
+            enemy.takeDamage(sacredDamage);
             if (!enemy.isAlive()) {
-                slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
-                slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
-                slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
-                slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGold() + " De Ouro!");
+                slowConsole.imprimirDevagar("A saúde total de " + enemy.getName() + " chegou a 0");
+                slowConsole.imprimirDevagar(enemy.getName() + " foi destruído!");
+                slowConsole.imprimirDevagar("Você absorveu " + enemy.getExp() + " de EXP das profundezas!");
+                slowConsole.imprimirDevagar(enemy.getName() + " deixou para trás " + enemy.getGold() + " de Ouro Profano!");
                 gainGold(enemy.getGold());
-               gainExp(enemy.getExp());
+                gainExp(enemy.getExp());
             }
         }
     }
@@ -55,21 +55,21 @@ public class Healer extends Attributes {
     public void heal(Attributes ally) {
         boolean manaRes;
         ManaAdm manaAdm = new ManaAdm();
-        manaRes = manaAdm.costMana(this.mana, 7,this.getName()); // Chamar costMana na instância criada
+        manaRes = manaAdm.costMana(this.mana, 7, this.getName()); // Chamar costMana na instância criada
         if (!manaRes) {
             int healAmount = (getSpecial() / 2) + ally.getHealthbar();
             if (ally.isAlive()) {
                 if (ally.getMaxHealthInitial() < healAmount) {
                     ally.setHealthbar(ally.getMaxHealthInitial());
-                    slowConsole.imprimirDevagar(getName() + " curou toda a vida de " + ally.getName() + "!");
+                    slowConsole.imprimirDevagar(getName() + " restaurou toda a vitalidade de " + ally.getName() + " com uma benção obscura!");
                 } else {
                     ally.setHealthbar(healAmount);
-                    slowConsole.imprimirDevagar(getName() + " curou " + getSpecial() + " de vida de " + ally.getName() + "!");
+                    slowConsole.imprimirDevagar(getName() + " devolveu " + getSpecial() + " de vida a " + ally.getName() + " com seu poder sombrio!");
                 }
-                this.mana = this.mana - 7;
-                slowConsole.imprimirDevagar(this.getName() + " gastou 7 de mana, ficando com " + this.mana + " restante.");
+                this.mana -= 7;
+                slowConsole.imprimirDevagar(getName() + " drenou 7 de mana, restando " + this.mana + ".");
             } else {
-                slowConsole.imprimirDevagar(ally.getName() + " está morto! Impossível curar.");
+                slowConsole.imprimirDevagar(ally.getName() + " já se encontra entre as sombras! Impossível curar.");
             }
         }
     }
@@ -80,12 +80,12 @@ public class Healer extends Attributes {
         manaRes = manaAdm.costMana(this.mana, 35, this.getName()); // Chamar costMana na instância criada
         if (!manaRes) {
             if (ally.isAlive()) {
-                slowConsole.imprimirDevagar(ally.getName() + " está vivo, impossível ressuscitar!");
+                slowConsole.imprimirDevagar(ally.getName() + " já se encontra entre os vivos. Impossível ressuscitar!");
             } else {
                 ally.setHealthbar(ally.getMaxHealthInitial() / 2);
-                slowConsole.imprimirDevagar(ally.getName() + " foi ressuscitado! Sua vida atual é " + ally.getHealthbar());
-                mana -= 35;
-                slowConsole.imprimirDevagar(getName() + " gastou 35 de mana, ficando com " + mana + " restante.");
+                slowConsole.imprimirDevagar(ally.getName() + " foi reanimado das profundezas! Sua saúde atual é " + ally.getHealthbar());
+                this.mana -= 35;
+                slowConsole.imprimirDevagar(getName() + " drenou 35 de mana, restando " + this.mana + ".");
             }
         }
     }
@@ -101,23 +101,23 @@ public class Healer extends Attributes {
 
             // Aumenta o nível do personagem
             setLevel(getLevel() + levelsGained);
-            slowConsole.imprimirDevagar(getName() + " upou de nível! Nível atual é: " + getLevel());
+            slowConsole.imprimirDevagar(getName() + " ascendeu em poder! Nível atual é: " + getLevel());
 
             // Aumenta os atributos ao subir de nível
             setSpecial(getSpecial() + 5 * levelsGained);
-            slowConsole.imprimirDevagar(getName() + " Aumentou " + (5 * levelsGained) + " de ataque Special!");
+            slowConsole.imprimirDevagar(getName() + " aumentou " + (5 * levelsGained) + " de Poder Arcano!");
             setHealthbar(getHealthbar() + 5 * levelsGained);
-            slowConsole.imprimirDevagar(getName() + " Aumentou " + (5 * levelsGained) + " de vida!");
+            slowConsole.imprimirDevagar(getName() + " aumentou " + (5 * levelsGained) + " de Vitalidade!");
             setMana(getMana() + 5 * levelsGained);
             setMaxMana(getMaxMana() + 5);
-            slowConsole.imprimirDevagar(getName() + " Aumentou " + (5 * levelsGained) + " de Mana!");
+            slowConsole.imprimirDevagar(getName() + " acumulou " + (5 * levelsGained) + " de Mana Profana!");
         }
     }
 
     @Override
     public void getTechnicalInfo() {
         super.getTechnicalInfo();
-        slowConsole.imprimirDevagar("Mana: " + getMana());
+        slowConsole.imprimirDevagar("Mana Profana: " + getMana());
     }
 
     public void recoverMana(int amount) {

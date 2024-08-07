@@ -1,9 +1,9 @@
 package rpg.Events;
 
 import rpg.Character.Classes.*;
+import rpg.itens.Item;
 import rpg.itens.BagItens.ManaPotion;
 import rpg.itens.BagItens.Potion;
-import rpg.itens.Item;
 import rpg.itens.Weapons.*;
 import rpg.Utils.SlowConsole;
 
@@ -61,8 +61,9 @@ public class Shooper implements NonCombatEvent {
             List<Item> availableItems = getRandomItems(personagem);
             List<Weapon> availableWeapons = getWeaponsForSale(personagem);
 
-            // Exibe o vendedor e os itens à venda
-            slowConsole.imprimirDevagar("=== Você encontrou um vendedor! ===");
+            // Exibe o Mysterious Merchant e os itens à venda
+            slowConsole.imprimirDevagar("=== Um Misterioso Mercador apareceu diante de você! ===");
+            slowConsole.imprimirDevagar("Ele é uma criatura envolta em sombras e luzes mágicas, oferecendo itens e armas raros.");
             slowConsole.imprimirDevagar("Escolha o tipo de item para visualizar:");
             slowConsole.imprimirDevagar("1. Poções");
             slowConsole.imprimirDevagar("2. Armas");
@@ -136,7 +137,7 @@ public class Shooper implements NonCombatEvent {
     }
 
     private void displayItems(List<Item> items) {
-        slowConsole.imprimirDevagar("=== " + "Poções" + " à venda ===");
+        slowConsole.imprimirDevagar("=== Poções à venda ===");
         for (int i = 0; i < items.size(); i++) {
             Item item = items.get(i);
             slowConsole.imprimirDevagar((i + 1) + ". " + item.getName() + " - " + item.getPrice() + " Ouro");
@@ -145,7 +146,7 @@ public class Shooper implements NonCombatEvent {
     }
 
     private void displayWeapons(List<Weapon> weapons) {
-        slowConsole.imprimirDevagar("=== " + "Armas" + " à venda ===");
+        slowConsole.imprimirDevagar("=== Armas à venda ===");
         for (int i = 0; i < weapons.size(); i++) {
             Weapon weapon = weapons.get(i);
             slowConsole.imprimirDevagar((i + 1) + ". " + weapon.getName() + " - " + weapon.attack() + " de dano");
@@ -154,12 +155,12 @@ public class Shooper implements NonCombatEvent {
     }
 
     private void buyItem(Attributes personagem, Item item) {
-        if (personagem.getBag().size() >= 5) {
+        if (personagem.getAbyssalInventory().size() >= 5) {
             slowConsole.imprimirDevagar("Limite de 5 itens alcançados...");
         } else {
             if (personagem.getGold() >= item.getPrice()) {
                 personagem.setGold(personagem.getGold() - item.getPrice());
-                personagem.addItemToBag(item);
+                personagem.addItemToAbyssalInventory(item);
                 slowConsole.imprimirDevagar("Você comprou " + item.getName() + " por " + item.getPrice() + " Ouro.");
 
                 // Remove o item da lista de itens disponíveis

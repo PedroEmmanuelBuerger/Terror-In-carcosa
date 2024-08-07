@@ -7,7 +7,7 @@ public class Start {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                *   Bem-vindo ao Caos de Amarelo, viajante!           *
+                *   Bem-vindo ao Carcosa, viajante!           *
                 *                                                     *
                 * Você acorda em um vazio abissal, envolto por uma    *
                 * neblina etérea e incompreensível. O ar é pesado e   *

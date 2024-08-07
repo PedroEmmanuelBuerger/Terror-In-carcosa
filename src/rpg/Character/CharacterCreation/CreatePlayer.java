@@ -15,11 +15,11 @@ public class CreatePlayer {
 
         // Escolha de classe
         slowConsole.imprimirDevagar("Escolha sua classe:");
-        slowConsole.imprimirDevagar("1 - Guerreiro (+15 de vida)");
-        slowConsole.imprimirDevagar("2 - Mago (+15 de mana)");
-        slowConsole.imprimirDevagar("3 - Ladino (+15 de ataque)");
-        slowConsole.imprimirDevagar("4 - Curandeiro (+5 de vida, +5 de mana, +5 de ataque especial)");
-        slowConsole.imprimirDevagar("5 - Necromante (+10 de ataque especial, +5 de mana)");
+        slowConsole.imprimirDevagar("1 - Guerreiro do Abismo (+15 de vida)");
+        slowConsole.imprimirDevagar("2 - Mago dos Mistérios Cósmicos (+15 de mana)");
+        slowConsole.imprimirDevagar("3 - Ladrão das Sombras (+15 de ataque)");
+        slowConsole.imprimirDevagar("4 - Curandeiro das Entidades (+5 de vida, +5 de mana, +5 de ataque especial)");
+        slowConsole.imprimirDevagar("5 - Necromante das Profundezas (+10 de ataque especial, +5 de mana)");
 
         int escolha;
         do {
@@ -52,10 +52,10 @@ public class CreatePlayer {
 
         // Escolha de raça
         slowConsole.imprimirDevagar("Escolha sua raça:");
-        slowConsole.imprimirDevagar("1 - Humano (+10 de ataque)");
-        slowConsole.imprimirDevagar("2 - Orc (+10 de vida)");
-        slowConsole.imprimirDevagar("3 - Elfo (+10 de ataque especial)");
-        slowConsole.imprimirDevagar("4 - Anão (+5 de ataque e +5 de vida)");
+        slowConsole.imprimirDevagar("1 - Humano do Vórtice (+10 de ataque)");
+        slowConsole.imprimirDevagar("2 - Orc do Abismo (+10 de vida)");
+        slowConsole.imprimirDevagar("3 - Elfo do Crepúsculo (+10 de ataque especial)");
+        slowConsole.imprimirDevagar("4 - Anão do Abismo (+5 de ataque e +5 de vida)");
 
         int escolhaRace;
         Race race = null;

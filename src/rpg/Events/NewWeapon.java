@@ -20,7 +20,7 @@ public class NewWeapon implements NonCombatEvent {
         Weapon newWeapon = weapons[random.nextInt(weapons.length)];
 
         // Exibe informações sobre a nova arma encontrada
-        slowConsole.imprimirDevagar("Você achou uma nova arma: " + newWeapon.getName() + " com dano (" + newWeapon.attack() + ").");
+        slowConsole.imprimirDevagar("Você encontrou uma arma antiga e corrompida: " + newWeapon.getName() + " com dano (" + newWeapon.attack() + ").");
 
         // Exibe informações sobre a arma atual, se houver
         Weapon currentWeapon = personagem.getWeapon();
@@ -29,7 +29,7 @@ public class NewWeapon implements NonCombatEvent {
         }
 
         // Pergunta ao jogador se deseja equipar a nova arma
-        slowConsole.imprimirDevagar("Deseja equipá-la? (s/n)");
+        slowConsole.imprimirDevagar("Deseja equipar esta arma profana? (s/n)");
         Scanner scanner = new Scanner(System.in);
         String choice = scanner.nextLine();
 
@@ -66,9 +66,9 @@ public class NewWeapon implements NonCombatEvent {
             personagem.setWeapon(newWeapon);
 
             // Exibe mensagem de sucesso
-            slowConsole.imprimirDevagar(personagem.getName() + " equipou a nova arma: " + newWeapon.getName() + " com dano " + newWeapon.attack() + "!");
+            slowConsole.imprimirDevagar(personagem.getName() + " empunha agora a nova arma: " + newWeapon.getName() + " com dano " + newWeapon.attack() + ", uma adição sinistra ao seu arsenal.");
         } else {
-            slowConsole.imprimirDevagar(personagem.getName() + " decidiu não equipar a arma.");
+            slowConsole.imprimirDevagar(personagem.getName() + " decidiu não equipar a arma, como se um pressentimento de mal-estar o tivesse envolvido.");
         }
     }
 

@@ -23,48 +23,48 @@ public class SpecialEncounter implements NonCombatEvent {
         if (personagem instanceof Mage mage) {
             if (!mageEncounterOccurred) {
                 mage.setSpecial(mage.getSpecial() + 5);
-                slowConsole.imprimirDevagar("Você encontrou um mago conhecido na dungeon! Aprendeu um espaço novo de magia!");
+                slowConsole.imprimirDevagar("Nas ruínas de uma biblioteca esquecida de Carcosa, você encontra um mago que murmura segredos arcanos. Você aprende um novo feitiço, gravado na sua mente como um pesadelo.");
 
                 String spellName = "Tempestade de Raios";
                 if (speelBook.hasSpell(spellName)) {
-                    // Adiciona a nova magia ao SpeelBook
                     speelBook.addNewSpell(spellName, 20, 33); // Nome, custo de mana, dano
                 } else {
-                    slowConsole.imprimirDevagar("Você já conhece a magia " + spellName + ".");
+                    slowConsole.imprimirDevagar("Os segredos já conhecidos da Tempestade de Raios ecoam na sua mente.");
                 }
 
-                mageEncounterOccurred = true; // Marca o evento como ocorrido
+                mageEncounterOccurred = true;
             }
         } else if (personagem instanceof Warrior warrior) {
             if (!warriorEncounterOccurred) {
                 warrior.setDefese(true);
                 warrior.setMaxHealthInitial(warrior.getMaxHealthInitial() + 10);
                 warrior.setHealthbar(warrior.getHealthbar() + 10);
-                slowConsole.imprimirDevagar("Você encontrou um companheiro guerreiro na dungeon! Poliu sua armadura e entrou em modo de defesa, ganhando também mais 10 de vida!");
+                slowConsole.imprimirDevagar("Em uma arena oculta sob as estrelas negras de Carcosa, um guerreiro fantasmagórico aprimora sua armadura, enchendo-o com uma determinação sobrenatural. Você ganha 10 de vida e entra em modo de defesa.");
 
-                warriorEncounterOccurred = true; // Marca o evento como ocorrido
+                warriorEncounterOccurred = true;
             }
         } else if (personagem instanceof Rogue rogue) {
             if (!rogueEncounterOccurred) {
                 rogue.setDodgeSkills(rogue.getDodgeSkills() * 2);
-                slowConsole.imprimirDevagar("Você encontrou alguém que te lembra das ruas... Seus instintos melhoraram, dobrando sua evasão!");
+                slowConsole.imprimirDevagar("Nas sombras de Carcosa, uma figura espectral lhe sussurra segredos antigos. Seus instintos se afiam, dobrando sua habilidade de evasão.");
 
-                rogueEncounterOccurred = true; // Marca o evento como ocorrido
+                rogueEncounterOccurred = true;
             }
         } else if (personagem instanceof Healer healer) {
             if (!healerEncounterOccurred) {
                 healer.setSpecial(healer.getSpecial() * 2);
-                slowConsole.imprimirDevagar("Você encontrou uma estátua de seu deus! Seu poder guiado pela sua fé é dobrado!");
+                slowConsole.imprimirDevagar("Perante um altar profano dedicado a deidades esquecidas, você sente seu poder sagrado amplificado. Sua fé e poder são dobrados.");
 
-                healerEncounterOccurred = true; // Marca o evento como ocorrido
+                healerEncounterOccurred = true;
             }
         } else if (personagem instanceof Necromancer necromancer) {
             if (!NecromancerEncounterOcurred) {
                 necromancer.setLimitImp(necromancer.getLimitImp() + 2);
                 necromancer.setMaxMana(necromancer.getMaxMana() + 10);
                 necromancer.setMana(necromancer.getMana() + 10);
-                slowConsole.imprimirDevagar("Você encontrou um culto sobre seu deus mesopotanico, quantidade de esqueletos aumentou para " + necromancer.getLimitImp() + " e recuperou 10 de mana!");
-                NecromancerEncounterOcurred = true; // Marca o evento como ocorrido
+                slowConsole.imprimirDevagar("Em um ritual proibido nas profundezas de Carcosa, você convoca horrores além da compreensão. A quantidade de esqueletos que pode controlar aumenta para " + necromancer.getLimitImp() + " e você recupera 10 de mana.");
+
+                NecromancerEncounterOcurred = true;
             }
         }
     }

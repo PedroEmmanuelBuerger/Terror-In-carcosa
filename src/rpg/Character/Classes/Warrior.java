@@ -6,11 +6,11 @@ import rpg.itens.Weapons.Weapon;
 
 public class Warrior extends Attributes {
     private boolean defense = false;
-    SlowConsole slowConsole = new SlowConsole();
+    private final SlowConsole slowConsole = new SlowConsole();
 
     public Warrior(String name, int healthbar, int attack, int special, String quote) {
         super(name, healthbar, attack, special, quote);
-        setClasses("Guerreiro");
+        setClasses("Guerreiro das Trevas");
         Weapon weapon = new Axe(0);
         setWeapon(weapon);
     }
@@ -19,27 +19,27 @@ public class Warrior extends Attributes {
         return defense;
     }
 
-    public void setDefese(boolean defese) {
-        this.defense = defese;
+    public void setDefese(boolean defense) {
+        this.defense = defense;
     }
 
     public void defend() {
         setDefese(true);
-        slowConsole.imprimirDevagar(getName() + " entrou em posição de defesa!");
+        slowConsole.imprimirDevagar(getName() + " assumiu uma postura defensiva, preparando-se para resistir aos horrores que se aproximam!");
     }
 
     @Override
     public void takeDamage(int damage) {
-        // Reduz a saúde do guerreiro atual pelo valor do dano recebido
         int currentHealth = this.getHealthbar();
         if (this.isDefese()) {
-            this.setHealthbar(currentHealth - (damage / 2));
-            slowConsole.imprimirDevagar(this.getName() + " defendeu, recebendo " + damage / 2 + " de dano!");
+            int reducedDamage = damage / 2;
+            this.setHealthbar(currentHealth - reducedDamage);
+            slowConsole.imprimirDevagar(getName() + " defendeu com bravura, reduzindo o dano para " + reducedDamage + "!");
             this.setDefese(false);
             getHealth(this);
         } else {
             this.setHealthbar(currentHealth - damage);
-            slowConsole.imprimirDevagar(this.getName() + " recebeu " + damage + " de dano!");
+            slowConsole.imprimirDevagar(getName() + " sofreu " + damage + " de dano, enfrentando o caos!");
             getHealth(this);
         }
     }

@@ -12,18 +12,18 @@ public class ManaRecoveryEvent implements NonCombatEvent {
     private final SlowConsole slowConsole = new SlowConsole();
     private final Random random = new Random();
 
+    @Override
     public void executeEvent(Attributes personagem) {
         int manaRecovered = random.nextInt(10) + 10; // Recupera entre 10 a 19 de mana
         if (personagem instanceof Mage) {
             ((Mage) personagem).recoverMana(manaRecovered);
-            slowConsole.imprimirDevagar("Você encontrou um cristal de mana! ganhou " + manaRecovered + " de mana.");
+            slowConsole.imprimirDevagar("Você encontrou um cristal de mana pulsante, emanando um brilho enigmático. Ganhou " + manaRecovered + " de mana.");
         } else if (personagem instanceof Healer) {
             ((Healer) personagem).recoverMana(manaRecovered);
-            slowConsole.imprimirDevagar("Você encontrou um foco de cura! ganhou " + manaRecovered + " de mana.");
-        }
-        else if (personagem instanceof Necromancer) {
+            slowConsole.imprimirDevagar("Você encontrou um foco de cura irradiando uma luz fraca e perturbadora. Ganhou " + manaRecovered + " de mana.");
+        } else if (personagem instanceof Necromancer) {
             ((Necromancer) personagem).recoverMana(manaRecovered);
-            slowConsole.imprimirDevagar("Você encontrou um corpo para ritual! ganhou " + manaRecovered + " de mana.");
+            slowConsole.imprimirDevagar("Você encontrou um corpo profanado, uma fonte de energia negra. Ganhou " + manaRecovered + " de mana.");
         }
     }
 }

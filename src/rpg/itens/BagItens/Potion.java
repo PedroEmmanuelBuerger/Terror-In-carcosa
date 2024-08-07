@@ -8,8 +8,8 @@ public class Potion extends Item {
     private final SlowConsole slowConsole = new SlowConsole();
     private final int healingAmount;
 
-    public Potion(String name,int price, int healingAmount) {
-        super(name,price);
+    public Potion(String name, int price, int healingAmount) {
+        super(name, price);
         this.healingAmount = healingAmount;
     }
 
@@ -32,6 +32,6 @@ public class Potion extends Item {
 
         // Atualiza a vida do jogador
         player.setHealthbar(newHealth);
-       slowConsole.imprimirDevagar("Nova vida após cura: " + newHealth);
+        slowConsole.imprimirDevagar("Ao beber a poção, um frio gélido percorre seu corpo, como se algo antigo e desconhecido estivesse cuidando de seus ferimentos. Nova vida: " + newHealth);
     }
 }

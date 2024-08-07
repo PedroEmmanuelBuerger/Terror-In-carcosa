@@ -8,7 +8,7 @@ public class RareItemEvent implements NonCombatEvent {
 
     @Override
     public void executeEvent(Attributes personagem) {
-        slowConsole.imprimirDevagar("Você encontrou um item raro! Ganhou +5 de ataque.");
+        slowConsole.imprimirDevagar("Em meio ao nevoeiro de Carcosa, você encontra um artefato antigo e perturbador. Sua presença incomoda, mas você sente um poder desconhecido fluindo para dentro de você. Ganhou +5 de ataque.");
         personagem.setAttack(personagem.getAttack() + 5);
     }
 }

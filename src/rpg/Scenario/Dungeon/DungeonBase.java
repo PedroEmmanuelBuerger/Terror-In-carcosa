@@ -109,7 +109,7 @@ public abstract class DungeonBase implements Dungeon {
         scanner.nextLine(); // Consome a nova linha remanescente
 
         if (choice == 1) {
-            for (Item item : personagem.getBag()) {
+            for (Item item : personagem.getAbyssalInventory()) {
                 slowConsole.imprimirDevagar("- " + item.getName());
             }
         } else if (choice == 2) {
@@ -122,7 +122,7 @@ public abstract class DungeonBase implements Dungeon {
     private void useItem(Scanner scanner, Attributes personagem) {
         slowConsole.imprimirDevagar("Escolha o item para usar:");
         // Exibe itens disponíveis na bag
-        for (Item item : personagem.getBag()) {
+        for (Item item : personagem.getAbyssalInventory()) {
             slowConsole.imprimirDevagar("- " + item.getName());
         }
 
@@ -130,7 +130,7 @@ public abstract class DungeonBase implements Dungeon {
         String itemName = scanner.nextLine().trim(); // Captura a entrada e remove espaços extras
 
         Item itemToUse = null;
-        for (Item item : personagem.getBag()) {
+        for (Item item : personagem.getAbyssalInventory()) {
             if (item.getName().equalsIgnoreCase(itemName)) {
                 itemToUse = item;
                 break;
@@ -238,7 +238,7 @@ public abstract class DungeonBase implements Dungeon {
         for (Imp imp : necromancer.getImps()) {
             if (imp.getHealthbar() > 0 && enemy.getHealthbar() > 0) {
                 slowConsole.imprimirDevagar("\nTurno do " + imp.getName() + ":");
-                imp.ImpAttack(enemy, necromancer);
+                imp.impAttack(enemy, necromancer);
             }
         }
         necromancer.getImps().removeIf(imp -> imp.getHealthbar() <= 0);

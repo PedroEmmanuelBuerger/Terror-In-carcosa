@@ -21,32 +21,32 @@ public class SpeelBook {
 
     private void initializeSpells() {
         // Adiciona feitiços padrão ao iniciar
-        spells.add(new Spell("Tormenta de fogo", 5, 8));
-        spells.add(new Spell("Jato Super Comprimido de Água", 7, 12));
-        spells.add(new Spell("Chuva de Pedras", 13, 15));
-        spells.add(new Spell("Tempestade Ártica", 17, 26));
+        spells.add(new Spell("Chama de Oblivion", 5, 8));
+        spells.add(new Spell("Fluxo de Águas Abissais", 7, 12));
+        spells.add(new Spell("Chuva de Fragmentos Cósmicos", 13, 15));
+        spells.add(new Spell("Tempestade Glacial", 17, 26));
     }
 
     public void addNewSpell(String name, int manaCost, int damage) {
-        if (hasSpell(name)) {
+        if (!hasSpell(name)) {
             spells.add(new Spell(name, manaCost, damage));
             slowConsole.imprimirDevagar("Nova magia adicionada: " + name);
         } else {
-            slowConsole.imprimirDevagar("A magia " + name + " já está no seu livro de magias.");
+            slowConsole.imprimirDevagar("A magia " + name + " já está no seu grimório.");
         }
     }
 
     public boolean hasSpell(String name) {
         for (Spell spell : spells) {
             if (spell.name().equals(name)) {
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
     public int selectSpell(Mage mage) {
-        slowConsole.imprimirDevagar("Selecione Sua Magia:");
+        slowConsole.imprimirDevagar("Escolha Seu Feitiço:");
         for (int i = 0; i < spells.size(); i++) {
             Spell spell = spells.get(i);
             slowConsole.imprimirDevagar((i + 1) + " - " + spell.name() + " (Custo de mana: " + spell.manaCost() + ")");
@@ -64,7 +64,7 @@ public class SpeelBook {
                     slowConsole.imprimirDevagar("Você selecionou: " + selectedSpell.name());
                     damage = selectedSpell.damage();
                     mage.setMana(mage.getMana() - selectedSpell.manaCost());
-                    slowConsole.imprimirDevagar(mage.getName() + " gastou " + selectedSpell.manaCost() + " de mana, ficando com " + mage.getMana() + " restante.");
+                    slowConsole.imprimirDevagar(mage.getName() + " drenou " + selectedSpell.manaCost() + " de mana, restando " + mage.getMana() + ".");
                 }
             } else {
                 slowConsole.imprimirDevagar("Escolha inválida. Por favor, escolha uma opção válida.");

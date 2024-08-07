@@ -14,11 +14,13 @@ public class Pause implements NonCombatEvent {
     public void executeEvent(Attributes personagem) {
         boolean running = true;
         while (running) {
-            slowConsole.imprimirDevagar("=== Você decide dar uma pausa... ===");
+            slowConsole.imprimirDevagar("=== Você encontra um lugar seguro para uma pausa... ===");
             slowConsole.imprimirDevagar("=== Menu de Pausa ===");
             slowConsole.imprimirDevagar("1. Visualizar Status");
             slowConsole.imprimirDevagar("2. Usar Item");
             slowConsole.imprimirDevagar("3. Voltar ao Jogo");
+
+            // Adiciona opções temáticas baseadas na classe do personagem
             if (personagem instanceof Necromancer) {
                 slowConsole.imprimirDevagar("4. Invocar Esqueleto");
             }
@@ -44,13 +46,16 @@ public class Pause implements NonCombatEvent {
                     break;
                 case 4:
                     if (personagem instanceof Necromancer necromancer) {
-                        ((Necromancer) personagem).summonImp();
+                        necromancer.summonImp();
+                        slowConsole.imprimirDevagar("Você invocou um esqueleto para lhe auxiliar nas batalhas!");
                     }
                     if (personagem instanceof Warrior warrior) {
-                        ((Warrior) personagem).setDefese(true);
+                        warrior.setDefese(true);
+                        slowConsole.imprimirDevagar("Você assume uma postura defensiva, preparado para os ataques inimigos.");
                     }
                     if (personagem instanceof Healer healer) {
-                        ((Healer) personagem).heal(personagem);
+                        healer.heal(personagem);
+                        slowConsole.imprimirDevagar("Você realiza um ritual de cura, restaurando a saúde de todos os membros do grupo.");
                     }
                     break;
                 default:
@@ -67,14 +72,14 @@ public class Pause implements NonCombatEvent {
     }
 
     private void usarItem(Attributes personagem) {
-        slowConsole.imprimirDevagar("Escolha o item para usar:");
+        slowConsole.imprimirDevagar("Escolha o item que deseja usar:");
         // Exibe itens disponíveis na bag
-        if (personagem.getBag().isEmpty()) {
-            slowConsole.imprimirDevagar("Sua bag está vazia.");
+        if (personagem.getAbyssalInventory().isEmpty()) {
+            slowConsole.imprimirDevagar("Sua bag está vazia. Não há itens para usar.");
             return;
         }
 
-        for (Item item : personagem.getBag()) {
+        for (Item item : personagem.getAbyssalInventory()) {
             slowConsole.imprimirDevagar("- " + item.getName());
         }
 
@@ -82,7 +87,7 @@ public class Pause implements NonCombatEvent {
         String itemName = scanner.nextLine();
 
         Item itemToUse = null;
-        for (Item item : personagem.getBag()) {
+        for (Item item : personagem.getAbyssalInventory()) {
             if (item.getName().equalsIgnoreCase(itemName)) {
                 itemToUse = item;
                 break;
@@ -90,7 +95,8 @@ public class Pause implements NonCombatEvent {
         }
 
         if (itemToUse != null) {
-            personagem.useItem(itemToUse); // Usar o item utilizando o método useItem de Attributes
+            personagem.useItem(itemToUse); // Usa o item utilizando o método useItem de Attributes
+            slowConsole.imprimirDevagar("Você usou " + itemToUse.getName() + ".");
         } else {
             slowConsole.imprimirDevagar("Item não encontrado na bag.");
         }

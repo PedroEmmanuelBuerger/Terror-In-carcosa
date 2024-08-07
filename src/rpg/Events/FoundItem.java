@@ -20,26 +20,27 @@ public class FoundItem implements NonCombatEvent {
         Potion foundPotion = potions[random.nextInt(potions.length)];
 
         // Exibe informações sobre a poção encontrada
-        slowConsole.imprimirDevagar("Você encontrou uma poção: " + foundPotion.getName() + " que cura " + foundPotion.getHealingAmount() + " pontos de vida.");
+        slowConsole.imprimirDevagar("Você encontrou uma poção antiga e macabra: " + foundPotion.getName() + ". Ela pode curar " + foundPotion.getHealingAmount() + " pontos de vida.");
 
         // Pergunta ao jogador se deseja adicionar a poção à bag
-        slowConsole.imprimirDevagar("Deseja adicionar esta poção à sua bag? (s/n)");
+        slowConsole.imprimirDevagar("Deseja adicionar esta poção ao seu inventário sinistro? (s/n)");
         Scanner scanner = new Scanner(System.in);
         String choice = scanner.nextLine();
 
         // Atualiza a bag do personagem com base na escolha
         if (choice.equalsIgnoreCase("s")) {
-            personagem.addItemToBag(foundPotion);
+            personagem.addItemToAbyssalInventory(foundPotion);
+            slowConsole.imprimirDevagar("Você adicionou a poção à sua bag, um item que pode ser útil nas trevas.");
         } else {
-            slowConsole.imprimirDevagar("Você decidiu não adicionar a poção à sua bag.");
+            slowConsole.imprimirDevagar("Você decidiu não adicionar a poção à sua bag, talvez para não lembrar dos horrores que ela representa.");
         }
     }
 
     private Potion[] getAvailablePotions() {
         return new Potion[] {
-                new Potion("Poção de Vida Menor",15, 50),
-                new Potion("Poção de Vida Média",25, 100),
-                new Potion("Poção de Vida Maior",50, 200)
+                new Potion("Poção de Vida Menor", 15, 50),
+                new Potion("Poção de Vida Média", 25, 100),
+                new Potion("Poção de Vida Maior", 50, 200)
         };
     }
 }

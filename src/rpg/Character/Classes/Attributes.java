@@ -21,11 +21,11 @@ public abstract class Attributes {
     private boolean alive;
     private int level;
     private int exp;
-    private int levelDungeon = 1; // Inicialize o nível da dungeon
+    private int levelDungeon = 1; // Inicializa o nível da dungeon
     SlowConsole slowConsole = new SlowConsole();
     private Weapon weapon = new Axe(0);
     private Race race;
-    private final List<Item> bag = new ArrayList<>();
+    private final List<Item> abyssalInventory = new ArrayList<>();
     private int gold = 0;
 
     public Attributes(String name, int healthbar, int attack, int special, String quote) {
@@ -127,15 +127,15 @@ public abstract class Attributes {
     public void attack(Attributes enemy) {
         CriticChance criticChance = new CriticChance(this.getAttack());
         int damage = criticChance.chanceCritic(); // Corrigir chamada ao método chanceCritic
-        slowConsole.imprimirDevagar(this.getName() + " atacou " + enemy.getName() + " causando " + damage + " de dano!");
+        slowConsole.imprimirDevagar(this.getName() + " ataca " + enemy.getName() + " com fúria cósmica, causando " + damage + " de dano!");
         enemy.takeDamage(damage);
 
         // Verifica se o inimigo foi derrotado
         if (!enemy.isAlive()) {
-            slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
-            slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
-            slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
-            slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGold() + " De Ouro!");
+            slowConsole.imprimirDevagar("A saúde total de " + enemy.getName() + " é reduzida a 0");
+            slowConsole.imprimirDevagar(enemy.getName() + " foi aniquilado!");
+            slowConsole.imprimirDevagar("Você absorveu " + enemy.getExp() + " de EXP do abismo!");
+            slowConsole.imprimirDevagar(enemy.getName() + " deixou " + enemy.getGold() + " de Ouro Profano!");
             gainGold(enemy.getGold());
             gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
         }
@@ -144,13 +144,13 @@ public abstract class Attributes {
     public void attackWithSpecial(Attributes enemy) {
         CriticChance criticChance = new CriticChance(this.getSpecial());
         int damage = criticChance.chanceCritic(); // Corrigir chamada ao método chanceCritic
-        slowConsole.imprimirDevagar(this.getName() + " atacou " + enemy.getName() + " com um ataque especial, causando " + damage + " de dano!");
+        slowConsole.imprimirDevagar(this.getName() + " desferiu um ataque especial de terror cósmico contra " + enemy.getName() + ", causando " + damage + " de dano!");
         enemy.takeDamage(damage);
         if (!enemy.isAlive()) {
-            slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
-            slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
-            slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
-            slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGold() + " De Ouro!");
+            slowConsole.imprimirDevagar("A saúde total de " + enemy.getName() + " é reduzida a 0");
+            slowConsole.imprimirDevagar(enemy.getName() + " foi aniquilado!");
+            slowConsole.imprimirDevagar("Você absorveu " + enemy.getExp() + " de EXP do abismo!");
+            slowConsole.imprimirDevagar(enemy.getName() + " deixou " + enemy.getGold() + " de Ouro Profano!");
             gainGold(enemy.getGold());
             gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
         }
@@ -164,13 +164,13 @@ public abstract class Attributes {
         // Reduz a saúde do personagem pelo valor do dano recebido
         int currentHealth = this.getHealthbar();
         this.setHealthbar(currentHealth - damage);
-        slowConsole.imprimirDevagar(this.getName() + " recebeu " + damage + " de dano!");
+        slowConsole.imprimirDevagar(this.getName() + " sofreu " + damage + " de dano do abismo!");
         getHealth(this);
     }
 
     public void getHealth(Attributes creature) {
         if (creature.getHealthbar() > 0) {
-            slowConsole.imprimirDevagar("Vida total de " + creature.getName() + " é " + creature.getHealthbar());
+            slowConsole.imprimirDevagar("A saúde total de " + creature.getName() + " é " + creature.getHealthbar());
         } else {
             creature.alive = false;
         }
@@ -203,14 +203,14 @@ public abstract class Attributes {
         while (exp >= level * 10) {
             exp -= level * 10; // Subtrai o máximo de experiência para o próximo nível
             level++; // Aumenta o nível do personagem
-            slowConsole.imprimirDevagar(getName() + " upou de nível! Nível atual é: " + getLevel());
+            slowConsole.imprimirDevagar(getName() + " ascendeu a um novo nível! Nível atual é: " + getLevel());
             setAttack(getAttack() + 5);
-            slowConsole.imprimirDevagar(getName() + " Aumentou 5 de ataque!");
+            slowConsole.imprimirDevagar(getName() + " absorveu 5 de poder de ataque das trevas!");
             setHealthbar(getHealthbar() + 5);
             setMaxHealthInitial(getMaxHealthInitial() + 5);
-            slowConsole.imprimirDevagar(getName() + " Aumentou 5 de vida!");
+            slowConsole.imprimirDevagar(getName() + " teve 5 de vida extra concedida pela escuridão!");
             setSpecial(getSpecial() + 5);
-            slowConsole.imprimirDevagar(getName() + " Aumentou 5 de Ataque Especial!");
+            slowConsole.imprimirDevagar(getName() + " recebeu 5 de poder especial das sombras!");
         }
     }
 
@@ -221,20 +221,20 @@ public abstract class Attributes {
     public void getTechnicalInfo() {
         slowConsole.imprimirDevagar("Nome: " + getName());
         slowConsole.imprimirDevagar("Classe: " + getClasses());
-        slowConsole.imprimirDevagar("Vida: " + getHealthbar());
+        slowConsole.imprimirDevagar("Saúde: " + getHealthbar());
         slowConsole.imprimirDevagar("Ataque: " + getAttack());
-        slowConsole.imprimirDevagar("Ataque Especial: " + getSpecial());
+        slowConsole.imprimirDevagar("Poder Especial: " + getSpecial());
         slowConsole.imprimirDevagar("Frase: " + getQuote());
         slowConsole.imprimirDevagar("Arma: " + getWeapon().getName());
         slowConsole.imprimirDevagar("Raça: " + getRace().getName());
-        slowConsole.imprimirDevagar("Ouro: " + getGold());
+        slowConsole.imprimirDevagar("Ouro Profano: " + getGold());
 
-        // Adiciona a exibição dos itens na bag
-        if (bag.isEmpty()) {
-            slowConsole.imprimirDevagar("A bag está vazia.");
+        // Adiciona a exibição dos itens no inventário abissal
+        if (abyssalInventory.isEmpty()) {
+            slowConsole.imprimirDevagar("O inventário abissal está vazio.");
         } else {
-            slowConsole.imprimirDevagar("Itens na bag:");
-            for (Item item : bag) {
+            slowConsole.imprimirDevagar("Itens no inventário abissal:");
+            for (Item item : abyssalInventory) {
                 slowConsole.imprimirDevagar(item.getName());
             }
         }
@@ -244,30 +244,30 @@ public abstract class Attributes {
         return maxHealthInitial;
     }
 
-    public List<Item> getBag() {
-        return bag;
+    public List<Item> getAbyssalInventory() {
+        return abyssalInventory;
     }
 
-    public void addItemToBag(Item item) {
-        if (this.getBag().size() >= 5) {
-            slowConsole.imprimirDevagar("Limite de 5 itens alcançados...");
+    public void addItemToAbyssalInventory(Item item) {
+        if (this.getAbyssalInventory().size() >= 5) {
+            slowConsole.imprimirDevagar("O limite de 5 itens no inventário abissal foi alcançado...");
         } else {
-            bag.add(item);
-            slowConsole.imprimirDevagar("Adicionou " + item.getName() + " à bag.");
+            abyssalInventory.add(item);
+            slowConsole.imprimirDevagar("Adicionou " + item.getName() + " ao inventário abissal.");
         }
     }
 
-    public void removeItemFromBag(Item item) {
-        bag.remove(item);
+    public void removeItemFromAbyssalInventory(Item item) {
+        abyssalInventory.remove(item);
     }
 
     public void useItem(Item item) {
-        if (bag.contains(item)) {
+        if (abyssalInventory.contains(item)) {
             item.UseItem(this);
-            slowConsole.imprimirDevagar("Usou " + item.getName() + ".");
-            removeItemFromBag(item); // Remove o item após o uso
+            slowConsole.imprimirDevagar("Utilizou " + item.getName() + " dos profundos recessos.");
+            removeItemFromAbyssalInventory(item); // Remove o item após o uso
         } else {
-            slowConsole.imprimirDevagar(item.getName() + " não está na bag.");
+            slowConsole.imprimirDevagar(item.getName() + " não está presente no inventário abissal.");
         }
     }
 }

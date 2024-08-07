@@ -17,7 +17,7 @@ public class Mage extends Attributes {
         this.mana = mana;
         this.maxMana = mana;
         this.speelBook = new SpeelBook(); // Inicializa o SpeelBook
-        this.setClasses("Mago");
+        this.setClasses("Arcanista das Sombras");
         Weapon weapon = new Staff(0);
         setWeapon(weapon);
     }
@@ -47,13 +47,13 @@ public class Mage extends Attributes {
         int damage = this.getAttack();
         CriticChance criticChance = new CriticChance(damage);
         damage = criticChance.chanceCritic(); // Corrigir chamada ao método chanceCritic
-        slowConsole.imprimirDevagar(this.getName() + " lançou uma bola de fogo em " + enemy.getName() + " causando " + damage + " de dano!");
+        slowConsole.imprimirDevagar(this.getName() + " lançou uma esfera de fogo negra contra " + enemy.getName() + ", causando " + damage + " de dano!");
         enemy.takeDamage(damage);
         if (!enemy.isAlive()) {
-            slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
-            slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
-            slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
-            slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGold() + " De Ouro!");
+            slowConsole.imprimirDevagar("A vida de " + enemy.getName() + " despencou para 0");
+            slowConsole.imprimirDevagar(enemy.getName() + " foi obliterado!");
+            slowConsole.imprimirDevagar("Você absorveu " + enemy.getExp() + " de EXP das profundezas do abismo!");
+            slowConsole.imprimirDevagar(enemy.getName() + " deixou para trás " + enemy.getGold() + " de Ouro Profano!");
             gainGold(enemy.getGold());
             gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
         }
@@ -67,10 +67,10 @@ public class Mage extends Attributes {
         if (damageSpell != 0) {
             enemy.takeDamage(this.getSpecial() + damageSpell);
             if (!enemy.isAlive()) {
-                slowConsole.imprimirDevagar("Vida total de " + enemy.getName() + " é 0");
-                slowConsole.imprimirDevagar(enemy.getName() + " foi derrotado!");
-                slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
-                slowConsole.imprimirDevagar(enemy.getName() + " Derrubou " + enemy.getGold() + " De Ouro!");
+                slowConsole.imprimirDevagar("A vida de " + enemy.getName() + " despencou para 0");
+                slowConsole.imprimirDevagar(enemy.getName() + " foi obliterado!");
+                slowConsole.imprimirDevagar("Você absorveu " + enemy.getExp() + " de EXP das profundezas do abismo!");
+                slowConsole.imprimirDevagar(enemy.getName() + " deixou para trás " + enemy.getGold() + " de Ouro Profano!");
                 gainGold(enemy.getGold());
                 gainExp(enemy.getExp());
             }
@@ -80,7 +80,7 @@ public class Mage extends Attributes {
     @Override
     public void getTechnicalInfo() {
         super.getTechnicalInfo();
-        slowConsole.imprimirDevagar("Mana: " + getMana());
+        slowConsole.imprimirDevagar("Mana Profana: " + getMana());
     }
 
     @Override
@@ -90,20 +90,20 @@ public class Mage extends Attributes {
         // Verifica se o personagem subiu de nível
         while (getExp() >= getLevel() * 10) {
             int levelsGained = getExp() / (getLevel() * 10); // Quantos níveis foram ganhos
-            setExp(getExp() % (getLevel() * 7)); // Experiência restante após subir de nível
+            setExp(getExp() % (getLevel() * 10)); // Experiência restante após subir de nível
 
             // Aumenta o nível do personagem
             setLevel(getLevel() + levelsGained);
-            slowConsole.imprimirDevagar(getName() + " upou de nível! Nível atual é: " + getLevel());
+            slowConsole.imprimirDevagar(getName() + " ascendeu nas artes arcanas! Nível atual é: " + getLevel());
 
             // Aumenta os atributos ao subir de nível
             setSpecial(getSpecial() + 5 * levelsGained);
-            slowConsole.imprimirDevagar(getName() + " Aumentou " + (5 * levelsGained) + " de ataque Special!");
+            slowConsole.imprimirDevagar(getName() + " aumentou " + (5 * levelsGained) + " de Poder Arcanos!");
             setHealthbar(getHealthbar() + 5 * levelsGained);
-            slowConsole.imprimirDevagar(getName() + " Aumentou " + (5 * levelsGained) + " de vida!");
+            slowConsole.imprimirDevagar(getName() + " aumentou " + (5 * levelsGained) + " de Vitalidade!");
             setMana(getMana() + 5 * levelsGained);
             setMaxMana(getMaxMana() + 5);
-            slowConsole.imprimirDevagar(getName() + " Aumentou " + (5 * levelsGained) + " de Mana!");
+            slowConsole.imprimirDevagar(getName() + " absorveu " + (5 * levelsGained) + " de Mana Arcanos!");
         }
     }
 
