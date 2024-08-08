@@ -18,7 +18,6 @@ public class Dungeon2 extends DungeonBase {
             int randomMonster = random.nextInt(5);
             Mob mob;
             switch (randomMonster) {
-                case 0 -> mob = new Mob("Devorador de Luz", 80, 15, 25, "A LUZ SERÁ DEVORADA!", 20, 20, Portraits.PortraitDevoradorDeLuz());
                 case 1 -> mob = new Mob("Lobisomem das Profundezas", 110, 27, 12, "A NOITE SE FECHA SOBRE VOCÊ!", 25, 25, Portraits.PortraitLobisomemDasProfundezas());
                 case 2 -> mob = new Mob("Demônio do Caos", 90, 40, 0, "SEJA CONSUMIDO PELA ESCURIDÃO!", 30, 30, Portraits.PortraitDemonioDoCaos());
                 case 3 -> mob = new Mob("Cavalo das Sombras", 70, 25, 30, "SUA EXISTÊNCIA É INSIGNIFICANTE!", 25, 25, Portraits.PortraitCavaloDasSombras());

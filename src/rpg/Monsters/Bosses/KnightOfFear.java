@@ -5,7 +5,7 @@ import rpg.Character.Classes.Attributes;
 
 public class KnightOfFear extends Attributes {
     SlowConsole slowConsole = new SlowConsole();
-    private String portrait = "";
+    private final String portrait;
 
     public KnightOfFear(String name, int healthbar, int attack, int specialAttack, String battleCry, String portrait) {
         super(name, healthbar, attack, specialAttack, battleCry);
@@ -16,7 +16,7 @@ public class KnightOfFear extends Attributes {
     @Override
     public void attack(Attributes target) {
         int damage = this.getAttack();
-        slowConsole.imprimirDevagar(this.getName() + " ataca " + target.getName() + " com força, causando " + damage + " de dano!");
+        slowConsole.imprimirDevagar(this.getName() + " ataca " + target.getName() + " com fora, causando " + damage + " de dano!");
         target.takeDamage(damage);
     }
 

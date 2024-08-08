@@ -2,152 +2,170 @@ package rpg.Utils.Messages;
 
 public class Portraits {
     public static String PortraitSombraDoAbismo() {
-        return "  ,      \n" +
-                " /\\' .\\    _____\n" +
-                ":  \\.'---'     `-.\n" +
-                " `-'             |\n" +
-                "    \\._        _.'\n" +
-                "       ``----' ";
+        return """
+                  ,     \s
+                 /\\' .\\    _____
+                :  \\.'---'     `-.
+                 `-'             |
+                    \\._        _.'
+                       ``----'\s""";
     }
 
     public static String PortraitAndarilhoDosVastosVacuo() {
-        return "    .-.\n" +
-                "   (o.o)\n" +
-                "    |=|\n" +
-                "   __|__\n" +
-                " //.=|=.\\\\\n" +
-                "// .=|=. \\\\\n" +
-                "\\\\ .=|=. //\n" +
-                " \\\\(_=_)//\n" +
-                "  (:| |:)\n" +
-                "   || ||\n" +
-                "   () ()\n" +
-                "   || ||\n" +
-                "   || ||\n" +
-                "  ==' '==";
+        return """
+                    .-.
+                   (o.o)
+                    |=|
+                   __|__
+                 //.=|=.\\\\
+                // .=|=. \\\\
+                \\\\ .=|=. //
+                 \\\\(_=_)//
+                  (:| |:)
+                   || ||
+                   () ()
+                   || ||
+                   || ||
+                  ==' '==""";
     }
 
     public static String PortraitCrepusculoAlado() {
-        return "     .\n" +
-                "     /\\\n" +
-                "    /  \\\n" +
-                "   /    \\\n" +
-                "  /      \\\n" +
-                " /        \\\n" +
-                "/          \\\n" +
-                "\\          /\n" +
-                " \\        /\n" +
-                "  \\      /\n" +
-                "   \\    /\n" +
-                "    \\  /\n" +
-                "     \\/";
+        return """
+                     .
+                     /\\
+                    /  \\
+                   /    \\
+                  /      \\
+                 /        \\
+                /          \\
+                \\          /
+                 \\        /
+                  \\      /
+                   \\    /
+                    \\  /
+                     \\/""";
     }
 
     public static String PortraitCacadorDeAlmas() {
-        return "      ____\n" +
-                "    o8%8888,    \n" +
-                "  o88%8888888.  \n" +
-                "  8'-    -:8888b  \n" +
-                " 8'         8888\n" +
-                "d8.-=. ,==-.:888b\n" +
-                " >8 `~` :`~' d8888\n" +
-                " 88         ,88888\n" +
-                " 88b. `-~  ':88888\n" +
-                " 888b ~==~ .:88888\n" +
-                " 88888o--:':::8888\n" +
-                " `88888| :::' 8888b\n" +
-                "  8888^^'       8888b\n" +
-                " /  -           `88888\n" +
-                "/                `88888\n" +
-                "                  `8888b\n" +
-                "                   `888b\n" +
-                "                    `88\n" +
-                "                      `";
+        return """
+                      ____
+                    o8%8888,   \s
+                  o88%8888888. \s
+                  8'-    -:8888b \s
+                 8'         8888
+                d8.-=. ,==-.:888b
+                 >8 `~` :`~' d8888
+                 88         ,88888
+                 88b. `-~  ':88888
+                 888b ~==~ .:88888
+                 88888o--:':::8888
+                 `88888| :::' 8888b
+                  8888^^'       8888b
+                 /  -           `88888
+                /                `88888
+                                  `8888b
+                                   `888b
+                                    `88
+                                      `""";
     }
 
     public static String PortraitGuardiaoDosSepulcros() {
-        return "   ___\n" +
-                "  /   \\\n" +
-                " | () |\n" +
-                "  \\___/\n" +
-                "  _|_|_";
+        return """
+                   ___
+                  /   \\
+                 | () |
+                  \\___/
+                  _|_|_\
+                """;
     }
 
     public static String PortraitDevoradorDeLuz() {
-        return "  __    __\n" +
-                " /  \\  /  \\\n" +
-                "|    ||    |\n" +
-                " \\__/  \\__/";
+        return """
+                  __    __
+                 /  \\  /  \\
+                |    ||    |
+                 \\__/  \\__/""";
     }
 
     public static String PortraitLobisomemDasProfundezas() {
-        return "       /\\_/\\\n" +
-                "     ( o.o )\n" +
-                "      > ^ <";
+        return """
+                       /\\_/\\
+                     ( o.o )
+                      > ^ <\
+                """;
     }
 
     public static String PortraitDemonioDoCaos() {
-        return "  /\\     /\\\n" +
-                " //\\\\   //\\\\\n" +
-                " \\o  \\/  o/";
+        return """
+                  /\\     /\\
+                 //\\\\   //\\\\
+                 \\o  \\/  o/\
+                """;
     }
 
     public static String PortraitCavaloDasSombras() {
-        return "     ,%%%,\n" +
-                "   ( o o )\n" +
-                "  /   o   \\\n" +
-                " (   (_)   )";
+        return """
+                     ,%%%,
+                   ( o o )
+                  /   o   \\
+                 (   (_)   )\
+                """;
     }
 
     public static String PortraitAranhaDoAbismo() {
-        return "   (\\(\\\n" +
-                "  (-.-)\n" +
-                "  o_('')('')";
+        return """
+                   (\\(\\
+                  (-.-)
+                  o_('')('')\
+                """;
     }
 
     public static String PortraitColossoDasSombras() {
-        return "  ,%%%,\n" +
-                "  /-.-\\\n" +
-                " (  o  )\n" +
-                "  `-^-'";
+        return """
+                  ,%%%,
+                  /-.-\\
+                 (  o  )
+                  `-^-'\
+                """;
     }
 
     public static String PortraitOlhoDasAbissaisProfundezas() {
-        return "    ___\n" +
-                "  /'   `\\\n" +
-                " |  @ @  |\n" +
-                "  \\  ^  /\n" +
-                "   `---'";
+        return """
+                    ___
+                  /'   `\\
+                 |  @ @  |
+                  \\  ^  /
+                   `---'\
+                """;
     }
 
     public static String PortraitRitoDasTrevas() {
-        return "   __  __\n" +
-                "  |  \\/  |\n" +
-                "  | .  . |\n" +
-                "  | |\\/| |\n" +
-                "  | |  | |\n" +
-                "  |_|  |_|";
+        return """
+                   __  __
+                  |  \\/  |
+                  | .  . |
+                  | |\\/| |
+                  | |  | |
+                  |_|  |_|\
+                """;
     }
 
     public static String PortraitCavaleiroDaNevoa() {
-        return "   |\\  |\\\n" +
-                "   (o.o)\n" +
-                "   `-^-'";
+        return """
+                   |\\  |\\
+                   (o.o)
+                   `-^-'\
+                """;
     }
 
     public static String PortraitGolemDaRuina() {
-        return "   _____\n" +
-                "  /     \\\n" +
-                " | () () |\n" +
-                "  \\  ^  /\n" +
-                "   |||||";
-    }
-
-    public static String PortraitKnightOfFear() {
-        return "  ,%%%.\n" +
-                "  /-.-\\\n" +
-                " (  o  )\n" +
-                "  `-^-'";
+        return """
+                   _____
+                  /     \\
+                 | () () |
+                  \\  ^  /
+                   |||||\
+                """;
     }
 
     public static String PortraitGhazkull() {
@@ -179,30 +197,30 @@ public class Portraits {
    |  /   V        ))       V   \\  |
    |/     `       //        '     \\|
    `              V                '
-    """;
+   \s""";
     }
 
     public static String PortraitTaigon() {
         return """
-                  '':''::'
-             .'' ::
-             :'     ::
-             :        ::
-             : <o>    <o>::
-             :           ::
+                  '':''::'.. '.
+             .'' ::             :
+             :'     ::            :
+             :        ::            :
+             : <o>    <o>::         :
+             :           ::         :
               :           ::
                :           .:
                 :        .:
                  :     .:
-                  :..-'
-               .-'
-              :
-               :
-               `:
-                `:
-                 `:
-                  `:.
-                   `.
+                  :..-'.'
+               .-'       '-.
+              :             :
+               :           :
+               `:        `:
+                `:      `:
+                 `:    `:
+                  `:  :`
+                   `.`
     """;
     }
 }

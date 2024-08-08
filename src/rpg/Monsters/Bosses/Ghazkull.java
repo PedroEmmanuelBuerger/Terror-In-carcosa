@@ -5,7 +5,7 @@ import rpg.Character.Classes.Attributes;
 
 public class Ghazkull extends Attributes {
     SlowConsole slowConsole = new SlowConsole();
-    private String portrait = "";
+    private final String portrait;
     public Ghazkull(String name, int healthbar, int attack, int specialAttack, String battleCry,String portrait) {
         super(name, healthbar, attack, specialAttack, battleCry);
         this.setExp(35);

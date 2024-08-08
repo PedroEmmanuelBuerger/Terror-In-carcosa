@@ -148,7 +148,7 @@ public abstract class DungeonBase implements Dungeon {
     private boolean enemyTurn(Attributes personagem, Attributes enemy) {
         slowConsole.imprimirDevagar("\nTurno de " + enemy.getName() + ":");
 
-        Attributes target = getEnemyTarget(personagem, enemy);
+        Attributes target = getEnemyTarget(personagem);
         int acaoInimigo = random.nextInt(3);
 
         switch (acaoInimigo) {
@@ -169,14 +169,11 @@ public abstract class DungeonBase implements Dungeon {
         }
 
         if (personagem.getHealthbar() <= 0) {
-            if (enemy instanceof Ghazkull) {
-                End.DefeatGhazkull();
-            } else if (enemy instanceof KingDragon) {
-                End.DefeatDragonKing();
-            } else if (enemy instanceof KnightOfFear) {
-                End.DefeatTaigon();
-            } else {
-                End.DefeatGenericMonster();
+            switch (enemy) {
+                case Ghazkull _ -> End.DefeatGhazkull();
+                case KingDragon _ -> End.DefeatDragonKing();
+                case KnightOfFear _ -> End.DefeatTaigon();
+                default -> End.DefeatGenericMonster();
             }
             return false;
         }
@@ -253,7 +250,7 @@ public abstract class DungeonBase implements Dungeon {
         necromancer.getImps().removeIf(imp -> imp.getHealthbar() <= 0);
     }
 
-    private Attributes getEnemyTarget(Attributes personagem, Attributes enemy) {
+    private Attributes getEnemyTarget(Attributes personagem) {
         if (personagem instanceof Necromancer && !((Necromancer) personagem).getImps().isEmpty()) {
             int targetChoice = random.nextInt(((Necromancer) personagem).getImps().size() + 1);
             if (targetChoice == 0) {

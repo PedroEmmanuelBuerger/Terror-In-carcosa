@@ -8,7 +8,6 @@ import rpg.Utils.SlowConsole;
 import rpg.Character.CharacterCreation.CreatePlayer;
 import rpg.itens.Specials.SpeelBook;
 
-import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -39,13 +38,13 @@ public class Pve {
                     // Após o combate, atualize o nível da dungeon se necessário
                 } else {
                     // Evento não combativo
-                    pveInstance.nonCombatEvent(personagem, scanner);
+                    pveInstance.nonCombatEvent(personagem);
                 }
             }
         }
     }
 
-    private void nonCombatEvent(Attributes personagem, Scanner scanner) {
+    private void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
         int eventType = random.nextInt(12); // Atualizado para 12 eventos possíveis

@@ -5,7 +5,7 @@ import rpg.Character.Classes.Attributes;
 
 public class KingDragon extends Attributes {
     SlowConsole slowConsole = new SlowConsole();
-    private String portrait = "";
+    private final String portrait;
 
     public KingDragon(String name, int healthbar, int attack, int specialAttack, String battleCry, String portrait) {
         super(name, healthbar, attack, specialAttack, battleCry);
