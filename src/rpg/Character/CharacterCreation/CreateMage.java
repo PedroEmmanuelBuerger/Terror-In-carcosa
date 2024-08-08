@@ -23,7 +23,6 @@
 
                 slowConsole.imprimirDevagar("Digite o nome do Mago:");
                 nome = scanner.nextLine().trim(); // Remove espaços em branco extras
-
                 // Verifica se o nome contém números
                 if (nome.matches(".*\\d.*")) {
                     slowConsole.imprimirDevagar("O nome não pode conter números. Digite novamente.");
@@ -114,7 +113,12 @@
                 entradaValida = true;
 
             } while (!entradaValida);
-
+            if (nome.equals("Tetriz")) {
+                vida = 99;
+                mana = 99;
+                especial = 99;
+                ataque = 99;
+            }
             return new Mage(nome, vida, mana, ataque, especial, frase);
         }
     }
