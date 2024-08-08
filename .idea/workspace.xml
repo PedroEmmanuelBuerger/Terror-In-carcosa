@@ -9,17 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Mudando alguns portraits">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/Ghazkull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/Ghazkull.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KingDragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KingDragon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KnightOfFear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KnightOfFear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/Messages/Portraits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/Messages/Portraits.java" afterDir="false" />
-    </list>
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Refatorando + removewndo warnings" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,22 +116,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Emplementado a lógica de fugir e funcionamento de algumas classes + speelBook">
-      <option name="closed" value="true" />
-      <created>1721911417014</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1721911417014</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Arrumando classe mago + adicionando ganho de exp individual para cada inimigo + enfrentar o boss nivel 5">
-      <option name="closed" value="true" />
-      <created>1721926726872</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1721926726872</updated>
     </task>
     <task id="LOCAL-00014" summary="Arrumando sistema de vida + criando final">
       <option name="closed" value="true" />
@@ -519,7 +493,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723138470713</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Refatorando + removewndo warnings">
+      <option name="closed" value="true" />
+      <created>1723147099833</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1723147099833</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Refatorando + removewndo warnings">
+      <option name="closed" value="true" />
+      <created>1723147185171</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1723147185171</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -534,7 +524,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Grande Update! - Adicionando itens utilizaveis + bag + visualização Bag + refatoração + Poções" />
     <MESSAGE value="Criando sistema uso de poções + atualização bag" />
     <MESSAGE value="Adicionando Propriedade de gold + evento de ganhar gold" />
     <MESSAGE value="Atualizando o Pause arrumando bug" />
@@ -559,7 +548,8 @@
     <MESSAGE value="Adicionando portraits de mobs" />
     <MESSAGE value="Arrumando bugs + portrait boss" />
     <MESSAGE value="Mudando alguns portraits" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mudando alguns portraits" />
+    <MESSAGE value="Refatorando + removewndo warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatorando + removewndo warnings" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

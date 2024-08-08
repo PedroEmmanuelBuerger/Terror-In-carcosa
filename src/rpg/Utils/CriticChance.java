@@ -22,7 +22,7 @@ public class CriticChance {
         SlowConsole slowConsole = new SlowConsole();
         double randomNumber = random.nextDouble() * 100.0;
         // Chance de ataque crítico em porcentagem
-        double criticalChance = 15.0;
+        double criticalChance = 25.0;
         if (randomNumber <= criticalChance) {
             slowConsole.imprimirDevagar("Seu ataque critou!");
             int criticalMultiplier = 2;
