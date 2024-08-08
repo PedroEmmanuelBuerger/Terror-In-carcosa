@@ -9,8 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando bugs + portrait boss">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Mudando alguns portraits">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/Ghazkull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/Ghazkull.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KingDragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KingDragon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KnightOfFear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KnightOfFear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/Messages/Portraits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/Messages/Portraits.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,14 +126,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Adicionando SpellBook, um evento aleatório e mudando o comportamento de alguns métodos">
-      <option name="closed" value="true" />
-      <created>1721909285215</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1721909285215</updated>
     </task>
     <task id="LOCAL-00012" summary="Emplementado a lógica de fugir e funcionamento de algumas classes + speelBook">
       <option name="closed" value="true" />
@@ -511,7 +511,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723137488805</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Mudando alguns portraits">
+      <option name="closed" value="true" />
+      <created>1723138470713</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1723138470713</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -526,7 +534,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Balanceamento + mudanças necromante" />
     <MESSAGE value="Grande Update! - Adicionando itens utilizaveis + bag + visualização Bag + refatoração + Poções" />
     <MESSAGE value="Criando sistema uso de poções + atualização bag" />
     <MESSAGE value="Adicionando Propriedade de gold + evento de ganhar gold" />
@@ -551,7 +558,8 @@
     <MESSAGE value="Adicionando Mente" />
     <MESSAGE value="Adicionando portraits de mobs" />
     <MESSAGE value="Arrumando bugs + portrait boss" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando bugs + portrait boss" />
+    <MESSAGE value="Mudando alguns portraits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mudando alguns portraits" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
