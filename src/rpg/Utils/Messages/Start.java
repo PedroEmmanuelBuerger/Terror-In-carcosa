@@ -6,32 +6,40 @@ public class Start {
     public static void startApp() {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""
-                * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                *   Bem-vindo ao Carcosa, viajante!           *
-                *                                                     *
-                * Você acorda em um vazio abissal, envolto por uma    *
-                * neblina etérea e incompreensível. O ar é pesado e   *
-                * o som distante de murmúrios cósmicos ecoa ao redor. *
-                *                                                     *
-                * À sua frente, uma porta de ouro decadente se ergue  *
-                * como o único caminho através do espaço deformado.   *
-                *                                                     *
-                * Você percebe que está em um labirinto de horrores,  *
-                * uma série de planos interligados, cada um repleto   *
-                * de monstros e enigmas abissais. A única saída é     *
-                * avançar mais profundo, enfrentando as ameaças que   *
-                * cada dimensão tem a oferecer. A sanidade está em    *
-                * jogo, e a liberdade está ao alcance, mas a coragem  *
-                * e a astúcia são necessárias para escapar.           *
-                *                                                     *
-                * Prepare-se, pois a jornada que se inicia não é      *
-                * para os fracos de mente. Você ouve sussurros        *
-                * distantes: "A verdadeira desolação começa aqui."    *
-                *                                                     *
-                * Boa sorte, viajante. Que seus passos não se percam  *
-                * na loucura.                                         *
-                * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                """);
+            * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+            *   Bem-vindo ao Carcosa, viajante!                   *
+            *                                                     *
+            * Nas profundezas de Carcosa, sob a névoa eterna,     *
+            * a cidade perdida ecoa com o poema antigo:           *
+            *                                                     *
+            * "Em Carcosa, sob o luar,                            *
+            * onde os sonhos se perdem no som dos sinos,          *
+            * no teatro sombrio e nas sombras dos eternos,        *
+            * a cidade canta um cântico de loucura e mistério."   *
+            *                                                     *
+            * Você acorda em um vazio abissal, envolto por uma    *
+            * neblina etérea e incompreensível. O ar é pesado e   *
+            * o som distante de murmúrios cósmicos ecoa ao redor. *
+            *                                                     *
+            * À sua frente, uma porta de ouro decadente se ergue  *
+            * como o único caminho através do espaço deformado.   *
+            *                                                     *
+            * Você percebe que está em um labirinto de horrores,  *
+            * uma série de planos interligados, cada um repleto   *
+            * de monstros e enigmas abissais. A única saída é     *
+            * avançar mais profundo, enfrentando as ameaças que   *
+            * cada dimensão tem a oferecer. A sanidade está em    *
+            * jogo, e a liberdade está ao alcance, mas a coragem  *
+            * e a astúcia são necessárias para escapar.           *
+            *                                                     *
+            * Prepare-se, pois a jornada que se inicia não é      *
+            * para os fracos de mente. Você ouve sussurros        *
+            * distantes: "A verdadeira desolação começa aqui."    *
+            *                                                     *
+            * Boa sorte, viajante. Que seus passos não se percam  *
+            * na loucura.                                         *
+            * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+            """);
     }
 
     public static void FinishGhazkull() {

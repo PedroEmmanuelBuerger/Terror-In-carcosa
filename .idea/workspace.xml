@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando opção de se mover (w,a,s,d)">
-      <change afterPath="$PROJECT_DIR$/lib/jline-3.21.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Terror In YellowCity.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Terror In YellowCity.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateMage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateMage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
-    </list>
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando opção de se mover (w,a,s,d)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,14 +116,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Trocando o console da aplicação pra ficar mais lento">
-      <option name="closed" value="true" />
-      <created>1721852295232</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1721852295232</updated>
     </task>
     <task id="LOCAL-00008" summary="Trocando o console da aplicação pra ficar mais lento">
       <option name="closed" value="true" />
@@ -516,7 +501,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723115300831</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Adicionando opção de se mover (w,a,s,d)">
+      <option name="closed" value="true" />
+      <created>1723122730035</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1723122730035</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
