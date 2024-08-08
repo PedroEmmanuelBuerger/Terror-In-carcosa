@@ -11,7 +11,9 @@ public class Dungeon1 extends DungeonBase {
     protected Attributes createEnemy(Attributes personagem) {
         if (personagem.getLevel() >= 5) {
             Start.EncounterGhazkull(); // Exibe a mensagem ao encontrar Ghazkull
-            return new Ghazkull("Ghazkull", 350, 20, 30, "SUA ALMA É MINHA!");
+            Ghazkull boss = new Ghazkull("Ghazkull", 350, 20, 30, "SUA ALMA É MINHA!", Portraits.PortraitGhazkull());
+            boss.generateTechinicalInfo();
+            return boss;
         } else {
             int randomMonster = random.nextInt(5);
             Mob mob;

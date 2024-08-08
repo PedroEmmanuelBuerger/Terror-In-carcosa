@@ -11,7 +11,9 @@ public class Dungeon2 extends DungeonBase {
     protected Attributes createEnemy(Attributes personagem) {
         if (personagem.getLevel() >= 10) {
             Start.EncounterLordDragonKing(); // Exibe a mensagem ao encontrar o Lorde Rei Dragão
-            return new KingDragon("Lorde Rei Dragão", 550, 45, 60, "O FOGO CONSUMIRÁ A REALIDADE!");
+            KingDragon boss = new KingDragon("Lorde Rei Dragão", 550, 45, 60, "O FOGO CONSUMIRÁ A REALIDADE!", Portraits.PortraitKingDragon());
+            boss.generateTechinicalInfo();
+            return boss;
         } else {
             int randomMonster = random.nextInt(5);
             Mob mob;

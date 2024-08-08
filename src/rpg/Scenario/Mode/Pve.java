@@ -28,26 +28,19 @@ public class Pve {
 
         while (personagem.getHealthbar() > 0) {
             slowConsole.imprimirDevagar("Mova-se![W,A,S,D]");
-            String key = scanner.nextLine().toLowerCase(); // Leia a entrada do jogador
+            String key = scanner.nextLine().toLowerCase().trim(); // Leia a entrada do jogador e remova espaços em branco
 
-            switch (key) {
-                case "w":
-                case "a":
-                case "s":
-                case "d":
-                    int randomEvent = random.nextInt(12); // Atualizado para 12 eventos possíveis
+            if (key.equals("w") || key.equals("a") || key.equals("s") || key.equals("d")) {
+                int randomEvent = random.nextInt(12); // Atualizado para 12 eventos possíveis
 
-                    if (randomEvent < 7) { // 3/12 chance para combate (ajustado para 5 eventos de combate possíveis)
-                        // Encontro de combate
-                        CombatSystem.startCombat(scanner, personagem);
-                        // Após o combate, atualize o nível da dungeon se necessário
-                    } else {
-                        // Evento não combativo
-                        pveInstance.nonCombatEvent(personagem, scanner);
-                    }
-                    break;
-                default:
-                    slowConsole.imprimirDevagar("Tecla não reconhecida.");
+                if (randomEvent < 7) { // 3/12 chance para combate (ajustado para 5 eventos de combate possíveis)
+                    // Encontro de combate
+                    CombatSystem.startCombat(scanner, personagem);
+                    // Após o combate, atualize o nível da dungeon se necessário
+                } else {
+                    // Evento não combativo
+                    pveInstance.nonCombatEvent(personagem, scanner);
+                }
             }
         }
     }

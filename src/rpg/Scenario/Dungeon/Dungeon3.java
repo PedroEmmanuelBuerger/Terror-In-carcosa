@@ -13,7 +13,9 @@ public class Dungeon3 extends DungeonBase {
     protected Attributes createEnemy(Attributes personagem) {
         if (personagem.getLevel() >= 20) {
             Start.EncounterTaigon(); // Exibe a mensagem ao encontrar o Cavaleiro do Medo Taigon
-            return new KnightOfFear("O Rei de Amarelo", 1000, 60, 80, "O VAZIO CHEGOU PARA VOCÊ...");
+            KnightOfFear boss = new KnightOfFear("O Rei de Amarelo", 1000, 60, 80, "O VAZIO CHEGOU PARA VOCÊ...", Portraits.PortraitTaigon());
+            boss.generateTechinicalInfo();
+            return boss;
         } else {
             int randomMonster = random.nextInt(5);
             Mob mob;
