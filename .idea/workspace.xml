@@ -9,9 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando final generico + identação">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando opção de se mover (w,a,s,d)">
+      <change afterPath="$PROJECT_DIR$/lib/jline-3.21.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Terror In YellowCity.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Terror In YellowCity.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateMage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateMage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,25 +56,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ConsoleLento.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SlowConsole.executor&quot;: &quot;Run&quot;,
-    &quot;Application.main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.principal.executor&quot;: &quot;Run&quot;,
-    &quot;JAR Application.Terror In YellowCity.jar.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pedro.silva/Downloads&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ConsoleLento.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.SlowConsole.executor": "Run",
+    "Application.main.executor": "Run",
+    "Application.principal.executor": "Run",
+    "JAR Application.Terror In YellowCity.jar.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/pedro.silva/OneDrive - Mainhardt/Documentos/intellij/Terror In YellowCity/lib/jline-3.21.0.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pedro.silva\OneDrive - Mainhardt\Documentos\intellij\Terror In YellowCity\lib" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="rpg.Monsters" />
     </key>
@@ -116,14 +123,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Inimigos conseguem usar + de 1 tipo de ação + sistema de status no jogo">
-      <option name="closed" value="true" />
-      <created>1721847896859</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1721847896859</updated>
     </task>
     <task id="LOCAL-00007" summary="Trocando o console da aplicação pra ficar mais lento">
       <option name="closed" value="true" />
@@ -509,7 +508,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723055379925</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Adicionando Easter Egg">
+      <option name="closed" value="true" />
+      <created>1723115300831</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1723115300831</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -524,8 +531,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Arrumando fluxo de esqueletos necromante + adicionando info esqueletos" />
-    <MESSAGE value="Refatorando mobs + adicionando dungeon nova + adicionando boss novo" />
     <MESSAGE value="Balanceamento + Adicionando mensagems novo boss + refatoração" />
     <MESSAGE value="Balanceamento + 1 final para cada classe" />
     <MESSAGE value="Adicionando mecanica de critico" />
@@ -549,6 +554,15 @@
     <MESSAGE value="+ Adição de tematica + finalização tematica texto" />
     <MESSAGE value="adicionando finais que é derrottado por boss" />
     <MESSAGE value="Adicionando final generico + identação" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando final generico + identação" />
+    <MESSAGE value="Adicionando Easter Egg" />
+    <MESSAGE value="Adicionando opção de se mover (w,a,s,d)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando opção de se mover (w,a,s,d)" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="keys" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

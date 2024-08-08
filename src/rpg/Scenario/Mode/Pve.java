@@ -8,38 +8,99 @@ import rpg.Utils.SlowConsole;
 import rpg.Character.CharacterCreation.CreatePlayer;
 import rpg.itens.Specials.SpeelBook;
 
+import java.io.IOException;
 import java.util.Random;
+import org.jline.terminal.Terminal;
+import org.jline.terminal.TerminalBuilder;
+import org.jline.utils.NonBlockingReader;
+
 import java.util.Scanner;
 
 public class Pve {
     private boolean specialEncounterOccurred = false; // Flag para rastrear o evento SpecialEncounter
 
-    public static void startBattle(Scanner scanner) {
+    public static void startBattle() {
         Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
         Attributes personagem = CreatePlayer.createPlayer(scanner);
         personagem.getTechnicalInfo();
 
         Pve pveInstance = new Pve(); // Crie uma instância de Pve para rastrear eventos
         personagem.setLevelDungeon(1); // Defina o nível da dungeon inicial como 1
 
-        while (personagem.getHealthbar() > 0) {
-            int randomEvent = random.nextInt(12); // Atualizado para 12 eventos possíveis
+        SlowConsole slowConsole = new SlowConsole();
 
-            if (randomEvent < 3) { // 3/12 chance para combate (ajustado para 5 eventos de combate possíveis)
-                // Encontro de combate
-                CombatSystem.startCombat(scanner, personagem);
-                // Após o combate, atualize o nível da dungeon se necessário
-            } else {
-                // Evento não combativo
-                pveInstance.nonCombatEvent(personagem);
+        Terminal terminal = null;
+        NonBlockingReader reader = null;
+        try {
+            terminal = TerminalBuilder.terminal();
+            reader = terminal.reader(); // Obtém o NonBlockingReader diretamente do terminal
+
+            while (personagem.getHealthbar() > 0) {
+                slowConsole.imprimirDevagar("Mova-se![W,A,S,D]");
+
+                // Leia um caractere e verifique o código
+                int codePoint = reader.read();
+                String key = getKeyFromCodePoint(codePoint);
+
+                if (key != null) {
+                    switch (key) {
+                        case "up":
+                        case "down":
+                        case "right":
+                        case "left":
+                            int randomEvent = random.nextInt(12); // Atualizado para 12 eventos possíveis
+
+                            if (randomEvent < 3) { // 3/12 chance para combate (ajustado para 5 eventos de combate possíveis)
+                                // Encontro de combate
+                                CombatSystem.startCombat(scanner, personagem);
+                                // Após o combate, atualize o nível da dungeon se necessário
+                            } else {
+                                // Evento não combativo
+                                pveInstance.nonCombatEvent(personagem, scanner);
+                            }
+                            break;
+                        default:
+                            slowConsole.imprimirDevagar("Tecla não reconhecida.");
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (terminal != null) {
+                try {
+                    terminal.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
 
-    private void nonCombatEvent(Attributes personagem) {
+    private static String getKeyFromCodePoint(int codePoint) {
+        // Converta o código do ponto para a tecla correspondente
+        // Dependendo do terminal, você pode precisar ajustar isso
+        switch (codePoint) {
+            case 119: return "up";    // Códigos de teclas
+            case 115: return "down";
+            case 97: return "right";
+            case 100: return "left";
+            default: return null;
+        }
+    }
+
+    private void nonCombatEvent(Attributes personagem, Scanner scanner) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
-        int eventType = random.nextInt(12); // Atualizado para 16 eventos possíveis (dá mais variação)
+        int eventType = random.nextInt(12); // Atualizado para 12 eventos possíveis
 
         NonCombatEvent event = null;
         switch (eventType) {

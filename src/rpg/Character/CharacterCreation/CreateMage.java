@@ -114,10 +114,10 @@
 
             } while (!entradaValida);
             if (nome.equals("Tetriz")) {
-                vida = 99;
-                mana = 99;
-                especial = 99;
-                ataque = 99;
+                vida = 999;
+                mana = 999;
+                especial = 999;
+                ataque = 999;
             }
             return new Mage(nome, vida, mana, ataque, especial, frase);
         }
