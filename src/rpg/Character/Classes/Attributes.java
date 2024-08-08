@@ -21,6 +21,7 @@ public abstract class Attributes {
     private boolean alive;
     private int level;
     private int exp;
+    private int mind = 50;
     private int levelDungeon = 1; // Inicializa o nível da dungeon
     SlowConsole slowConsole = new SlowConsole();
     private Weapon weapon = new Axe(0);
@@ -54,6 +55,14 @@ public abstract class Attributes {
 
     public Weapon getWeapon() {
         return weapon;
+    }
+
+    public int getMind() {
+        return mind;
+    }
+
+    public void setMind(int mind) {
+        this.mind = mind;
     }
 
     public void applyRaceBonuses() {
@@ -224,6 +233,7 @@ public abstract class Attributes {
         slowConsole.imprimirDevagar("Saúde: " + getHealthbar());
         slowConsole.imprimirDevagar("Ataque: " + getAttack());
         slowConsole.imprimirDevagar("Poder Especial: " + getSpecial());
+        slowConsole.imprimirDevagar("Mente: " + getMind());
         slowConsole.imprimirDevagar("Frase: " + getQuote());
         slowConsole.imprimirDevagar("Arma: " + getWeapon().getName());
         slowConsole.imprimirDevagar("Raça: " + getRace().getName());

@@ -19,7 +19,7 @@ public class CreatePlayer {
         slowConsole.imprimirDevagar("2 - Mago dos Mistérios Cósmicos (+15 de mana)");
         slowConsole.imprimirDevagar("3 - Ladrão das Sombras (+15 de ataque)");
         slowConsole.imprimirDevagar("4 - Curandeiro das Entidades (+5 de vida, +5 de mana, +5 de ataque especial)");
-        slowConsole.imprimirDevagar("5 - Necromante das Profundezas (+10 de ataque especial, +5 de mana)");
+        slowConsole.imprimirDevagar("5 - Necromante das Profundezas (+5 de ataque especial, +5 de mana, +5 de mente)");
 
         int escolha;
         do {
@@ -44,6 +44,7 @@ public class CreatePlayer {
                 case 5:
                     Chose.ChooseNecromancer(); // Mensagem para Necromante
                     personagem = CreateNecromancer.createNecromancer(scanner);
+                    personagem.setMind(personagem.getMind() + 5);
                     break;
                 default:
                     slowConsole.imprimirDevagar("Escolha inválida. Por favor, escolha uma opção válida.");
@@ -52,7 +53,7 @@ public class CreatePlayer {
 
         // Escolha de raça
         slowConsole.imprimirDevagar("Escolha sua raça:");
-        slowConsole.imprimirDevagar("1 - Humano do Vórtice (+10 de ataque)");
+        slowConsole.imprimirDevagar("1 - Humano do Vórtice (+5 de ataque, + 5 de mente)");
         slowConsole.imprimirDevagar("2 - Orc do Abismo (+10 de vida)");
         slowConsole.imprimirDevagar("3 - Elfo do Crepúsculo (+10 de ataque especial)");
         slowConsole.imprimirDevagar("4 - Anão do Abismo (+5 de ataque e +5 de vida)");
@@ -87,7 +88,9 @@ public class CreatePlayer {
 
         personagem.setRace(race);
         personagem.applyRaceBonuses(); // Aplica os bônus da raça
-
+        if (personagem.getRace() == race.HUMAN) {
+            personagem.setMind(personagem.getMind() + 5);
+        }
         return personagem;
     }
 }

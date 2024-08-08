@@ -115,7 +115,6 @@ public class CreateNecromancer {
             entradaValida = true;
 
         } while (!entradaValida);
-
         return new Necromancer(nome, vida, mana, ataque, especial, frase);
     }
 }
