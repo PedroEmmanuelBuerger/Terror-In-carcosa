@@ -10,10 +10,6 @@ import rpg.itens.Specials.SpeelBook;
 
 import java.io.IOException;
 import java.util.Random;
-import org.jline.terminal.Terminal;
-import org.jline.terminal.TerminalBuilder;
-import org.jline.utils.NonBlockingReader;
-
 import java.util.Scanner;
 
 public class Pve {
@@ -30,70 +26,29 @@ public class Pve {
 
         SlowConsole slowConsole = new SlowConsole();
 
-        Terminal terminal = null;
-        NonBlockingReader reader = null;
-        try {
-            terminal = TerminalBuilder.terminal();
-            reader = terminal.reader(); // Obtém o NonBlockingReader diretamente do terminal
+        while (personagem.getHealthbar() > 0) {
+            slowConsole.imprimirDevagar("Mova-se![W,A,S,D]");
+            String key = scanner.nextLine().toLowerCase(); // Leia a entrada do jogador
 
-            while (personagem.getHealthbar() > 0) {
-                slowConsole.imprimirDevagar("Mova-se![W,A,S,D]");
+            switch (key) {
+                case "w":
+                case "a":
+                case "s":
+                case "d":
+                    int randomEvent = random.nextInt(12); // Atualizado para 12 eventos possíveis
 
-                // Leia um caractere e verifique o código
-                int codePoint = reader.read();
-                String key = getKeyFromCodePoint(codePoint);
-
-                if (key != null) {
-                    switch (key) {
-                        case "up":
-                        case "down":
-                        case "right":
-                        case "left":
-                            int randomEvent = random.nextInt(12); // Atualizado para 12 eventos possíveis
-
-                            if (randomEvent < 3) { // 3/12 chance para combate (ajustado para 5 eventos de combate possíveis)
-                                // Encontro de combate
-                                CombatSystem.startCombat(scanner, personagem);
-                                // Após o combate, atualize o nível da dungeon se necessário
-                            } else {
-                                // Evento não combativo
-                                pveInstance.nonCombatEvent(personagem, scanner);
-                            }
-                            break;
-                        default:
-                            slowConsole.imprimirDevagar("Tecla não reconhecida.");
+                    if (randomEvent < 7) { // 3/12 chance para combate (ajustado para 5 eventos de combate possíveis)
+                        // Encontro de combate
+                        CombatSystem.startCombat(scanner, personagem);
+                        // Após o combate, atualize o nível da dungeon se necessário
+                    } else {
+                        // Evento não combativo
+                        pveInstance.nonCombatEvent(personagem, scanner);
                     }
-                }
+                    break;
+                default:
+                    slowConsole.imprimirDevagar("Tecla não reconhecida.");
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (reader != null) {
-                try {
-                    reader.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (terminal != null) {
-                try {
-                    terminal.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-    private static String getKeyFromCodePoint(int codePoint) {
-        // Converta o código do ponto para a tecla correspondente
-        // Dependendo do terminal, você pode precisar ajustar isso
-        switch (codePoint) {
-            case 119: return "up";    // Códigos de teclas
-            case 115: return "down";
-            case 97: return "right";
-            case 100: return "left";
-            default: return null;
         }
     }
 

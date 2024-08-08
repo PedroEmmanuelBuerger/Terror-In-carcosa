@@ -3,6 +3,7 @@ package rpg.Scenario.Dungeon;
 import rpg.Character.Classes.Attributes;
 import rpg.Monsters.Mob;
 import rpg.Monsters.Bosses.KingDragon;
+import rpg.Utils.Messages.Portraits;
 import rpg.Utils.Messages.Start;
 
 public class Dungeon2 extends DungeonBase {
@@ -13,14 +14,17 @@ public class Dungeon2 extends DungeonBase {
             return new KingDragon("Lorde Rei Dragão", 550, 45, 60, "O FOGO CONSUMIRÁ A REALIDADE!");
         } else {
             int randomMonster = random.nextInt(5);
-            return switch (randomMonster) {
-                case 0 -> new Mob("Devorador de Luz", 80, 15, 25, "A LUZ SERÁ DEVORADA!", 20, 20);
-                case 1 -> new Mob("Lobisomem das Profundezas", 110, 27, 12, "A NOITE SE FECHA SOBRE VOCÊ!", 25, 25);
-                case 2 -> new Mob("Demônio do Caos", 90, 40, 0, "SEJA CONSUMIDO PELA ESCURIDÃO!", 30, 30);
-                case 3 -> new Mob("Cavalo das Sombras", 70, 25, 30, "SUA EXISTÊNCIA É INSIGNIFICANTE!", 25, 25);
-                case 4 -> new Mob("Aranha do Abismo", 75, 17, 20, "A TEIA DO CAOS SE FECHA!", 18, 18);
-                default -> new Mob("Devorador de Luz", 80, 15, 25, "A LUZ SERÁ DEVORADA!", 20, 20);
-            };
+            Mob mob;
+            switch (randomMonster) {
+                case 0 -> mob = new Mob("Devorador de Luz", 80, 15, 25, "A LUZ SERÁ DEVORADA!", 20, 20, Portraits.PortraitDevoradorDeLuz());
+                case 1 -> mob = new Mob("Lobisomem das Profundezas", 110, 27, 12, "A NOITE SE FECHA SOBRE VOCÊ!", 25, 25, Portraits.PortraitLobisomemDasProfundezas());
+                case 2 -> mob = new Mob("Demônio do Caos", 90, 40, 0, "SEJA CONSUMIDO PELA ESCURIDÃO!", 30, 30, Portraits.PortraitDemonioDoCaos());
+                case 3 -> mob = new Mob("Cavalo das Sombras", 70, 25, 30, "SUA EXISTÊNCIA É INSIGNIFICANTE!", 25, 25, Portraits.PortraitCavaloDasSombras());
+                case 4 -> mob = new Mob("Aranha do Abismo", 75, 17, 20, "A TEIA DO CAOS SE FECHA!", 18, 18, Portraits.PortraitAranhaDoAbismo());
+                default -> mob = new Mob("Devorador de Luz", 80, 15, 25, "A LUZ SERÁ DEVORADA!", 20, 20, Portraits.PortraitDevoradorDeLuz());
+            }
+            mob.generateTechinicalInfo(); // Exibe as informações técnicas incluindo o retrato
+            return mob;
         }
     }
 

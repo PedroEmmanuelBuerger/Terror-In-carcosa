@@ -4,6 +4,7 @@ import rpg.Character.Classes.Attributes;
 import rpg.Monsters.Bosses.KnightOfFear;
 import rpg.Monsters.Mob;
 import rpg.Utils.Messages.End;
+import rpg.Utils.Messages.Portraits;
 import rpg.Utils.Messages.Start;
 
 public class Dungeon3 extends DungeonBase {
@@ -15,13 +16,16 @@ public class Dungeon3 extends DungeonBase {
             return new KnightOfFear("O Rei de Amarelo", 1000, 60, 80, "O VAZIO CHEGOU PARA VOCÊ...");
         } else {
             int randomMonster = random.nextInt(5);
-            return switch (randomMonster) {
-                case 1 -> new Mob("Colosso das Sombras", 150, 40, 8, "A ESCURIDÃO ME PERMEIA!", 50, 50);
-                case 2 -> new Mob("Olho das Abissais Profundezas", 170, 25, 30, "SEU DESTINO É O VÍNCULO!", 65, 65);
-                case 3 -> new Mob("Rito das Trevas", 130, 50, 15, "A FOSSA DA EXISTÊNCIA TE CHAMA!", 60, 60);
-                case 4 -> new Mob("Cavaleiro da Névoa", 180, 30, 30, "EU SEREI O PORTADOR DA NÉVOA!", 85, 85);
-                default -> new Mob("Golem da Ruína", 120, 30, 20, "SUA ALMA SERÁ ANEXADA AO ABISMO!", 40, 40);
-            };
+            Mob mob;
+            switch (randomMonster) {
+                case 1 -> mob = new Mob("Colosso das Sombras", 150, 40, 8, "A ESCURIDÃO ME PERMEIA!", 50, 50, Portraits.PortraitColossoDasSombras());
+                case 2 -> mob = new Mob("Olho das Abissais Profundezas", 170, 25, 30, "SEU DESTINO É O VÍNCULO!", 65, 65, Portraits.PortraitOlhoDasAbissaisProfundezas());
+                case 3 -> mob = new Mob("Rito das Trevas", 130, 50, 15, "A FOSSA DA EXISTÊNCIA TE CHAMA!", 60, 60, Portraits.PortraitRitoDasTrevas());
+                case 4 -> mob = new Mob("Cavaleiro da Névoa", 180, 30, 30, "EU SEREI O PORTADOR DA NÉVOA!", 85, 85, Portraits.PortraitCavaleiroDaNevoa());
+                default -> mob = new Mob("Golem da Ruína", 120, 30, 20, "SUA ALMA SERÁ ANEXADA AO ABISMO!", 40, 40, Portraits.PortraitGolemDaRuina());
+            }
+            mob.generateTechinicalInfo(); // Exibe as informações técnicas incluindo o retrato
+            return mob;
         }
     }
 
