@@ -20,7 +20,7 @@ public class Mob extends Attributes {
     @Override
     public void attack(Attributes target) {
         int damage = this.getAttack();
-        slowConsole.imprimirDevagar(this.getName() + " ataca " + target.getName() + " com suas garras afiadas, causando " + damage + " de dano!");
+        slowConsole.imprimirDevagar(this.getName() + " ataca " + target.getName() + " com suas ferramentas afiadas, causando " + damage + " de dano!");
         target.takeDamage(damage);
     }
 

@@ -190,7 +190,7 @@ public abstract class DungeonBase implements Dungeon {
         if (personagem instanceof Mage) {
             slowConsole.imprimirDevagar("2 - Livro de magias");
         } else if (personagem instanceof Necromancer) {
-            slowConsole.imprimirDevagar("2 - Invocar Esqueleto (Custo de mana: 15)");
+            slowConsole.imprimirDevagar("2 - Invocar Imp (Custo de mana: 15)");
         } else {
             slowConsole.imprimirDevagar("2 - Ataque Especial");
         }

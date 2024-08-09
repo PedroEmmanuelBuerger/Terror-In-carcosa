@@ -10,6 +10,7 @@ public class KnightOfFear extends Attributes {
     public KnightOfFear(String name, int healthbar, int attack, int specialAttack, String battleCry, String portrait) {
         super(name, healthbar, attack, specialAttack, battleCry);
         this.setExp(150);
+        this.setGold(2000);
         this.portrait = portrait;
     }
 

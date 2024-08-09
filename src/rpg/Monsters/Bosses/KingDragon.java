@@ -10,6 +10,7 @@ public class KingDragon extends Attributes {
     public KingDragon(String name, int healthbar, int attack, int specialAttack, String battleCry, String portrait) {
         super(name, healthbar, attack, specialAttack, battleCry);
         this.setExp(70);
+        this.setGold(1000);
         this.portrait = portrait;
     }
 

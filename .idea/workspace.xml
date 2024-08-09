@@ -9,7 +9,72 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Refatorando + removewndo warnings" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Refatorando + removewndo warnings">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-ant-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-ant-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-astbuilder-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-astbuilder-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-cli-commons-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-cli-commons-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-cli-picocli-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-cli-picocli-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-console-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-console-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-contracts-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-contracts-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-datetime-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-datetime-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-dateutil-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-dateutil-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-docgenerator-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-docgenerator-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-ginq-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-ginq-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-groovydoc-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-groovydoc-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-groovysh-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-groovysh-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-jmx-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-jmx-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-json-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-json-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-jsr223-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-jsr223-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-macro-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-macro-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-macro-library-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-macro-library-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-nio-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-nio-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-servlet-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-servlet-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-sql-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-sql-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-swing-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-swing-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-templates-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-templates-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-test-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-test-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-test-junit5-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-test-junit5-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-testng-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-testng-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-toml-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-toml-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-typecheckers-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-typecheckers-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-xml-4.0.14-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-xml-4.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/Ghazkull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/Ghazkull.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KingDragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KingDragon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KnightOfFear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KnightOfFear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Mob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

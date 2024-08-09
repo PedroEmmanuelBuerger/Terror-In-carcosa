@@ -9,6 +9,7 @@ public class Ghazkull extends Attributes {
     public Ghazkull(String name, int healthbar, int attack, int specialAttack, String battleCry,String portrait) {
         super(name, healthbar, attack, specialAttack, battleCry);
         this.setExp(35);
+        this.setGold(500);
         this.portrait = portrait;
     }
     @Override
