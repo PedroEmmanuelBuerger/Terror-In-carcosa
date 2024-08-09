@@ -7,7 +7,7 @@ public class Bayoneta implements Weapon {
 
     @Override
     public int getPrice() {
-        return 15;
+        return 13;
     }
 
     public Bayoneta() {

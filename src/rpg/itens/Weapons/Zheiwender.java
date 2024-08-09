@@ -7,7 +7,7 @@ public class Zheiwender implements Weapon {
 
     @Override
     public int getPrice() {
-        return 15;
+        return 25;
     }
     public Zheiwender() {
         Random random = new Random();

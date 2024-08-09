@@ -7,7 +7,7 @@ public class Bible implements Weapon {
 
     @Override
     public int getPrice() {
-        return 15;
+        return 55;
     }
     public Bible() {
         Random random = new Random();

@@ -7,7 +7,7 @@ public class StickOfTruth implements Weapon {
 
     @Override
     public int getPrice() {
-        return 15;
+        return 50;
     }
     public StickOfTruth() {
         Random random = new Random();

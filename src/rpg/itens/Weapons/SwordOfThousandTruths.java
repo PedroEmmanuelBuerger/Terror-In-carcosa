@@ -7,7 +7,7 @@ public class SwordOfThousandTruths implements Weapon {
 
     @Override
     public int getPrice() {
-        return 15;
+        return 50;
     }
     public SwordOfThousandTruths() {
         Random random = new Random();

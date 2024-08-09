@@ -7,7 +7,7 @@ public class DaggersOfSouls implements Weapon {
 
     @Override
     public int getPrice() {
-        return 15;
+        return 25;
     }
     public DaggersOfSouls() {
         Random random = new Random();

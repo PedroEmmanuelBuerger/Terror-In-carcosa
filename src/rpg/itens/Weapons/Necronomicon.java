@@ -7,7 +7,7 @@ public class Necronomicon implements Weapon {
 
     @Override
     public int getPrice() {
-        return 15;
+        return 1000;
     }
     public Necronomicon() {
         Random random = new Random();

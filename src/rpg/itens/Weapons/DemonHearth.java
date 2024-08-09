@@ -7,7 +7,7 @@ public class DemonHearth implements Weapon {
 
     @Override
     public int getPrice() {
-        return 15;
+        return 30;
     }
     public DemonHearth() {
         Random random = new Random();

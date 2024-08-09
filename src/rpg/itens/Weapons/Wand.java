@@ -7,7 +7,7 @@ public class Wand implements Weapon {
 
     @Override
     public int getPrice() {
-        return 15;
+        return 25;
     }
     public Wand() {
         Random random = new Random();

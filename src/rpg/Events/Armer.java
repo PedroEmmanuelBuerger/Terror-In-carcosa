@@ -47,12 +47,12 @@ public class Armer implements NonCombatEvent {
 
             for (int i = 0; i < weaponsForSale.size(); i++) {
                 Weapon weapon = weaponsForSale.get(i);
-                slowConsole.imprimirDevagar((i + 1) + ". " + weapon.getName() + " - " + weapon.getPrice() + " Ouro");
+                slowConsole.imprimirDevagar((i + 1) + ". " + weapon.getName() + " - " + weapon.getPrice() + " Ouro - Dano: " + weapon.attack());
             }
             slowConsole.imprimirDevagar((weaponsForSale.size() + 1) + ". Voltar ao Jogo");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Limpar o buffer do scanner
+            scanner.nextLine();
 
             if (choice == weaponsForSale.size() + 1) {
                 shopping = false;
