@@ -43,7 +43,7 @@ public class Pve {
 
     private void nonCombatEvent(Attributes personagem) {
         Random random = new Random();
-        int eventType = random.nextInt(14);
+        int eventType = random.nextInt(15);
 
         NonCombatEvent event = null;
         switch (eventType) {
@@ -100,6 +100,9 @@ public class Pve {
                 break;
             case 13:
                 event = new NewArmor();
+                break;
+            case 14:
+                event = new ArmorShopper();
                 break;
             default:
                 new Pause();
