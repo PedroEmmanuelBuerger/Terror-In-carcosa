@@ -1,11 +1,12 @@
 package rpg.Mode;
 
-import rpg.Mode.Campaign.Events.*;
 import rpg.Character.Classes.Attributes;
-import rpg.Character.Classes.Mage;
-import rpg.Mode.Campaign.Dungeon.CombatSystem;
-import rpg.Utils.SlowConsole;
 import rpg.Character.CharacterCreation.CreatePlayer;
+import rpg.Character.Classes.Mage;
+import rpg.Mode.Campaign.Events.*;
+import rpg.Mode.Coops.Dugeon.Dungeon1Coop;
+import rpg.Mode.Coops.Dugeon.DungeonCoop;
+import rpg.Utils.SlowConsole;
 import rpg.itens.Specials.SpeelBook;
 
 import java.util.ArrayList;
@@ -38,16 +39,14 @@ public class Coop {
         SlowConsole slowConsole = new SlowConsole();
 
         while (jogadores.stream().anyMatch(j -> j.getHealthbar() > 0)) {
-            slowConsole.imprimirDevagar("Movão-se![W,A,S,D]");
+            slowConsole.imprimirDevagar("Movam-se![W,A,S,D]");
             String key = scanner.nextLine().toLowerCase().trim();
 
             if (key.equals("w") || key.equals("a") || key.equals("s") || key.equals("d")) {
                 int randomEvent = random.nextInt(12);
 
                 if (randomEvent < 6) {
-                    for (Attributes jogador : jogadores) {
-                        CombatSystem.startCombat(scanner, jogador);
-                    }
+                    coopInstance.startCombat(scanner, jogadores);
                 } else {
                     for (Attributes jogador : jogadores) {
                         coopInstance.nonCombatEvent(jogador);
@@ -55,6 +54,25 @@ public class Coop {
                 }
             }
         }
+    }
+
+    private void startCombat(Scanner scanner, List<Attributes> jogadores) {
+        DungeonCoop dungeon = createDungeon(jogadores);
+        dungeon.startCombat(scanner, jogadores);
+    }
+
+    private DungeonCoop createDungeon(List<Attributes> jogadores) {
+        int levelDungeon = jogadores.get(0).getLevelDungeon();
+        for (Attributes jogador : jogadores) {
+            if (jogador.getLevelDungeon() != levelDungeon) {
+                throw new IllegalStateException("Todos os jogadores devem estar no mesmo nível de dungeon.");
+            }
+        }
+
+        return switch (levelDungeon) {
+            case 1 -> new Dungeon1Coop();
+            default -> throw new IllegalStateException("Dungeon não encontrada para o nível: " + levelDungeon);
+        };
     }
 
     private void nonCombatEvent(Attributes jogador) {
