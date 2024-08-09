@@ -1,4 +1,4 @@
-package rpg.Campaign.Dungeon;
+package rpg.Mode.Campaign.Dungeon;
 import rpg.Character.Classes.Attributes;
 
 import java.util.Scanner;

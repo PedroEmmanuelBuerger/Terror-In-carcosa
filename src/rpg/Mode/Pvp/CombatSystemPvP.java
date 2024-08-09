@@ -1,8 +1,7 @@
-package rpg.PvpMode;
+package rpg.Mode.Pvp;
 
 import rpg.Character.Classes.Attributes;
 import rpg.Character.Classes.Healer;
-import rpg.Character.Classes.Mage;
 import rpg.Character.Classes.Necromancer;
 import rpg.Character.Classes.Warrior;
 import rpg.Utils.CombatUtils;

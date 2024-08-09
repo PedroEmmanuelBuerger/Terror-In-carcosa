@@ -2,12 +2,12 @@ package rpg.Mode;
 
 import rpg.Character.Classes.Attributes;
 import rpg.Character.CharacterCreation.CreatePlayer;
-import rpg.PvpMode.CombatSystemPvP;
+import rpg.Mode.Pvp.CombatSystemPvP;
 import rpg.Utils.SlowConsole;
 
 import java.util.Scanner;
 
-public class Pvp {
+public class Pvps {
     public static void startBattle() {
         Scanner scanner = new Scanner(System.in);
         SlowConsole slowConsole = new SlowConsole();

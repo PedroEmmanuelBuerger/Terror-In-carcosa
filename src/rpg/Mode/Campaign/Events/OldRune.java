@@ -1,4 +1,4 @@
-package rpg.Campaign.Events;
+package rpg.Mode.Campaign.Events;
 
 import rpg.Character.Classes.Attributes;
 import rpg.Character.Classes.Healer;

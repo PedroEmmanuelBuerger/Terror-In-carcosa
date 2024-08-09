@@ -1,4 +1,4 @@
-package rpg.Campaign.Dungeon;
+package rpg.Mode.Campaign.Dungeon;
 
 import rpg.Character.Classes.*;
 import rpg.Monsters.Bosses.Ghazkull;

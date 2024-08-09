@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Refatorando toda a estrutura de código + começo implantação PvP">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando funções necromante pvp + refatoração">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Pvp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Pvp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/PvpMode/CombatSystemPvP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/PvpMode/CombatSystemPvP.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,14 +119,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Adicionando 2 armas novas por classe + evento de trocar de arma + balanceamento">
-      <option name="closed" value="true" />
-      <created>1722251162607</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1722251162607</updated>
     </task>
     <task id="LOCAL-00024" summary="Adicionando Classe Necromante + 2 novas armas + arma inicial + eventos para necromante + mecanica de invocação + balanceamento">
       <option name="closed" value="true" />
@@ -514,7 +504,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723223663830</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Adicionando funções necromante pvp + refatoração">
+      <option name="closed" value="true" />
+      <created>1723226620778</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1723226620778</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -529,7 +527,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionando poção de mana + mudanças no shooper" />
     <MESSAGE value="Refatorando TODO o codigo" />
     <MESSAGE value="Arrumando bug que gold vinha negativo em certos casos" />
     <MESSAGE value="Liberando Opção invocar esqueleto pause" />
@@ -554,7 +551,8 @@
     <MESSAGE value="Adicionando loja de armadura" />
     <MESSAGE value="começando a implementação do modo Coop e Pvp" />
     <MESSAGE value="Refatorando toda a estrutura de código + começo implantação PvP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refatorando toda a estrutura de código + começo implantação PvP" />
+    <MESSAGE value="Adicionando funções necromante pvp + refatoração" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando funções necromante pvp + refatoração" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

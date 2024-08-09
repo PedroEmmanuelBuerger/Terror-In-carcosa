@@ -1,9 +1,9 @@
 package rpg.Mode;
 
-import rpg.Campaign.Events.*;
+import rpg.Mode.Campaign.Events.*;
 import rpg.Character.Classes.Attributes;
 import rpg.Character.Classes.Mage;
-import rpg.Campaign.Dungeon.CombatSystem;
+import rpg.Mode.Campaign.Dungeon.CombatSystem;
 import rpg.Utils.SlowConsole;
 import rpg.Character.CharacterCreation.CreatePlayer;
 import rpg.itens.Specials.SpeelBook;

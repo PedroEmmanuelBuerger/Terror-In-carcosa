@@ -1,4 +1,4 @@
-package rpg.Campaign.Events;
+package rpg.Mode.Campaign.Events;
 
 import rpg.Utils.SlowConsole;
 import rpg.Character.Classes.Attributes;
