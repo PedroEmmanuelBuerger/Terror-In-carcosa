@@ -17,9 +17,7 @@ public class Shooper implements NonCombatEvent {
     private List<Item> itemsForSale;
 
     public Shooper() {
-        // Inicializa a lista de itens que o vendedor oferece
         itemsForSale = new ArrayList<>();
-        // Adiciona itens para venda
         itemsForSale.add(new Potion("Poção de Vida Menor", 15, 50));
         itemsForSale.add(new Potion("Poção de Vida Média", 25, 100));
         itemsForSale.add(new Potion("Poção de Vida Maior", 50, 200));
@@ -29,7 +27,6 @@ public class Shooper implements NonCombatEvent {
     public void executeEvent(Attributes personagem) {
         slowConsole.imprimirDevagar("=== Você encontrou um vendedor! ===");
         boolean shopping = true;
-        // Adiciona poções de mana se a classe do personagem for Necromancer, Mage ou Healer
         if (personagem instanceof Necromancer || personagem instanceof Mage || personagem instanceof Healer) {
             itemsForSale.add(new ManaPotion("Poção de Mana Menor", 20, 30));
             itemsForSale.add(new ManaPotion("Poção de Mana Média", 35, 60));
@@ -37,11 +34,9 @@ public class Shooper implements NonCombatEvent {
         }
 
         while (shopping) {
-            // Exibe o ouro atual do jogador
             slowConsole.imprimirDevagar("Você tem " + personagem.getGold() + " Ouro.");
             slowConsole.imprimirDevagar("=== Itens à venda ===");
 
-            // Exibe os itens disponíveis para venda
             for (int i = 0; i < itemsForSale.size(); i++) {
                 Item item = itemsForSale.get(i);
                 slowConsole.imprimirDevagar((i + 1) + ". " + item.getName() + " - " + item.getPrice() + " Ouro");
@@ -49,18 +44,16 @@ public class Shooper implements NonCombatEvent {
             slowConsole.imprimirDevagar((itemsForSale.size() + 1) + ". Voltar ao Jogo");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Limpar o buffer do scanner
+            scanner.nextLine();
 
             if (choice == itemsForSale.size() + 1) {
                 shopping = false; // Sai do loop para voltar ao jogo
             } else if (choice > 0 && choice <= itemsForSale.size()) {
-                // Processa a compra do item selecionado
                 Item selectedItem = itemsForSale.get(choice - 1);
                 buyItem(personagem, selectedItem);
-                // Atualiza a exibição dos itens após a compra
                 if (itemsForSale.isEmpty()) {
                     slowConsole.imprimirDevagar("Não há mais itens à venda.");
-                    shopping = false; // Sai do loop se não há mais itens à venda
+                    shopping = false;
                 }
             } else {
                 slowConsole.imprimirDevagar("Opção inválida. Tente novamente.");
@@ -72,7 +65,7 @@ public class Shooper implements NonCombatEvent {
         if (personagem.getGold() >= item.getPrice()) {
             personagem.setGold(personagem.getGold() - item.getPrice());
             personagem.addItemToAbyssalInventory(item);
-            itemsForSale.remove(item); // Remove o item da lista de itens à venda
+            itemsForSale.remove(item);
             slowConsole.imprimirDevagar("Você comprou " + item.getName() + " por " + item.getPrice() + " Ouro.");
         } else {
             slowConsole.imprimirDevagar("Ouro insuficiente para comprar " + item.getName() + ".");

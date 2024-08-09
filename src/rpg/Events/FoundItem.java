@@ -12,22 +12,17 @@ public class FoundItem implements NonCombatEvent {
 
     @Override
     public void executeEvent(Attributes personagem) {
-        // Cria uma lista de potions disponíveis
         Potion[] potions = getAvailablePotions();
 
-        // Seleciona uma potion aleatória da lista
         Random random = new Random();
         Potion foundPotion = potions[random.nextInt(potions.length)];
 
-        // Exibe informações sobre a poção encontrada
         slowConsole.imprimirDevagar("Você encontrou uma poção antiga e macabra: " + foundPotion.getName() + ". Ela pode curar " + foundPotion.getHealingAmount() + " pontos de vida.");
 
-        // Pergunta ao jogador se deseja adicionar a poção à bag
         slowConsole.imprimirDevagar("Deseja adicionar esta poção ao seu inventário sinistro? (s/n)");
         Scanner scanner = new Scanner(System.in);
         String choice = scanner.nextLine();
 
-        // Atualiza a bag do personagem com base na escolha
         if (choice.equalsIgnoreCase("s")) {
             personagem.addItemToAbyssalInventory(foundPotion);
             slowConsole.imprimirDevagar("Você adicionou a poção à sua bag, um item que pode ser útil nas trevas.");

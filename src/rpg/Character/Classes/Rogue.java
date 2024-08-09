@@ -17,7 +17,7 @@ public class Rogue extends Attributes {
         this.setClasses("Sombra Oculta");
         Weapon weapon = new Daggers(0);
         setWeapon(weapon);
-        this.dodgeSkills = BASE_DODGE_SKILLS; // Inicializa a habilidade de esquiva com o valor base
+        this.dodgeSkills = BASE_DODGE_SKILLS;
     }
 
     public double getDodgeSkills() {
@@ -37,6 +37,7 @@ public class Rogue extends Attributes {
         } else {
             this.setHealthbar(currentHealth - damage);
             slowConsole.imprimirDevagar(getName() + " foi atingido e sofreu " + damage + " de dano!");
+            getHealth(this);
             if (this.getHealthbar() <= 0) {
                 slowConsole.imprimirDevagar(getName() + " caiu nas trevas eternas...");
             }

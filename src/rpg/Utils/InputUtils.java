@@ -7,10 +7,10 @@ public class InputUtils {
     public static int lerInteiro(Scanner scanner, String mensagemErro) {
         while (!scanner.hasNextInt()) {
             System.out.println(mensagemErro);
-            scanner.next(); // Limpa a entrada inválida
+            scanner.next();
         }
         int escolha = scanner.nextInt();
-        scanner.nextLine(); // Consumir a nova linha pendente
+        scanner.nextLine();
         return escolha;
     }
 }

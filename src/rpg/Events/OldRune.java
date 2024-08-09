@@ -13,7 +13,7 @@ public class OldRune implements NonCombatEvent {
 
     @Override
     public void executeEvent(Attributes personagem) {
-        int manaRecovered = random.nextInt(10) + 10; // Recupera entre 10 a 19 de mana
+        int manaRecovered = random.nextInt(10) + 10;
         if (personagem instanceof Mage) {
             ((Mage) personagem).setMana(((Mage) personagem).getMana() + 5);
             personagem.setSpecial(personagem.getSpecial() + 5);

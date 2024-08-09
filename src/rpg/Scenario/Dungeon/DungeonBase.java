@@ -81,7 +81,7 @@ public abstract class DungeonBase implements Dungeon {
                 } else if (personagem instanceof Warrior) {
                     ((Warrior) personagem).defend();
                 } else {
-                    viewOrUseItems(scanner, personagem); // Se o personagem não for Healer, use esta opção
+                    viewOrUseItems(scanner, personagem);
                 }
                 break;
             case 7:
@@ -107,14 +107,14 @@ public abstract class DungeonBase implements Dungeon {
         slowConsole.imprimirDevagar("2 - Usar Item");
 
         int choice = getPlayerAction(scanner);
-        scanner.nextLine(); // Consome a nova linha remanescente
+        scanner.nextLine();
 
         if (choice == 1) {
             for (Item item : personagem.getAbyssalInventory()) {
                 slowConsole.imprimirDevagar("- " + item.getName());
             }
         } else if (choice == 2) {
-            useItem(scanner, personagem); // Chama a lógica correta para usar o item
+            useItem(scanner, personagem);
         } else {
             slowConsole.imprimirDevagar("Opção inválida. Você perdeu a vez.");
         }
@@ -122,13 +122,12 @@ public abstract class DungeonBase implements Dungeon {
 
     private void useItem(Scanner scanner, Attributes personagem) {
         slowConsole.imprimirDevagar("Escolha o item para usar:");
-        // Exibe itens disponíveis na bag
         for (Item item : personagem.getAbyssalInventory()) {
             slowConsole.imprimirDevagar("- " + item.getName());
         }
 
         slowConsole.imprimirDevagar("Digite o nome do item:");
-        String itemName = scanner.nextLine().trim(); // Captura a entrada e remove espaços extras
+        String itemName = scanner.nextLine().trim();
 
         Item itemToUse = null;
         for (Item item : personagem.getAbyssalInventory()) {
@@ -139,7 +138,7 @@ public abstract class DungeonBase implements Dungeon {
         }
 
         if (itemToUse != null) {
-            personagem.useItem(itemToUse); // Usa o método useItem da classe Attributes
+            personagem.useItem(itemToUse);
         } else {
             slowConsole.imprimirDevagar("Item não encontrado na bag.");
         }

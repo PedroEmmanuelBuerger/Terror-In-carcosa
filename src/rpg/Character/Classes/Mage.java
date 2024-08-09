@@ -16,7 +16,7 @@ public class Mage extends Attributes {
         super(name, healthbar, attack, special, quote);
         this.mana = mana;
         this.maxMana = mana;
-        this.speelBook = new SpeelBook(); // Inicializa o SpeelBook
+        this.speelBook = new SpeelBook();
         this.setClasses("Arcanista das Sombras");
         Weapon weapon = new Staff(0);
         setWeapon(weapon);
@@ -46,7 +46,7 @@ public class Mage extends Attributes {
     public void attack(Attributes enemy) {
         int damage = this.getAttack();
         CriticChance criticChance = new CriticChance(damage);
-        damage = criticChance.chanceCritic(); // Corrigir chamada ao método chanceCritic
+        damage = criticChance.chanceCritic();
         slowConsole.imprimirDevagar(this.getName() + " lançou uma esfera de fogo negra contra " + enemy.getName() + ", causando " + damage + " de dano!");
         enemy.takeDamage(damage);
         if (!enemy.isAlive()) {
@@ -55,7 +55,7 @@ public class Mage extends Attributes {
             slowConsole.imprimirDevagar("Você absorveu " + enemy.getExp() + " de EXP das profundezas do abismo!");
             slowConsole.imprimirDevagar(enemy.getName() + " deixou para trás " + enemy.getGold() + " de Ouro Profano!");
             gainGold(enemy.getGold());
-            gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
+            gainExp(enemy.getExp());
         }
     }
 
@@ -85,18 +85,15 @@ public class Mage extends Attributes {
 
     @Override
     public void gainExp(int expGain) {
-        setExp(getExp() + expGain); // Adiciona a experiência ganha
+        setExp(getExp() + expGain);
 
-        // Verifica se o personagem subiu de nível
         while (getExp() >= getLevel() * 10) {
-            int levelsGained = getExp() / (getLevel() * 10); // Quantos níveis foram ganhos
-            setExp(getExp() % (getLevel() * 10)); // Experiência restante após subir de nível
+            int levelsGained = getExp() / (getLevel() * 10);
+            setExp(getExp() % (getLevel() * 10));
 
-            // Aumenta o nível do personagem
             setLevel(getLevel() + levelsGained);
             slowConsole.imprimirDevagar(getName() + " ascendeu nas artes arcanas! Nível atual é: " + getLevel());
 
-            // Aumenta os atributos ao subir de nível
             setSpecial(getSpecial() + 5 * levelsGained);
             slowConsole.imprimirDevagar(getName() + " aumentou " + (5 * levelsGained) + " de Poder Arcanos!");
             setHealthbar(getHealthbar() + 5 * levelsGained);

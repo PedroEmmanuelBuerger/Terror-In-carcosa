@@ -12,7 +12,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Pve {
-    private boolean specialEncounterOccurred = false; // Flag para rastrear o evento SpecialEncounter
+    private boolean specialEncounterOccurred = false;
 
     public static void startBattle() {
         Random random = new Random();
@@ -20,24 +20,21 @@ public class Pve {
         Attributes personagem = CreatePlayer.createPlayer(scanner);
         personagem.getTechnicalInfo();
 
-        Pve pveInstance = new Pve(); // Crie uma instância de Pve para rastrear eventos
-        personagem.setLevelDungeon(1); // Defina o nível da dungeon inicial como 1
+        Pve pveInstance = new Pve();
+        personagem.setLevelDungeon(1);
 
         SlowConsole slowConsole = new SlowConsole();
 
         while (personagem.getHealthbar() > 0) {
             slowConsole.imprimirDevagar("Mova-se![W,A,S,D]");
-            String key = scanner.nextLine().toLowerCase().trim(); // Leia a entrada do jogador e remova espaços em branco
+            String key = scanner.nextLine().toLowerCase().trim();
 
             if (key.equals("w") || key.equals("a") || key.equals("s") || key.equals("d")) {
-                int randomEvent = random.nextInt(12); // Atualizado para 12 eventos possíveis
+                int randomEvent = random.nextInt(12);
 
-                if (randomEvent < 7) { // 3/12 chance para combate (ajustado para 5 eventos de combate possíveis)
-                    // Encontro de combate
+                if (randomEvent < 7) {
                     CombatSystem.startCombat(scanner, personagem);
-                    // Após o combate, atualize o nível da dungeon se necessário
                 } else {
-                    // Evento não combativo
                     pveInstance.nonCombatEvent(personagem);
                 }
             }
@@ -47,22 +44,22 @@ public class Pve {
     private void nonCombatEvent(Attributes personagem) {
         SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
-        int eventType = random.nextInt(12); // Atualizado para 12 eventos possíveis
+        int eventType = random.nextInt(15);
 
         NonCombatEvent event = null;
         switch (eventType) {
             case 0:
                 if (personagem instanceof Mage mage) {
                     if (!specialEncounterOccurred) {
-                        SpeelBook speelBookactual = mage.getSpeelBook(); // Verifica se o evento já ocorreu
+                        SpeelBook speelBookactual = mage.getSpeelBook();
                         event = new SpecialEncounter(speelBookactual);
-                        specialEncounterOccurred = true; // Marca o evento como ocorrido
+                        specialEncounterOccurred = true;
                     }
                 } else {
-                    SpeelBook speelBook = new SpeelBook(); // Crie o SpeelBook aqui para que ele possa ser usado nos eventos
-                    if (!specialEncounterOccurred) { // Verifica se o evento já ocorreu
+                    SpeelBook speelBook = new SpeelBook();
+                    if (!specialEncounterOccurred) {
                         event = new SpecialEncounter(speelBook);
-                        specialEncounterOccurred = true; // Marca o evento como ocorrido
+                        specialEncounterOccurred = true;
                     }
                 }
                 break;
@@ -85,23 +82,25 @@ public class Pve {
                 event = new OldRune();
                 break;
             case 7:
-                event = new FoundItem(); // Adiciona o novo evento de encontrar item
+                event = new FoundItem();
                 break;
             case 8:
-                event = new FindGoldEvent(random.nextInt(101) + 50); // Encontrar entre 50 e 150 de ouro
+                event = new FindGoldEvent(random.nextInt(101) + 50);
                 break;
             case 9:
-                event = new Shooper(); // Adiciona o evento de loja
+                event = new Shooper();
                 break;
-            // Menos probabilidade para os eventos mais raros
             case 10:
-                event = new NewWeapon(); // Adiciona o evento de arma
+                event = new NewWeapon();
                 break;
             case 11:
-                event = new Pause(); // Evento de pausa
+                event = new Pause();
+                break;
+            case 12:
+                event = new Armer();
                 break;
             default:
-                slowConsole.imprimirDevagar("Evento não reconhecido.");
+                new Pause();
                 return;
         }
 

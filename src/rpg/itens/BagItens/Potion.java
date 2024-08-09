@@ -19,18 +19,15 @@ public class Potion extends Item {
 
     @Override
     public void UseItem(Attributes player) {
-        // Obtém a quantidade de vida atual e a cura disponível
         int currentHealth = player.getHealthbar();
         int healingAmount = this.getHealingAmount();
         int maxHealth = player.getMaxHealthInitial();
 
-        // Calcula a nova vida, garantindo que não exceda o máximo permitido
         int newHealth = currentHealth + healingAmount;
         if (newHealth > maxHealth) {
-            newHealth = maxHealth; // A vida não pode exceder o máximo permitido
+            newHealth = maxHealth;
         }
 
-        // Atualiza a vida do jogador
         player.setHealthbar(newHealth);
         slowConsole.imprimirDevagar("Ao beber a poção, um frio gélido percorre seu corpo, como se algo antigo e desconhecido estivesse cuidando de seus ferimentos. Nova vida: " + newHealth);
     }

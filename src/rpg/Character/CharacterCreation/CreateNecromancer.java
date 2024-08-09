@@ -15,28 +15,21 @@ public class CreateNecromancer {
         int mana = 0;
         String frase = "";
 
-        // Loop para garantir entradas válidas
         boolean entradaValida = false;
         do {
-            // Resetando pontos de maxPoints a cada tentativa de criação
             int tempMaxPoints = 99;
 
             slowConsole.imprimirDevagar("Digite o nome do Necromante:");
-            nome = scanner.nextLine().trim(); // Remove espaços em branco extras
-
-            // Verifica se o nome contém números
+            nome = scanner.nextLine().trim();
             if (nome.matches(".*\\d.*")) {
                 slowConsole.imprimirDevagar("O nome não pode conter números. Digite novamente.");
                 continue;
             }
 
-            // Entrada para vida
             slowConsole.imprimirDevagar("Digite o valor da vida inicial do Necromante (máximo " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 vida = scanner.nextInt();
-                scanner.nextLine(); // Limpar o buffer
-
-                // Verifica se a vida digitada é válida
+                scanner.nextLine();
                 if (vida > tempMaxPoints) {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para a vida. Tente novamente.");
                     continue;
@@ -45,76 +38,65 @@ public class CreateNecromancer {
                     slowConsole.imprimirDevagar("Vida inicial não pode ser 0");
                     continue;
                 }
-                tempMaxPoints -= vida; // Atualiza tempMaxPoints após a entrada válida
+                tempMaxPoints -= vida;
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para a vida.");
-                scanner.nextLine(); // Limpar o buffer
+                scanner.nextLine();
                 continue;
             }
 
-            // Entrada para ataque
             slowConsole.imprimirDevagar("Digite o valor do ataque do Necromante (máximo " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 ataque = scanner.nextInt();
-                scanner.nextLine(); // Limpar o buffer
-
-                // Verifica se o ataque digitado é válido
+                scanner.nextLine();
                 if (ataque > tempMaxPoints) {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para o ataque. Tente novamente.");
                     continue;
                 }
-                tempMaxPoints -= ataque; // Atualiza tempMaxPoints após a entrada válida
+                tempMaxPoints -= ataque;
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para o ataque.");
-                scanner.nextLine(); // Limpar o buffer
+                scanner.nextLine();
                 continue;
             }
 
-            // Entrada para ataque especial
             slowConsole.imprimirDevagar("Digite o valor do ataque especial do Necromante (máximo " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 especial = scanner.nextInt();
-                scanner.nextLine(); // Limpar o buffer
-
-                // Verifica se o ataque especial digitado é válido
+                scanner.nextLine();
                 if (especial > tempMaxPoints) {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para o ataque especial. Tente novamente.");
                     continue;
                 }
                 tempMaxPoints -= especial;
-                especial = especial + 10;
+                especial += 10;
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para o ataque especial.");
-                scanner.nextLine(); // Limpar o buffer
+                scanner.nextLine();
                 continue;
             }
 
-            // Entrada para mana
             slowConsole.imprimirDevagar("Digite o valor da mana do Necromante (máximo " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 mana = scanner.nextInt();
-                scanner.nextLine(); // Limpar o buffer
-
-                // Verifica se a mana digitada é válida
+                scanner.nextLine();
                 if (mana > tempMaxPoints) {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para a mana. Tente novamente.");
                     continue;
                 }
-                mana += 5; // Adiciona pontos extras à mana
+                mana += 5;
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para a mana.");
-                scanner.nextLine(); // Limpar o buffer
+                scanner.nextLine();
                 continue;
             }
 
-            // Entrada para frase
             slowConsole.imprimirDevagar("Digite a frase de efeito do Necromante:");
-            frase = scanner.nextLine().trim(); // Remove espaços em branco extras
+            frase = scanner.nextLine().trim();
 
-            // Se todas as entradas forem válidas, sair do loop
             entradaValida = true;
-
         } while (!entradaValida);
+
         return new Necromancer(nome, vida, mana, ataque, especial, frase);
     }
 }

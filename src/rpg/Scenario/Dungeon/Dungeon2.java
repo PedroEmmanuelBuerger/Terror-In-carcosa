@@ -10,7 +10,7 @@ public class Dungeon2 extends DungeonBase {
     @Override
     protected Attributes createEnemy(Attributes personagem) {
         if (personagem.getLevel() >= 10) {
-            Start.EncounterLordDragonKing(); // Exibe a mensagem ao encontrar o Lorde Rei Dragão
+            Start.EncounterLordDragonKing();
             KingDragon boss = new KingDragon("Lorde Rei Dragão", 550, 45, 60, "O FOGO CONSUMIRÁ A REALIDADE!", Portraits.PortraitKingDragon());
             boss.generateTechinicalInfo();
             return boss;
@@ -24,7 +24,7 @@ public class Dungeon2 extends DungeonBase {
                 case 4 -> mob = new Mob("Aranha do Abismo", 75, 17, 20, "A TEIA DO CAOS SE FECHA!", 18, 18, Portraits.PortraitAranhaDoAbismo());
                 default -> mob = new Mob("Devorador de Luz", 80, 15, 25, "A LUZ SERÁ DEVORADA!", 20, 20, Portraits.PortraitDevoradorDeLuz());
             }
-            mob.generateTechinicalInfo(); // Exibe as informações técnicas incluindo o retrato
+            mob.generateTechinicalInfo();
             return mob;
         }
     }
@@ -32,8 +32,8 @@ public class Dungeon2 extends DungeonBase {
     @Override
     protected void onBossDefeated(Attributes personagem) {
         if (personagem.getLevelDungeon() == 2) {
-            Start.FinishDragonKing(); // Exibe a mensagem e avança para a próxima dungeon, se houver
+            Start.FinishDragonKing();
         }
-        personagem.setLevelDungeon(personagem.getLevelDungeon() + 1); // Atualiza o nível da dungeon
+        personagem.setLevelDungeon(personagem.getLevelDungeon() + 1);
     }
 }

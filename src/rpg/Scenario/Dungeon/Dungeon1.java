@@ -27,7 +27,7 @@ public class Dungeon1 extends DungeonBase {
                 case 4 -> mob = new Mob("Guardião dos Sepulcros", 45, 10, 7, "A escuridão vai te engolir!", 7, 7, Portraits.PortraitGuardiaoDosSepulcros());
                 default -> mob = new Mob("Sombra do Abismo", 35, 5, 13, "Sinto o cosmos chorando!", 5, 5, Portraits.PortraitSombraDoAbismo());
             }
-            mob.generateTechinicalInfo(); // Exibe as informações técnicas incluindo o retrato
+            mob.generateTechinicalInfo();
             return mob;
         }
     }
@@ -35,8 +35,8 @@ public class Dungeon1 extends DungeonBase {
     @Override
     protected void onBossDefeated(Attributes personagem) {
         if (personagem.getLevelDungeon() == 1) {
-            Start.FinishGhazkull(); // Exibe a mensagem e avança para a próxima dungeon
+            Start.FinishGhazkull();
         }
-        personagem.setLevelDungeon(personagem.getLevelDungeon() + 1); // Atualiza o nível da dungeon
+        personagem.setLevelDungeon(personagem.getLevelDungeon() + 1);
     }
 }

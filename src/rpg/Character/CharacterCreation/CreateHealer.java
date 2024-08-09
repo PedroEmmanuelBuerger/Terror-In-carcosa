@@ -17,25 +17,21 @@ public class CreateHealer {
 
         boolean entradaValida = false;
         do {
-            // Resetando pontos de maxPoints a cada tentativa de criação
             int tempMaxPoints = 99;
 
             slowConsole.imprimirDevagar("Digite o nome do Curandeiro:");
             nome = scanner.nextLine().trim(); // Remove espaços em branco extras
 
-            // Verifica se o nome contém números
             if (nome.matches(".*\\d.*")) {
                 slowConsole.imprimirDevagar("O nome não pode conter números. Digite novamente.");
                 continue;
             }
 
-            // Entrada para vida
             slowConsole.imprimirDevagar("Digite o valor da vida inicial do Curandeiro (restantes " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 vida = scanner.nextInt();
-                scanner.nextLine(); // Limpar o buffer
+                scanner.nextLine();
 
-                // Verifica se a vida digitada é válida
                 if (vida > tempMaxPoints) {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para a vida. Tente novamente.");
                     continue;
@@ -44,71 +40,65 @@ public class CreateHealer {
                     slowConsole.imprimirDevagar("Vida inicial não pode ser 0");
                     continue;
                 }
-                tempMaxPoints -= vida; // Atualiza tempMaxPoints após a entrada válida
-                vida += 5; // Adiciona pontos extras à vida
+                tempMaxPoints -= vida;
+                vida += 5;
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para a vida.");
-                scanner.nextLine(); // Limpar o buffer
+                scanner.nextLine();
                 continue;
             }
 
-            // Entrada para ataque
             slowConsole.imprimirDevagar("Digite o valor do ataque do Curandeiro (restantes " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 ataque = scanner.nextInt();
-                scanner.nextLine(); // Limpar o buffer
+                scanner.nextLine();
 
-                // Verifica se o ataque digitado é válido
                 if (ataque > tempMaxPoints) {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para o ataque. Tente novamente.");
                     continue;
                 }
-                tempMaxPoints -= ataque; // Atualiza tempMaxPoints após a entrada válida
+                tempMaxPoints -= ataque;
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para o ataque.");
-                scanner.nextLine(); // Limpar o buffer
+                scanner.nextLine();
                 continue;
             }
 
-            // Entrada para ataque especial
             slowConsole.imprimirDevagar("Digite o valor do ataque especial do Curandeiro (restantes " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 especial = scanner.nextInt();
-                scanner.nextLine(); // Limpar o buffer
+                scanner.nextLine();
 
-                // Verifica se o ataque especial digitado é válido
                 if (especial > tempMaxPoints) {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para o ataque especial. Tente novamente.");
                     continue;
                 }
-                tempMaxPoints -= especial; // Atualiza tempMaxPoints após a entrada válida
-                especial += 5; // Adiciona pontos extras ao ataque especial
+                tempMaxPoints -= especial;
+                especial += 5;
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para o ataque especial.");
-                scanner.nextLine(); // Limpar o buffer
+                scanner.nextLine();
                 continue;
             }
 
-            // Entrada para mana
             slowConsole.imprimirDevagar("Digite o valor da mana do Curandeiro (restantes " + tempMaxPoints + "):");
             if (scanner.hasNextInt()) {
                 mana = scanner.nextInt();
-                scanner.nextLine(); // Limpar o buffer
+                scanner.nextLine();
 
-                // Verifica se a mana digitada é válida
                 if (mana > tempMaxPoints) {
                     slowConsole.imprimirDevagar("Você excedeu o limite de pontos para a mana. Tente novamente.");
                     continue;
                 }
-                mana += 5; // Adiciona pontos extras à mana
+                mana += 5;
             } else {
                 slowConsole.imprimirDevagar("Entrada inválida. Digite um número para a mana.");
-                scanner.nextLine(); // Limpar o buffer
+                scanner.nextLine();
                 continue;
             }
 
             slowConsole.imprimirDevagar("Digite a frase de efeito do Curandeiro:");
-            frase = scanner.nextLine().trim(); // Remove espaços em branco extras
+            frase = scanner.nextLine().trim();
 
             entradaValida = true;
 

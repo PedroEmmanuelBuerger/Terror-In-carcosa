@@ -12,11 +12,11 @@ import java.util.Scanner;
 public class SpeelBook {
     private final Scanner scanner;
     private final SlowConsole slowConsole = new SlowConsole();
-    private final List<Spell> spells = new ArrayList<>(); // Lista de feitiços
+    private final List<Spell> spells = new ArrayList<>();
 
     public SpeelBook() {
         this.scanner = new Scanner(System.in);
-        initializeSpells(); // Inicializa com feitiços padrão
+        initializeSpells();
     }
 
     private void initializeSpells() {

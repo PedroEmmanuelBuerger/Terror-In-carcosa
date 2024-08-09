@@ -9,9 +9,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Removendo bibliotecas inuteis + balanceamento + conserto bugs">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Retornando shopper apenas de potions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateHealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateHealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateMage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateMage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateNecromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateNecromancer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreatePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreatePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateRogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateRogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateWarrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateWarrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/Race.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/Race.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Attributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Healer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/Armer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/Armer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/FindGoldEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/FindGoldEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/FoundItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/FoundItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/HealingPotionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/HealingPotionEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/HealthRecoveryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/HealthRecoveryEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/NewWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/NewWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/OldRune.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/OldRune.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/Pause.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/Pause.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Events/Shooper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/Shooper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/BagItens/Potion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/BagItens/Potion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Specials/SpeelBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Specials/SpeelBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Bayoneta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Bayoneta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Bible.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Bible.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Crossbow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Crossbow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/DaggersOfSouls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/DaggersOfSouls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/DemonHearth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/DemonHearth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Axe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Axe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Daggers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Daggers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Mace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Mace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Ring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Ring.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Initials/Staff.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,14 +151,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00015" summary="organizando código + mudando funcionamento eventos">
-      <option name="closed" value="true" />
-      <created>1721928687789</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1721928687789</updated>
     </task>
     <task id="LOCAL-00016" summary="Adicionando Niveis + Dungeons diferentes + Novos inimigos + balanceamento">
       <option name="closed" value="true" />
@@ -512,7 +536,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723207668769</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Retornando shopper apenas de potions">
+      <option name="closed" value="true" />
+      <created>1723208619588</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1723208619588</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -527,7 +559,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionando Propriedade de gold + evento de ganhar gold" />
     <MESSAGE value="Atualizando o Pause arrumando bug" />
     <MESSAGE value="Adicionando evento de vendedor + mob dropa gold + refatoração" />
     <MESSAGE value="Arrumando código + refatoração + drop de gold aleatório + remoção de item na loja apos compra + bug fixes" />
@@ -552,7 +583,8 @@
     <MESSAGE value="Mudando alguns portraits" />
     <MESSAGE value="Refatorando + removewndo warnings" />
     <MESSAGE value="Removendo bibliotecas inuteis + balanceamento + conserto bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removendo bibliotecas inuteis + balanceamento + conserto bugs" />
+    <MESSAGE value="Retornando shopper apenas de potions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Retornando shopper apenas de potions" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

@@ -20,7 +20,6 @@ public class Pause implements NonCombatEvent {
             slowConsole.imprimirDevagar("2. Usar Item");
             slowConsole.imprimirDevagar("3. Voltar ao Jogo");
 
-            // Adiciona opções temáticas baseadas na classe do personagem
             if (personagem instanceof Necromancer) {
                 slowConsole.imprimirDevagar("4. Invocar Esqueleto");
             }
@@ -32,7 +31,7 @@ public class Pause implements NonCombatEvent {
             }
 
             int choice = scanner.nextInt();
-            scanner.nextLine();  // Limpar o buffer do scanner
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -42,7 +41,7 @@ public class Pause implements NonCombatEvent {
                     usarItem(personagem);
                     break;
                 case 3:
-                    running = false; // Sai do loop para voltar ao jogo
+                    running = false;
                     break;
                 case 4:
                     if (personagem instanceof Necromancer necromancer) {
@@ -68,12 +67,11 @@ public class Pause implements NonCombatEvent {
         slowConsole.imprimirDevagar("=== Status de " + personagem.getName() + " ===");
         personagem.getTechnicalInfo();
         slowConsole.imprimirDevagar("Pressione Enter para voltar ao menu.");
-        scanner.nextLine(); // Espera o usuário pressionar Enter
+        scanner.nextLine();
     }
 
     private void usarItem(Attributes personagem) {
         slowConsole.imprimirDevagar("Escolha o item que deseja usar:");
-        // Exibe itens disponíveis na bag
         if (personagem.getAbyssalInventory().isEmpty()) {
             slowConsole.imprimirDevagar("Sua bag está vazia. Não há itens para usar.");
             return;
@@ -95,7 +93,7 @@ public class Pause implements NonCombatEvent {
         }
 
         if (itemToUse != null) {
-            personagem.useItem(itemToUse); // Usa o item utilizando o método useItem de Attributes
+            personagem.useItem(itemToUse);
             slowConsole.imprimirDevagar("Você usou " + itemToUse.getName() + ".");
         } else {
             slowConsole.imprimirDevagar("Item não encontrado na bag.");

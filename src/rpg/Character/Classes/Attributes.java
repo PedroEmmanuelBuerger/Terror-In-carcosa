@@ -37,8 +37,8 @@ public abstract class Attributes {
         this.quote = quote;
         this.maxHealthInitial = healthbar;
         this.alive = true;
-        this.level = 1; // Inicializa o nível como 1
-        this.exp = 0; // Inicializa a experiência como 0
+        this.level = 1;
+        this.exp = 0;
     }
 
     public int getGold() {
@@ -135,24 +135,23 @@ public abstract class Attributes {
 
     public void attack(Attributes enemy) {
         CriticChance criticChance = new CriticChance(this.getAttack());
-        int damage = criticChance.chanceCritic(); // Corrigir chamada ao método chanceCritic
+        int damage = criticChance.chanceCritic();
         slowConsole.imprimirDevagar(this.getName() + " ataca " + enemy.getName() + " com fúria cósmica, causando " + damage + " de dano!");
         enemy.takeDamage(damage);
 
-        // Verifica se o inimigo foi derrotado
         if (!enemy.isAlive()) {
             slowConsole.imprimirDevagar("A saúde total de " + enemy.getName() + " é reduzida a 0");
             slowConsole.imprimirDevagar(enemy.getName() + " foi aniquilado!");
             slowConsole.imprimirDevagar("Você absorveu " + enemy.getExp() + " de EXP do abismo!");
             slowConsole.imprimirDevagar(enemy.getName() + " deixou " + enemy.getGold() + " de Ouro Profano!");
             gainGold(enemy.getGold());
-            gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
+            gainExp(enemy.getExp());
         }
     }
 
     public void attackWithSpecial(Attributes enemy) {
         CriticChance criticChance = new CriticChance(this.getSpecial());
-        int damage = criticChance.chanceCritic(); // Corrigir chamada ao método chanceCritic
+        int damage = criticChance.chanceCritic();
         slowConsole.imprimirDevagar(this.getName() + " desferiu um ataque especial de terror cósmico contra " + enemy.getName() + ", causando " + damage + " de dano!");
         enemy.takeDamage(damage);
         if (!enemy.isAlive()) {
@@ -161,7 +160,7 @@ public abstract class Attributes {
             slowConsole.imprimirDevagar("Você absorveu " + enemy.getExp() + " de EXP do abismo!");
             slowConsole.imprimirDevagar(enemy.getName() + " deixou " + enemy.getGold() + " de Ouro Profano!");
             gainGold(enemy.getGold());
-            gainExp(enemy.getExp()); // Ganha experiência baseada no nível do inimigo
+            gainExp(enemy.getExp());
         }
     }
 
@@ -170,7 +169,6 @@ public abstract class Attributes {
     }
 
     public void takeDamage(int damage) {
-        // Reduz a saúde do personagem pelo valor do dano recebido
         int currentHealth = this.getHealthbar();
         this.setHealthbar(currentHealth - damage);
         slowConsole.imprimirDevagar(this.getName() + " sofreu " + damage + " de dano do abismo!");
@@ -206,12 +204,11 @@ public abstract class Attributes {
     }
 
     public void gainExp(int expGain) {
-        exp += expGain; // Adiciona a experiência ganha
+        exp += expGain;
 
-        // Verifica se o personagem subiu de nível
         while (exp >= level * 10) {
-            exp -= level * 10; // Subtrai o máximo de experiência para o próximo nível
-            level++; // Aumenta o nível do personagem
+            exp -= level * 10;
+            level++;
             slowConsole.imprimirDevagar(getName() + " ascendeu a um novo nível! Nível atual é: " + getLevel());
             setAttack(getAttack() + 5);
             slowConsole.imprimirDevagar(getName() + " absorveu 5 de poder de ataque das trevas!");
@@ -239,7 +236,6 @@ public abstract class Attributes {
         slowConsole.imprimirDevagar("Raça: " + getRace().getName());
         slowConsole.imprimirDevagar("Ouro Profano: " + getGold());
 
-        // Adiciona a exibição dos itens no inventário abissal
         if (abyssalInventory.isEmpty()) {
             slowConsole.imprimirDevagar("O inventário abissal está vazio.");
         } else {

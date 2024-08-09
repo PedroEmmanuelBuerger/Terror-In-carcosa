@@ -3,7 +3,7 @@ package rpg.itens.Weapons.Initials;
 import rpg.itens.Weapons.Weapon;
 
 /**
- * @param attack Atributo para armazenar o valor de ataque
+ * @param attack
  */
 public record Daggers(int attack) implements Weapon {
 

@@ -13,7 +13,6 @@ public class CreatePlayer {
         SlowConsole slowConsole = new SlowConsole();
         Attributes personagem = null;
 
-        // Escolha de classe
         slowConsole.imprimirDevagar("Escolha sua classe:");
         slowConsole.imprimirDevagar("1 - Guerreiro do Abismo (+15 de vida)");
         slowConsole.imprimirDevagar("2 - Mago dos Mistérios Cósmicos (+15 de mana)");
@@ -26,23 +25,23 @@ public class CreatePlayer {
             escolha = InputUtils.lerInteiro(scanner, "Escolha inválida. Por favor, escolha uma opção válida.");
             switch (escolha) {
                 case 1:
-                    Chose.ChooseWarrior(); // Mensagem para Guerreiro
+                    Chose.ChooseWarrior();
                     personagem = CreateWarrior.createWarrior(scanner);
                     break;
                 case 2:
-                    Chose.ChooseMage(); // Mensagem para Mago
+                    Chose.ChooseMage();
                     personagem = CreateMage.createMage(scanner);
                     break;
                 case 3:
-                    Chose.ChooseRogue(); // Mensagem para Ladino
+                    Chose.ChooseRogue();
                     personagem = CreateRogue.createRogue(scanner);
                     break;
                 case 4:
-                    Chose.ChooseHealer(); // Mensagem para Curandeiro
+                    Chose.ChooseHealer();
                     personagem = CreateHealer.createHealer(scanner);
                     break;
                 case 5:
-                    Chose.ChooseNecromancer(); // Mensagem para Necromante
+                    Chose.ChooseNecromancer();
                     personagem = CreateNecromancer.createNecromancer(scanner);
                     personagem.setMind(personagem.getMind() + 5);
                     break;
@@ -51,7 +50,6 @@ public class CreatePlayer {
             }
         } while (personagem == null);
 
-        // Escolha de raça
         slowConsole.imprimirDevagar("Escolha sua raça:");
         slowConsole.imprimirDevagar("1 - Humano do Vórtice (+5 de ataque, + 5 de mente)");
         slowConsole.imprimirDevagar("2 - Orc do Abismo (+10 de vida)");
@@ -63,23 +61,22 @@ public class CreatePlayer {
 
         do {
             escolhaRace = InputUtils.lerInteiro(scanner, "Escolha inválida. Por favor, escolha uma opção válida.");
-
             switch (escolhaRace) {
                 case 1:
                     race = Race.HUMAN;
-                    Chose.ChooseHuman(); // Mensagem para Humano
+                    Chose.ChooseHuman();
                     break;
                 case 2:
                     race = Race.ORC;
-                    Chose.ChooseOrc(); // Mensagem para Orc
+                    Chose.ChooseOrc();
                     break;
                 case 3:
                     race = Race.ELF;
-                    Chose.ChooseElf(); // Mensagem para Elfo
+                    Chose.ChooseElf();
                     break;
                 case 4:
                     race = Race.DWARF;
-                    Chose.ChooseDwarf(); // Mensagem para Anão
+                    Chose.ChooseDwarf();
                     break;
                 default:
                     slowConsole.imprimirDevagar("Escolha inválida. Por favor, escolha uma opção válida.");
@@ -87,8 +84,8 @@ public class CreatePlayer {
         } while (race == null);
 
         personagem.setRace(race);
-        personagem.applyRaceBonuses(); // Aplica os bônus da raça
-        if (personagem.getRace() == race.HUMAN) {
+        personagem.applyRaceBonuses();
+        if (personagem.getRace() == Race.HUMAN) {
             personagem.setMind(personagem.getMind() + 5);
         }
         return personagem;

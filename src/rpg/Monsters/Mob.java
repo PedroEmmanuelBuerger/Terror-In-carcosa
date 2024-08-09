@@ -12,8 +12,8 @@ public class Mob extends Attributes {
 
     public Mob(String name, int healthbar, int attack, int specialAttack, String battleCry, int exp, int gold, String portrait) {
         super(name, healthbar, attack, specialAttack, battleCry);
-        this.setExp(exp); // Configura a experiência do mob
-        this.setGold(generateRandomGold(gold)); // Configura o ouro com um valor aleatório baseado no parâmetro
+        this.setExp(exp);
+        this.setGold(generateRandomGold(gold));
         this.portrait = portrait;
     }
 
@@ -31,7 +31,6 @@ public class Mob extends Attributes {
         target.takeDamage(damage);
     }
 
-    // Método auxiliar para gerar um valor aleatório de gold baseado em um intervalo
     private int generateRandomGold(int baseGold) {
         int minVal = baseGold - 5;
         int maxVal = baseGold + 5;

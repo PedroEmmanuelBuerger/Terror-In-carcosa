@@ -9,7 +9,7 @@ public enum Race {
     private final String name;
     private final int bonusHealth;
     private final int bonusSpecial;
-    private final int bonusAttack; // Novo atributo para bônus de ataque
+    private final int bonusAttack;
 
     Race(String name, int bonusHealth, int bonusSpecial, int bonusAttack) {
         this.name = name;

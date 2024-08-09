@@ -12,7 +12,7 @@ public class Dungeon3 extends DungeonBase {
     @Override
     protected Attributes createEnemy(Attributes personagem) {
         if (personagem.getLevel() >= 20) {
-            Start.EncounterTaigon(); // Exibe a mensagem ao encontrar o Cavaleiro do Medo Taigon
+            Start.EncounterTaigon();
             KnightOfFear boss = new KnightOfFear("O Rei de Amarelo", 1000, 60, 80, "O VAZIO CHEGOU PARA VOCÊ...", Portraits.PortraitTaigon());
             boss.generateTechinicalInfo();
             return boss;
@@ -26,7 +26,7 @@ public class Dungeon3 extends DungeonBase {
                 case 4 -> mob = new Mob("Cavaleiro da Névoa", 180, 30, 30, "EU SEREI O PORTADOR DA NÉVOA!", 85, 85, Portraits.PortraitCavaleiroDaNevoa());
                 default -> mob = new Mob("Golem da Ruína", 120, 30, 20, "SUA ALMA SERÁ ANEXADA AO ABISMO!", 40, 40, Portraits.PortraitGolemDaRuina());
             }
-            mob.generateTechinicalInfo(); // Exibe as informações técnicas incluindo o retrato
+            mob.generateTechinicalInfo();
             return mob;
         }
     }
@@ -35,7 +35,7 @@ public class Dungeon3 extends DungeonBase {
     protected void onBossDefeated(Attributes personagem) {
         if (personagem.getLevelDungeon() == 3) {
             Start.EncounterTaigon();
-            String characterClass = personagem.getClasses(); // Supondo que existe um método para obter a classe do personagem
+            String characterClass = personagem.getClasses();
 
             switch (characterClass) {
                 case "Guerreiro":

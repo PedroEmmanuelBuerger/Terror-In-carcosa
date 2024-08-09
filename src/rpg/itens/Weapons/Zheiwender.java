@@ -3,7 +3,7 @@ package rpg.itens.Weapons;
 import java.util.Random;
 
 public class Zheiwender implements Weapon {
-    private final int attack; // Dano aleatório definido uma vez
+    private final int attack;
 
     @Override
     public int getPrice() {
@@ -18,7 +18,7 @@ public class Zheiwender implements Weapon {
 
     @Override
     public int attack() {
-        return attack; // Retorna o dano definido no construtor
+        return attack;
     }
 
     @Override

@@ -8,7 +8,7 @@ public class HealingPotionEvent implements NonCombatEvent {
 
     @Override
     public void executeEvent(Attributes personagem) {
-        if (personagem.getHealthbar() < personagem.getMaxHealthInitial()) { // Verifica se não está com saúde máxima
+        if (personagem.getHealthbar() < personagem.getMaxHealthInitial()) {
             slowConsole.imprimirDevagar("Você encontrou uma fonte de cura antiga e esquecida... Recuperou +20 de vida.");
             int maxHealth = personagem.getMaxHealthInitial();
             personagem.setHealthbar(Math.min(personagem.getHealthbar() + 20, maxHealth));

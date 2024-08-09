@@ -32,13 +32,13 @@ public class Healer extends Attributes {
     public void attackWithSpecial(Attributes enemy) {
         int sacredDamage = this.getSpecial() / 2;
         CriticChance criticChance = new CriticChance(sacredDamage);
-        sacredDamage = criticChance.chanceCritic(); // Corrigir chamada ao método chanceCritic
+        sacredDamage = criticChance.chanceCritic();
         boolean manaRes;
         ManaAdm manaAdm = new ManaAdm();
-        manaRes = manaAdm.costMana(this.mana, 10, this.getName()); // Chamar costMana na instância criada
+        manaRes = manaAdm.costMana(this.mana, 10, this.getName());
         if (!manaRes) {
             slowConsole.imprimirDevagar(this.getName() + " lançou um feitiço sagrado, infligindo " + sacredDamage + " de dano a " + enemy.getName() + "!");
-            this.mana -= 10; // Reduzir a mana após o uso do feitiço
+            this.mana -= 10;
             slowConsole.imprimirDevagar(this.getName() + " drenou 10 de mana, restando " + this.mana + ".");
             enemy.takeDamage(sacredDamage);
             if (!enemy.isAlive()) {
@@ -92,18 +92,15 @@ public class Healer extends Attributes {
 
     @Override
     public void gainExp(int expGain) {
-        setExp(getExp() + expGain); // Adiciona a experiência ganha
+        setExp(getExp() + expGain);
 
-        // Verifica se o personagem subiu de nível
         while (getExp() >= getLevel() * 10) {
-            int levelsGained = getExp() / (getLevel() * 10); // Quantos níveis foram ganhos
-            setExp(getExp() % (getLevel() * 10)); // Experiência restante após subir de nível
+            int levelsGained = getExp() / (getLevel() * 10);
+            setExp(getExp() % (getLevel() * 10));
 
-            // Aumenta o nível do personagem
             setLevel(getLevel() + levelsGained);
             slowConsole.imprimirDevagar(getName() + " ascendeu em poder! Nível atual é: " + getLevel());
 
-            // Aumenta os atributos ao subir de nível
             setSpecial(getSpecial() + 5 * levelsGained);
             slowConsole.imprimirDevagar(getName() + " aumentou " + (5 * levelsGained) + " de Poder Arcano!");
             setHealthbar(getHealthbar() + 5 * levelsGained);
