@@ -9,18 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando preço das armas">
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Armors/Armor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Armors/Rags.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando mecanica Armadura">
+      <change afterPath="$PROJECT_DIR$/src/rpg/Events/NewArmor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Armors/CursedGoldenArmor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Armors/DemonCarcass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Armors/FabricoftheCosmos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Armors/LeatherUndefinedColor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Armors/Robe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Armors/UltradimensionalOctopusSkin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreatePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreatePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Attributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/Ghazkull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/Ghazkull.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KingDragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KingDragon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KnightOfFear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KnightOfFear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Mob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Armors/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Armors/Armor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,14 +127,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Arrumando bug resetar valor maxpoints">
-      <option name="closed" value="true" />
-      <created>1721937880426</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1721937880426</updated>
     </task>
     <task id="LOCAL-00019" summary="Arrumando funcionamento de classes + adicionando novos eventos + adicionando atributo weapon">
       <option name="closed" value="true" />
@@ -521,7 +512,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723211528366</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Adicionando mecanica Armadura">
+      <option name="closed" value="true" />
+      <created>1723212544605</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1723212544605</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -536,7 +535,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Arrumando código + refatoração + drop de gold aleatório + remoção de item na loja apos compra + bug fixes" />
     <MESSAGE value="Balanceamento + chance de aparecer eventos é menor" />
     <MESSAGE value="Arrumando Necromante" />
     <MESSAGE value="Arrumando Bugs + Refatorando todo código + removendo redundancias" />
@@ -561,7 +559,8 @@
     <MESSAGE value="Retornando shopper apenas de potions" />
     <MESSAGE value="Removendo todos os comentarios + adicionando armeiro + balanceamento + chance de ter pause" />
     <MESSAGE value="Arrumando preço das armas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando preço das armas" />
+    <MESSAGE value="Adicionando mecanica Armadura" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando mecanica Armadura" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

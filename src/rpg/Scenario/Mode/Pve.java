@@ -32,7 +32,7 @@ public class Pve {
             if (key.equals("w") || key.equals("a") || key.equals("s") || key.equals("d")) {
                 int randomEvent = random.nextInt(12);
 
-                if (randomEvent < 7) {
+                if (randomEvent < 6) {
                     CombatSystem.startCombat(scanner, personagem);
                 } else {
                     pveInstance.nonCombatEvent(personagem);
@@ -42,9 +42,8 @@ public class Pve {
     }
 
     private void nonCombatEvent(Attributes personagem) {
-        SlowConsole slowConsole = new SlowConsole();
         Random random = new Random();
-        int eventType = random.nextInt(15);
+        int eventType = random.nextInt(14);
 
         NonCombatEvent event = null;
         switch (eventType) {
@@ -98,6 +97,9 @@ public class Pve {
                 break;
             case 12:
                 event = new Armer();
+                break;
+            case 13:
+                event = new NewArmor();
                 break;
             default:
                 new Pause();
