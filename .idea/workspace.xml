@@ -9,36 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="começando a implementação do modo Coop e Pvp">
-      <change afterPath="$PROJECT_DIR$/src/rpg/Mode/Pvp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpg/PvpMode/CombatSystemPvP.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Refatorando toda a estrutura de código + começo implantação PvP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/Armer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Events/Armer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/ArmorShopper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Events/ArmorShopper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/FindGoldEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Events/FindGoldEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/FoundItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Events/FoundItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/HealingPotionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Events/HealingPotionEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/HealthRecoveryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Events/HealthRecoveryEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/MagicItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Events/MagicItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/ManaRecoveryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Events/ManaRecoveryEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/NewArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Events/NewArmor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/NewWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Events/NewWeapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/NonCombatEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Events/NonCombatEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/OldRune.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Events/OldRune.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/Pause.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Events/Pause.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/RareItemEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Events/RareItemEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/Shooper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Events/Shooper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Events/SpecialEncounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Events/SpecialEncounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Dungeon/Dungeon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Dungeon/Dungeon1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Dungeon/Dungeon2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/Dungeon3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Dungeon/Dungeon3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Dungeon/DungeonBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Coop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Coop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Pve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pvp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/CombatSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Campaign/Dungeon/CombatSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Pvp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Pvp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/PvpMode/CombatSystemPvP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/PvpMode/CombatSystemPvP.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,14 +121,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Adicionando Objeto para arma + adicionando dano por arma + evento que troca a arma + varias novas armas + armas iniciais">
-      <option name="closed" value="true" />
-      <created>1722015650134</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1722015650134</updated>
     </task>
     <task id="LOCAL-00023" summary="Adicionando 2 armas novas por classe + evento de trocar de arma + balanceamento">
       <option name="closed" value="true" />
@@ -540,7 +506,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723222978007</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Refatorando toda a estrutura de código + começo implantação PvP">
+      <option name="closed" value="true" />
+      <created>1723223663830</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1723223663830</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -555,7 +529,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="+ Refatoração" />
     <MESSAGE value="Adicionando poção de mana + mudanças no shooper" />
     <MESSAGE value="Refatorando TODO o codigo" />
     <MESSAGE value="Arrumando bug que gold vinha negativo em certos casos" />
@@ -580,7 +553,8 @@
     <MESSAGE value="Arrumando eventos + adição trocar de armadura" />
     <MESSAGE value="Adicionando loja de armadura" />
     <MESSAGE value="começando a implementação do modo Coop e Pvp" />
-    <option name="LAST_COMMIT_MESSAGE" value="começando a implementação do modo Coop e Pvp" />
+    <MESSAGE value="Refatorando toda a estrutura de código + começo implantação PvP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatorando toda a estrutura de código + começo implantação PvP" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

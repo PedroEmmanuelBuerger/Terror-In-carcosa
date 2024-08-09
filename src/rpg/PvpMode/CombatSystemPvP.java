@@ -1,18 +1,21 @@
-package rpg.Utils;
+package rpg.PvpMode;
 
 import rpg.Character.Classes.Attributes;
 import rpg.Character.Classes.Healer;
 import rpg.Character.Classes.Mage;
+import rpg.Character.Classes.Necromancer;
 import rpg.Character.Classes.Warrior;
+import rpg.Utils.CombatUtils;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Item;
+import rpg.itens.Specials.Imp;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class CombatSystemPvP {
-    private Random random = new Random();
-    private SlowConsole slowConsole = new SlowConsole();
+    private final Random random = new Random();
+    private final SlowConsole slowConsole = new SlowConsole();
 
     public void startCombat(Scanner scanner, Attributes player1, Attributes player2) {
         slowConsole.imprimirDevagar("O combate entre " + player1.getName() + " e " + player2.getName() + " começou!");
@@ -32,14 +35,18 @@ public class CombatSystemPvP {
     private boolean playerTurn(Scanner scanner, Attributes player, Attributes opponent) {
         slowConsole.imprimirDevagar("É a vez de " + player.getName() + ":");
         slowConsole.imprimirDevagar("Escolha sua ação:");
-        printPlayerActions(player);
+        CombatUtils.printPlayerActions(player);
 
         int action = getPlayerAction(scanner);
         if (action == -1) return true;
 
         switch (action) {
             case 1:
-                player.attack(opponent);
+                if (opponent instanceof Necromancer && !((Necromancer) opponent).getImps().isEmpty()) {
+                    attackTarget(scanner, player, (Necromancer) opponent);
+                } else {
+                    player.attack(opponent);
+                }
                 break;
             case 2:
                 player.attackWithSpecial(opponent);
@@ -68,20 +75,22 @@ public class CombatSystemPvP {
         return opponent.getHealthbar() > 0;
     }
 
-    private void printPlayerActions(Attributes player) {
-        slowConsole.imprimirDevagar("1 - Atacar");
-        if (player instanceof Mage) {
-            slowConsole.imprimirDevagar("2 - Livro de magias");
-        } else {
-            slowConsole.imprimirDevagar("2 - Ataque Especial");
+    private void attackTarget(Scanner scanner, Attributes player, Necromancer necromancer) {
+        slowConsole.imprimirDevagar("Escolha o alvo do ataque:");
+        slowConsole.imprimirDevagar("1 - " + necromancer.getName());
+        int index = 2;
+        for (Imp imp : necromancer.getImps()) {
+            slowConsole.imprimirDevagar(index + " - " + imp.getName());
+            index++;
         }
-        slowConsole.imprimirDevagar("3 - Fugir");
-        slowConsole.imprimirDevagar("4 - Status");
-        slowConsole.imprimirDevagar("5 - Usar Item");
-        if (player instanceof Warrior) {
-            slowConsole.imprimirDevagar("6 - Defender");
-        } else if (player instanceof Healer) {
-            slowConsole.imprimirDevagar("6 - Curar");
+
+        int targetChoice = getPlayerAction(scanner);
+        if (targetChoice == 1) {
+            player.attack(necromancer);
+        } else if (targetChoice > 1 && targetChoice <= necromancer.getImps().size() + 1) {
+            player.attack(necromancer.getImps().get(targetChoice - 2));
+        } else {
+            slowConsole.imprimirDevagar("Escolha inválida. Você perdeu a vez.");
         }
     }
 
