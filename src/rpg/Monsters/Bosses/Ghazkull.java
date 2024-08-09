@@ -2,15 +2,18 @@ package rpg.Monsters.Bosses;
 
 import rpg.Utils.SlowConsole;
 import rpg.Character.Classes.Attributes;
+import rpg.itens.Armors.Rags;
 
 public class Ghazkull extends Attributes {
     SlowConsole slowConsole = new SlowConsole();
     private final String portrait;
+    Rags rag = new Rags();
     public Ghazkull(String name, int healthbar, int attack, int specialAttack, String battleCry,String portrait) {
         super(name, healthbar, attack, specialAttack, battleCry);
         this.setExp(35);
         this.setGold(500);
         this.portrait = portrait;
+        this.setArmor(rag);
     }
     @Override
     public void attack(Attributes target) {

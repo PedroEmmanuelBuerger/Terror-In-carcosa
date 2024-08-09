@@ -9,8 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Removendo todos os comentarios + adicionando armeiro + balanceamento + chance de ter pause">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando preço das armas">
+      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Armors/Armor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Armors/Rags.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreatePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreatePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Attributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/Ghazkull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/Ghazkull.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KingDragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KingDragon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KnightOfFear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KnightOfFear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Mob.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,14 +128,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Classes iniciam com valor definido + arrumando bugs">
-      <option name="closed" value="true" />
-      <created>1721936849242</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1721936849242</updated>
     </task>
     <task id="LOCAL-00018" summary="Arrumando bug resetar valor maxpoints">
       <option name="closed" value="true" />
@@ -511,7 +513,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723210691290</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Arrumando preço das armas">
+      <option name="closed" value="true" />
+      <created>1723211528366</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1723211528366</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -526,7 +536,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionando evento de vendedor + mob dropa gold + refatoração" />
     <MESSAGE value="Arrumando código + refatoração + drop de gold aleatório + remoção de item na loja apos compra + bug fixes" />
     <MESSAGE value="Balanceamento + chance de aparecer eventos é menor" />
     <MESSAGE value="Arrumando Necromante" />
@@ -551,7 +560,8 @@
     <MESSAGE value="Removendo bibliotecas inuteis + balanceamento + conserto bugs" />
     <MESSAGE value="Retornando shopper apenas de potions" />
     <MESSAGE value="Removendo todos os comentarios + adicionando armeiro + balanceamento + chance de ter pause" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removendo todos os comentarios + adicionando armeiro + balanceamento + chance de ter pause" />
+    <MESSAGE value="Arrumando preço das armas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando preço das armas" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

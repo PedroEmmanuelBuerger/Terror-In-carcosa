@@ -2,6 +2,8 @@ package rpg.Monsters;
 
 import rpg.Utils.SlowConsole;
 import rpg.Character.Classes.Attributes;
+import rpg.itens.Armors.Armor;
+import rpg.itens.Armors.Rags;
 
 import java.util.Random;
 
@@ -9,12 +11,13 @@ public class Mob extends Attributes {
     SlowConsole slowConsole = new SlowConsole();
     private static final Random random = new Random();
     private final String portrait;
-
+    Rags rag = new Rags();
     public Mob(String name, int healthbar, int attack, int specialAttack, String battleCry, int exp, int gold, String portrait) {
         super(name, healthbar, attack, specialAttack, battleCry);
         this.setExp(exp);
         this.setGold(generateRandomGold(gold));
         this.portrait = portrait;
+        this.setArmor(rag);
     }
 
     @Override

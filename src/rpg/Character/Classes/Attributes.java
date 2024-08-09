@@ -3,6 +3,7 @@ package rpg.Character.Classes;
 import rpg.Character.CharacterCreation.Race;
 import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
+import rpg.itens.Armors.Armor;
 import rpg.itens.Item;
 import rpg.itens.Weapons.Initials.Axe;
 import rpg.itens.Weapons.Weapon;
@@ -22,7 +23,8 @@ public abstract class Attributes {
     private int level;
     private int exp;
     private int mind = 50;
-    private int levelDungeon = 1; // Inicializa o nível da dungeon
+    private int levelDungeon = 1;
+    private Armor armor;// Inicializa o nível da dungeon
     SlowConsole slowConsole = new SlowConsole();
     private Weapon weapon = new Axe(0);
     private Race race;
@@ -47,6 +49,14 @@ public abstract class Attributes {
 
     public void setGold(int gold) {
         this.gold = gold;
+    }
+
+    public Armor getArmor() {
+        return armor;
+    }
+
+    public void setArmor(Armor armor) {
+        this.armor = armor;
     }
 
     public void setRace(Race race) {
@@ -170,6 +180,7 @@ public abstract class Attributes {
 
     public void takeDamage(int damage) {
         int currentHealth = this.getHealthbar();
+        damage = damage / this.getArmor().armor();
         this.setHealthbar(currentHealth - damage);
         slowConsole.imprimirDevagar(this.getName() + " sofreu " + damage + " de dano do abismo!");
         getHealth(this);
@@ -233,6 +244,7 @@ public abstract class Attributes {
         slowConsole.imprimirDevagar("Mente: " + getMind());
         slowConsole.imprimirDevagar("Frase: " + getQuote());
         slowConsole.imprimirDevagar("Arma: " + getWeapon().getName());
+        slowConsole.imprimirDevagar("Armadura: " + getArmor().getName());
         slowConsole.imprimirDevagar("Raça: " + getRace().getName());
         slowConsole.imprimirDevagar("Ouro Profano: " + getGold());
 

@@ -2,16 +2,18 @@ package rpg.Monsters.Bosses;
 
 import rpg.Utils.SlowConsole;
 import rpg.Character.Classes.Attributes;
+import rpg.itens.Armors.Rags;
 
 public class KnightOfFear extends Attributes {
     SlowConsole slowConsole = new SlowConsole();
     private final String portrait;
-
+    Rags rag = new Rags();
     public KnightOfFear(String name, int healthbar, int attack, int specialAttack, String battleCry, String portrait) {
         super(name, healthbar, attack, specialAttack, battleCry);
         this.setExp(150);
         this.setGold(2000);
         this.portrait = portrait;
+        this.setArmor(rag);
     }
 
     @Override

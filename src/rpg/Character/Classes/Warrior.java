@@ -31,6 +31,7 @@ public class Warrior extends Attributes {
     @Override
     public void takeDamage(int damage) {
         int currentHealth = this.getHealthbar();
+        damage = damage / this.getArmor().armor();
         if (this.isDefese()) {
             int reducedDamage = damage / 2;
             this.setHealthbar(currentHealth - reducedDamage);

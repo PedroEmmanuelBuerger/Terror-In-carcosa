@@ -4,6 +4,7 @@ import rpg.Utils.Messages.Chose;
 import rpg.Utils.SlowConsole;
 import rpg.Utils.InputUtils;
 import rpg.Character.Classes.*;
+import rpg.itens.Armors.Rags;
 
 import java.util.Scanner;
 
@@ -88,6 +89,8 @@ public class CreatePlayer {
         if (personagem.getRace() == Race.HUMAN) {
             personagem.setMind(personagem.getMind() + 5);
         }
+        Rags rag = new Rags();
+        personagem.setArmor(rag);
         return personagem;
     }
 }
