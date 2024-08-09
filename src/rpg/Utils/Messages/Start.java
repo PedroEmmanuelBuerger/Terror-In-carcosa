@@ -41,7 +41,65 @@ public class Start {
             * * * * * * * * * * * * * * * * * * * * * * * * * * * *
             """);
     }
-
+    public static void StartPvP() {
+        SlowConsole slowConsole = new SlowConsole();
+        slowConsole.imprimirDevagar("""
+            * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+            *   O Desafio das Sombras - Modo PvP!                     *
+            *                                                         *
+            * No reino de Carcosa, onde a loucura e o terror          *
+            * governam, a arena dos desafiantes abre suas portas.     *
+            *                                                         *
+            * Entre as brumas e os ecos distantes, você se vê         *
+            * convocado para uma batalha de almas e sanidade.         *
+            *                                                         *
+            * Aqui, a competição entre viajantes não é apenas sobre   *
+            * força ou habilidade, mas sobre quem pode resistir ao    *
+            * impacto da escuridão e do caos que permeia este lugar.  *
+            *                                                         *
+            * Cada golpe e cada estratégia é um teste de coragem,     *
+            * e cada vitória ou derrota é uma reflexão da própria     *
+            * essência.                                               *
+            *                                                         *
+            * Prepare-se para enfrentar outros que também buscam      *
+            * prevalecer na arena onde a sanidade se torna uma        *
+            * mercadoria preciosa. Sua jornada na arena começa agora. *
+            *                                                         *
+            * Que a força e a astúcia estejam com você, viajante.     *
+            * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+            """);
+    }
+    public static void StartCoop() {
+        SlowConsole slowConsole = new SlowConsole();
+        slowConsole.imprimirDevagar("""
+            * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+            *   Aliança nas Sombras - Modo Coop!                    *
+            *                                                       *
+            * Em Carcosa, onde a névoa eterna envolve cada esquina, *
+            * uma nova aliança é forjada na escuridão.              *
+            *                                                       *
+            * Você e seus aliados são convocados para enfrentar as  *
+            * ameaças cósmicas que assolam este domínio de loucura. *
+            *                                                       *
+            * A jornada que se inicia não é para os fracos. Aqui,   *
+            * a cooperação e a confiança mútua serão suas maiores   *
+            * armas contra as forças abissais que emergem das       *
+            * sombras.                                              *
+            *                                                       *
+            * Juntos, vocês enfrentarão monstros e desafios que     *
+            * testam não apenas suas habilidades, mas também a      *
+            * resiliência de sua união. O caminho é traiçoeiro e    *
+            * os horrores são muitos, mas somente através da        *
+            * cooperação poderão superar as provações que Carcosa   *
+            * reserva.                                              *
+            *                                                       *
+            * Que a luz da camaradagem ilumine seu caminho através  *
+            * das trevas intermináveis.                             *
+            *                                                       *
+            * Prepare-se para uma jornada de coragem compartilhada. *
+            * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+            """);
+    }
     public static void FinishGhazkull() {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""

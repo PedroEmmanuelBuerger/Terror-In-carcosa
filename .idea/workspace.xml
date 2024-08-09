@@ -9,10 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando eventos + adição trocar de armadura">
-      <change afterPath="$PROJECT_DIR$/src/rpg/Events/ArmorShopper.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando loja de armadura">
+      <change afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Coop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pvp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Mode/Pve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/Messages/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/Messages/Start.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,14 +122,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Arrumando eventos para mago">
-      <option name="closed" value="true" />
-      <created>1722004645739</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1722004645739</updated>
     </task>
     <task id="LOCAL-00021" summary="Arrumando classe healer e mage + balanceamento">
       <option name="closed" value="true" />
@@ -513,7 +507,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723214188783</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Adicionando loja de armadura">
+      <option name="closed" value="true" />
+      <created>1723214877338</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1723214877338</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -528,7 +530,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Arrumando Necromante" />
     <MESSAGE value="Arrumando Bugs + Refatorando todo código + removendo redundancias" />
     <MESSAGE value="+ Refatoração" />
     <MESSAGE value="Adicionando poção de mana + mudanças no shooper" />
@@ -553,7 +554,8 @@
     <MESSAGE value="Arrumando preço das armas" />
     <MESSAGE value="Adicionando mecanica Armadura" />
     <MESSAGE value="Arrumando eventos + adição trocar de armadura" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando eventos + adição trocar de armadura" />
+    <MESSAGE value="Adicionando loja de armadura" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando loja de armadura" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
