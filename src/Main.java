@@ -1,5 +1,6 @@
-import rpg.Scenario.Mode.Coop;
-import rpg.Scenario.Mode.Pve;
+import rpg.Mode.Coop;
+import rpg.Mode.Pve;
+import rpg.Mode.Pvp;
 import rpg.Utils.Messages.Start;
 import rpg.Utils.SlowConsole;
 
@@ -61,6 +62,7 @@ public class Main {
     private static void startPvP() {
         slowConsole.imprimirDevagar("Você escolheu o modo PvP!");
         Start.StartPvP();
+        Pvp.startBattle();
         // Implemente a lógica do modo PvP aqui
     }
 }

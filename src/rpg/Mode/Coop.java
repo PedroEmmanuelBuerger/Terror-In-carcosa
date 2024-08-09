@@ -1,54 +1,70 @@
-package rpg.Scenario.Mode;
+package rpg.Mode;
 
+import rpg.Campaign.Events.*;
 import rpg.Character.Classes.Attributes;
 import rpg.Character.Classes.Mage;
-import rpg.Events.*;
-import rpg.Utils.CombatSystem;
+import rpg.Campaign.Dungeon.CombatSystem;
 import rpg.Utils.SlowConsole;
 import rpg.Character.CharacterCreation.CreatePlayer;
 import rpg.itens.Specials.SpeelBook;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Pve {
+public class Coop {
     private boolean specialEncounterOccurred = false;
 
-    public static void startBattle() {
+    public static void startCoop() {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
-        Attributes personagem = CreatePlayer.createPlayer(scanner);
-        personagem.getTechnicalInfo();
+        List<Attributes> jogadores = new ArrayList<>();
 
-        Pve pveInstance = new Pve();
-        personagem.setLevelDungeon(1);
+        // Criação de múltiplos jogadores
+        for (int i = 0; i < 2; i++) {  // Pode alterar o número de jogadores conforme necessário
+            System.out.println("Criação do Jogador " + (i + 1) + ":");
+            Attributes jogador = CreatePlayer.createPlayer(scanner);
+            jogador.getTechnicalInfo();
+            jogadores.add(jogador);
+        }
+
+        Coop coopInstance = new Coop();
+
+        for (Attributes jogador : jogadores) {
+            jogador.setLevelDungeon(1);
+        }
 
         SlowConsole slowConsole = new SlowConsole();
 
-        while (personagem.getHealthbar() > 0) {
-            slowConsole.imprimirDevagar("Mova-se![W,A,S,D]");
+        while (jogadores.stream().anyMatch(j -> j.getHealthbar() > 0)) {
+            slowConsole.imprimirDevagar("Movão-se![W,A,S,D]");
             String key = scanner.nextLine().toLowerCase().trim();
 
             if (key.equals("w") || key.equals("a") || key.equals("s") || key.equals("d")) {
                 int randomEvent = random.nextInt(12);
 
                 if (randomEvent < 6) {
-                    CombatSystem.startCombat(scanner, personagem);
+                    for (Attributes jogador : jogadores) {
+                        CombatSystem.startCombat(scanner, jogador);
+                    }
                 } else {
-                    pveInstance.nonCombatEvent(personagem);
+                    for (Attributes jogador : jogadores) {
+                        coopInstance.nonCombatEvent(jogador);
+                    }
                 }
             }
         }
     }
 
-    private void nonCombatEvent(Attributes personagem) {
+    private void nonCombatEvent(Attributes jogador) {
         Random random = new Random();
         int eventType = random.nextInt(15);
 
         NonCombatEvent event = null;
         switch (eventType) {
             case 0:
-                if (personagem instanceof Mage mage) {
+                if (jogador instanceof Mage mage) {
                     if (!specialEncounterOccurred) {
                         SpeelBook speelBookactual = mage.getSpeelBook();
                         event = new SpecialEncounter(speelBookactual);
@@ -110,7 +126,7 @@ public class Pve {
         }
 
         if (event != null) {
-            event.executeEvent(personagem);
+            event.executeEvent(jogador);
         }
     }
 }

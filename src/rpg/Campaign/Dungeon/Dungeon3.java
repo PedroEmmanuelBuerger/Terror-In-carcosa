@@ -1,4 +1,4 @@
-package rpg.Scenario.Dungeon;
+package rpg.Campaign.Dungeon;
 
 import rpg.Character.Classes.Attributes;
 import rpg.Monsters.Bosses.KnightOfFear;

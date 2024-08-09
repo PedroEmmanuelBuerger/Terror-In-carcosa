@@ -1,10 +1,6 @@
-package rpg.Utils;
+package rpg.Campaign.Dungeon;
 
-import rpg.Scenario.Dungeon.Dungeon;
-import rpg.Scenario.Dungeon.Dungeon1;
-import rpg.Scenario.Dungeon.Dungeon2;
 import rpg.Character.Classes.Attributes;
-import rpg.Scenario.Dungeon.Dungeon3;
 
 import java.util.Scanner;
 

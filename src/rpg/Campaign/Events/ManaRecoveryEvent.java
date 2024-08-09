@@ -1,4 +1,4 @@
-package rpg.Events;
+package rpg.Campaign.Events;
 
 import rpg.Character.Classes.Necromancer;
 import rpg.Utils.SlowConsole;
