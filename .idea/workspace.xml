@@ -9,71 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Refatorando + removewndo warnings">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Removendo bibliotecas inuteis + balanceamento + conserto bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-ant-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-ant-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-astbuilder-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-astbuilder-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-cli-commons-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-cli-commons-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-cli-picocli-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-cli-picocli-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-console-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-console-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-contracts-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-contracts-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-datetime-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-datetime-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-dateutil-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-dateutil-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-docgenerator-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-docgenerator-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-ginq-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-ginq-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-groovydoc-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-groovydoc-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-groovysh-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-groovysh-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-jmx-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-jmx-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-json-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-json-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-jsr223-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-jsr223-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-macro-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-macro-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-macro-library-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-macro-library-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-nio-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-nio-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-servlet-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-servlet-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-sql-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-sql-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-swing-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-swing-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-templates-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-templates-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-test-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-test-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-test-junit5-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-test-junit5-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-testng-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-testng-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-toml-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-toml-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-typecheckers-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-typecheckers-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-xml-4.0.14-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/groovy-xml-4.0.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/Ghazkull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/Ghazkull.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KingDragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KingDragon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KnightOfFear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Bosses/KnightOfFear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Mob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Scenario/Dungeon/DungeonBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Events/Shooper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Events/Shooper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,14 +119,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Arrumando sistema de vida + criando final">
-      <option name="closed" value="true" />
-      <created>1721927808184</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1721927808184</updated>
     </task>
     <task id="LOCAL-00015" summary="organizando código + mudando funcionamento eventos">
       <option name="closed" value="true" />
@@ -574,7 +504,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723147185171</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Removendo bibliotecas inuteis + balanceamento + conserto bugs">
+      <option name="closed" value="true" />
+      <created>1723207668769</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1723207668769</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -589,7 +527,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Criando sistema uso de poções + atualização bag" />
     <MESSAGE value="Adicionando Propriedade de gold + evento de ganhar gold" />
     <MESSAGE value="Atualizando o Pause arrumando bug" />
     <MESSAGE value="Adicionando evento de vendedor + mob dropa gold + refatoração" />
@@ -614,7 +551,8 @@
     <MESSAGE value="Arrumando bugs + portrait boss" />
     <MESSAGE value="Mudando alguns portraits" />
     <MESSAGE value="Refatorando + removewndo warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refatorando + removewndo warnings" />
+    <MESSAGE value="Removendo bibliotecas inuteis + balanceamento + conserto bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removendo bibliotecas inuteis + balanceamento + conserto bugs" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
