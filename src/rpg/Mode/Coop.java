@@ -62,7 +62,7 @@ public class Coop {
     }
 
     private DungeonCoop createDungeon(List<Attributes> jogadores) {
-        int levelDungeon = jogadores.get(0).getLevelDungeon();
+        int levelDungeon = jogadores.getFirst().getLevelDungeon();
         for (Attributes jogador : jogadores) {
             if (jogador.getLevelDungeon() != levelDungeon) {
                 throw new IllegalStateException("Todos os jogadores devem estar no mesmo nível de dungeon.");

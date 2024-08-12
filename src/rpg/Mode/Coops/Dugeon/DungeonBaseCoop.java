@@ -18,10 +18,6 @@ public abstract class DungeonBaseCoop implements DungeonCoop {
 
     protected abstract void onBossDefeated(List<Attributes> jogadores);
 
-    public void startCombat(Scanner scanner, Attributes jogador) {
-        throw new UnsupportedOperationException("Use startCombat(List<Attributes> jogadores) para o modo cooperativo.");
-    }
-
     public void startCombat(Scanner scanner, List<Attributes> jogadores) {
         Attributes enemy = createEnemy(jogadores);
         if (enemy == null) return;

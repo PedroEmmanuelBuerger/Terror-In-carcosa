@@ -2,7 +2,6 @@ package rpg.Monsters;
 
 import rpg.Utils.SlowConsole;
 import rpg.Character.Classes.Attributes;
-import rpg.itens.Armors.Armor;
 import rpg.itens.Armors.Rags;
 
 import java.util.Random;

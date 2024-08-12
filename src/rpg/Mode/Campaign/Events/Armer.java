@@ -10,10 +10,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Armer implements NonCombatEvent {
-    private SlowConsole slowConsole = new SlowConsole();
-    private Scanner scanner = new Scanner(System.in);
+    private final SlowConsole slowConsole = new SlowConsole();
+    private final Scanner scanner = new Scanner(System.in);
 
-    private List<Weapon> weaponsForSale;
+    private final List<Weapon> weaponsForSale;
 
     public Armer() {
         weaponsForSale = new ArrayList<>();

@@ -11,10 +11,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Shooper implements NonCombatEvent {
-    private SlowConsole slowConsole = new SlowConsole();
-    private Scanner scanner = new Scanner(System.in);
+    private final SlowConsole slowConsole = new SlowConsole();
+    private final Scanner scanner = new Scanner(System.in);
 
-    private List<Item> itemsForSale;
+    private final List<Item> itemsForSale;
 
     public Shooper() {
         itemsForSale = new ArrayList<>();

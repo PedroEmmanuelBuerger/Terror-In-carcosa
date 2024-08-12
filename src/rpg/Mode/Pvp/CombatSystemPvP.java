@@ -20,8 +20,8 @@ public class CombatSystemPvP {
         slowConsole.imprimirDevagar("O combate entre " + player1.getName() + " e " + player2.getName() + " começou!");
 
         while (player1.getHealthbar() > 0 && player2.getHealthbar() > 0) {
-            if (!playerTurn(scanner, player1, player2)) break;
-            if (!playerTurn(scanner, player2, player1)) break;
+            if (playerTurn(scanner, player1, player2)) break;
+            if (playerTurn(scanner, player2, player1)) break;
         }
 
         if (player1.getHealthbar() <= 0) {
@@ -37,7 +37,7 @@ public class CombatSystemPvP {
         CombatUtils.printPlayerActions(player);
 
         int action = getPlayerAction(scanner);
-        if (action == -1) return true;
+        if (action == -1) return false;
 
         switch (action) {
             case 1:
@@ -51,8 +51,8 @@ public class CombatSystemPvP {
                 player.attackWithSpecial(opponent);
                 break;
             case 3:
-                handleEscape(player, opponent);
-                return false;
+                handleEscape(player);
+                return true;
             case 4:
                 player.getTechnicalInfo();
                 break;
@@ -68,10 +68,10 @@ public class CombatSystemPvP {
                 break;
             default:
                 slowConsole.imprimirDevagar("Ação inválida. Você perdeu a vez.");
-                return true;
+                return false;
         }
 
-        return opponent.getHealthbar() > 0;
+        return opponent.getHealthbar() <= 0;
     }
 
     private void attackTarget(Scanner scanner, Attributes player, Necromancer necromancer) {
@@ -146,7 +146,7 @@ public class CombatSystemPvP {
         }
     }
 
-    private void handleEscape(Attributes player, Attributes opponent) {
+    private void handleEscape(Attributes player) {
         double escapeChance = 25.00;
         double randomSuccess = random.nextDouble() * 100.0;
         if (randomSuccess <= escapeChance) {
