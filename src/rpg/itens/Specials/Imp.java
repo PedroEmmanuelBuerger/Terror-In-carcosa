@@ -20,7 +20,7 @@ public class Imp extends Attributes {
             slowConsole.imprimirDevagar(enemy.getName() + " foi consumido pelas sombras!");
             slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
             slowConsole.imprimirDevagar(enemy.getName() + " deixou cair " + enemy.getGold() + " de Ouro!");
-            gainGold(enemy.getGold());
+            personagem.gainGold(enemy.getGold());
             personagem.gainExp(enemy.getExp());
         }
     }
