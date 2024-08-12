@@ -1,18 +1,20 @@
-package rpg.itens.Weapons;
+package rpg.itens.Weapons.Warrior;
+
+import rpg.itens.Weapons.Weapon;
 
 import java.util.Random;
 
-public class DemonHearth implements Weapon {
+public class Zheiwender implements Weapon {
     private final int attack;
 
     @Override
     public int getPrice() {
-        return 30;
+        return 25;
     }
-    public DemonHearth() {
+    public Zheiwender() {
         Random random = new Random();
-        int minAttack = 13;
-        int maxAttack = 17;
+        int minAttack = 5;
+        int maxAttack = 10;
         this.attack = random.nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 
@@ -23,6 +25,6 @@ public class DemonHearth implements Weapon {
 
     @Override
     public String getName() {
-        return "Coração de Demônio";
+        return "Zheiwender";
     }
 }

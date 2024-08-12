@@ -1,10 +1,13 @@
 package rpg.Mode.Campaign.Dungeon;
 
+import com.sun.tools.javac.Main;
 import rpg.Character.Classes.*;
+import rpg.Mode.Pve;
 import rpg.Monsters.Bosses.Ghazkull;
 import rpg.Monsters.Bosses.KingDragon;
 import rpg.Monsters.Bosses.KnightOfFear;
 import rpg.Utils.Messages.End;
+import rpg.Utils.Messages.Start;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Item;
 import rpg.itens.Specials.Imp;
@@ -168,12 +171,7 @@ public abstract class DungeonBase implements Dungeon {
         }
 
         if (personagem.getHealthbar() <= 0) {
-            switch (enemy) {
-                case Ghazkull _ -> End.DefeatGhazkull();
-                case KingDragon _ -> End.DefeatDragonKing();
-                case KnightOfFear _ -> End.DefeatTaigon();
-                default -> End.DefeatGenericMonster();
-            }
+            handleDefeat();
             return false;
         }
 
@@ -183,6 +181,27 @@ public abstract class DungeonBase implements Dungeon {
 
         return true;
     }
+
+    private void handleDefeat() {
+        End.DefeatGenericMonster();
+
+        slowConsole.imprimirDevagar("Deseja reiniciar o jogo? (s/n)");
+        Scanner scanner = new Scanner(System.in);
+        String response = scanner.nextLine().trim().toLowerCase();
+
+        if (response.equals("s")) {
+            restartApplication();
+        } else {
+            End.DefeatGenericMonster();
+        }
+    }
+
+    public static void restartApplication() {
+        System.out.println("Reiniciando o jogo...");
+        Start.startApp();
+        Pve.startBattle();
+    }
+
 
     private void printPlayerActions(Attributes personagem) {
         slowConsole.imprimirDevagar("1 - Atacar");

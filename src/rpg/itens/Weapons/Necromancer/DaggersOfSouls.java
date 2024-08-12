@@ -1,18 +1,20 @@
-package rpg.itens.Weapons;
+package rpg.itens.Weapons.Necromancer;
+
+import rpg.itens.Weapons.Weapon;
 
 import java.util.Random;
 
-public class Necronomicon implements Weapon {
+public class DaggersOfSouls implements Weapon {
     private final int attack;
 
     @Override
     public int getPrice() {
-        return 1000;
+        return 25;
     }
-    public Necronomicon() {
+    public DaggersOfSouls() {
         Random random = new Random();
-        int minAttack = 18;
-        int maxAttack = 28;
+        int minAttack = 15;
+        int maxAttack = 23;
         this.attack = random.nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 
@@ -23,6 +25,6 @@ public class Necronomicon implements Weapon {
 
     @Override
     public String getName() {
-        return "Livro dos Mortos: Necronomicon";
+        return "Adagas da Alma";
     }
 }

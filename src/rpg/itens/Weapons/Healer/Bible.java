@@ -1,18 +1,20 @@
-package rpg.itens.Weapons;
+package rpg.itens.Weapons.Healer;
+
+import rpg.itens.Weapons.Weapon;
 
 import java.util.Random;
 
-public class SwordOfThousandTruths implements Weapon {
+public class Bible implements Weapon {
     private final int attack;
 
     @Override
     public int getPrice() {
-        return 50;
+        return 55;
     }
-    public SwordOfThousandTruths() {
+    public Bible() {
         Random random = new Random();
-        int minAttack = 15;
-        int maxAttack = 23;
+        int minAttack = 8;
+        int maxAttack = 17;
         this.attack = random.nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 
@@ -23,6 +25,6 @@ public class SwordOfThousandTruths implements Weapon {
 
     @Override
     public String getName() {
-        return "Espada de Mil Verdades";
+        return "Bíblia Sagrada";
     }
 }

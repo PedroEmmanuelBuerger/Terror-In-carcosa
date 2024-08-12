@@ -1,7 +1,16 @@
 package rpg.Mode.Campaign.Events;
 
 import rpg.Character.Classes.*;
-import rpg.itens.Weapons.*;
+import rpg.itens.Weapons.Healer.Bible;
+import rpg.itens.Weapons.Healer.Necronomicon;
+import rpg.itens.Weapons.Mage.StickOfTruth;
+import rpg.itens.Weapons.Mage.Wand;
+import rpg.itens.Weapons.Necromancer.DaggersOfSouls;
+import rpg.itens.Weapons.Necromancer.DemonHearth;
+import rpg.itens.Weapons.Rogue.Bayoneta;
+import rpg.itens.Weapons.Rogue.Crossbow;
+import rpg.itens.Weapons.Warrior.SwordOfThousandTruths;
+import rpg.itens.Weapons.Warrior.Zheiwender;
 import rpg.itens.Weapons.Weapon;
 import rpg.Utils.SlowConsole;
 

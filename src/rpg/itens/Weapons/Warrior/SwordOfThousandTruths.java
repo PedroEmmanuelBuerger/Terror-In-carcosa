@@ -1,18 +1,20 @@
-package rpg.itens.Weapons;
+package rpg.itens.Weapons.Warrior;
+
+import rpg.itens.Weapons.Weapon;
 
 import java.util.Random;
 
-public class StickOfTruth implements Weapon {
+public class SwordOfThousandTruths implements Weapon {
     private final int attack;
 
     @Override
     public int getPrice() {
         return 50;
     }
-    public StickOfTruth() {
+    public SwordOfThousandTruths() {
         Random random = new Random();
-        int minAttack = 10;
-        int maxAttack = 20;
+        int minAttack = 15;
+        int maxAttack = 23;
         this.attack = random.nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 
@@ -23,6 +25,6 @@ public class StickOfTruth implements Weapon {
 
     @Override
     public String getName() {
-        return "Cajado da Verdade";
+        return "Espada de Mil Verdades";
     }
 }

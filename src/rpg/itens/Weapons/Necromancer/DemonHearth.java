@@ -1,19 +1,20 @@
-package rpg.itens.Weapons;
+package rpg.itens.Weapons.Necromancer;
+
+import rpg.itens.Weapons.Weapon;
 
 import java.util.Random;
 
-public class Bayoneta implements Weapon {
+public class DemonHearth implements Weapon {
     private final int attack;
 
     @Override
     public int getPrice() {
-        return 13;
+        return 30;
     }
-
-    public Bayoneta() {
+    public DemonHearth() {
         Random random = new Random();
-        int minAttack = 8;
-        int maxAttack = 15;
+        int minAttack = 13;
+        int maxAttack = 17;
         this.attack = random.nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 
@@ -24,6 +25,6 @@ public class Bayoneta implements Weapon {
 
     @Override
     public String getName() {
-        return "Bayoneta";
+        return "Coração de Demônio";
     }
 }

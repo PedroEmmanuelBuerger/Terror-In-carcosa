@@ -9,7 +9,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando bug de loja apos comprar item" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Removendo Comentarios">
+      <change afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Paladin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/DungeonBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/Armer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/Armer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/NewWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/NewWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Bayoneta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Rogue/Bayoneta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Bible.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Healer/Bible.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Crossbow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Rogue/Crossbow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/DaggersOfSouls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Necromancer/DaggersOfSouls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/DemonHearth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Necromancer/DemonHearth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Necronomicon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Healer/Necronomicon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/StickOfTruth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Mage/StickOfTruth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/SwordOfThousandTruths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Warrior/SwordOfThousandTruths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Wand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Mage/Wand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/itens/Weapons/Zheiwender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Warrior/Zheiwender.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,14 +135,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Adicionando Propriedade de gold + evento de ganhar gold">
-      <option name="closed" value="true" />
-      <created>1722430111189</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1722430111189</updated>
     </task>
     <task id="LOCAL-00038" summary="Atualizando o Pause arrumando bug">
       <option name="closed" value="true" />
@@ -511,7 +520,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723491858934</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Removendo Comentarios">
+      <option name="closed" value="true" />
+      <created>1723492386577</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1723492386577</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -526,7 +543,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mudando alguns portraits" />
     <MESSAGE value="Refatorando + removewndo warnings" />
     <MESSAGE value="Removendo bibliotecas inuteis + balanceamento + conserto bugs" />
     <MESSAGE value="Retornando shopper apenas de potions" />
@@ -551,7 +567,8 @@
     <MESSAGE value="Arrumando bug não aparecia armadura octopus" />
     <MESSAGE value="Adicionando armadura amaldiçoada" />
     <MESSAGE value="Arrumando bug de loja apos comprar item" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando bug de loja apos comprar item" />
+    <MESSAGE value="Removendo Comentarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removendo Comentarios" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

@@ -1,18 +1,20 @@
-package rpg.itens.Weapons;
+package rpg.itens.Weapons.Mage;
+
+import rpg.itens.Weapons.Weapon;
 
 import java.util.Random;
 
-public class Zheiwender implements Weapon {
+public class Wand implements Weapon {
     private final int attack;
 
     @Override
     public int getPrice() {
         return 25;
     }
-    public Zheiwender() {
+    public Wand() {
         Random random = new Random();
-        int minAttack = 5;
-        int maxAttack = 10;
+        int minAttack = 8;
+        int maxAttack = 14;
         this.attack = random.nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 
@@ -23,6 +25,6 @@ public class Zheiwender implements Weapon {
 
     @Override
     public String getName() {
-        return "Zheiwender";
+        return "Varinha";
     }
 }

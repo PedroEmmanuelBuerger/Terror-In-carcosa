@@ -1,18 +1,20 @@
-package rpg.itens.Weapons;
+package rpg.itens.Weapons.Rogue;
+
+import rpg.itens.Weapons.Weapon;
 
 import java.util.Random;
 
-public class Bible implements Weapon {
+public class Crossbow implements Weapon {
     private final int attack;
 
     @Override
     public int getPrice() {
-        return 55;
+        return 15;
     }
-    public Bible() {
+    public Crossbow() {
         Random random = new Random();
-        int minAttack = 8;
-        int maxAttack = 17;
+        int minAttack = 7;
+        int maxAttack = 15;
         this.attack = random.nextInt((maxAttack - minAttack) + 1) + minAttack;
     }
 
@@ -23,6 +25,6 @@ public class Bible implements Weapon {
 
     @Override
     public String getName() {
-        return "Bíblia Sagrada";
+        return "Crossbow";
     }
 }
