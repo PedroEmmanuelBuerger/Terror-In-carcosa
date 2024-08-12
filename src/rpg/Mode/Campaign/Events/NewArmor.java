@@ -52,7 +52,13 @@ public class NewArmor implements NonCombatEvent {
 
             personagem.setArmor(newArmor);
 
-            slowConsole.imprimirDevagar(personagem.getName() + " agora está usando a nova armadura: " + newArmor.getName() + " com proteção " + newArmor.armor() + ", uma adição sinistra ao seu equipamento.");
+            if (newArmor instanceof RuinedKing) {
+                personagem.setMaxHealthInitial(1);
+                personagem.setHealthbar(1);// Define a vida do personagem como 1
+                slowConsole.imprimirDevagar(personagem.getName() + " equipou " + newArmor.getName() + ", e sua vida foi reduzida para 1.");
+            } else {
+                slowConsole.imprimirDevagar(personagem.getName() + " agora está usando a nova armadura: " + newArmor.getName() + " com proteção " + newArmor.armor() + ", uma adição sinistra ao seu equipamento.");
+            }
         } else {
             slowConsole.imprimirDevagar(personagem.getName() + " decidiu não equipar a armadura, como se um pressentimento de mal-estar o tivesse envolvido.");
         }
@@ -67,7 +73,8 @@ public class NewArmor implements NonCombatEvent {
                     new FabricoftheCosmos(),
                     new DemonCarcass(),
                     new CursedGoldenArmor(),
-                    new UltradimensionalOctopusSkin()
+                    new UltradimensionalOctopusSkin(),
+                    new RuinedKing() // Adiciona RuinedKing
             };
             case Mage _ -> new Armor[]{
                     new Robe(),
@@ -76,7 +83,8 @@ public class NewArmor implements NonCombatEvent {
                     new FabricoftheCosmos(),
                     new DemonCarcass(),
                     new CursedGoldenArmor(),
-                    new UltradimensionalOctopusSkin()
+                    new UltradimensionalOctopusSkin(),
+                    new RuinedKing() // Adiciona RuinedKing
             };
             case Necromancer _ -> new Armor[]{
                     new Robe(),
@@ -85,7 +93,8 @@ public class NewArmor implements NonCombatEvent {
                     new FabricoftheCosmos(),
                     new DemonCarcass(),
                     new CursedGoldenArmor(),
-                    new UltradimensionalOctopusSkin()
+                    new UltradimensionalOctopusSkin(),
+                    new RuinedKing() // Adiciona RuinedKing
             };
             case null, default -> new Armor[]{
                     new Rags(),
@@ -93,7 +102,8 @@ public class NewArmor implements NonCombatEvent {
                     new FabricoftheCosmos(),
                     new DemonCarcass(),
                     new CursedGoldenArmor(),
-                    new UltradimensionalOctopusSkin()
+                    new UltradimensionalOctopusSkin(),
+                    new RuinedKing() // Adiciona RuinedKing
             };
         };
     }

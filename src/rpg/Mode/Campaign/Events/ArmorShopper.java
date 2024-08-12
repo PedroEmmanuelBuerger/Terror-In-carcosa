@@ -55,6 +55,8 @@ public class ArmorShopper implements NonCombatEvent {
             } else if (choice > 0 && choice <= armorsForSale.size()) {
                 Armor selectedArmor = armorsForSale.get(choice - 1);
                 buyArmor(personagem, selectedArmor);
+                // Remove a armadura comprada da lista de armaduras disponíveis para venda
+                armorsForSale.remove(selectedArmor);
                 if (armorsForSale.isEmpty()) {
                     slowConsole.imprimirDevagar("Não há mais armaduras à venda.");
                     shopping = false;
@@ -98,7 +100,7 @@ public class ArmorShopper implements NonCombatEvent {
 
             if (armor instanceof RuinedKing) {
                 personagem.setHealthbar(1);
-                personagem.setMaxHealthInitial(1);// Define a vida do personagem como 1
+                personagem.setMaxHealthInitial(1); // Define a vida do personagem como 1
                 slowConsole.imprimirDevagar("Você equipou " + armor.getName() + " e sua vida foi reduzida para 1.");
             } else {
                 slowConsole.imprimirDevagar("Você comprou " + armor.getName() + " por " + armor.getPrice() + " Ouro.");

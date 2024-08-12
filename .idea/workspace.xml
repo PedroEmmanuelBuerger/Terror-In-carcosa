@@ -9,10 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando bug não aparecia armadura octopus">
-      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Armors/RuinedKing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando armadura amaldiçoada" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,14 +118,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Grande Update! - Adicionando itens utilizaveis + bag + visualização Bag + refatoração + Poções">
-      <option name="closed" value="true" />
-      <created>1722426129338</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1722426129338</updated>
     </task>
     <task id="LOCAL-00036" summary="Criando sistema uso de poções + atualização bag">
       <option name="closed" value="true" />
@@ -514,7 +503,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723489505184</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Adicionando armadura amaldiçoada">
+      <option name="closed" value="true" />
+      <created>1723491390359</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1723491390359</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -529,7 +526,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionando portraits de mobs" />
     <MESSAGE value="Arrumando bugs + portrait boss" />
     <MESSAGE value="Mudando alguns portraits" />
     <MESSAGE value="Refatorando + removewndo warnings" />
@@ -554,7 +550,8 @@
     <MESSAGE value="Rebalanceando armaduras" />
     <MESSAGE value="Arrumando armaduras para terem valor variavel de armor + rebalanceamento" />
     <MESSAGE value="Arrumando bug não aparecia armadura octopus" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando bug não aparecia armadura octopus" />
+    <MESSAGE value="Adicionando armadura amaldiçoada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando armadura amaldiçoada" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
