@@ -17,7 +17,7 @@ public class CreateRogue {
         boolean entradaValida = false;
         do {
             int tempMaxPoints;
-            if (Mode == 3) {
+            if (Mode == 3 || Mode == 2) {
                 tempMaxPoints = 50;
             } else {
                 tempMaxPoints = 99;

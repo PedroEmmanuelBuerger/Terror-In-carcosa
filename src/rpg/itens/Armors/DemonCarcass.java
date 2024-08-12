@@ -1,10 +1,20 @@
 package rpg.itens.Armors;
 
+import java.util.Random;
+
 public class DemonCarcass implements Armor {
+    private final int defense;
+
+    public DemonCarcass() {
+        Random random = new Random();
+        int minDefense = 7;
+        int maxDefense = 12;
+        this.defense = random.nextInt((maxDefense - minDefense) + 1) + minDefense;
+    }
 
     @Override
     public int armor() {
-        return 10; // Defesa alta
+        return defense;
     }
 
     @Override

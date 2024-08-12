@@ -9,10 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando bug imp ganhava gold ao inves de player">
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Attributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Warrior.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Rebalanceando armaduras">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateHealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateHealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateMage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateMage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateNecromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateNecromancer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateRogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateRogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateWarrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateWarrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,14 +125,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Balanceamento + 1 final para cada classe">
-      <option name="closed" value="true" />
-      <created>1722340696328</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1722340696328</updated>
     </task>
     <task id="LOCAL-00033" summary="Adicionando mecanica de critico">
       <option name="closed" value="true" />
@@ -515,7 +510,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723487565129</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Rebalanceando armaduras">
+      <option name="closed" value="true" />
+      <created>1723487968235</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1723487968235</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -530,7 +533,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionando Easter Egg" />
     <MESSAGE value="Adicionando opção de se mover (w,a,s,d)" />
     <MESSAGE value="Adicionando Mente" />
     <MESSAGE value="Adicionando portraits de mobs" />
@@ -555,7 +557,8 @@
     <MESSAGE value="Arrumando bug escolhas individual classe pvp" />
     <MESSAGE value="Refatorando removendo warning" />
     <MESSAGE value="Arrumando bug imp ganhava gold ao inves de player" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando bug imp ganhava gold ao inves de player" />
+    <MESSAGE value="Rebalanceando armaduras" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebalanceando armaduras" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

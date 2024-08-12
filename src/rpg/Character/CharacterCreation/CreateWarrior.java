@@ -17,7 +17,7 @@ public class CreateWarrior {
         boolean entradaValida = false;
         do {
             int tempMaxPoints;
-            if (Mode == 3) {
+            if (Mode == 3 || Mode == 2) {
                 tempMaxPoints = 50;
                 vida = vida + 20;
             } else {

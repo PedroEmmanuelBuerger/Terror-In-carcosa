@@ -1,10 +1,22 @@
 package rpg.itens.Armors;
 
+import java.util.Random;
+
 public class Robe implements Armor {
+    private final int defense;
+    private final int mana;
+
+    public Robe() {
+        Random random = new Random();
+        int minDefense = 3;
+        int maxDefense = 7;
+        this.defense = random.nextInt((maxDefense - minDefense) + 1) + minDefense;
+        this.mana = 10; // Valor fixo de mana
+    }
 
     @Override
     public int armor() {
-        return 5; // Defesa média
+        return defense;
     }
 
     @Override
@@ -19,6 +31,6 @@ public class Robe implements Armor {
 
     @Override
     public int getMana() {
-        return 10; // Adiciona mana
+        return mana;
     }
 }
