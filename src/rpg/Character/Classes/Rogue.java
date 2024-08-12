@@ -32,7 +32,7 @@ public class Rogue extends Attributes {
     public void takeDamage(int damage) {
         double randomNumber = random.nextDouble() * 100.0;
         int currentHealth = this.getHealthbar();
-        damage = damage / this.getArmor().armor();
+        damage = damage - this.getArmor().armor();
         if (randomNumber <= dodgeSkills) {
             slowConsole.imprimirDevagar(getName() + " escorreu para as sombras e desviou do ataque!");
         } else {

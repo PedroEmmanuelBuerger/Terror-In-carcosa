@@ -180,7 +180,7 @@ public abstract class Attributes {
 
     public void takeDamage(int damage) {
         int currentHealth = this.getHealthbar();
-        damage = damage / this.getArmor().armor();
+        damage = damage - this.getArmor().armor();
         this.setHealthbar(currentHealth - damage);
         slowConsole.imprimirDevagar(this.getName() + " sofreu " + damage + " de dano do abismo!");
         getHealth(this);
