@@ -25,7 +25,8 @@ public class ArmorShopper implements NonCombatEvent {
         allArmors.add(new DemonCarcass());
         allArmors.add(new CursedGoldenArmor());
         allArmors.add(new Robe());
-        allArmors.add(new UltradimensionalOctopusSkin());// Adicione Robe para Healers, Mages, e Necromancers
+        allArmors.add(new UltradimensionalOctopusSkin());
+        allArmors.add(new RuinedKing()); // Adicione RuinedKing
     }
 
     @Override
@@ -95,8 +96,14 @@ public class ArmorShopper implements NonCombatEvent {
             // Aplica o bônus específico se necessário
             applyArmorBonus(personagem, armor);
 
-            slowConsole.imprimirDevagar("Você comprou " + armor.getName() + " por " + armor.getPrice() + " Ouro.");
-            slowConsole.imprimirDevagar("Agora, sua armadura equipada é: " + armor.getName() + " com proteção " + armor.armor() + ".");
+            if (armor instanceof RuinedKing) {
+                personagem.setHealthbar(1);
+                personagem.setMaxHealthInitial(1);// Define a vida do personagem como 1
+                slowConsole.imprimirDevagar("Você equipou " + armor.getName() + " e sua vida foi reduzida para 1.");
+            } else {
+                slowConsole.imprimirDevagar("Você comprou " + armor.getName() + " por " + armor.getPrice() + " Ouro.");
+                slowConsole.imprimirDevagar("Agora, sua armadura equipada é: " + armor.getName() + " com proteção " + armor.armor() + ".");
+            }
         } else {
             slowConsole.imprimirDevagar("Ouro insuficiente para comprar " + armor.getName() + ".");
         }

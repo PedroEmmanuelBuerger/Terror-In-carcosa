@@ -9,13 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Rebalanceando armaduras">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando bug não aparecia armadura octopus">
+      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Armors/RuinedKing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateHealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateHealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateMage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateMage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateNecromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateNecromancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateRogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateRogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateWarrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateWarrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,22 +121,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Adicionando mecanica de critico">
-      <option name="closed" value="true" />
-      <created>1722346806944</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1722346806944</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Balanceamento + mudanças necromante">
-      <option name="closed" value="true" />
-      <created>1722347576895</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1722347576895</updated>
     </task>
     <task id="LOCAL-00035" summary="Grande Update! - Adicionando itens utilizaveis + bag + visualização Bag + refatoração + Poções">
       <option name="closed" value="true" />
@@ -518,7 +498,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723487968235</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Arrumando armaduras para terem valor variavel de armor + rebalanceamento">
+      <option name="closed" value="true" />
+      <created>1723489359178</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1723489359178</updated>
+    </task>
+    <task id="LOCAL-00083" summary="Arrumando bug não aparecia armadura octopus">
+      <option name="closed" value="true" />
+      <created>1723489505184</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1723489505184</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -533,8 +529,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionando opção de se mover (w,a,s,d)" />
-    <MESSAGE value="Adicionando Mente" />
     <MESSAGE value="Adicionando portraits de mobs" />
     <MESSAGE value="Arrumando bugs + portrait boss" />
     <MESSAGE value="Mudando alguns portraits" />
@@ -558,7 +552,9 @@
     <MESSAGE value="Refatorando removendo warning" />
     <MESSAGE value="Arrumando bug imp ganhava gold ao inves de player" />
     <MESSAGE value="Rebalanceando armaduras" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebalanceando armaduras" />
+    <MESSAGE value="Arrumando armaduras para terem valor variavel de armor + rebalanceamento" />
+    <MESSAGE value="Arrumando bug não aparecia armadura octopus" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando bug não aparecia armadura octopus" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
