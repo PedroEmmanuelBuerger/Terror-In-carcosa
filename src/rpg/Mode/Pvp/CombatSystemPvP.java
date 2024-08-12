@@ -9,6 +9,7 @@ import rpg.Utils.SlowConsole;
 import rpg.itens.Item;
 import rpg.itens.Specials.Imp;
 
+import java.util.Iterator;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -23,19 +24,12 @@ public class CombatSystemPvP {
             if (playerTurn(scanner, player1, player2)) break;
             if (playerTurn(scanner, player2, player1)) break;
         }
-
-        if (player1.getHealthbar() <= 0) {
-            slowConsole.imprimirDevagar(player1.getName() + " foi derrotado!");
-        } else if (player2.getHealthbar() <= 0) {
-            slowConsole.imprimirDevagar(player2.getName() + " foi derrotado!");
-        }
     }
 
     private boolean playerTurn(Scanner scanner, Attributes player, Attributes opponent) {
         slowConsole.imprimirDevagar("É a vez de " + player.getName() + ":");
         slowConsole.imprimirDevagar("Escolha sua ação:");
         CombatUtils.printPlayerActions(player);
-
         int action = getPlayerAction(scanner);
         if (action == -1) return false;
 
@@ -51,15 +45,12 @@ public class CombatSystemPvP {
                 player.attackWithSpecial(opponent);
                 break;
             case 3:
-                handleEscape(player);
-                return true;
-            case 4:
                 player.getTechnicalInfo();
                 break;
-            case 5:
+            case 4:
                 viewOrUseItems(scanner, player);
                 break;
-            case 6:
+            case 5:
                 if (player instanceof Warrior) {
                     ((Warrior) player).defend();
                 } else if (player instanceof Healer) {
@@ -77,16 +68,23 @@ public class CombatSystemPvP {
     private void attackTarget(Scanner scanner, Attributes player, Necromancer necromancer) {
         slowConsole.imprimirDevagar("Escolha o alvo do ataque:");
         slowConsole.imprimirDevagar("1 - " + necromancer.getName());
+
         int index = 2;
-        for (Imp imp : necromancer.getImps()) {
-            slowConsole.imprimirDevagar(index + " - " + imp.getName());
-            index++;
+        Iterator<Imp> impIterator = necromancer.getImps().iterator();
+        while (impIterator.hasNext()) {
+            Imp imp = impIterator.next();
+            if (imp.getHealthbar() > 0) {
+                slowConsole.imprimirDevagar(index + " - " + imp.getName());
+                index++;
+            } else {
+                impIterator.remove(); // Remover o Imp morto da lista
+            }
         }
 
         int targetChoice = getPlayerAction(scanner);
         if (targetChoice == 1) {
             player.attack(necromancer);
-        } else if (targetChoice > 1 && targetChoice <= necromancer.getImps().size() + 1) {
+        } else if (targetChoice > 1 && targetChoice < index) {
             player.attack(necromancer.getImps().get(targetChoice - 2));
         } else {
             slowConsole.imprimirDevagar("Escolha inválida. Você perdeu a vez.");
@@ -143,16 +141,6 @@ public class CombatSystemPvP {
             player.useItem(itemToUse);
         } else {
             slowConsole.imprimirDevagar("Item não encontrado na bag.");
-        }
-    }
-
-    private void handleEscape(Attributes player) {
-        double escapeChance = 25.00;
-        double randomSuccess = random.nextDouble() * 100.0;
-        if (randomSuccess <= escapeChance) {
-            slowConsole.imprimirDevagar(player.getName() + " fugiu com sucesso!");
-        } else {
-            slowConsole.imprimirDevagar(player.getName() + " tentou fugir, mas não conseguiu!");
         }
     }
 }
