@@ -167,7 +167,7 @@ public abstract class Attributes {
         if (!enemy.isAlive()) {
             slowConsole.imprimirDevagar("A saúde total de " + enemy.getName() + " é reduzida a 0");
             slowConsole.imprimirDevagar(enemy.getName() + " foi aniquilado!");
-            slowConsole.imprimirDevagar("Você absorveu " + enemy.getExp() + " de EXP do abismo!");
+            slowConsole.imprimirDevagar(this.getName() + " absorveu " + enemy.getExp() + " de EXP do abismo!");
             slowConsole.imprimirDevagar(enemy.getName() + " deixou " + enemy.getGold() + " de Ouro Profano!");
             gainGold(enemy.getGold());
             gainExp(enemy.getExp());

@@ -83,7 +83,7 @@ public class Necromancer extends Attributes {
         if (!enemy.isAlive()) {
             slowConsole.imprimirDevagar("A vida de " + enemy.getName() + " chegou a 0.");
             slowConsole.imprimirDevagar(enemy.getName() + " foi consumido pelas sombras!");
-            slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
+            slowConsole.imprimirDevagar(this.getName() + " absorveu " + enemy.getExp() + " de EXP do abismo!");
             slowConsole.imprimirDevagar(enemy.getName() + " deixou cair " + enemy.getGold() + " de Ouro!");
             gainGold(enemy.getGold());
             gainExp(enemy.getExp());
@@ -99,7 +99,7 @@ public class Necromancer extends Attributes {
             if (!enemy.isAlive()) {
                 slowConsole.imprimirDevagar("A vida de " + enemy.getName() + " chegou a 0.");
                 slowConsole.imprimirDevagar(enemy.getName() + " foi consumido pelas sombras!");
-                slowConsole.imprimirDevagar("Você ganhou " + enemy.getExp() + " de EXP!");
+                slowConsole.imprimirDevagar(this.getName() + " absorveu " + enemy.getExp() + " de EXP do abismo!");
                 slowConsole.imprimirDevagar(enemy.getName() + " deixou cair " + enemy.getGold() + " de Ouro!");
                 gainGold(enemy.getGold());
                 gainExp(enemy.getExp());

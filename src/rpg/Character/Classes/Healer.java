@@ -44,7 +44,7 @@ public class Healer extends Attributes {
             if (!enemy.isAlive()) {
                 slowConsole.imprimirDevagar("A saúde total de " + enemy.getName() + " chegou a 0");
                 slowConsole.imprimirDevagar(enemy.getName() + " foi destruído!");
-                slowConsole.imprimirDevagar("Você absorveu " + enemy.getExp() + " de EXP das profundezas!");
+                slowConsole.imprimirDevagar(this.getName() + " absorveu " + enemy.getExp() + " de EXP das profundezas!");
                 slowConsole.imprimirDevagar(enemy.getName() + " deixou para trás " + enemy.getGold() + " de Ouro Profano!");
                 gainGold(enemy.getGold());
                 gainExp(enemy.getExp());

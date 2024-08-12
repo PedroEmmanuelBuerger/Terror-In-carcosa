@@ -52,7 +52,7 @@ public class Mage extends Attributes {
         if (!enemy.isAlive()) {
             slowConsole.imprimirDevagar("A vida de " + enemy.getName() + " despencou para 0");
             slowConsole.imprimirDevagar(enemy.getName() + " foi obliterado!");
-            slowConsole.imprimirDevagar("Você absorveu " + enemy.getExp() + " de EXP das profundezas do abismo!");
+            slowConsole.imprimirDevagar(this.getName() + " absorveu " + enemy.getExp() + " de EXP do abismo!");
             slowConsole.imprimirDevagar(enemy.getName() + " deixou para trás " + enemy.getGold() + " de Ouro Profano!");
             gainGold(enemy.getGold());
             gainExp(enemy.getExp());
@@ -69,7 +69,7 @@ public class Mage extends Attributes {
             if (!enemy.isAlive()) {
                 slowConsole.imprimirDevagar("A vida de " + enemy.getName() + " despencou para 0");
                 slowConsole.imprimirDevagar(enemy.getName() + " foi obliterado!");
-                slowConsole.imprimirDevagar("Você absorveu " + enemy.getExp() + " de EXP das profundezas do abismo!");
+                slowConsole.imprimirDevagar(this.getName() + " absorveu " + enemy.getExp() + " de EXP do abismo!");
                 slowConsole.imprimirDevagar(enemy.getName() + " deixou para trás " + enemy.getGold() + " de Ouro Profano!");
                 gainGold(enemy.getGold());
                 gainExp(enemy.getExp());

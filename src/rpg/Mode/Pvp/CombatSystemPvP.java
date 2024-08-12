@@ -1,10 +1,7 @@
 package rpg.Mode.Pvp;
 
-import rpg.Character.Classes.Attributes;
-import rpg.Character.Classes.Healer;
-import rpg.Character.Classes.Necromancer;
-import rpg.Character.Classes.Warrior;
-import rpg.Utils.CombatUtils;
+import rpg.Character.Classes.*;
+import rpg.Utils.CombatUtilsPvp;
 import rpg.Utils.SlowConsole;
 import rpg.itens.Item;
 import rpg.itens.Specials.Imp;
@@ -28,8 +25,7 @@ public class CombatSystemPvP {
 
     private boolean playerTurn(Scanner scanner, Attributes player, Attributes opponent) {
         slowConsole.imprimirDevagar("É a vez de " + player.getName() + ":");
-        slowConsole.imprimirDevagar("Escolha sua ação:");
-        CombatUtils.printPlayerActions(player);
+        CombatUtilsPvp.printPlayerActions(player);
         int action = getPlayerAction(scanner);
         if (action == -1) return false;
 
@@ -42,19 +38,43 @@ public class CombatSystemPvP {
                 }
                 break;
             case 2:
-                player.attackWithSpecial(opponent);
+                if (player instanceof Mage) {
+                    player.attackWithSpecial(opponent);
+                } else if (player instanceof Necromancer) {
+                    ((Necromancer) player).summonImp();
+                } else {
+                    player.attackWithSpecial(opponent);
+                }
                 break;
             case 3:
-                player.getTechnicalInfo();
+                if (player instanceof Necromancer) {
+                    ((Necromancer) player).selectSpell(opponent);
+                } else {
+                    player.getTechnicalInfo();
+                }
                 break;
             case 4:
-                viewOrUseItems(scanner, player);
+                if (player instanceof Necromancer) {
+                    player.getTechnicalInfo();
+                } else {
+                    viewOrUseItems(scanner, player);
+                }
                 break;
             case 5:
                 if (player instanceof Warrior) {
                     ((Warrior) player).defend();
                 } else if (player instanceof Healer) {
+                    ((Healer) player).ressurection(player);
+                } else {
+                    viewOrUseItems(scanner, player);
+                }
+                break;
+            case 6:
+                if (player instanceof Healer) {
                     ((Healer) player).heal(player);
+                } else {
+                    slowConsole.imprimirDevagar("Ação inválida. Você perdeu a vez.");
+                    return false;
                 }
                 break;
             default:
