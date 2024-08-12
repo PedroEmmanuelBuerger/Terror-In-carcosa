@@ -30,7 +30,6 @@ public class NewArmor implements NonCombatEvent {
 
         if (choice.equalsIgnoreCase("s")) {
             if (currentArmor != null) {
-                // Aplica o bônus da nova armadura
                 switch (personagem) {
                     case Healer healer -> healer.setMana(healer.getMana() + newArmor.armor() - currentArmor.armor());
                     case Mage mage -> mage.setMana(mage.getMana() + newArmor.armor() - currentArmor.armor());
@@ -40,7 +39,6 @@ public class NewArmor implements NonCombatEvent {
                     }
                 }
             } else {
-                // Inicializa a mana com o bônus da nova armadura
                 switch (personagem) {
                     case Healer healer -> healer.setMana(newArmor.armor());
                     case Mage mage -> mage.setMana(newArmor.armor());
@@ -54,7 +52,7 @@ public class NewArmor implements NonCombatEvent {
 
             if (newArmor instanceof RuinedKing) {
                 personagem.setMaxHealthInitial(1);
-                personagem.setHealthbar(1);// Define a vida do personagem como 1
+                personagem.setHealthbar(1);
                 slowConsole.imprimirDevagar(personagem.getName() + " equipou " + newArmor.getName() + ", e sua vida foi reduzida para 1.");
             } else {
                 slowConsole.imprimirDevagar(personagem.getName() + " agora está usando a nova armadura: " + newArmor.getName() + " com proteção " + newArmor.armor() + ", uma adição sinistra ao seu equipamento.");
@@ -66,17 +64,7 @@ public class NewArmor implements NonCombatEvent {
 
     private Armor[] getAvailableArmors(Attributes personagem) {
         return switch (personagem) {
-            case Healer _ -> new Armor[]{
-                    new Robe(), // Robe é específico para Healers, Mages e Necromancers
-                    new Rags(),
-                    new LeatherUndefinedColor(),
-                    new FabricoftheCosmos(),
-                    new DemonCarcass(),
-                    new CursedGoldenArmor(),
-                    new UltradimensionalOctopusSkin(),
-                    new RuinedKing() // Adiciona RuinedKing
-            };
-            case Mage _ -> new Armor[]{
+            case Healer _, Mage _, Necromancer _ -> new Armor[]{
                     new Robe(),
                     new Rags(),
                     new LeatherUndefinedColor(),
@@ -84,17 +72,7 @@ public class NewArmor implements NonCombatEvent {
                     new DemonCarcass(),
                     new CursedGoldenArmor(),
                     new UltradimensionalOctopusSkin(),
-                    new RuinedKing() // Adiciona RuinedKing
-            };
-            case Necromancer _ -> new Armor[]{
-                    new Robe(),
-                    new Rags(),
-                    new LeatherUndefinedColor(),
-                    new FabricoftheCosmos(),
-                    new DemonCarcass(),
-                    new CursedGoldenArmor(),
-                    new UltradimensionalOctopusSkin(),
-                    new RuinedKing() // Adiciona RuinedKing
+                    new RuinedKing()
             };
             case null, default -> new Armor[]{
                     new Rags(),
@@ -103,7 +81,7 @@ public class NewArmor implements NonCombatEvent {
                     new DemonCarcass(),
                     new CursedGoldenArmor(),
                     new UltradimensionalOctopusSkin(),
-                    new RuinedKing() // Adiciona RuinedKing
+                    new RuinedKing()
             };
         };
     }

@@ -41,7 +41,7 @@ public class Main {
             return scanner.nextInt();
         } else {
             slowConsole.imprimirDevagar("Entrada inválida. O jogo será encerrado.");
-            scanner.nextLine(); // Limpa o buffer
+            scanner.nextLine();
             return -1;
         }
     }
@@ -49,20 +49,18 @@ public class Main {
     private static void startCampaign() {
         slowConsole.imprimirDevagar("Você escolheu o modo Campanha!");
         Start.startApp();
-        Pve.startBattle(); // Certifique-se de que o método estático startBattle() esteja disponível na classe Pve
+        Pve.startBattle();
     }
 
     private static void startCoop() {
         slowConsole.imprimirDevagar("Você escolheu o modo Coop!");
         Start.StartCoop();
         Coop.startCoop();
-        // Implemente a lógica do modo Coop aqui
     }
 
     private static void startPvP() {
         slowConsole.imprimirDevagar("Você escolheu o modo PvP!");
         Start.StartPvP();
         Pvps.startBattle();
-        // Implemente a lógica do modo PvP aqui
     }
 }

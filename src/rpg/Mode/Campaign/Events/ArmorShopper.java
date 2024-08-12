@@ -14,8 +14,8 @@ public class ArmorShopper implements NonCombatEvent {
     private final SlowConsole slowConsole = new SlowConsole();
     private final Scanner scanner = new Scanner(System.in);
 
-    private final List<Armor> allArmors; // Lista completa de armaduras
-    private List<Armor> armorsForSale; // Armaduras disponíveis para venda
+    private final List<Armor> allArmors;
+    private List<Armor> armorsForSale;
 
     public ArmorShopper() {
         allArmors = new ArrayList<>();
@@ -34,7 +34,6 @@ public class ArmorShopper implements NonCombatEvent {
         slowConsole.imprimirDevagar("=== Você encontrou um ferreiro das trevas especializado em armaduras... ===");
         boolean shopping = true;
 
-        // Filtra armaduras que podem ser compradas pela classe do personagem e seleciona aleatoriamente duas
         filterAndSelectArmorsForSale(personagem);
 
         while (shopping) {
@@ -55,7 +54,6 @@ public class ArmorShopper implements NonCombatEvent {
             } else if (choice > 0 && choice <= armorsForSale.size()) {
                 Armor selectedArmor = armorsForSale.get(choice - 1);
                 buyArmor(personagem, selectedArmor);
-                // Remove a armadura comprada da lista de armaduras disponíveis para venda
                 armorsForSale.remove(selectedArmor);
                 if (armorsForSale.isEmpty()) {
                     slowConsole.imprimirDevagar("Não há mais armaduras à venda.");
@@ -68,7 +66,6 @@ public class ArmorShopper implements NonCombatEvent {
     }
 
     private void filterAndSelectArmorsForSale(Attributes personagem) {
-        // Filtra armaduras que podem ser compradas pela classe do personagem
         List<Armor> availableArmors = new ArrayList<>();
         for (Armor armor : allArmors) {
             if (armor instanceof Robe && !(personagem instanceof Healer || personagem instanceof Mage || personagem instanceof Necromancer)) {
@@ -77,7 +74,6 @@ public class ArmorShopper implements NonCombatEvent {
             availableArmors.add(armor);
         }
 
-        // Seleciona aleatoriamente duas armaduras
         Random random = new Random();
         armorsForSale = new ArrayList<>();
         if (availableArmors.size() > 2) {
@@ -95,12 +91,11 @@ public class ArmorShopper implements NonCombatEvent {
             personagem.setGold(personagem.getGold() - armor.getPrice());
             personagem.setArmor(armor);
 
-            // Aplica o bônus específico se necessário
             applyArmorBonus(personagem, armor);
 
             if (armor instanceof RuinedKing) {
                 personagem.setHealthbar(1);
-                personagem.setMaxHealthInitial(1); // Define a vida do personagem como 1
+                personagem.setMaxHealthInitial(1);
                 slowConsole.imprimirDevagar("Você equipou " + armor.getName() + " e sua vida foi reduzida para 1.");
             } else {
                 slowConsole.imprimirDevagar("Você comprou " + armor.getName() + " por " + armor.getPrice() + " Ouro.");
@@ -114,15 +109,15 @@ public class ArmorShopper implements NonCombatEvent {
     private void applyArmorBonus(Attributes personagem, Armor armor) {
         if (personagem instanceof Healer healer) {
             if (armor instanceof Robe) {
-                healer.setMana(healer.getMana() + armor.armor()); // Aplica bônus de mana se for o Robe
+                healer.setMana(healer.getMana() + armor.armor());
             }
         } else if (personagem instanceof Mage mage) {
             if (armor instanceof Robe) {
-                mage.setMana(mage.getMana() + armor.armor()); // Aplica bônus de mana se for o Robe
+                mage.setMana(mage.getMana() + armor.armor());
             }
         } else if (personagem instanceof Necromancer necromancer) {
             if (armor instanceof Robe) {
-                necromancer.setMana(necromancer.getMana() + armor.armor()); // Aplica bônus de mana se for o Robe
+                necromancer.setMana(necromancer.getMana() + armor.armor());
             }
         }
     }

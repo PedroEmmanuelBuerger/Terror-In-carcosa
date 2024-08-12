@@ -11,7 +11,6 @@ public record Daggers(int attack) implements Weapon {
     public int getPrice() {
         return 15;
     }
-    // Inicializa o valor de ataque
 
     @Override
     public String getName() {

@@ -11,7 +11,7 @@ public class Robe implements Armor {
         int minDefense = 3;
         int maxDefense = 7;
         this.defense = random.nextInt((maxDefense - minDefense) + 1) + minDefense;
-        this.mana = 10; // Valor fixo de mana
+        this.mana = 10;
     }
 
     @Override

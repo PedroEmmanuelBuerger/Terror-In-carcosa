@@ -22,8 +22,7 @@ public class Coop {
         Scanner scanner = new Scanner(System.in);
         List<Attributes> jogadores = new ArrayList<>();
 
-        // Criação de múltiplos jogadores
-        for (int i = 0; i < 2; i++) {  // Pode alterar o número de jogadores conforme necessário
+        for (int i = 0; i < 2; i++) {
             System.out.println("Criação do Jogador " + (i + 1) + ":");
             Attributes jogador = CreatePlayer.createPlayer(scanner, 2);
             jogador.getTechnicalInfo();

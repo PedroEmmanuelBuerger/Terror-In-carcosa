@@ -47,7 +47,7 @@ public class Shooper implements NonCombatEvent {
             scanner.nextLine();
 
             if (choice == itemsForSale.size() + 1) {
-                shopping = false; // Sai do loop para voltar ao jogo
+                shopping = false;
             } else if (choice > 0 && choice <= itemsForSale.size()) {
                 Item selectedItem = itemsForSale.get(choice - 1);
                 buyItem(personagem, selectedItem);

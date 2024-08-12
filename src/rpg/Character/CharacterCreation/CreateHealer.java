@@ -24,7 +24,7 @@ public class CreateHealer {
                 tempMaxPoints = 99;
             }
             slowConsole.imprimirDevagar("Digite o nome do Curandeiro:");
-            nome = scanner.nextLine().trim(); // Remove espaços em branco extras
+            nome = scanner.nextLine().trim();
 
             if (nome.matches(".*\\d.*")) {
                 slowConsole.imprimirDevagar("O nome não pode conter números. Digite novamente.");

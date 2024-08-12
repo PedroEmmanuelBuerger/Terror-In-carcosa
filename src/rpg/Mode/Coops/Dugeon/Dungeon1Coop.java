@@ -12,11 +12,10 @@ public class Dungeon1Coop extends DungeonBaseCoop {
 
     @Override
     protected Attributes createEnemy(List<Attributes> jogadores) {
-        // Determina o nível dos jogadores; aqui assumimos que todos os jogadores têm o mesmo nível.
         int nivelMedio = jogadores.getFirst().getLevel();
 
         if (nivelMedio >= 5) {
-            Start.EncounterGhazkull(); // Exibe a mensagem ao encontrar Ghazkull
+            Start.EncounterGhazkull();
             Ghazkull boss = new Ghazkull("Ghazkull", 350, 20, 30, "SUA ALMA É MINHA!", Portraits.PortraitGhazkull());
             boss.generateTechinicalInfo();
             return boss;

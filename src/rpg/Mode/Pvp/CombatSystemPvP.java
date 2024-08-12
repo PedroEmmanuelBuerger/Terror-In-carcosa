@@ -95,7 +95,7 @@ public class CombatSystemPvP {
                 slowConsole.imprimirDevagar(index + " - " + imp.getName());
                 index++;
             } else {
-                impIterator.remove(); // Remover o Imp morto da lista
+                impIterator.remove();
             }
         }
 

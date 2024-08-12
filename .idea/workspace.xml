@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando armadura amaldiçoada" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando bug de loja apos comprar item" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,14 +118,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Criando sistema uso de poções + atualização bag">
-      <option name="closed" value="true" />
-      <created>1722428954351</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1722428954351</updated>
     </task>
     <task id="LOCAL-00037" summary="Adicionando Propriedade de gold + evento de ganhar gold">
       <option name="closed" value="true" />
@@ -511,7 +503,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723491390359</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Arrumando bug de loja apos comprar item">
+      <option name="closed" value="true" />
+      <created>1723491858934</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1723491858934</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -526,7 +526,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Arrumando bugs + portrait boss" />
     <MESSAGE value="Mudando alguns portraits" />
     <MESSAGE value="Refatorando + removewndo warnings" />
     <MESSAGE value="Removendo bibliotecas inuteis + balanceamento + conserto bugs" />
@@ -551,7 +550,8 @@
     <MESSAGE value="Arrumando armaduras para terem valor variavel de armor + rebalanceamento" />
     <MESSAGE value="Arrumando bug não aparecia armadura octopus" />
     <MESSAGE value="Adicionando armadura amaldiçoada" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando armadura amaldiçoada" />
+    <MESSAGE value="Arrumando bug de loja apos comprar item" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando bug de loja apos comprar item" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

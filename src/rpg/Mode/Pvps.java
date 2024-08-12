@@ -12,7 +12,6 @@ public class Pvps {
         Scanner scanner = new Scanner(System.in);
         SlowConsole slowConsole = new SlowConsole();
 
-        // Criar dois jogadores
         slowConsole.imprimirDevagar("Player 1:");
         Attributes player1 = CreatePlayer.createPlayer(scanner,3);
         player1.getTechnicalInfo();
