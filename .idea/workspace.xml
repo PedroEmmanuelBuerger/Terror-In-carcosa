@@ -9,10 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="começo implementação modo coop">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/Armer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/Armer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/NewArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/NewArmor.java" afterDir="false" />
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Refatoração">
+      <change afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/ChoseInitialWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateHealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateHealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateMage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateMage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateNecromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateNecromancer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreatePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreatePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateRogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateRogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateWarrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateWarrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Coop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Coop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Pve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Pvps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Pvps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -122,14 +129,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Adicionando raças + buff raças">
-      <option name="closed" value="true" />
-      <created>1722262692126</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1722262692126</updated>
     </task>
     <task id="LOCAL-00027" summary="Adicionando BakcGround + Mudando funcionamento armas + Removendo esqueleto da lista caso morra + mudar de imp para esqueleto">
       <option name="closed" value="true" />
@@ -515,7 +514,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723228550174</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Refatoração">
+      <option name="closed" value="true" />
+      <created>1723484273516</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1723484273518</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -530,7 +537,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Liberando Opção invocar esqueleto pause" />
     <MESSAGE value="Adicionando opções no menu de pause" />
     <MESSAGE value="Iniciando a mudança de tematica" />
     <MESSAGE value="+ Adição de tematica + finalização tematica texto" />
@@ -555,7 +561,8 @@
     <MESSAGE value="Adicionando funções necromante pvp + refatoração" />
     <MESSAGE value="refatoração" />
     <MESSAGE value="começo implementação modo coop" />
-    <option name="LAST_COMMIT_MESSAGE" value="começo implementação modo coop" />
+    <MESSAGE value="Refatoração" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatoração" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

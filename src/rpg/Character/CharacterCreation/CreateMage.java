@@ -6,7 +6,7 @@ import rpg.Character.Classes.Mage;
 import java.util.Scanner;
 
 public class CreateMage {
-    public static Mage createMage(Scanner scanner) {
+    public static Mage createMage(Scanner scanner, int Mode) {
         SlowConsole slowConsole = new SlowConsole();
         String nome;
         int vida = 0;
@@ -17,7 +17,12 @@ public class CreateMage {
 
         boolean entradaValida = false;
         do {
-            int tempMaxPoints = 99;
+            int tempMaxPoints;
+            if (Mode == 3) {
+                tempMaxPoints = 50;
+            } else {
+                tempMaxPoints = 99;
+            }
 
             slowConsole.imprimirDevagar("Digite o nome do Mago:");
             nome = scanner.nextLine().trim();

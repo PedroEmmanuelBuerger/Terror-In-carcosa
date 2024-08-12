@@ -25,7 +25,7 @@ public class Coop {
         // Criação de múltiplos jogadores
         for (int i = 0; i < 2; i++) {  // Pode alterar o número de jogadores conforme necessário
             System.out.println("Criação do Jogador " + (i + 1) + ":");
-            Attributes jogador = CreatePlayer.createPlayer(scanner);
+            Attributes jogador = CreatePlayer.createPlayer(scanner, 2);
             jogador.getTechnicalInfo();
             jogadores.add(jogador);
         }

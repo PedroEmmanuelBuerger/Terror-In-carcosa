@@ -6,7 +6,7 @@ import rpg.Utils.SlowConsole;
 import java.util.Scanner;
 
 public class CreateNecromancer {
-    public static Necromancer createNecromancer(Scanner scanner) {
+    public static Necromancer createNecromancer(Scanner scanner, int Mode) {
         SlowConsole slowConsole = new SlowConsole();
         String nome;
         int vida = 0;
@@ -17,7 +17,12 @@ public class CreateNecromancer {
 
         boolean entradaValida = false;
         do {
-            int tempMaxPoints = 99;
+            int tempMaxPoints;
+            if (Mode == 3) {
+                tempMaxPoints = 50;
+            } else {
+                tempMaxPoints = 99;
+            }
 
             slowConsole.imprimirDevagar("Digite o nome do Necromante:");
             nome = scanner.nextLine().trim();

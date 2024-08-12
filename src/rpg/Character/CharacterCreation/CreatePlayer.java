@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class CreatePlayer {
 
-    public static Attributes createPlayer(Scanner scanner) {
+    public static Attributes createPlayer(Scanner scanner, int mode) {
         SlowConsole slowConsole = new SlowConsole();
         Attributes personagem = null;
 
@@ -27,23 +27,23 @@ public class CreatePlayer {
             switch (escolha) {
                 case 1:
                     Chose.ChooseWarrior();
-                    personagem = CreateWarrior.createWarrior(scanner);
+                    personagem = CreateWarrior.createWarrior(scanner, mode);
                     break;
                 case 2:
                     Chose.ChooseMage();
-                    personagem = CreateMage.createMage(scanner);
+                    personagem = CreateMage.createMage(scanner, mode);
                     break;
                 case 3:
                     Chose.ChooseRogue();
-                    personagem = CreateRogue.createRogue(scanner);
+                    personagem = CreateRogue.createRogue(scanner, mode);
                     break;
                 case 4:
                     Chose.ChooseHealer();
-                    personagem = CreateHealer.createHealer(scanner);
+                    personagem = CreateHealer.createHealer(scanner, mode);
                     break;
                 case 5:
                     Chose.ChooseNecromancer();
-                    personagem = CreateNecromancer.createNecromancer(scanner);
+                    personagem = CreateNecromancer.createNecromancer(scanner, mode);
                     personagem.setMind(personagem.getMind() + 5);
                     break;
                 default:

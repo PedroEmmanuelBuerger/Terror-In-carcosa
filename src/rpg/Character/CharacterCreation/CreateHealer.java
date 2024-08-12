@@ -6,7 +6,7 @@ import rpg.Character.Classes.Healer;
 import java.util.Scanner;
 
 public class CreateHealer {
-    public static Healer createHealer(Scanner scanner) {
+    public static Healer createHealer(Scanner scanner, int Mode) {
         SlowConsole slowConsole = new SlowConsole();
         String nome;
         int vida = 0;
@@ -17,8 +17,12 @@ public class CreateHealer {
 
         boolean entradaValida = false;
         do {
-            int tempMaxPoints = 99;
-
+            int tempMaxPoints;
+            if (Mode == 3) {
+                tempMaxPoints = 50;
+            } else {
+                tempMaxPoints = 99;
+            }
             slowConsole.imprimirDevagar("Digite o nome do Curandeiro:");
             nome = scanner.nextLine().trim(); // Remove espaços em branco extras
 

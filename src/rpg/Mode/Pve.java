@@ -17,7 +17,7 @@ public class Pve {
     public static void startBattle() {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
-        Attributes personagem = CreatePlayer.createPlayer(scanner);
+        Attributes personagem = CreatePlayer.createPlayer(scanner,1);
         personagem.getTechnicalInfo();
 
         Pve pveInstance = new Pve();

@@ -6,7 +6,7 @@ import rpg.Character.Classes.Warrior;
 import java.util.Scanner;
 
 public class CreateWarrior {
-    public static Warrior createWarrior(Scanner scanner) {
+    public static Warrior createWarrior(Scanner scanner, int Mode) {
         SlowConsole slowConsole = new SlowConsole();
         String nome;
         int vida = 0;
@@ -16,7 +16,13 @@ public class CreateWarrior {
 
         boolean entradaValida = false;
         do {
-            int tempMaxPoints = 99;
+            int tempMaxPoints;
+            if (Mode == 3) {
+                tempMaxPoints = 50;
+                vida = vida + 20;
+            } else {
+                tempMaxPoints = 99;
+            }
 
             slowConsole.imprimirDevagar("Digite o nome do Guerreiro:");
             nome = scanner.nextLine().trim();

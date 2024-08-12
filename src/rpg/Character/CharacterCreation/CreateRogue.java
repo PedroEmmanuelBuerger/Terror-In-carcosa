@@ -6,7 +6,7 @@ import rpg.Character.Classes.Rogue;
 import java.util.Scanner;
 
 public class CreateRogue {
-    public static Rogue createRogue(Scanner scanner) {
+    public static Rogue createRogue(Scanner scanner, int Mode) {
         SlowConsole slowConsole = new SlowConsole();
         String nome;
         int vida = 0;
@@ -16,7 +16,12 @@ public class CreateRogue {
 
         boolean entradaValida = false;
         do {
-            int tempMaxPoints = 99;
+            int tempMaxPoints;
+            if (Mode == 3) {
+                tempMaxPoints = 50;
+            } else {
+                tempMaxPoints = 99;
+            }
 
             slowConsole.imprimirDevagar("Digite o nome do Ladrão:");
             nome = scanner.nextLine().trim();
