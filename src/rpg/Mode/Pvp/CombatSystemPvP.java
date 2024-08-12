@@ -7,11 +7,9 @@ import rpg.itens.Item;
 import rpg.itens.Specials.Imp;
 
 import java.util.Iterator;
-import java.util.Random;
 import java.util.Scanner;
 
 public class CombatSystemPvP {
-    private final Random random = new Random();
     private final SlowConsole slowConsole = new SlowConsole();
 
     public void startCombat(Scanner scanner, Attributes player1, Attributes player2) {
