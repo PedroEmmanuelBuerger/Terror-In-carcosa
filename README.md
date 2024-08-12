@@ -1,7 +1,6 @@
 ## Terror In Carcosa
 <div>
-  <img src="https://github.com/user-attachments/assets/96a7d8e3-a0f1-4585-a9ff-2d5ab5570d29" width="45%" />
-  <img src="https://github.com/user-attachments/assets/bfaff974-0b87-450b-978a-0beb8b639d26" width="45%" />
+  <img src="https://github.com/user-attachments/assets/bfaff974-0b87-450b-978a-0beb8b639d26" width="50%" />
 </div>
 Terror In Carcosa é um projeto de RPG desenvolvido para oferecer uma experiência de jogo imersiva com combate, eventos e criação de personagens. O sistema permite criar e gerenciar personagens de diferentes classes e raças, participar de batalhas e eventos aleatórios, e experimentar um ambiente de jogo dinâmico e envolvente com a tematica de horror cósmico, baseada principalmente em "O Rei de Amarelo".
 
