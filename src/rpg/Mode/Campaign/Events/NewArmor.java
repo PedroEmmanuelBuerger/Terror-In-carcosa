@@ -60,36 +60,40 @@ public class NewArmor implements NonCombatEvent {
 
     private Armor[] getAvailableArmors(Attributes personagem) {
         return switch (personagem) {
-            case Healer healer -> new Armor[]{
+            case Healer _ -> new Armor[]{
                     new Robe(), // Robe é específico para Healers, Mages e Necromancers
                     new Rags(),
                     new LeatherUndefinedColor(),
                     new FabricoftheCosmos(),
                     new DemonCarcass(),
-                    new CursedGoldenArmor()
+                    new CursedGoldenArmor(),
+                    new UltradimensionalOctopusSkin()
             };
-            case Mage mage -> new Armor[]{
+            case Mage _ -> new Armor[]{
                     new Robe(),
                     new Rags(),
                     new LeatherUndefinedColor(),
                     new FabricoftheCosmos(),
                     new DemonCarcass(),
-                    new CursedGoldenArmor()
+                    new CursedGoldenArmor(),
+                    new UltradimensionalOctopusSkin()
             };
-            case Necromancer necromancer -> new Armor[]{
+            case Necromancer _ -> new Armor[]{
                     new Robe(),
                     new Rags(),
                     new LeatherUndefinedColor(),
                     new FabricoftheCosmos(),
                     new DemonCarcass(),
-                    new CursedGoldenArmor()
+                    new CursedGoldenArmor(),
+                    new UltradimensionalOctopusSkin()
             };
             case null, default -> new Armor[]{
                     new Rags(),
                     new LeatherUndefinedColor(),
                     new FabricoftheCosmos(),
                     new DemonCarcass(),
-                    new CursedGoldenArmor()
+                    new CursedGoldenArmor(),
+                    new UltradimensionalOctopusSkin()
             };
         };
     }

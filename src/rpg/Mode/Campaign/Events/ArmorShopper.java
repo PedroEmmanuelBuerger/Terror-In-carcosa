@@ -11,10 +11,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ArmorShopper implements NonCombatEvent {
-    private SlowConsole slowConsole = new SlowConsole();
-    private Scanner scanner = new Scanner(System.in);
+    private final SlowConsole slowConsole = new SlowConsole();
+    private final Scanner scanner = new Scanner(System.in);
 
-    private List<Armor> allArmors; // Lista completa de armaduras
+    private final List<Armor> allArmors; // Lista completa de armaduras
     private List<Armor> armorsForSale; // Armaduras disponíveis para venda
 
     public ArmorShopper() {
@@ -24,7 +24,8 @@ public class ArmorShopper implements NonCombatEvent {
         allArmors.add(new FabricoftheCosmos());
         allArmors.add(new DemonCarcass());
         allArmors.add(new CursedGoldenArmor());
-        allArmors.add(new Robe()); // Adicione Robe para Healers, Mages, e Necromancers
+        allArmors.add(new Robe());
+        allArmors.add(new UltradimensionalOctopusSkin());// Adicione Robe para Healers, Mages, e Necromancers
     }
 
     @Override
