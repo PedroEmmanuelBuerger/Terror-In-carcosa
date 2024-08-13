@@ -32,5 +32,5 @@ Os principais aprendizados incluem:
 ## Conclusão
 Terror In Carcosa é um jogo de RPG que demonstra conceitos fundamentais de desenvolvimento de software, incluindo a criação de um sistema de combate, gerenciamento de recursos e eventos aleatórios. Este projeto proporcionou uma oportunidade valiosa para aprender e aplicar práticas modernas de desenvolvimento, além de criar uma experiência de jogo envolvente e interativa.
 <div>
-  <img src="https://github.com/user-attachments/assets/17c68f73-64a6-4b14-95a5-dfd85e624b9c" width="50%" />
+  <img src="https://github.com/user-attachments/assets/17c68f73-64a6-4b14-95a5-dfd85e624b9c" width="90%" />
 </div>
