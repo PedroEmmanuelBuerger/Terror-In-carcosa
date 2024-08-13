@@ -185,7 +185,20 @@ public class Start {
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 """);
     }
-
+    public static void ShowCarcosa() {
+        SlowConsole slowConsole = new SlowConsole();
+        slowConsole.imprimirDevagar("""
+            ********************************************************************************************
+            *                                                                                          *
+            *    @@@@@@@   @@@@@@   @@@@@@@   @@@@@@@   @@@@@@   @@@@@@   @@@@@@                       *
+            *   !@@       @@!  @@@  @@!  @@@  !@@       @@!  @@@  !@@      @@!  @@@                    *
+            *   !@!       @!@!@!@!  @!@!!@!   !@!       @!@  !@!  !@@!!    @!@!@!@!                    *
+            *   :!!       !!:  !!!  !!: :!!   :!!       !!:  !!!     !:!   !!:  !!!                    *
+            *    :: :: :   :   : :   :   : :   :: :: :  : :. :  ::.: :     :   : :                     *
+            *                                                                                          *
+            ********************************************************************************************
+            """);
+    }
     public static void EncounterLordDragonKing() {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""

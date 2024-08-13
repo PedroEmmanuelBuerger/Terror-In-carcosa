@@ -10,7 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Refatorando + adicionando opção de reiniciar campanha">
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/DungeonBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/Messages/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/Messages/Start.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,14 +122,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Adicionando evento de vendedor + mob dropa gold + refatoração">
-      <option name="closed" value="true" />
-      <created>1722432022849</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1722432022849</updated>
     </task>
     <task id="LOCAL-00040" summary="Arrumando código + refatoração + drop de gold aleatório + remoção de item na loja apos compra + bug fixes">
       <option name="closed" value="true" />
@@ -513,7 +507,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723493656515</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Refatorando + adicionando opção de reiniciar campanha">
+      <option name="closed" value="true" />
+      <created>1723545040028</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1723545040028</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

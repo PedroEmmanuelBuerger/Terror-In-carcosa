@@ -11,6 +11,7 @@ public class Main {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        Start.ShowCarcosa();
         slowConsole.imprimirDevagar("=== Bem-vindo ao Mundo de RPG das Trevas ===");
         slowConsole.imprimirDevagar("Escolha seu modo de jogo...");
         slowConsole.imprimirDevagar("1 - Campanha");
