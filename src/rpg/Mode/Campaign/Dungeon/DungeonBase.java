@@ -192,7 +192,6 @@ public abstract class DungeonBase implements Dungeon {
         if (response.equals("s")) {
             restartApplication();
         } else {
-            End.DefeatGenericMonster();
         }
     }
 
