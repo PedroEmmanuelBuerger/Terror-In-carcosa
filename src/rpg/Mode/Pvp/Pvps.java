@@ -1,8 +1,7 @@
-package rpg.Mode;
+package rpg.Mode.Pvp;
 
 import rpg.Character.Classes.Attributes;
 import rpg.Character.CharacterCreation.CreatePlayer;
-import rpg.Mode.Pvp.CombatSystemPvP;
 import rpg.Utils.SlowConsole;
 
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package rpg.Mode.Coops.Dugeon;
+package rpg.Mode.Coops.Dungeons;
 
 import rpg.Character.Classes.Attributes;
 import rpg.Monsters.Bosses.Ghazkull;

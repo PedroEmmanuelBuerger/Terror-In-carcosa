@@ -1,54 +1,87 @@
-package rpg.Mode;
+package rpg.Mode.Coops;
 
-import rpg.Mode.Campaign.Events.*;
 import rpg.Character.Classes.Attributes;
-import rpg.Character.Classes.Mage;
-import rpg.Mode.Campaign.Dungeon.CombatSystem;
-import rpg.Utils.SlowConsole;
 import rpg.Character.CharacterCreation.CreatePlayer;
+import rpg.Character.Classes.Mage;
+import rpg.Mode.Campaign.Events.*;
+import rpg.Mode.Coops.Dungeons.Dungeon1Coop;
+import rpg.Mode.Coops.Dungeons.DungeonCoop;
+import rpg.Utils.SlowConsole;
 import rpg.itens.Specials.SpeelBook;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Pve {
+public class Coop {
     private boolean specialEncounterOccurred = false;
 
-    public static void startBattle() {
+    public static void startCoop() {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
-        Attributes personagem = CreatePlayer.createPlayer(scanner,1);
-        personagem.getTechnicalInfo();
+        List<Attributes> jogadores = new ArrayList<>();
 
-        Pve pveInstance = new Pve();
-        personagem.setLevelDungeon(1);
+        for (int i = 0; i < 2; i++) {
+            System.out.println("Criação do Jogador " + (i + 1) + ":");
+            Attributes jogador = CreatePlayer.createPlayer(scanner, 2);
+            jogador.getTechnicalInfo();
+            jogadores.add(jogador);
+        }
+
+        Coop coopInstance = new Coop();
+
+        for (Attributes jogador : jogadores) {
+            jogador.setLevelDungeon(1);
+        }
 
         SlowConsole slowConsole = new SlowConsole();
 
-        while (personagem.getHealthbar() > 0) {
-            slowConsole.imprimirDevagar("Mova-se![W,A,S,D]");
+        while (jogadores.stream().anyMatch(j -> j.getHealthbar() > 0)) {
+            slowConsole.imprimirDevagar("Movam-se![W,A,S,D]");
             String key = scanner.nextLine().toLowerCase().trim();
 
             if (key.equals("w") || key.equals("a") || key.equals("s") || key.equals("d")) {
                 int randomEvent = random.nextInt(12);
 
                 if (randomEvent < 6) {
-                    CombatSystem.startCombat(scanner, personagem);
+                    coopInstance.startCombat(scanner, jogadores);
                 } else {
-                    pveInstance.nonCombatEvent(personagem);
+                    for (Attributes jogador : jogadores) {
+                        coopInstance.nonCombatEvent(jogador);
+                    }
                 }
             }
         }
     }
 
-    private void nonCombatEvent(Attributes personagem) {
+    private void startCombat(Scanner scanner, List<Attributes> jogadores) {
+        DungeonCoop dungeon = createDungeon(jogadores);
+        dungeon.startCombat(scanner, jogadores);
+    }
+
+    private DungeonCoop createDungeon(List<Attributes> jogadores) {
+        int levelDungeon = jogadores.getFirst().getLevelDungeon();
+        for (Attributes jogador : jogadores) {
+            if (jogador.getLevelDungeon() != levelDungeon) {
+                throw new IllegalStateException("Todos os jogadores devem estar no mesmo nível de dungeon.");
+            }
+        }
+
+        return switch (levelDungeon) {
+            case 1 -> new Dungeon1Coop();
+            default -> throw new IllegalStateException("Dungeon não encontrada para o nível: " + levelDungeon);
+        };
+    }
+
+    private void nonCombatEvent(Attributes jogador) {
         Random random = new Random();
         int eventType = random.nextInt(15);
 
         NonCombatEvent event = null;
         switch (eventType) {
             case 0:
-                if (personagem instanceof Mage mage) {
+                if (jogador instanceof Mage mage) {
                     if (!specialEncounterOccurred) {
                         SpeelBook speelBookactual = mage.getSpeelBook();
                         event = new SpecialEncounter(speelBookactual);
@@ -110,7 +143,7 @@ public class Pve {
         }
 
         if (event != null) {
-            event.executeEvent(personagem);
+            event.executeEvent(jogador);
         }
     }
 }

@@ -1,5 +1,4 @@
 package rpg.Character.Classes;
-
 import rpg.Utils.CriticChance;
 import rpg.Utils.SlowConsole;
 import rpg.Utils.ManaAdm;

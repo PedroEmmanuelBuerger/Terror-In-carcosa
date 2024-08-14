@@ -1,6 +1,6 @@
-import rpg.Mode.Coop;
-import rpg.Mode.Pve;
-import rpg.Mode.Pvps;
+import rpg.Mode.Coops.Coop;
+import rpg.Mode.Campaign.Pve;
+import rpg.Mode.Pvp.Pvps;
 import rpg.Utils.Messages.Start;
 import rpg.Utils.SlowConsole;
 

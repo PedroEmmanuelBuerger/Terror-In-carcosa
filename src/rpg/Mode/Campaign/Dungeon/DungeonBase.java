@@ -1,8 +1,7 @@
 package rpg.Mode.Campaign.Dungeon;
 
-import com.sun.tools.javac.Main;
 import rpg.Character.Classes.*;
-import rpg.Mode.Pve;
+import rpg.Mode.Campaign.Pve;
 import rpg.Monsters.Bosses.Ghazkull;
 import rpg.Monsters.Bosses.KingDragon;
 import rpg.Monsters.Bosses.KnightOfFear;

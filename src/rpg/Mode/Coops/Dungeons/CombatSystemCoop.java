@@ -1,4 +1,4 @@
-package rpg.Mode.Coops.Dugeon;
+package rpg.Mode.Coops.Dungeons;
 
 import rpg.Character.Classes.*;
 import rpg.Utils.SlowConsole;
@@ -166,10 +166,10 @@ public class CombatSystemCoop {
         double escapeChance = 25.00;
         double randomSucess = random.nextDouble() * 100.0;
         if (randomSucess <= escapeChance && !enemy.getName().equals("Ghazkull") && !enemy.getName().equals("Lorde Rei Dragão")) {
-            slowConsole.imprimirDevagar("Você fugiu!");
+            slowConsole.imprimirDevagar("Vocês fugiu!");
             return false;
         } else {
-            slowConsole.imprimirDevagar("Você tentou fugir, mas não conseguiu!");
+            slowConsole.imprimirDevagar("Vocês tentaram fugir, mas não conseguiu!");
             return true;
         }
     }
