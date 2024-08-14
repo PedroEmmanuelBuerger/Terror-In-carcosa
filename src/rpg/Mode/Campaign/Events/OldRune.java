@@ -1,8 +1,6 @@
 package rpg.Mode.Campaign.Events;
 
-import rpg.Character.Classes.Attributes;
-import rpg.Character.Classes.Healer;
-import rpg.Character.Classes.Mage;
+import rpg.Character.Classes.*;
 import rpg.Utils.SlowConsole;
 
 import java.util.Random;
@@ -20,7 +18,13 @@ public class OldRune implements NonCombatEvent {
             slowConsole.imprimirDevagar("Você encontrou uma runa antiga e enigmática, coberta por inscrições de outro mundo... Ganhou " + manaRecovered + " de mana e 5 de ataque especial.");
         } else if (personagem instanceof Healer) {
             ((Healer) personagem).setMana(((Healer) personagem).getMana() + 5);
-            personagem.setSpecial(((Healer) personagem).getSpecial() + 5);
+            personagem.setSpecial(personagem.getSpecial() + 5);
+            slowConsole.imprimirDevagar("Você encontrou uma runa antiga, suas inscrições emitem uma luz sinistra... Ganhou " + manaRecovered + " de mana e 5 de ataque especial.");
+        } else if (personagem instanceof Necromancer) {
+            ((Necromancer) personagem).setMana(((Necromancer) personagem).getMana() + 5);
+            slowConsole.imprimirDevagar("Você encontrou uma runa antiga, suas inscrições emitem uma luz sinistra... Ganhou " + manaRecovered + " de mana e 5 de ataque especial.");
+        } else if (personagem instanceof Paladin) {
+            ((Paladin) personagem).setMana(((Paladin) personagem).getMana() + 5);
             slowConsole.imprimirDevagar("Você encontrou uma runa antiga, suas inscrições emitem uma luz sinistra... Ganhou " + manaRecovered + " de mana e 5 de ataque especial.");
         }
     }

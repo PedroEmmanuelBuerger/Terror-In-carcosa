@@ -9,18 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando logo">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Refatoração + mudança modo coop">
+      <change afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreatePaladin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Healer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreatePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreatePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Paladin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Paladin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/DungeonBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Coop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Coops/Coop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Coops/Dugeon/CombatSystemCoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Coops/Dungeons/CombatSystemCoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Coops/Dugeon/Dungeon1Coop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Coops/Dungeons/Dungeon1Coop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Coops/Dugeon/DungeonBaseCoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Coops/Dungeons/DungeonBaseCoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Coops/Dugeon/DungeonCoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Coops/Dungeons/DungeonCoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Pve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Pvps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Pvp/Pvps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/ArmorShopper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/ArmorShopper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/ManaRecoveryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/ManaRecoveryEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/NewArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/NewArmor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/NewWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/NewWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/OldRune.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/OldRune.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/Pause.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/Pause.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/SpecialEncounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/SpecialEncounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/Messages/Chose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/Messages/Chose.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,14 +132,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Balanceamento + chance de aparecer eventos é menor">
-      <option name="closed" value="true" />
-      <created>1722435400415</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1722435400415</updated>
     </task>
     <task id="LOCAL-00042" summary="Arrumando Necromante">
       <option name="closed" value="true" />
@@ -523,7 +517,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723546103551</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="Refatoração + mudança modo coop">
+      <option name="closed" value="true" />
+      <created>1723654922384</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1723654922384</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -538,7 +540,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Retornando shopper apenas de potions" />
     <MESSAGE value="Removendo todos os comentarios + adicionando armeiro + balanceamento + chance de ter pause" />
     <MESSAGE value="Arrumando preço das armas" />
     <MESSAGE value="Adicionando mecanica Armadura" />
@@ -563,7 +564,8 @@
     <MESSAGE value="Removendo Comentarios" />
     <MESSAGE value="Refatorando + adicionando opção de reiniciar campanha" />
     <MESSAGE value="Adicionando logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando logo" />
+    <MESSAGE value="Refatoração + mudança modo coop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatoração + mudança modo coop" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

@@ -1,10 +1,7 @@
 package rpg.Mode.Campaign.Events;
 
-import rpg.Character.Classes.Necromancer;
+import rpg.Character.Classes.*;
 import rpg.Utils.SlowConsole;
-import rpg.Character.Classes.Attributes;
-import rpg.Character.Classes.Healer;
-import rpg.Character.Classes.Mage;
 
 import java.util.Random;
 
@@ -23,6 +20,9 @@ public class ManaRecoveryEvent implements NonCombatEvent {
             slowConsole.imprimirDevagar("Você encontrou um foco de cura irradiando uma luz fraca e perturbadora. Ganhou " + manaRecovered + " de mana.");
         } else if (personagem instanceof Necromancer) {
             ((Necromancer) personagem).recoverMana(manaRecovered);
+            slowConsole.imprimirDevagar("Você encontrou um corpo profanado, uma fonte de energia negra. Ganhou " + manaRecovered + " de mana.");
+        } else if (personagem instanceof Paladin) {
+            ((Paladin) personagem).recoverMana(manaRecovered);
             slowConsole.imprimirDevagar("Você encontrou um corpo profanado, uma fonte de energia negra. Ganhou " + manaRecovered + " de mana.");
         }
     }

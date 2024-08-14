@@ -35,8 +35,7 @@ public abstract class DungeonBase implements Dungeon {
             if (!enemyTurn(personagem, enemy)) break;
         }
 
-        if (enemy.getHealthbar() <= 0 &&
-                (enemy instanceof Ghazkull || enemy instanceof KingDragon || enemy instanceof KnightOfFear)) {
+        if (enemy.getHealthbar() <= 0 && (enemy instanceof Ghazkull || enemy instanceof KingDragon || enemy instanceof KnightOfFear)) {
             onBossDefeated(personagem);
         }
     }
@@ -82,6 +81,8 @@ public abstract class DungeonBase implements Dungeon {
                     handleRessurection(personagem);
                 } else if (personagem instanceof Warrior) {
                     ((Warrior) personagem).defend();
+                } else if (personagem instanceof Paladin) {
+                    ((Paladin) personagem).defend();
                 } else {
                     viewOrUseItems(scanner, personagem);
                 }
@@ -89,6 +90,8 @@ public abstract class DungeonBase implements Dungeon {
             case 7:
                 if (personagem instanceof Healer) {
                     ((Healer) personagem).heal(personagem);
+                } else if (personagem instanceof Paladin) {
+                    ((Paladin) personagem).heal(personagem);
                 }
                 break;
             default:
@@ -219,10 +222,13 @@ public abstract class DungeonBase implements Dungeon {
             slowConsole.imprimirDevagar("3 - Fugir");
             slowConsole.imprimirDevagar("4 - Status");
             slowConsole.imprimirDevagar("5 - Usar Item"); // Adicione esta linha
-            if (personagem instanceof Warrior) {
+            if (personagem instanceof Warrior || personagem instanceof Paladin) {
                 slowConsole.imprimirDevagar("6 - Defender");
             } else if (personagem instanceof Healer) {
                 slowConsole.imprimirDevagar("6 - Ressurreição");
+                slowConsole.imprimirDevagar("7 - Curar");
+            }
+            if (personagem instanceof Paladin) {
                 slowConsole.imprimirDevagar("7 - Curar");
             }
         }

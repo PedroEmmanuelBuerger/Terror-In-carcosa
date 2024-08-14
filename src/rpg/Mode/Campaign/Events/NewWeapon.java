@@ -48,6 +48,10 @@ public class NewWeapon implements NonCombatEvent {
                     case Healer healer -> healer.setSpecial(healer.getSpecial() + damageDifference);
                     case Mage mage -> mage.setSpecial(mage.getSpecial() + damageDifference);
                     case Necromancer necromancer -> necromancer.setSpecial(necromancer.getSpecial() + damageDifference);
+                    case Paladin paladin -> {
+                        paladin.setSpecial(paladin.getSpecial() + damageDifference);
+                        paladin.setAttack(paladin.getAttack() + damageDifference);
+                    }
                     default -> {
                     }
                 }
@@ -58,6 +62,10 @@ public class NewWeapon implements NonCombatEvent {
                     case Healer healer -> healer.setSpecial(newWeapon.attack());
                     case Mage mage -> mage.setSpecial(newWeapon.attack());
                     case Necromancer necromancer -> necromancer.setSpecial(newWeapon.attack());
+                    case Paladin paladin -> {
+                        paladin.setSpecial(newWeapon.attack());
+                        paladin.setAttack(newWeapon.attack());
+                    }
                     default -> {
                     }
                 }
@@ -73,27 +81,27 @@ public class NewWeapon implements NonCombatEvent {
 
     private Weapon[] getAvailableWeapons(Attributes personagem) {
         if (personagem instanceof Warrior) {
-            return new Weapon[] {
+            return new Weapon[]{
                     new Zheiwender(),
                     new SwordOfThousandTruths()
             };
         } else if (personagem instanceof Rogue) {
-            return new Weapon[] {
+            return new Weapon[]{
                     new Bayoneta(),
                     new Crossbow()
             };
         } else if (personagem instanceof Healer) {
-            return new Weapon[] {
+            return new Weapon[]{
                     new Necronomicon(),
                     new Bible()
             };
         } else if (personagem instanceof Mage) {
-            return new Weapon[] {
+            return new Weapon[]{
                     new StickOfTruth(),
                     new Wand()
             };
         } else if (personagem instanceof Necromancer) {
-            return new Weapon[] {
+            return new Weapon[]{
                     new DaggersOfSouls(),
                     new DemonHearth()
             };

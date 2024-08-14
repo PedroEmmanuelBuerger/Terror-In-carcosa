@@ -23,11 +23,14 @@ public class Pause implements NonCombatEvent {
             if (personagem instanceof Necromancer) {
                 slowConsole.imprimirDevagar("4. Invocar Esqueleto");
             }
-            if (personagem instanceof Warrior) {
+            if (personagem instanceof Warrior || personagem instanceof Paladin) {
                 slowConsole.imprimirDevagar("4. Defender");
             }
             if (personagem instanceof Healer) {
                 slowConsole.imprimirDevagar("4. Curar");
+            }
+            if (personagem instanceof Paladin) {
+                slowConsole.imprimirDevagar("5. Curar");
             }
 
             int choice = scanner.nextInt();
@@ -47,13 +50,20 @@ public class Pause implements NonCombatEvent {
                     if (personagem instanceof Necromancer necromancer) {
                         necromancer.summonImp();
                         slowConsole.imprimirDevagar("Você invocou um esqueleto para lhe auxiliar nas batalhas!");
-                    }
-                    if (personagem instanceof Warrior warrior) {
+                    } else if (personagem instanceof Warrior warrior) {
                         warrior.setDefese(true);
                         slowConsole.imprimirDevagar("Você assume uma postura defensiva, preparado para os ataques inimigos.");
-                    }
-                    if (personagem instanceof Healer healer) {
+                    } else if (personagem instanceof Paladin paladin) {
+                        paladin.setDefese(true);
+                        slowConsole.imprimirDevagar("Você assume uma postura defensiva, preparado para os ataques inimigos.");
+                    } else if (personagem instanceof Healer healer) {
                         healer.heal(personagem);
+                        slowConsole.imprimirDevagar("Você realiza um ritual de cura, restaurando a saúde de todos os membros do grupo.");
+                    }
+                    break;
+                case 5:
+                    if (personagem instanceof Paladin paladin) {
+                        paladin.heal(personagem);
                         slowConsole.imprimirDevagar("Você realiza um ritual de cura, restaurando a saúde de todos os membros do grupo.");
                     }
                     break;

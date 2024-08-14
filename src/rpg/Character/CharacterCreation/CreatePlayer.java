@@ -20,6 +20,7 @@ public class CreatePlayer {
         slowConsole.imprimirDevagar("3 - Ladrão das Sombras (+15 de ataque)");
         slowConsole.imprimirDevagar("4 - Curandeiro das Entidades (+5 de vida, +5 de mana, +5 de ataque especial)");
         slowConsole.imprimirDevagar("5 - Necromante das Profundezas (+5 de ataque especial, +5 de mana, +5 de mente)");
+        slowConsole.imprimirDevagar("6 - Paladino do do Desconhecido (+5 de ataque, + 5 de mana, +5 de ataque especial");
 
         int escolha;
         do {
@@ -46,6 +47,9 @@ public class CreatePlayer {
                     personagem = CreateNecromancer.createNecromancer(scanner, mode);
                     personagem.setMind(personagem.getMind() + 5);
                     break;
+                case 6:
+                    Chose.ChoosePaladin();
+                    personagem = CreatePaladin.createPaladin(scanner, mode);
                 default:
                     slowConsole.imprimirDevagar("Escolha inválida. Por favor, escolha uma opção válida.");
             }

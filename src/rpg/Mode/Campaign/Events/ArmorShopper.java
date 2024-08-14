@@ -120,5 +120,10 @@ public class ArmorShopper implements NonCombatEvent {
                 necromancer.setMana(necromancer.getMana() + armor.armor());
             }
         }
+        else if (personagem instanceof Paladin paladin) {
+            if (armor instanceof Robe) {
+                paladin.setMana(paladin.getMana() + armor.armor());
+            }
+        }
     }
 }

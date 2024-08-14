@@ -66,6 +66,16 @@ public class SpecialEncounter implements NonCombatEvent {
 
                 NecromancerEncounterOcurred = true;
             }
+        } else if (personagem instanceof Paladin paladin) {
+            if (!NecromancerEncounterOcurred) {
+                paladin.setDefese(true);
+                paladin.setAttack(paladin.getAttack() + 5);
+                paladin.setSpecial(paladin.getSpecial() + 5);
+                paladin.setHealthbar(paladin.getHealthbar() + 5);
+                paladin.setMaxHealthInitial(paladin.getMaxHealthInitial() + 5);
+                slowConsole.imprimirDevagar("Em um encontro com um grupo de paladinos antigos e obscuros seu discernimento se fortalece... entrou em modo de defesa e aumentou em 5 seu ataque, seu ataque especial e sua vida maxima.");
+                NecromancerEncounterOcurred = true;
+            }
         }
     }
 }

@@ -43,6 +43,7 @@ public class NewArmor implements NonCombatEvent {
                     case Healer healer -> healer.setMana(newArmor.armor());
                     case Mage mage -> mage.setMana(newArmor.armor());
                     case Necromancer necromancer -> necromancer.setMana(newArmor.armor());
+                    case Paladin paladin -> paladin.setMana(newArmor.armor());
                     default -> {
                     }
                 }
