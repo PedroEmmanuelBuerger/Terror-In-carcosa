@@ -18,6 +18,7 @@ public class Rogue extends Attributes {
         Weapon weapon = new Daggers(0);
         setWeapon(weapon);
         this.dodgeSkills = BASE_DODGE_SKILLS;
+        this.setMaxHealthInitial(healthbar);
     }
 
     public double getDodgeSkills() {

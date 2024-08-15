@@ -86,9 +86,44 @@ public class Armer implements NonCombatEvent {
     private void buyWeapon(Attributes personagem, Weapon weapon) {
         if (personagem.getGold() >= weapon.getPrice()) {
             personagem.setGold(personagem.getGold() - weapon.getPrice());
+
+            Weapon currentWeapon = personagem.getWeapon();
+            if (currentWeapon != null) {
+                int damageDifference = weapon.attack() - currentWeapon.attack();
+
+                switch (personagem) {
+                    case Warrior warrior -> warrior.setAttack(warrior.getAttack() + damageDifference);
+                    case Rogue rogue -> rogue.setAttack(rogue.getAttack() + damageDifference);
+                    case Healer healer -> healer.setSpecial(healer.getSpecial() + damageDifference);
+                    case Mage mage -> mage.setSpecial(mage.getSpecial() + damageDifference);
+                    case Necromancer necromancer -> necromancer.setSpecial(necromancer.getSpecial() + damageDifference);
+                    case Paladin paladin -> {
+                        paladin.setSpecial(paladin.getSpecial() + damageDifference);
+                        paladin.setAttack(paladin.getAttack() + damageDifference);
+                    }
+                    default -> {
+                    }
+                }
+            } else {
+                switch (personagem) {
+                    case Warrior warrior -> warrior.setAttack(weapon.attack());
+                    case Rogue rogue -> rogue.setAttack(weapon.attack());
+                    case Healer healer -> healer.setSpecial(weapon.attack());
+                    case Mage mage -> mage.setSpecial(weapon.attack());
+                    case Necromancer necromancer -> necromancer.setSpecial(weapon.attack());
+                    case Paladin paladin -> {
+                        paladin.setSpecial(weapon.attack());
+                        paladin.setAttack(weapon.attack());
+                    }
+                    default -> {
+                    }
+                }
+            }
+
             personagem.setWeapon(weapon);
             weaponsForSale.remove(weapon);
             slowConsole.imprimirDevagar("Você comprou " + weapon.getName() + " por " + weapon.getPrice() + " Ouro.");
+            slowConsole.imprimirDevagar(personagem.getName() + " empunha agora a nova arma: " + weapon.getName() + " com dano " + weapon.attack() + ", uma adição sinistra ao seu arsenal.");
         } else {
             slowConsole.imprimirDevagar("Ouro insuficiente para comprar " + weapon.getName() + ".");
         }

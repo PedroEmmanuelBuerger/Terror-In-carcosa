@@ -2,7 +2,6 @@ package rpg.Character.Classes;
 
 import rpg.Utils.SlowConsole;
 import rpg.Utils.ManaAdm;
-import rpg.itens.Weapons.Initials.Axe;
 import rpg.itens.Weapons.Initials.Mace;
 import rpg.itens.Weapons.Weapon;
 
@@ -19,6 +18,7 @@ public class Paladin extends Attributes {
         setWeapon(weapon);
         this.mana = mana;
         this.maxMana = mana;
+        this.setMaxHealthInitial(healthbar);
     }
 
     public int getMana() {

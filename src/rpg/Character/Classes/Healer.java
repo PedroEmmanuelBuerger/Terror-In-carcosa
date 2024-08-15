@@ -17,6 +17,7 @@ public class Healer extends Attributes {
         this.maxMana = mana;
         Weapon weapon = new Mace(0);
         setWeapon(weapon);
+        this.setMaxHealthInitial(healthbar);
     }
 
     public int getMana() {

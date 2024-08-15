@@ -26,6 +26,7 @@ public class Necromancer extends Attributes {
         Weapon weapon = new Ring(0);
         setWeapon(weapon);
         this.spellBook = new EvilForces();
+        this.setMaxHealthInitial(healthbar);
     }
 
     public int getLimitImp() {
