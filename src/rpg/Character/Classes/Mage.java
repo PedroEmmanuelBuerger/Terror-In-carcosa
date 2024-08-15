@@ -79,12 +79,6 @@ public class Mage extends Attributes {
     }
 
     @Override
-    public void getTechnicalInfo() {
-        super.getTechnicalInfo();
-        slowConsole.imprimirDevagar("Mana Profana: " + getMana());
-    }
-
-    @Override
     public void gainExp(int expGain) {
         setExp(getExp() + expGain);
 

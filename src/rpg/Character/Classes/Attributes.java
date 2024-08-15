@@ -243,16 +243,28 @@ public abstract class Attributes {
     public void getTechnicalInfo() {
         slowConsole.imprimirDevagar("Nome: " + getName());
         slowConsole.imprimirDevagar("Classe: " + getClasses());
+        slowConsole.imprimirDevagar("Raça: " + getRace().getName());
         slowConsole.imprimirDevagar("Nivel: " + getLevel());
         slowConsole.imprimirDevagar("Exp: " + getExp() + "/" + level * 10);
         slowConsole.imprimirDevagar("Saúde: " + getHealthbar());
         slowConsole.imprimirDevagar("Ataque: " + getAttack());
         slowConsole.imprimirDevagar("Poder Especial: " + getSpecial());
+        if (this instanceof Paladin personagem) {
+            slowConsole.imprimirDevagar("Mana: " + personagem.getMana());
+        }
+        if (this instanceof Mage personagem) {
+            slowConsole.imprimirDevagar("Mana: " + personagem.getMana());
+        }
+        if (this instanceof Healer personagem) {
+            slowConsole.imprimirDevagar("Mana: " + personagem.getMana());
+        }
+        if (this instanceof Necromancer personagem) {
+            slowConsole.imprimirDevagar("Mana: " + personagem.getMana());
+        }
         slowConsole.imprimirDevagar("Mente: " + getMind());
         slowConsole.imprimirDevagar("Frase: " + getQuote());
         slowConsole.imprimirDevagar("Arma: " + getWeapon().getName());
         slowConsole.imprimirDevagar("Armadura: " + getArmor().getName());
-        slowConsole.imprimirDevagar("Raça: " + getRace().getName());
         slowConsole.imprimirDevagar("Ouro Profano: " + getGold());
 
         if (abyssalInventory.isEmpty()) {

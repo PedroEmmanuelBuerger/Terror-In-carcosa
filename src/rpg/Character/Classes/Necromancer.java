@@ -111,7 +111,6 @@ public class Necromancer extends Attributes {
     @Override
     public void getTechnicalInfo() {
         super.getTechnicalInfo();
-        slowConsole.imprimirDevagar("Mana: " + getMana());
         if (!getImps().isEmpty()) {
             slowConsole.imprimirDevagar("Imps Invocados:");
             for (Imp imp : getImps()) {

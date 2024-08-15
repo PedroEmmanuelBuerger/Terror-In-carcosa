@@ -94,12 +94,6 @@ public class Paladin extends Attributes {
         }
     }
 
-    @Override
-    public void getTechnicalInfo() {
-        super.getTechnicalInfo();
-        slowConsole.imprimirDevagar("Mana Profana: " + getMana());
-    }
-
     public void recoverMana(int amount) {
         int maxMana = getMaxMana();
         if (this.mana + amount <= maxMana) {
