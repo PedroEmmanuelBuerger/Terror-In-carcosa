@@ -56,12 +56,12 @@ public class Chose {
         slowConsole.imprimirDevagar("""
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                 *   O Paladino da Luz Eterna!                                 *
-                *                                                            *
+                *                                                             *
                 * Guardião da justiça e da esperança, o Paladino da Luz       *
                 * Eterna é uma força inabalável contra as trevas. Com seu     *
                 * escudo impenetrável e habilidades divinas, ele protege      *
                 * os inocentes e desafia as entidades cósmicas.               *
-                *                                                            *
+                *                                                             *
                 * Prepare-se para combater o mal com a luz e a justiça,       *
                 * restaurando a ordem no meio do caos.                        *
                 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

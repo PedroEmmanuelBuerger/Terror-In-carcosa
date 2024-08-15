@@ -24,7 +24,7 @@ public class Dungeon3 extends DungeonBase {
                 case 2 -> mob = new Mob("Olho das Abissais Profundezas", 170, 25, 30, "SEU DESTINO É O VÍNCULO!", 65, 65, Portraits.PortraitOlhoDasAbissaisProfundezas());
                 case 3 -> mob = new Mob("Rito das Trevas", 130, 50, 15, "A FOSSA DA EXISTÊNCIA TE CHAMA!", 60, 60, Portraits.PortraitRitoDasTrevas());
                 case 4 -> mob = new Mob("Cavaleiro da Névoa", 180, 30, 30, "EU SEREI O PORTADOR DA NÉVOA!", 85, 85, Portraits.PortraitCavaleiroDaNevoa());
-                default -> mob = new Mob("Golem da Ruína", 120, 30, 20, "SUA ALMA SERÁ ANEXADA AO ABISMO!", 40, 40, Portraits.PortraitMindeater());
+                default -> mob = new Mob("Golem da Ruína", 120, 30, 20, "SUA ALMA SERÁ ANEXADA AO ABISMO!", 40, 40, Portraits.PortraitGolemDaRuina());
             }
             mob.generateTechinicalInfo();
             return mob;
