@@ -191,6 +191,18 @@ public abstract class Attributes {
         }
     }
 
+    public void lostMind(int quantity) {
+        int currentmid = this.getMind();
+        this.setMind(currentmid - quantity);
+        slowConsole.imprimirDevagar(this.getName() + " perdeu " + quantity + " de sanidade!");
+        if (getMind() > 0) {
+            slowConsole.imprimirDevagar("Mente de " + this.getName() + " restante é " + this.getMind());
+        } else {
+            slowConsole.imprimirDevagar("Mente de " + this.getName() + " restante é 0");
+            slowConsole.imprimirDevagar("Você sucumbiu a loucura!!!");
+        }
+    }
+
     public void getHealth(Attributes creature) {
         if (creature.getHealthbar() > 0) {
             slowConsole.imprimirDevagar("A saúde total de " + creature.getName() + " é " + creature.getHealthbar());

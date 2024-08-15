@@ -2,7 +2,7 @@ package rpg.Mode.Campaign.Dungeon;
 
 import rpg.Character.Classes.Attributes;
 import rpg.Monsters.Bosses.KnightOfFear;
-import rpg.Monsters.Mob;
+import rpg.Monsters.Minions.Mob;
 import rpg.Utils.Messages.End;
 import rpg.Utils.Messages.Portraits;
 import rpg.Utils.Messages.Start;
@@ -24,7 +24,7 @@ public class Dungeon3 extends DungeonBase {
                 case 2 -> mob = new Mob("Olho das Abissais Profundezas", 170, 25, 30, "SEU DESTINO É O VÍNCULO!", 65, 65, Portraits.PortraitOlhoDasAbissaisProfundezas());
                 case 3 -> mob = new Mob("Rito das Trevas", 130, 50, 15, "A FOSSA DA EXISTÊNCIA TE CHAMA!", 60, 60, Portraits.PortraitRitoDasTrevas());
                 case 4 -> mob = new Mob("Cavaleiro da Névoa", 180, 30, 30, "EU SEREI O PORTADOR DA NÉVOA!", 85, 85, Portraits.PortraitCavaleiroDaNevoa());
-                default -> mob = new Mob("Golem da Ruína", 120, 30, 20, "SUA ALMA SERÁ ANEXADA AO ABISMO!", 40, 40, Portraits.PortraitGolemDaRuina());
+                default -> mob = new Mob("Golem da Ruína", 120, 30, 20, "SUA ALMA SERÁ ANEXADA AO ABISMO!", 40, 40, Portraits.PortraitMindeater());
             }
             mob.generateTechinicalInfo();
             return mob;
@@ -38,20 +38,23 @@ public class Dungeon3 extends DungeonBase {
             String characterClass = personagem.getClasses();
 
             switch (characterClass) {
-                case "Guerreiro":
+                case "Guerreiro das Trevas":
                     End.FinishWarrior();
                     break;
-                case "Mago":
+                case "Arcanista das Sombras":
                     End.FinishMage();
                     break;
-                case "Necromante":
+                case "Necromante das Sombras":
                     End.FinishNecromancer();
                     break;
-                case "Curandeiro":
+                case "Curandeiro das Trevas":
                     End.FinishHealer();
                     break;
-                case "Bandido":
+                case "Sombra Oculta":
                     End.FinishRogue();
+                    break;
+                case "Paladino do Desconhecido":
+                    End.FinishPaladin();
                     break;
                 default:
                     System.out.println("Você derrotou o Cavaleiro do Medo Taigon, mas sua classe não é reconhecida para mensagens específicas.");

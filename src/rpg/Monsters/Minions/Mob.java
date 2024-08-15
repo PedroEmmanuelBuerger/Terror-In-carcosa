@@ -1,4 +1,4 @@
-package rpg.Monsters;
+package rpg.Monsters.Minions;
 
 import rpg.Utils.SlowConsole;
 import rpg.Character.Classes.Attributes;

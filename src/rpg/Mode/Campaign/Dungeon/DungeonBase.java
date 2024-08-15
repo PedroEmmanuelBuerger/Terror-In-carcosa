@@ -77,14 +77,11 @@ public abstract class DungeonBase implements Dungeon {
                 }
                 break;
             case 6:
-                if (personagem instanceof Healer) {
-                    handleRessurection(personagem);
-                } else if (personagem instanceof Warrior) {
-                    ((Warrior) personagem).defend();
-                } else if (personagem instanceof Paladin) {
-                    ((Paladin) personagem).defend();
-                } else {
-                    viewOrUseItems(scanner, personagem);
+                switch (personagem) {
+                    case Healer _ -> handleRessurection(personagem);
+                    case Warrior warrior -> warrior.defend();
+                    case Paladin paladin -> paladin.defend();
+                    case null, default -> viewOrUseItems(scanner, personagem);
                 }
                 break;
             case 7:
@@ -172,8 +169,8 @@ public abstract class DungeonBase implements Dungeon {
                 break;
         }
 
-        if (personagem.getHealthbar() <= 0) {
-            handleDefeat();
+        if (personagem.getHealthbar() <= 0 || personagem.getMind() <= 0) {
+            handleDefeat(enemy);
             return false;
         }
 
@@ -184,16 +181,19 @@ public abstract class DungeonBase implements Dungeon {
         return true;
     }
 
-    private void handleDefeat() {
-        End.DefeatGenericMonster();
-
+    private void handleDefeat(Attributes enemy) {
+        switch (enemy) {
+            case Ghazkull _ -> End.DefeatGhazkull();
+            case KingDragon _ -> End.DefeatDragonKing();
+            case KnightOfFear _ -> End.DefeatTaigon();
+            case null, default -> End.DefeatGenericMonster();
+        }
         slowConsole.imprimirDevagar("Deseja reiniciar o jogo? (s/n)");
         Scanner scanner = new Scanner(System.in);
         String response = scanner.nextLine().trim().toLowerCase();
 
         if (response.equals("s")) {
             restartApplication();
-        } else {
         }
     }
 
@@ -247,7 +247,7 @@ public abstract class DungeonBase implements Dungeon {
     private boolean handleEscape(Attributes enemy) {
         double escapeChance = 25.00;
         double randomSucess = random.nextDouble() * 100.0;
-        if (randomSucess <= escapeChance && !enemy.getName().equals("Ghazkull") && !enemy.getName().equals("Lorde Rei Dragão")) {
+        if (randomSucess <= escapeChance && !enemy.getName().equals("Ghazkull") && !enemy.getName().equals("Lorde Rei Dragão") && !enemy.getName().equals("O Rei de Amarelo")) {
             slowConsole.imprimirDevagar("Você fugiu!");
             return false;
         } else {

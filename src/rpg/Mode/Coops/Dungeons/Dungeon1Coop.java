@@ -2,7 +2,7 @@ package rpg.Mode.Coops.Dungeons;
 
 import rpg.Character.Classes.Attributes;
 import rpg.Monsters.Bosses.Ghazkull;
-import rpg.Monsters.Mob;
+import rpg.Monsters.Minions.Mob;
 import rpg.Utils.Messages.Portraits;
 import rpg.Utils.Messages.Start;
 

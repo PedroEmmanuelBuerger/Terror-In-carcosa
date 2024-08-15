@@ -43,6 +43,26 @@ public class End {
                 """);
     }
 
+    public static void FinishPaladin() {
+        SlowConsole slowConsole = new SlowConsole();
+        slowConsole.imprimirDevagar("""
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                *   Vitória do Paladino da Luz Eterna!                          *
+                *                                                               *
+                * Com sua inabalável fé e força sagrada, você superou os         *
+                * horrores do abismo. Sua luz divina dissipou as trevas          *
+                * mais profundas, trazendo esperança e justiça.                 *
+                *                                                               *
+                * O caminho à sua frente se ilumina com a glória da Luz Eterna.  *
+                * Embora a escuridão sempre espreite, seu coração puro e         *
+                * destemido continuará a brilhar como um farol de esperança.     *
+                *                                                               *
+                * Que a Luz Eterna guie seus passos em todas as batalhas         *
+                * futuras, e que sua justiça nunca vacile.                       *
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                """);
+    }
+
     public static void FinishNecromancer() {
         SlowConsole slowConsole = new SlowConsole();
         slowConsole.imprimirDevagar("""

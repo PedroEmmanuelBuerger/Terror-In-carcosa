@@ -1,7 +1,7 @@
 package rpg.Mode.Campaign.Dungeon;
 
 import rpg.Character.Classes.Attributes;
-import rpg.Monsters.Mob;
+import rpg.Monsters.Minions.Mob;
 import rpg.Monsters.Bosses.KingDragon;
 import rpg.Utils.Messages.Portraits;
 import rpg.Utils.Messages.Start;

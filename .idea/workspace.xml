@@ -9,11 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando bugs">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando ficha">
+      <change afterPath="$PROJECT_DIR$/src/rpg/Monsters/Minions/MindEater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Attributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/Messages/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/Messages/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/Dungeon1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/Dungeon1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/Dungeon2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/Dungeon2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/Dungeon3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/Dungeon3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/DungeonBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Coops/Dungeons/Dungeon1Coop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Coops/Dungeons/Dungeon1Coop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Monsters/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Monsters/Minions/Mob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/Messages/End.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/Messages/End.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,14 +129,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Liberando Opção invocar esqueleto pause">
-      <option name="closed" value="true" />
-      <created>1722875506308</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1722875506308</updated>
     </task>
     <task id="LOCAL-00050" summary="Adicionando opções no menu de pause">
       <option name="closed" value="true" />
@@ -516,7 +514,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723732863369</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="Arrumando ficha">
+      <option name="closed" value="true" />
+      <created>1723733564591</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1723733564591</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -531,7 +537,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="começando a implementação do modo Coop e Pvp" />
     <MESSAGE value="Refatorando toda a estrutura de código + começo implantação PvP" />
     <MESSAGE value="Adicionando funções necromante pvp + refatoração" />
     <MESSAGE value="refatoração" />
@@ -556,7 +561,8 @@
     <MESSAGE value="Adicionando informação as fichas + alteração de texto" />
     <MESSAGE value="Adicionando opção de curar alidado coop" />
     <MESSAGE value="Arrumando bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando bugs" />
+    <MESSAGE value="Arrumando ficha" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando ficha" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
