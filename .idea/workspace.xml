@@ -9,9 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando informação as fichas + alteração de texto">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando opção de curar alidado coop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Coops/Dungeons/CombatSystemCoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Coops/Dungeons/CombatSystemCoop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,14 +120,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Refatorando TODO o codigo">
-      <option name="closed" value="true" />
-      <created>1722543452264</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1722543452264</updated>
     </task>
     <task id="LOCAL-00048" summary="Arrumando bug que gold vinha negativo em certos casos">
       <option name="closed" value="true" />
@@ -514,7 +505,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723731311950</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="Adicionando opção de curar alidado coop">
+      <option name="closed" value="true" />
+      <created>1723732384388</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1723732384388</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -529,7 +528,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionando loja de armadura" />
     <MESSAGE value="começando a implementação do modo Coop e Pvp" />
     <MESSAGE value="Refatorando toda a estrutura de código + começo implantação PvP" />
     <MESSAGE value="Adicionando funções necromante pvp + refatoração" />
@@ -554,7 +552,8 @@
     <MESSAGE value="Arrumando bugs" />
     <MESSAGE value="Arrumando bug de curas + redução de dano da armadura" />
     <MESSAGE value="Adicionando informação as fichas + alteração de texto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando informação as fichas + alteração de texto" />
+    <MESSAGE value="Adicionando opção de curar alidado coop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando opção de curar alidado coop" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

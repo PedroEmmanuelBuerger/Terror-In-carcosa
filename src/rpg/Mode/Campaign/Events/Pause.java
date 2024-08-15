@@ -4,6 +4,7 @@ import rpg.Character.Classes.*;
 import rpg.itens.Item;
 import rpg.Utils.SlowConsole;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Pause implements NonCombatEvent {
@@ -33,8 +34,7 @@ public class Pause implements NonCombatEvent {
                 slowConsole.imprimirDevagar("5. Curar");
             }
 
-            int choice = scanner.nextInt();
-            scanner.nextLine();
+            int choice = getUserChoice();
 
             switch (choice) {
                 case 1:
@@ -71,6 +71,22 @@ public class Pause implements NonCombatEvent {
                     slowConsole.imprimirDevagar("Opção inválida. Tente novamente.");
             }
         }
+    }
+
+    private int getUserChoice() {
+        int choice = -1;
+        boolean validInput = false;
+        while (!validInput) {
+            try {
+                choice = scanner.nextInt();
+                scanner.nextLine();
+                validInput = true;
+            } catch (InputMismatchException e) {
+                scanner.nextLine(); // clear the invalid input
+                slowConsole.imprimirDevagar("Entrada inválida. Por favor, digite um número.");
+            }
+        }
+        return choice;
     }
 
     private void visualizarStatus(Attributes personagem) {
