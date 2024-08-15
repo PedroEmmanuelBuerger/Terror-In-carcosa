@@ -179,11 +179,16 @@ public abstract class Attributes {
     }
 
     public void takeDamage(int damage) {
-        int currentHealth = this.getHealthbar();
-        damage = damage - this.getArmor().armor();
-        this.setHealthbar(currentHealth - damage);
-        slowConsole.imprimirDevagar(this.getName() + " sofreu " + damage + " de dano do abismo!");
-        getHealth(this);
+        int reducedDamage = damage - (armor != null ? armor.armor() : 0);
+
+        if (reducedDamage > 0) {
+            int currentHealth = this.getHealthbar();
+            this.setHealthbar(currentHealth - reducedDamage);
+            slowConsole.imprimirDevagar(this.getName() + " sofreu " + reducedDamage + " de dano do abismo!");
+            getHealth(this);
+        } else {
+            slowConsole.imprimirDevagar("A armadura de " + this.getName() + " resistiu ao ataque!");
+        }
     }
 
     public void getHealth(Attributes creature) {

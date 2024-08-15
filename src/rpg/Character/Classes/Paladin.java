@@ -55,14 +55,14 @@ public class Paladin extends Attributes {
         ManaAdm manaAdm = new ManaAdm();
         manaRes = manaAdm.costMana(this.mana, 7, this.getName());
         if (!manaRes) {
-            int healAmount = getSpecial() + ally.getHealthbar();
+            int healAmount = getSpecial();
             if (ally.isAlive()) {
                 if (ally.getMaxHealthInitial() < healAmount) {
                     ally.setHealthbar(ally.getMaxHealthInitial());
-                    slowConsole.imprimirDevagar(getName() + " restaurou toda a vitalidade de " + ally.getName() + " com uma benção obscura!");
+                    slowConsole.imprimirDevagar(getName() + " restaurou toda a vitalidade de " + ally.getName() + " com uma benção obscura! curando "+ally.getMaxHealthInitial() + " de vida");
                 } else {
                     ally.setHealthbar(healAmount);
-                    slowConsole.imprimirDevagar(getName() + " devolveu " + getSpecial() + " de vida a " + ally.getName() + " com seu poder sombrio!");
+                    slowConsole.imprimirDevagar(getName() + " devolveu " + getSpecial() + " de vida a " + ally.getName() + " com seu poder sombrio! curando "+healAmount+" de vida");
                 }
                 this.mana -= 7;
                 slowConsole.imprimirDevagar(getName() + " drenou 7 de mana, restando " + this.mana + ".");
@@ -86,6 +86,7 @@ public class Paladin extends Attributes {
             setSpecial(getSpecial() + 5 * levelsGained);
             slowConsole.imprimirDevagar(getName() + " aumentou " + (5 * levelsGained) + " de Poder Arcano!");
             setHealthbar(getHealthbar() + 5 * levelsGained);
+            setMaxHealthInitial(getMaxHealthInitial() + 5 * levelsGained);
             slowConsole.imprimirDevagar(getName() + " aumentou " + (5 * levelsGained) + " de Vitalidade!");
             setMana(getMana() + 5 * levelsGained);
             setMaxMana(getMaxMana() + 5);
@@ -111,17 +112,21 @@ public class Paladin extends Attributes {
     @Override
     public void takeDamage(int damage) {
         int currentHealth = this.getHealthbar();
-        damage = damage - this.getArmor().armor();
+        int reducedDamage = damage - (this.getArmor() != null ? this.getArmor().armor() : 0);
+
+        if (reducedDamage <= 0) {
+            slowConsole.imprimirDevagar("A armadura de " + this.getName() + " resistiu ao ataque!");
+            return;
+        }
+
         if (this.isDefese()) {
-            int reducedDamage = damage / 2;
-            this.setHealthbar(currentHealth - reducedDamage);
+            reducedDamage /= 2;
             slowConsole.imprimirDevagar(getName() + " defendeu com bravura, reduzindo o dano para " + reducedDamage + "!");
             this.setDefese(false);
-            getHealth(this);
-        } else {
-            this.setHealthbar(currentHealth - damage);
-            slowConsole.imprimirDevagar(getName() + " sofreu " + damage + " de dano, enfrentando o caos!");
-            getHealth(this);
         }
+
+        this.setHealthbar(currentHealth - reducedDamage);
+        slowConsole.imprimirDevagar(getName() + " sofreu " + reducedDamage + " de dano, enfrentando o caos!");
+        getHealth(this);
     }
 }

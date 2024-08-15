@@ -57,14 +57,14 @@ public class Healer extends Attributes {
         ManaAdm manaAdm = new ManaAdm();
         manaRes = manaAdm.costMana(this.mana, 7, this.getName()); // Chamar costMana na instância criada
         if (!manaRes) {
-            int healAmount = (getSpecial() / 2) + ally.getHealthbar();
+            int healAmount = getSpecial();
             if (ally.isAlive()) {
                 if (ally.getMaxHealthInitial() < healAmount) {
                     ally.setHealthbar(ally.getMaxHealthInitial());
-                    slowConsole.imprimirDevagar(getName() + " restaurou toda a vitalidade de " + ally.getName() + " com uma benção obscura!");
+                    slowConsole.imprimirDevagar(getName() + " restaurou toda a vitalidade de " + ally.getName() + " com uma benção obscura! curando "+ally.getMaxHealthInitial() + " de vida");
                 } else {
                     ally.setHealthbar(healAmount);
-                    slowConsole.imprimirDevagar(getName() + " devolveu " + getSpecial() + " de vida a " + ally.getName() + " com seu poder sombrio!");
+                    slowConsole.imprimirDevagar(getName() + " devolveu " + getSpecial() + " de vida a " + ally.getName() + " com seu poder sombrio! curando "+healAmount+" de vida");
                 }
                 this.mana -= 7;
                 slowConsole.imprimirDevagar(getName() + " drenou 7 de mana, restando " + this.mana + ".");
@@ -104,6 +104,7 @@ public class Healer extends Attributes {
             setSpecial(getSpecial() + 5 * levelsGained);
             slowConsole.imprimirDevagar(getName() + " aumentou " + (5 * levelsGained) + " de Poder Arcano!");
             setHealthbar(getHealthbar() + 5 * levelsGained);
+            setMaxHealthInitial(getMaxHealthInitial() + 5 * levelsGained);
             slowConsole.imprimirDevagar(getName() + " aumentou " + (5 * levelsGained) + " de Vitalidade!");
             setMana(getMana() + 5 * levelsGained);
             setMaxMana(getMaxMana() + 5);
