@@ -193,6 +193,7 @@ public abstract class DungeonBase implements Dungeon {
         String response = scanner.nextLine().trim().toLowerCase();
 
         if (response.equals("s")) {
+            clearConsole();
             restartApplication();
         }
     }
@@ -202,7 +203,6 @@ public abstract class DungeonBase implements Dungeon {
         Start.startApp();
         Pve.startBattle();
     }
-
 
     private void printPlayerActions(Attributes personagem) {
         slowConsole.imprimirDevagar("1 - Atacar");
@@ -221,7 +221,7 @@ public abstract class DungeonBase implements Dungeon {
         } else {
             slowConsole.imprimirDevagar("3 - Fugir");
             slowConsole.imprimirDevagar("4 - Status");
-            slowConsole.imprimirDevagar("5 - Usar Item"); // Adicione esta linha
+            slowConsole.imprimirDevagar("5 - Usar Item");
             if (personagem instanceof Warrior || personagem instanceof Paladin) {
                 slowConsole.imprimirDevagar("6 - Defender");
             } else if (personagem instanceof Healer) {
@@ -282,6 +282,12 @@ public abstract class DungeonBase implements Dungeon {
             }
         } else {
             return personagem;
+        }
+    }
+
+    private void clearConsole() {
+        for (int i = 0; i < 50; i++) {
+            System.out.println();
         }
     }
 }
