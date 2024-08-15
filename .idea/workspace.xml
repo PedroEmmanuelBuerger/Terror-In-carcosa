@@ -10,19 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Refatoração + mudança modo coop">
-      <change afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreatePaladin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Paladin/GiantShield.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpg/itens/Weapons/Paladin/GolemSpine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreatePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreatePlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Paladin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Paladin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/DungeonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/DungeonBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/ArmorShopper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/ArmorShopper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/ManaRecoveryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/ManaRecoveryEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/NewArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/NewArmor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/NewWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/NewWeapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/OldRune.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/OldRune.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/Pause.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/Pause.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/SpecialEncounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/SpecialEncounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Utils/Messages/Chose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Utils/Messages/Chose.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,14 +123,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Arrumando Necromante">
-      <option name="closed" value="true" />
-      <created>1722453719022</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1722453719022</updated>
     </task>
     <task id="LOCAL-00043" summary="Arrumando Bugs + Refatorando todo código + removendo redundancias">
       <option name="closed" value="true" />
@@ -525,7 +508,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723654922384</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Refatoração + mudança modo coop">
+      <option name="closed" value="true" />
+      <created>1723661966006</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1723661966006</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -9,6 +9,8 @@ import rpg.itens.Weapons.Mage.StickOfTruth;
 import rpg.itens.Weapons.Mage.Wand;
 import rpg.itens.Weapons.Necromancer.DaggersOfSouls;
 import rpg.itens.Weapons.Necromancer.DemonHearth;
+import rpg.itens.Weapons.Paladin.GiantShield;
+import rpg.itens.Weapons.Paladin.GolemSpine;
 import rpg.itens.Weapons.Rogue.Bayoneta;
 import rpg.itens.Weapons.Rogue.Crossbow;
 import rpg.itens.Weapons.Warrior.SwordOfThousandTruths;
@@ -104,6 +106,11 @@ public class NewWeapon implements NonCombatEvent {
             return new Weapon[]{
                     new DaggersOfSouls(),
                     new DemonHearth()
+            };
+        } else if (personagem instanceof Paladin) {
+            return new Weapon[]{
+              new GiantShield(),
+              new GolemSpine()
             };
         }
         return new Weapon[0];

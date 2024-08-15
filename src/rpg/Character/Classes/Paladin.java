@@ -55,7 +55,7 @@ public class Paladin extends Attributes {
         ManaAdm manaAdm = new ManaAdm();
         manaRes = manaAdm.costMana(this.mana, 7, this.getName());
         if (!manaRes) {
-            int healAmount = (getSpecial() / 2) + ally.getHealthbar();
+            int healAmount = getSpecial() + ally.getHealthbar();
             if (ally.isAlive()) {
                 if (ally.getMaxHealthInitial() < healAmount) {
                     ally.setHealthbar(ally.getMaxHealthInitial());
