@@ -59,7 +59,7 @@ public class Paladin extends Attributes {
             if (ally.isAlive()) {
                 if (ally.getMaxHealthInitial() < healAmount) {
                     ally.setHealthbar(ally.getMaxHealthInitial());
-                    slowConsole.imprimirDevagar(getName() + " restaurou toda a vitalidade de " + ally.getName() + " com uma benção obscura! curando "+ally.getMaxHealthInitial() + " de vida");
+                    slowConsole.imprimirDevagar(getName() + " restaurou toda a vitalidade de " + ally.getName() + " com uma benção obscura! ficando com "+ally.getMaxHealthInitial() + " de vida");
                 } else {
                     ally.setHealthbar(healAmount);
                     slowConsole.imprimirDevagar(getName() + " devolveu " + getSpecial() + " de vida a " + ally.getName() + " com seu poder sombrio! curando "+healAmount+" de vida");

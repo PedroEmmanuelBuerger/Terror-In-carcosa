@@ -243,6 +243,8 @@ public abstract class Attributes {
     public void getTechnicalInfo() {
         slowConsole.imprimirDevagar("Nome: " + getName());
         slowConsole.imprimirDevagar("Classe: " + getClasses());
+        slowConsole.imprimirDevagar("Nivel: " + getLevel());
+        slowConsole.imprimirDevagar("Exp: " + getExp() + "/" + level * 10);
         slowConsole.imprimirDevagar("Saúde: " + getHealthbar());
         slowConsole.imprimirDevagar("Ataque: " + getAttack());
         slowConsole.imprimirDevagar("Poder Especial: " + getSpecial());

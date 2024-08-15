@@ -9,11 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando bugs">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Healer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Paladin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Paladin.java" afterDir="false" />
-    </list>
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando bug de curas + redução de dano da armadura" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,14 +118,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00045" summary="+ Refatoração">
-      <option name="closed" value="true" />
-      <created>1722516255265</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1722516255265</updated>
     </task>
     <task id="LOCAL-00046" summary="Adicionando poção de mana + mudanças no shooper">
       <option name="closed" value="true" />
@@ -515,7 +503,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723729763833</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Arrumando bug de curas + redução de dano da armadura">
+      <option name="closed" value="true" />
+      <created>1723730966697</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1723730966697</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -530,7 +526,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionando mecanica Armadura" />
     <MESSAGE value="Arrumando eventos + adição trocar de armadura" />
     <MESSAGE value="Adicionando loja de armadura" />
     <MESSAGE value="começando a implementação do modo Coop e Pvp" />
@@ -555,7 +550,8 @@
     <MESSAGE value="Refatoração + mudança modo coop" />
     <MESSAGE value="Adicionando armas classe paladino + rebalanceamento" />
     <MESSAGE value="Arrumando bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando bugs" />
+    <MESSAGE value="Arrumando bug de curas + redução de dano da armadura" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando bug de curas + redução de dano da armadura" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
