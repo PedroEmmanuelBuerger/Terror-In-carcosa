@@ -20,7 +20,7 @@ public class CombatSystemCoop {
         while (jogadores.stream().anyMatch(j -> j.getHealthbar() > 0) && enemy.getHealthbar() > 0) {
             for (Attributes jogador : jogadores) {
                 if (jogador.getHealthbar() > 0) {
-                    if (!playerTurn(scanner, jogador, enemy)) break;
+                    if (!playerTurn(scanner, jogador, jogadores, enemy)) break;
                 }
             }
             if (enemy.getHealthbar() > 0) {
@@ -35,7 +35,7 @@ public class CombatSystemCoop {
         }
     }
 
-    private boolean playerTurn(Scanner scanner, Attributes jogador, Attributes enemy) {
+    private boolean playerTurn(Scanner scanner, Attributes jogador, List<Attributes> jogadores, Attributes enemy) {
         slowConsole.imprimirDevagar("É a vez de " + jogador.getName() + ":");
         slowConsole.imprimirDevagar("Escolha sua ação:");
         printPlayerActions(jogador);
@@ -72,17 +72,16 @@ public class CombatSystemCoop {
                 }
                 break;
             case 6:
-                if (jogador instanceof Healer) {
-                    handleRessurection(jogador);
-                } else if (jogador instanceof Warrior) {
-                    ((Warrior) jogador).defend();
-                } else {
-                    viewOrUseItems(scanner, jogador);
+                switch (jogador) {
+                    case Healer _ -> handleRessurection(jogador, jogadores, scanner);
+                    case Warrior warrior -> warrior.defend();
+                    case Paladin _ -> handleHealing(scanner, jogador, jogadores);
+                    default -> viewOrUseItems(scanner, jogador);
                 }
                 break;
             case 7:
                 if (jogador instanceof Healer) {
-                    ((Healer) jogador).heal(jogador);
+                    handleHealing(scanner, jogador, jogadores);
                 }
                 break;
             default:
@@ -148,6 +147,8 @@ public class CombatSystemCoop {
             } else if (jogador instanceof Healer) {
                 slowConsole.imprimirDevagar("6 - Ressurreição");
                 slowConsole.imprimirDevagar("7 - Curar");
+            } else if (jogador instanceof Paladin) {
+                slowConsole.imprimirDevagar("6 - Curar");
             }
         }
     }
@@ -174,9 +175,41 @@ public class CombatSystemCoop {
         }
     }
 
-    private void handleRessurection(Attributes jogador) {
-        if (jogador instanceof Healer) {
-            ((Healer) jogador).ressurection(jogador);
+    private void handleRessurection(Attributes healer, List<Attributes> jogadores, Scanner scanner) {
+        slowConsole.imprimirDevagar("Escolha o jogador para ressuscitar:");
+        for (int i = 0; i < jogadores.size(); i++) {
+            Attributes jogador = jogadores.get(i);
+            slowConsole.imprimirDevagar((i + 1) + " - " + jogador.getName() + " (HP: " + jogador.getHealthbar() + ")");
+        }
+        int escolha = getPlayerAction(scanner) - 1;
+        if (escolha >= 0 && escolha < jogadores.size()) {
+            Attributes alvo = jogadores.get(escolha);
+            if (alvo.getHealthbar() <= 0) {
+                ((Healer) healer).ressurection(alvo);
+            } else {
+                slowConsole.imprimirDevagar(alvo.getName() + " já está vivo!");
+            }
+        } else {
+            slowConsole.imprimirDevagar("Escolha inválida. Você perdeu a vez.");
+        }
+    }
+
+    private void handleHealing(Scanner scanner, Attributes healer, List<Attributes> jogadores) {
+        slowConsole.imprimirDevagar("Escolha o jogador para curar:");
+        for (int i = 0; i < jogadores.size(); i++) {
+            Attributes jogador = jogadores.get(i);
+            slowConsole.imprimirDevagar((i + 1) + " - " + jogador.getName() + " (HP: " + jogador.getHealthbar() + ")");
+        }
+        int escolha = getPlayerAction(scanner) - 1;
+        if (escolha >= 0 && escolha < jogadores.size()) {
+            Attributes alvo = jogadores.get(escolha);
+            if (healer instanceof Healer) {
+                ((Healer) healer).heal(alvo);
+            } else if (healer instanceof Paladin) {
+                ((Paladin) healer).heal(alvo);
+            }
+        } else {
+            slowConsole.imprimirDevagar("Escolha inválida. Você perdeu a vez.");
         }
     }
 
