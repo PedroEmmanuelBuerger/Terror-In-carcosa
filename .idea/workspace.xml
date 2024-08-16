@@ -9,9 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Adicionando evento de recuperar mente + rebalanceamento">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/Dungeon3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Dungeon/Dungeon3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Healer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Necromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Necromancer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Paladin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Paladin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/Classes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/Classes/Warrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,24 +58,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ConsoleLento.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SlowConsole.executor&quot;: &quot;Run&quot;,
-    &quot;Application.main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.principal.executor&quot;: &quot;Run&quot;,
-    &quot;JAR Application.Terror In YellowCity.jar.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pedro.silva/OneDrive - Mainhardt/Documentos/intellij/Terror In YellowCity/lib/jline-3.21.0.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ConsoleLento.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.SlowConsole.executor": "Run",
+    "Application.main.executor": "Run",
+    "Application.principal.executor": "Run",
+    "JAR Application.Terror In YellowCity.jar.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/pedro.silva/OneDrive - Mainhardt/Documentos/intellij/Terror In YellowCity/lib/jline-3.21.0.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pedro.silva\OneDrive - Mainhardt\Documentos\intellij\Terror In YellowCity\lib" />
@@ -121,14 +126,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00052" summary="+ Adição de tematica + finalização tematica texto">
-      <option name="closed" value="true" />
-      <created>1723041216394</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1723041216394</updated>
     </task>
     <task id="LOCAL-00053" summary="adicionando finais que é derrottado por boss">
       <option name="closed" value="true" />
@@ -514,7 +511,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723751396177</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Arrumando bugs">
+      <option name="closed" value="true" />
+      <created>1723752425191</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1723752425191</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -550,11 +555,11 @@
     <MESSAGE value="Arrumando bug de curas + redução de dano da armadura" />
     <MESSAGE value="Adicionando informação as fichas + alteração de texto" />
     <MESSAGE value="Adicionando opção de curar alidado coop" />
-    <MESSAGE value="Arrumando bugs" />
     <MESSAGE value="Arrumando ficha" />
     <MESSAGE value="Adicionando MindEater + dano da mente + arrumando bugs" />
     <MESSAGE value="Adicionando evento de recuperar mente + rebalanceamento" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando evento de recuperar mente + rebalanceamento" />
+    <MESSAGE value="Arrumando bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando bugs" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

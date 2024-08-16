@@ -53,11 +53,12 @@ public class ArmorShopper implements NonCombatEvent {
                 shopping = false;
             } else if (choice > 0 && choice <= armorsForSale.size()) {
                 Armor selectedArmor = armorsForSale.get(choice - 1);
-                buyArmor(personagem, selectedArmor);
-                armorsForSale.remove(selectedArmor);
-                if (armorsForSale.isEmpty()) {
-                    slowConsole.imprimirDevagar("Não há mais armaduras à venda.");
-                    shopping = false;
+                if (buyArmor(personagem, selectedArmor)) {
+                    armorsForSale.remove(selectedArmor);
+                    if (armorsForSale.isEmpty()) {
+                        slowConsole.imprimirDevagar("Não há mais armaduras à venda.");
+                        shopping = false;
+                    }
                 }
             } else {
                 slowConsole.imprimirDevagar("Opção inválida. Tente novamente.");
@@ -86,7 +87,7 @@ public class ArmorShopper implements NonCombatEvent {
         }
     }
 
-    private void buyArmor(Attributes personagem, Armor armor) {
+    private boolean buyArmor(Attributes personagem, Armor armor) {
         if (personagem.getGold() >= armor.getPrice()) {
             personagem.setGold(personagem.getGold() - armor.getPrice());
             personagem.setArmor(armor);
@@ -101,8 +102,10 @@ public class ArmorShopper implements NonCombatEvent {
                 slowConsole.imprimirDevagar("Você comprou " + armor.getName() + " por " + armor.getPrice() + " Ouro.");
                 slowConsole.imprimirDevagar("Agora, sua armadura equipada é: " + armor.getName() + " com proteção " + armor.armor() + ".");
             }
+            return true;
         } else {
             slowConsole.imprimirDevagar("Ouro insuficiente para comprar " + armor.getName() + ".");
+            return false;
         }
     }
 
@@ -119,8 +122,7 @@ public class ArmorShopper implements NonCombatEvent {
             if (armor instanceof Robe) {
                 necromancer.setMana(necromancer.getMana() + armor.armor());
             }
-        }
-        else if (personagem instanceof Paladin paladin) {
+        } else if (personagem instanceof Paladin paladin) {
             if (armor instanceof Robe) {
                 paladin.setMana(paladin.getMana() + armor.armor());
             }

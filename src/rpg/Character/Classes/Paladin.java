@@ -18,7 +18,6 @@ public class Paladin extends Attributes {
         setWeapon(weapon);
         this.mana = mana;
         this.maxMana = mana;
-        this.setMaxHealthInitial(healthbar);
     }
 
     public int getMana() {
@@ -57,11 +56,11 @@ public class Paladin extends Attributes {
         if (!manaRes) {
             int healAmount = getSpecial();
             if (ally.isAlive()) {
-                if (ally.getMaxHealthInitial() < healAmount) {
+                if (healAmount + ally.getHealthbar() > ally.getMaxHealthInitial()) {
                     ally.setHealthbar(ally.getMaxHealthInitial());
                     slowConsole.imprimirDevagar(getName() + " restaurou toda a vitalidade de " + ally.getName() + " com uma benção obscura! ficando com "+ally.getMaxHealthInitial() + " de vida");
                 } else {
-                    ally.setHealthbar(healAmount);
+                    ally.setHealthbar(ally.getHealthbar() + healAmount);
                     slowConsole.imprimirDevagar(getName() + " devolveu " + getSpecial() + " de vida a " + ally.getName() + " com seu poder sombrio! curando "+healAmount+" de vida");
                 }
                 this.mana -= 7;

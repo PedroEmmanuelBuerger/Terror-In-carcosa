@@ -20,7 +20,6 @@ public class Mage extends Attributes {
         this.setClasses("Arcanista das Sombras");
         Weapon weapon = new Staff(0);
         setWeapon(weapon);
-        this.setMaxHealthInitial(healthbar);
     }
 
     public SpeelBook getSpeelBook() {

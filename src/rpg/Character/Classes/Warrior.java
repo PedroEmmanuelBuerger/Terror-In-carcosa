@@ -13,7 +13,6 @@ public class Warrior extends Attributes {
         setClasses("Guerreiro das Trevas");
         Weapon weapon = new Axe(0);
         setWeapon(weapon);
-        this.setMaxHealthInitial(healthbar);
     }
 
     public boolean isDefese() {
