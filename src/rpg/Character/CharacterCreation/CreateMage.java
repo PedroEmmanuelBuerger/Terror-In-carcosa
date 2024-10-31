@@ -1,5 +1,6 @@
 package rpg.Character.CharacterCreation;
 
+import rpg.Mode.Campaign.Events.ChoseInitialWeapon;
 import rpg.Utils.SlowConsole;
 import rpg.Character.Classes.Mage;
 
@@ -107,7 +108,8 @@ public class CreateMage {
             especial = 999;
             ataque = 999;
         }
-
+        ChoseInitialWeapon choseweapon = new ChoseInitialWeapon();
+        choseweapon.choseWeapon("Mage");
         return new Mage(nome, vida, mana, ataque, especial, frase);
     }
 }

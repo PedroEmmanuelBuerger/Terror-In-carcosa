@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Arrumando bugs">
+    <list default="true" id="c95232bc-8560-475f-8e0c-470a1ff42545" name="Changes" comment="Refatorando + adicionando funcionamento armadura">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/ArmorShopper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/ArmorShopper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/NewArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/NewArmor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Pve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Pve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateMage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Character/CharacterCreation/CreateMage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/ChoseInitialWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpg/Mode/Campaign/Events/ChoseInitialWeapon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,14 +122,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721766583100</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Adicionando final generico + identação">
-      <option name="closed" value="true" />
-      <created>1723055379925</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1723055379925</updated>
     </task>
     <task id="LOCAL-00055" summary="Adicionando Easter Egg">
       <option name="closed" value="true" />
@@ -516,7 +507,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723811058813</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="Refatorando + adicionando funcionamento armadura">
+      <option name="closed" value="true" />
+      <created>1730395069632</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1730395069632</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -531,7 +530,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refatoração" />
     <MESSAGE value="começo implementação modo coop" />
     <MESSAGE value="Refatoração" />
     <MESSAGE value="Balanceando pvp" />
@@ -556,7 +554,8 @@
     <MESSAGE value="Adicionando MindEater + dano da mente + arrumando bugs" />
     <MESSAGE value="Adicionando evento de recuperar mente + rebalanceamento" />
     <MESSAGE value="Arrumando bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando bugs" />
+    <MESSAGE value="Refatorando + adicionando funcionamento armadura" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatorando + adicionando funcionamento armadura" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
