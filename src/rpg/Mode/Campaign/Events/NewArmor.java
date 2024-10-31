@@ -23,7 +23,10 @@ public class NewArmor implements NonCombatEvent {
         if (currentArmor != null) {
             slowConsole.imprimirDevagar("Sua armadura atual é: " + currentArmor.getName() + " com proteção (" + currentArmor.armor() + ").");
         }
-
+        if (currentArmor instanceof RuinedKing) {
+            slowConsole.imprimirDevagar("A presença da Ruined King impede que você a remova ou equipe outra armadura.");
+            return; // Interrompe o método para evitar a troca da armadura
+        }
         slowConsole.imprimirDevagar("Deseja equipar esta armadura profana? (s/n)");
         Scanner scanner = new Scanner(System.in);
         String choice = scanner.nextLine();

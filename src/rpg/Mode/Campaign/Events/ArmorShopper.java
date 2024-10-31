@@ -89,6 +89,11 @@ public class ArmorShopper implements NonCombatEvent {
 
     private boolean buyArmor(Attributes personagem, Armor armor) {
         if (personagem.getGold() >= armor.getPrice()) {
+            if(personagem.getArmor() instanceof RuinedKing){
+                slowConsole.imprimirDevagar("você tenta, mas é Impossivel remover Ruined King");
+                return false;
+            }
+
             personagem.setGold(personagem.getGold() - armor.getPrice());
             personagem.setArmor(armor);
 

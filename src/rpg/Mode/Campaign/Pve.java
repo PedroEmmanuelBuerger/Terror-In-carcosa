@@ -63,7 +63,7 @@ public class Pve {
                 }
                 break;
             case 1:
-                event = new ManaRecoveryEvent();
+               event = new ManaRecoveryEvent();
                 break;
             case 2:
                 event = new HealthRecoveryEvent();
