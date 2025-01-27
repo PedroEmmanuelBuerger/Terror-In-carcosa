@@ -1,36 +1,39 @@
-## Terror In Carcosa
-Terror In Carcosa é um projeto de RPG desenvolvido para oferecer uma experiência de jogo imersiva com combate, eventos e criação de personagens. O sistema permite criar e gerenciar personagens de diferentes classes e raças, participar de batalhas e eventos aleatórios, e experimentar um ambiente de jogo dinâmico e envolvente com a tematica de horror cósmico, baseada principalmente em "O Rei de Amarelo".
+# Terror In Carcosa
 
-## Funcionalidades
-O projeto inclui as seguintes funcionalidades:
+Terror In Carcosa is an RPG project developed to offer an immersive gaming experience with combat, events, and character creation. The system allows players to create and manage characters of different classes and races, engage in battles and random events, and experience a dynamic and engaging game environment with a cosmic horror theme, primarily inspired by *"The King in Yellow."*
 
-- Criação de Personagens: Permite criar personagens de diferentes classes, incluindo Guerreiro, Mago, Ladino e Curandeiro, tambem podendo escolher uma raça, cada um com suas características e habilidades únicas.
-- Sistema de Combate: Implementa batalhas entre o personagem do jogador e inimigos, com a capacidade de realizar ataques normais e especiais,fugir, usar itens entre outros.
-- Eventos Não Combatentes: Inclui eventos aleatórios que podem afetar o estado do personagem, como encontrar poções de cura ou itens raros.
-- Gerenciamento de Mana e Experiência: Personagens podem usar mana para habilidades especiais e ganhar experiência para subir de nível e melhorar suas estatísticas.
-- Classes: Cada classe é unica e tem sua peculiaridade, com um funcionamento próprio, tendo tambem uma descrição e sua própria historia.
-- Raças: cada raça tem seu bonus inicial e sua descrição.
-- Interação com jogador: Muitos eventos são de escolha do jogador, fora outro aspectos como o movimento e gerenciamento do personagem/itens.
+## Features
 
-## Tecnologias Utilizadas
-O projeto foi desenvolvido utilizando as seguintes tecnologias:
+The project includes the following features:
 
-- Java: Linguagem de programação Main utilizada para implementar a lógica do jogo.
-- POO (Programação Orientada a Objetos): Para estruturar e organizar o código do jogo.
-- Intellij(IDE): Foi a IDE Utilizada para formular o projeto.
-- Solid(Principio SOLID): Foi desenvolvido com base no solid.
-- Jline: Biblioteca para mapeamento e leitura de teclas do Java.
+- **Character Creation**: Allows players to create characters from various classes, including Warrior, Mage, Rogue, and Healer, as well as choose a race. Each class and race comes with unique characteristics and abilities.
+- **Combat System**: Implements battles between the player's character and enemies, offering options for normal and special attacks, escaping, using items, and more.
+- **Non-Combat Events**: Includes random events that can affect the character's state, such as finding healing potions or rare items.
+- **Mana and Experience Management**: Characters can use mana for special abilities and gain experience to level up and improve their stats.
+- **Classes**: Each class is unique with its own mechanics, description, and lore.
+- **Races**: Each race provides initial bonuses and comes with its own description.
+- **Player Interaction**: Many events require player decisions, along with other aspects such as character movement and item management.
 
-## Principais Aprendizados
-Os principais aprendizados incluem:
-- Criação de Sistema de RPG: Implementar um sistema de RPG completo com criação de personagens, combate e eventos.
-- Gestão de Estados e Recursos: Gerenciar atributos dos personagens, como vida, ataque, mana e experiência.
-- Implementação de Eventos Aleatórios: Criar e integrar eventos que afetam a experiência do jogador de maneira dinâmica.
-- Organização de código: Principal desafio do projeto foi organizar o código para que seguisse a implementação SOLID, e que ficasse a nivel do exigido pelo mercado.
-- Refatoração: Projeto ao longo de sua produção foi ganhando tamanho e aumentando sua proporção, assim sendo necessario a refatoração.
+## Technologies Used
 
-## Conclusão
-Terror In Carcosa é um jogo de RPG que demonstra conceitos fundamentais de desenvolvimento de software, incluindo a criação de um sistema de combate, gerenciamento de recursos e eventos aleatórios. Este projeto proporcionou uma oportunidade valiosa para aprender e aplicar práticas modernas de desenvolvimento, além de criar uma experiência de jogo envolvente e interativa.
-<div>
-  <img src="https://github.com/user-attachments/assets/17c68f73-64a6-4b14-95a5-dfd85e624b9c" width="90%" />
-</div>
+The project was developed using the following technologies:
+
+- **Java**: Main programming language used to implement game logic.
+- **OOP (Object-Oriented Programming)**: To structure and organize the game's code.
+- **IntelliJ (IDE)**: The IDE used to develop the project.
+- **SOLID Principles**: The project was developed following the SOLID principles.
+- **JLine**: Library for Java key mapping and input reading.
+
+## Key Learnings
+
+The main learnings from this project include:
+
+- **RPG System Development**: Building a complete RPG system with character creation, combat, and events.
+- **State and Resource Management**: Managing character attributes such as health, attack, mana, and experience.
+- **Random Event Implementation**: Creating and integrating events that dynamically affect the player's experience.
+- **Code Organization**: The main challenge was organizing the code to adhere to SOLID principles and meet industry standards.
+- **Refactoring**: As the project grew in scope and complexity, refactoring became necessary to maintain code quality.
+
+## Conclusion
+
+Terror In Carcosa is an RPG game that demonstrates fundamental software development concepts, including building a combat system, managing resources, and implementing random events. This project provided valuable opportunities to learn and apply modern development practices while creating an engaging and interactive gaming experience.
